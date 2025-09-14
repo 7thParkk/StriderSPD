@@ -2,7 +2,7 @@ import openai
 import json
 
 # 设置您的 OpenAI API 密钥
-# openai.api_key = ''
+openai.api_key = ''
 
 # 打开 JSON 文件并加载数据
 with open('../data/test.json', 'r') as f:
