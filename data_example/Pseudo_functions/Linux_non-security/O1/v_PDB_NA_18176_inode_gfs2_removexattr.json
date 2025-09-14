@@ -1,0 +1,23 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall gfs2_removexattr(__int64 a1, __int64 a2)",
+        "{",
+        "  __int64 v2; // r12",
+        "  unsigned int v3; // ebx",
+        "  _BYTE v5[96]; // [rsp+0h] [rbp-60h] BYREF",
+        "",
+        "  v2 = *(_QWORD *)(a1 + 48);",
+        "  gfs2_holder_init(*(_QWORD *)(v2 + 584), 1LL, 0LL, v5);",
+        "  v3 = gfs2_glock_nq(v5);",
+        "  if ( !v3 )",
+        "  {",
+        "    v3 = gfs2_rs_alloc(v2);",
+        "    if ( !v3 )",
+        "      v3 = generic_removexattr(a1, a2);",
+        "    gfs2_glock_dq(v5);",
+        "  }",
+        "  gfs2_holder_uninit(v5);",
+        "  return v3;",
+        "}"
+    ]
+}
