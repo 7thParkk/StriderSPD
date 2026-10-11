@@ -21,8 +21,6 @@ The environment pins PyTorch 2.4.0 with CUDA 12.1, Transformers 4.55.0, Accelera
 
 The paper joint checkpoint is hosted at [hanjin996/StriderSPD](https://huggingface.co/hanjin996/StriderSPD):
 
-Checkpoint publication is in progress. Its download link will become available after the upload is verified.
-
 - [model_epoch5_best_acc_qwen3_8b_824.pth](https://huggingface.co/hanjin996/StriderSPD/resolve/main/model_epoch5_best_acc_qwen3_8b_824.pth), 25,682,301,190 bytes (25.68 GB).
 - [benchmark_1720.zip](https://huggingface.co/hanjin996/StriderSPD/resolve/main/benchmark_1720.zip), an alternative download of the benchmark already included here.
 
