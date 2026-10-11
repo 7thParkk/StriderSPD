@@ -17,7 +17,7 @@ def load_model_tokenizer(args, model_path):
         from rec_attention.llama_model_v3 import LlamaModelForCausalLM as model_class
     else:
         raise ValueError(args.llm_architecture_type)
-    # Keep the original V1 initialization and final BF16 model dtype.
+    # Keep the paper code's initialization and final BF16 model dtype.
     # For --do_test, strict loading subsequently replaces every model tensor.
     model = model_class.from_pretrained(
         model_path, device_map="auto", trust_remote_code=True)

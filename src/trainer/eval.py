@@ -21,7 +21,7 @@ def evaluate(model, eval_dataset, args, accelerator=None):
     if accelerator is None:
         accelerator = Accelerator(mixed_precision="bf16", device_placement=False)
     if accelerator.num_processes != 1:
-        raise RuntimeError("Run V1 with one Python process; its GPUs use model parallelism.")
+        raise RuntimeError("Run StriderSPD with one Python process; its GPUs use model parallelism.")
     loader = DataLoader(
         eval_dataset, batch_size=args.eval_batch_size, shuffle=False,
         collate_fn=custom_collate_fn, sampler=SequentialSampler(eval_dataset))
@@ -59,7 +59,7 @@ def evaluate(model, eval_dataset, args, accelerator=None):
                     probabilities = torch.sigmoid(scores)
                     batch_predictions = (probabilities >= 0.5).int().tolist()
                 else:
-                    # Keep the V1 validation threshold/precision during training.
+                    # Keep the paper code's validation threshold/precision during training.
                     probabilities = torch.sigmoid(logits[:, 0])
                     batch_predictions = (probabilities >= 0.5).int().cpu().tolist()
                     scores = logits[:, 0].detach().float().cpu()

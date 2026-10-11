@@ -25,7 +25,7 @@ def cuda_devices(value):
 
 
 def parse_args(argv=None):
-    parser = argparse.ArgumentParser(description="StriderSPD V1 training and evaluation")
+    parser = argparse.ArgumentParser(description="StriderSPD training and evaluation")
     action = parser.add_mutually_exclusive_group(required=True)
     action.add_argument("--do_train", action="store_true")
     action.add_argument("--do_test", action="store_true")
@@ -50,7 +50,7 @@ def parse_args(argv=None):
     parser.add_argument("--llm_architecture_type", choices=("qwen2", "qwen3", "llama"), default="qwen3")
     parser.add_argument("--pretrained_llm_path", help="HF repository or local model directory; paper joint training requires its LoRA-merged initializer")
     parser.add_argument("--unixcoder_path", default="microsoft/unixcoder-base", help="HF repository or local UniXcoder config/tokenizer directory")
-    parser.add_argument("--checkpoint_path", help="Complete V1 state dictionary required for evaluation")
+    parser.add_argument("--checkpoint_path", help="Complete StriderSPD state dictionary required for evaluation")
     parser.add_argument("--gnn_devices", type=cuda_devices, default=cuda_devices("cuda:1,cuda:2,cuda:3"), help="GNN, token embedding, adapter-head CUDA roles; repeats are allowed")
     parser.add_argument("--output_dir", default=str(REPO_ROOT / "outputs" / "eval"))
     parser.add_argument("--log_dir", default=str(REPO_ROOT / "outputs" / "logs"))

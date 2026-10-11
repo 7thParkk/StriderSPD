@@ -4,7 +4,7 @@ import argparse
 import hashlib
 from pathlib import Path
 
-REPO_ID = "hanjin996/StriderSPD-V1"
+REPO_ID = "hanjin996/StriderSPD"
 FILENAME = "model_epoch5_best_acc_qwen3_8b_824.pth"
 SHA256 = "991045a6bd0c8a30b113b1d2f633ed6d464f48ec06f4325b6adfef27db5e01e7"
 SIZE_BYTES = 25682301190

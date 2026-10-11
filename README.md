@@ -4,7 +4,7 @@ Repository for the TSE paper "StriderSPD: Structure-Guided Joint Representation 
 
 ## Install
 
-Use Linux, Python 3.11, and CUDA GPUs supporting BF16. The original V1 execution uses four visible GPUs in one Python process; the code uses model parallelism.
+Use Linux, Python 3.11, and CUDA GPUs supporting BF16. The original execution uses four visible GPUs in one Python process; the code uses model parallelism.
 
 ```bash
 git clone https://github.com/7thParkk/StriderSPD.git
@@ -19,12 +19,12 @@ The environment pins PyTorch 2.4.0 with CUDA 12.1, Transformers 4.55.0, Accelera
 
 ## Download the trained model
 
-The paper joint checkpoint is hosted at [hanjin996/StriderSPD-V1](https://huggingface.co/hanjin996/StriderSPD-V1):
+The paper joint checkpoint is hosted at [hanjin996/StriderSPD](https://huggingface.co/hanjin996/StriderSPD):
 
 Checkpoint publication is in progress. Its download link will become available after the upload is verified.
 
-- [model_epoch5_best_acc_qwen3_8b_824.pth](https://huggingface.co/hanjin996/StriderSPD-V1/resolve/main/model_epoch5_best_acc_qwen3_8b_824.pth), 25,682,301,190 bytes (25.68 GB).
-- [benchmark_1720.zip](https://huggingface.co/hanjin996/StriderSPD-V1/resolve/main/benchmark_1720.zip), an alternative download of the benchmark already included here.
+- [model_epoch5_best_acc_qwen3_8b_824.pth](https://huggingface.co/hanjin996/StriderSPD/resolve/main/model_epoch5_best_acc_qwen3_8b_824.pth), 25,682,301,190 bytes (25.68 GB).
+- [benchmark_1720.zip](https://huggingface.co/hanjin996/StriderSPD/resolve/main/benchmark_1720.zip), an alternative download of the benchmark already included here.
 
 Download and verify the checkpoint:
 

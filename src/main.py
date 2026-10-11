@@ -1,4 +1,4 @@
-"""Train the V1 joint model or evaluate its complete paper checkpoint."""
+"""Train the StriderSPD joint model or evaluate its complete paper checkpoint."""
 
 import os
 from pathlib import Path
@@ -37,7 +37,7 @@ def main(argv=None):
 
     args.n_gpu = torch.cuda.device_count()
     if not args.n_gpu:
-        raise RuntimeError("V1 execution requires CUDA GPUs with BF16 support.")
+        raise RuntimeError("StriderSPD execution requires CUDA GPUs with BF16 support.")
     for device in args.gnn_devices:
         index = int(device.split(":")[1])
         if index >= args.n_gpu:
@@ -68,7 +68,7 @@ def main(argv=None):
     )
     joint_model = My_Model(base_gnn=gnn, base_llm=llm, args=args)
 
-    # Preserve the V1 training initialization order.
+    # Preserve the paper code's training initialization order.
     set_seed(args.seed)
     if args.do_train:
         train(args, joint_model, node_tokenizer, llm_tokenizer)
