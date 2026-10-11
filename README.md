@@ -45,12 +45,10 @@ benchmark_1720/
 
 There are 1,720 paired samples: 1,010 security and 710 non-security. Each modality has 3,440 pre/post JSON files. Projects, optimization levels, file names, manifest order and JSON contents are preserved from the original benchmark. CFG JSON contains nodes and edges; pseudo JSON contains a `pseudo_code` list. Labels and pair paths are in the manifest.
 
-Check all representations and the archived reference predictions without ML dependencies:
+Check all data representations without ML dependencies:
 
 ```bash
-python scripts/check_benchmark.py \
-  --predictions release_metadata/reference_predictions.jsonl \
-  --metrics release_metadata/paper_reference_metrics.json
+python scripts/check_benchmark.py
 ```
 
 When using the ZIP download, extract it into `benchmark_1720/`:
@@ -120,7 +118,7 @@ The 1,720-sample release supplies evaluation data. The train/dev representations
 
 ## Paper reference
 
-Archived predictions from this exact checkpoint reproduce these benchmark results:
+Paper checkpoint reference results on the 1,720-sample benchmark:
 
 | Samples | Accuracy | Precision | Recall | F1 | FPR |
 | --- | --- | --- | --- | --- | --- |
