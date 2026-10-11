@@ -1,0 +1,43 @@
+{
+    "nodes": {
+        "208": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "test REG REG",
+            "mov REG CONSTANT",
+            "cmovz REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "pop REG",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "3296": []
+    },
+    "edges": {
+        "208": [
+            3296
+        ],
+        "3296": []
+    },
+    "boundary": {
+        "208": 277,
+        "3296": 3296
+    },
+    "jmp_instruction": {
+        "208": "jmp     bdrv_unref; PIC mode",
+        "3296": "extrn job_completed:near"
+    }
+}

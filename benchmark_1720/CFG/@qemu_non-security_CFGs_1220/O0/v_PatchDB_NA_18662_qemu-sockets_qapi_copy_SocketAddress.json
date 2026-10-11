@@ -1,0 +1,87 @@
+{
+    "nodes": {
+        "11888": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC CONSTANT",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "cmp MEMACC 0",
+            "jz ADDR"
+        ],
+        "12007": [
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "12082": [
+            "nop"
+        ],
+        "12083": [
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "11888": [
+            12007,
+            12082
+        ],
+        "12007": [
+            12083
+        ],
+        "12082": [
+            12083
+        ],
+        "12083": []
+    },
+    "boundary": {
+        "11888": 12007,
+        "12007": 12082,
+        "12082": 12083,
+        "12083": 12085
+    },
+    "jmp_instruction": {
+        "11888": "jz      short loc_2F32",
+        "12007": "jmp     short locret_2F33",
+        "12082": "nop",
+        "12083": "retn"
+    }
+}

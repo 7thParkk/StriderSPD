@@ -1,0 +1,184 @@
+{
+    "nodes": {
+        "2544": [
+            "endbr64",
+            "sub REG CONSTANT",
+            "cmp REG 2",
+            "jle ADDR"
+        ],
+        "2561": [
+            "movzx REG MEMACC",
+            "mov REG REG",
+            "and REG CONSTANT"
+        ],
+        "2570": [
+            "cmp 16 18446744073709551615",
+            "movzx REG MEMACC",
+            "jnz ADDR"
+        ],
+        "2580": [
+            "mov REG REG",
+            "and REG CONSTANT",
+            "cmp REG 2",
+            "setz REG",
+            "movzx REG REG",
+            "mov MEMACC REG"
+        ],
+        "2596": [
+            "cmp 52 4",
+            "jbe ADDR"
+        ],
+        "2602": [
+            "mov MEMACC CONSTANT"
+        ],
+        "2609": [
+            "movzx REG MEMACC",
+            "mov MEMACC REG",
+            "shr REG CONSTANT",
+            "and REG CONSTANT",
+            "mov MEMACC REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "2630": [
+            "or REG CONSTANT",
+            "and REG CONSTANT",
+            "mov MEMACC REG",
+            "cmp REG 128",
+            "jz ADDR"
+        ],
+        "2644": [
+            "ja ADDR"
+        ],
+        "2646": [
+            "cmp REG 1",
+            "sbb REG REG",
+            "and REG CONSTANT",
+            "add REG CONSTANT",
+            "mov MEMACC REG"
+        ],
+        "2660": [
+            "call ADDR",
+            "xor REG REG",
+            "add REG CONSTANT",
+            "retn"
+        ],
+        "2672": [
+            "and REG CONSTANT",
+            "mov MEMACC REG",
+            "call ADDR",
+            "xor REG REG",
+            "add REG CONSTANT",
+            "retn"
+        ],
+        "2696": [
+            "mov MEMACC CONSTANT",
+            "xor REG REG",
+            "xor REG REG",
+            "jmp ADDR"
+        ],
+        "2712": [
+            "mov MEMACC CONSTANT",
+            "call ADDR",
+            "xor REG REG",
+            "add REG CONSTANT",
+            "retn"
+        ],
+        "2736": [
+            "cmp REG 192",
+            "jnz ADDR"
+        ],
+        "2741": [
+            "mov MEMACC CONSTANT",
+            "call ADDR",
+            "xor REG REG",
+            "add REG CONSTANT",
+            "retn"
+        ]
+    },
+    "edges": {
+        "2544": [
+            2561,
+            2696
+        ],
+        "2561": [
+            2570
+        ],
+        "2570": [
+            2580,
+            2596
+        ],
+        "2580": [
+            2596
+        ],
+        "2596": [
+            2602,
+            2609
+        ],
+        "2602": [
+            2609
+        ],
+        "2609": [
+            2630,
+            2672
+        ],
+        "2630": [
+            2644,
+            2712
+        ],
+        "2644": [
+            2646,
+            2736
+        ],
+        "2646": [
+            2660
+        ],
+        "2660": [],
+        "2672": [],
+        "2696": [
+            2570
+        ],
+        "2712": [],
+        "2736": [
+            2660,
+            2741
+        ],
+        "2741": []
+    },
+    "boundary": {
+        "2544": 2561,
+        "2561": 2570,
+        "2570": 2580,
+        "2580": 2596,
+        "2596": 2602,
+        "2602": 2609,
+        "2609": 2630,
+        "2630": 2644,
+        "2644": 2646,
+        "2646": 2660,
+        "2660": 2672,
+        "2672": 2690,
+        "2696": 2709,
+        "2712": 2728,
+        "2736": 2741,
+        "2741": 2757
+    },
+    "jmp_instruction": {
+        "2544": "jle     loc_A88",
+        "2561": "and     esi, 1",
+        "2570": "jnz     short loc_A24",
+        "2580": "mov     [rdi+10h], eax",
+        "2596": "jbe     short loc_A31",
+        "2602": "mov     dword ptr [rdi+34h], 4",
+        "2609": "jz      short loc_A70",
+        "2630": "jz      short loc_A98",
+        "2644": "ja      short loc_AB0",
+        "2646": "mov     [rdi+78h], al",
+        "2660": "retn",
+        "2672": "retn",
+        "2696": "jmp     loc_A0A",
+        "2712": "retn",
+        "2736": "jnz     short loc_A64",
+        "2741": "retn"
+    }
+}

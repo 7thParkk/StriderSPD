@@ -1,0 +1,115 @@
+{
+    "nodes": {
+        "2228": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "call ADDR",
+            "lea REG 1",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "jmp ADDR"
+        ],
+        "2279": [
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "2294": [
+            "cmp MEMACC 0",
+            "jz ADDR"
+        ],
+        "2299": [
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "cmp MEMACC 1",
+            "sbb REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "2338": [
+            "mov REG CONSTANT"
+        ],
+        "2343": [
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "2362": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "2369": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "2228": [
+            2294
+        ],
+        "2279": [
+            2294,
+            2369
+        ],
+        "2294": [
+            2299,
+            2362
+        ],
+        "2299": [
+            2279,
+            2338
+        ],
+        "2338": [
+            2343
+        ],
+        "2343": [],
+        "2362": [
+            2343
+        ],
+        "2369": [
+            2343
+        ]
+    },
+    "boundary": {
+        "2228": 2279,
+        "2279": 2294,
+        "2294": 2299,
+        "2299": 2338,
+        "2338": 2343,
+        "2343": 2362,
+        "2362": 2369,
+        "2369": 2376
+    },
+    "jmp_instruction": {
+        "2228": "jmp     short loc_8F6",
+        "2279": "jz      short loc_941",
+        "2294": "jz      short loc_93A",
+        "2299": "jnz     short loc_8E7",
+        "2338": "mov     ebx, 1",
+        "2343": "retn",
+        "2362": "jmp     short loc_927",
+        "2369": "jmp     short loc_927"
+    }
+}

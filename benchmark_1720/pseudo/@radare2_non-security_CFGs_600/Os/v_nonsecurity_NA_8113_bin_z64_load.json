@@ -1,0 +1,26 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall load(__int64 a1)",
+        "{",
+        "  const char *v1; // r12",
+        "  __int64 v2; // rbp",
+        "  size_t v3; // rax",
+        "",
+        "  if ( a1 )",
+        "    r_buf_buffer(*(_QWORD *)(a1 + 24));",
+        "  v1 = *(const char **)a1;",
+        "  r_buf_size(*(_QWORD *)(a1 + 24));",
+        "  v2 = *(_QWORD *)(a1 + 40);",
+        "  if ( v2 )",
+        "  {",
+        "    v3 = strlen(v1);",
+        "    if ( v3 > 4 && !strcmp(&v1[v3 - 4], \".z64\") )",
+        "    {",
+        "      r_buf_buffer(*(_QWORD *)(a1 + 24));",
+        "      *(_QWORD *)(v2 + 208) = 0LL;",
+        "    }",
+        "  }",
+        "  return 0LL;",
+        "}"
+    ]
+}

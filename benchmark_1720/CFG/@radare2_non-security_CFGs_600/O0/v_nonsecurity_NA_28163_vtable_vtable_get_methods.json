@@ -1,0 +1,177 @@
+{
+    "nodes": {
+        "2066": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "cmp MEMACC 0",
+            "jz ADDR"
+        ],
+        "2128": [
+            "cmp MEMACC 0",
+            "jz ADDR"
+        ],
+        "2135": [
+            "cmp MEMACC 0",
+            "jnz ADDR"
+        ],
+        "2142": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "2164": [
+            "mov MEMACC CONSTANT",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "2194": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "2230": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "2277": [
+            "mov REG MEMACC",
+            "movzx REG MEMACC",
+            "movzx REG REG",
+            "add MEMACC REG",
+            "add MEMACC CONSTANT"
+        ],
+        "2296": [
+            "mov REG MEMACC",
+            "cmp REG MEMACC",
+            "jl ADDR"
+        ],
+        "2304": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC"
+        ],
+        "2320": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jz ADDR"
+        ],
+        "2335": [
+            "call ADDR"
+        ],
+        "2340": [
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "2066": [
+            2128,
+            2142
+        ],
+        "2128": [
+            2135,
+            2142
+        ],
+        "2135": [
+            2142,
+            2164
+        ],
+        "2142": [
+            2320
+        ],
+        "2164": [
+            2296
+        ],
+        "2194": [
+            2230,
+            2277
+        ],
+        "2230": [
+            2277
+        ],
+        "2277": [
+            2296
+        ],
+        "2296": [
+            2194,
+            2304
+        ],
+        "2304": [
+            2320
+        ],
+        "2320": [
+            2335,
+            2340
+        ],
+        "2335": [],
+        "2340": []
+    },
+    "boundary": {
+        "2066": 2128,
+        "2128": 2135,
+        "2135": 2142,
+        "2142": 2164,
+        "2164": 2194,
+        "2194": 2230,
+        "2230": 2277,
+        "2277": 2296,
+        "2296": 2304,
+        "2304": 2320,
+        "2320": 2335,
+        "2335": 2340,
+        "2340": 2342
+    },
+    "jmp_instruction": {
+        "2066": "jz      short loc_85E",
+        "2128": "jz      short loc_85E",
+        "2135": "jnz     short loc_874",
+        "2142": "jmp     loc_910",
+        "2164": "jmp     short loc_8F8",
+        "2194": "jz      short loc_8E5",
+        "2230": "call    r_list_append; PIC mode",
+        "2277": "add     [rbp+var_38], 1",
+        "2296": "jl      short loc_892",
+        "2304": "mov     rax, [rbp+var_18]",
+        "2320": "jz      short locret_924",
+        "2335": "call    __stack_chk_fail; PIC mode",
+        "2340": "retn"
+    }
+}

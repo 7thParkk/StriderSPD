@@ -1,0 +1,114 @@
+{
+    "nodes": {
+        "1830": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov MEMACC CONSTANT",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "cmp MEMACC 18446744073709551614",
+            "jz ADDR"
+        ],
+        "1914": [
+            "cmp MEMACC 18446744073709551594",
+            "jnz ADDR"
+        ],
+        "1920": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC CONSTANT",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG"
+        ],
+        "1968": [
+            "cmp MEMACC 0",
+            "jns ADDR"
+        ],
+        "1974": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "1993": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jz ADDR"
+        ],
+        "2011": [
+            "call ADDR"
+        ],
+        "2016": [
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "1830": [
+            1914,
+            1920
+        ],
+        "1914": [
+            1920,
+            1968
+        ],
+        "1920": [
+            1968
+        ],
+        "1968": [
+            1974,
+            1993
+        ],
+        "1974": [
+            1993
+        ],
+        "1993": [
+            2011,
+            2016
+        ],
+        "2011": [],
+        "2016": []
+    },
+    "boundary": {
+        "1830": 1914,
+        "1914": 1920,
+        "1920": 1968,
+        "1968": 1974,
+        "1974": 1993,
+        "1993": 2011,
+        "2011": 2016,
+        "2016": 2018
+    },
+    "jmp_instruction": {
+        "1830": "jz      short loc_780",
+        "1914": "jnz     short loc_7B0",
+        "1920": "mov     [rbp+ret], eax",
+        "1968": "jns     short loc_7C9",
+        "1974": "call    error_propagate; PIC mode",
+        "1993": "jz      short locret_7E0",
+        "2011": "call    __stack_chk_fail; PIC mode",
+        "2016": "retn"
+    }
+}

@@ -1,0 +1,90 @@
+{
+    "nodes": {
+        "1183": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1231": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "1238": [
+            "mov REG MEMACC",
+            "mov MEMACC CONSTANT",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "cmp MEMACC 0",
+            "jz ADDR"
+        ],
+        "1268": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "1309": [
+            "mov REG CONSTANT"
+        ],
+        "1314": [
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "1183": [
+            1231,
+            1238
+        ],
+        "1231": [
+            1314
+        ],
+        "1238": [
+            1268,
+            1309
+        ],
+        "1268": [
+            1314
+        ],
+        "1309": [
+            1314
+        ],
+        "1314": []
+    },
+    "boundary": {
+        "1183": 1231,
+        "1231": 1238,
+        "1238": 1268,
+        "1268": 1309,
+        "1309": 1314,
+        "1314": 1316
+    },
+    "jmp_instruction": {
+        "1183": "jz      short loc_4D6",
+        "1231": "jmp     short locret_522",
+        "1238": "jz      short loc_51D",
+        "1268": "jmp     short locret_522",
+        "1309": "mov     eax, 0",
+        "1314": "retn"
+    }
+}

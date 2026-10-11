@@ -1,0 +1,176 @@
+{
+    "nodes": {
+        "5317": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "cmp MEMACC 0",
+            "jz ADDR"
+        ],
+        "5351": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5363": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5382": [
+            "cmp MEMACC 0",
+            "jnz ADDR"
+        ],
+        "5389": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "5399": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "xor REG CONSTANT",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5425": [
+            "mov REG MEMACC",
+            "mov MEMACC CONSTANT",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "5459": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "call REG",
+            "xor REG CONSTANT",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5557": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5568": [
+            "mov REG MEMACC",
+            "mov MEMACC CONSTANT",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG"
+        ],
+        "5592": [
+            "mov REG MEMACC"
+        ],
+        "5595": [
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "5317": [
+            5351,
+            5389
+        ],
+        "5351": [
+            5363,
+            5389
+        ],
+        "5363": [
+            5382,
+            5389
+        ],
+        "5382": [
+            5389,
+            5399
+        ],
+        "5389": [
+            5595
+        ],
+        "5399": [
+            5425,
+            5459
+        ],
+        "5425": [
+            5595
+        ],
+        "5459": [
+            5557,
+            5592
+        ],
+        "5557": [
+            5568,
+            5592
+        ],
+        "5568": [
+            5592
+        ],
+        "5592": [
+            5595
+        ],
+        "5595": []
+    },
+    "boundary": {
+        "5317": 5351,
+        "5351": 5363,
+        "5363": 5382,
+        "5382": 5389,
+        "5389": 5399,
+        "5399": 5425,
+        "5425": 5459,
+        "5459": 5557,
+        "5557": 5568,
+        "5568": 5592,
+        "5592": 5595,
+        "5595": 5597
+    },
+    "jmp_instruction": {
+        "5317": "jz      short loc_150D",
+        "5351": "jz      short loc_150D",
+        "5363": "jz      short loc_150D",
+        "5382": "jnz     short loc_1517",
+        "5389": "jmp     locret_15DB",
+        "5399": "jz      short loc_1553",
+        "5425": "jmp     locret_15DB",
+        "5459": "jz      short loc_15D8",
+        "5557": "jz      short loc_15D8",
+        "5568": "mov     [rax+70h], edx",
+        "5592": "mov     eax, [rbp+var_1C]",
+        "5595": "retn"
+    }
+}

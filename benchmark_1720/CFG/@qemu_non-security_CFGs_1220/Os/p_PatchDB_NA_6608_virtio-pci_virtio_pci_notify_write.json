@@ -1,0 +1,74 @@
+{
+    "nodes": {
+        "14629": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "movsxd REG REG",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "div REG REG",
+            "mov MEMACC REG",
+            "cmp MEMACC 1023",
+            "ja ADDR"
+        ],
+        "14787": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "14804": [
+            "nop",
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "14629": [
+            14787,
+            14804
+        ],
+        "14787": [
+            14804
+        ],
+        "14804": []
+    },
+    "boundary": {
+        "14629": 14787,
+        "14787": 14804,
+        "14804": 14807
+    },
+    "jmp_instruction": {
+        "14629": "ja      short loc_39D4",
+        "14787": "call    virtio_queue_notify; PIC mode",
+        "14804": "retn"
+    }
+}

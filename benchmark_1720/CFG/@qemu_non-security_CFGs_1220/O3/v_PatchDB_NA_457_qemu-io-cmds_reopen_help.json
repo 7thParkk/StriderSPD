@@ -1,0 +1,24 @@
+{
+    "nodes": {
+        "160": [
+            "endbr64",
+            "lea REG MEMACC",
+            "jmp ADDR"
+        ],
+        "30560": []
+    },
+    "edges": {
+        "160": [
+            30560
+        ],
+        "30560": []
+    },
+    "boundary": {
+        "160": 176,
+        "30560": 30560
+    },
+    "jmp_instruction": {
+        "160": "jmp     puts; PIC mode",
+        "30560": "extrn strcmp:near"
+    }
+}

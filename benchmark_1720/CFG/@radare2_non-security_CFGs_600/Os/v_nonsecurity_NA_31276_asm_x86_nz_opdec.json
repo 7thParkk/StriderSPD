@@ -1,0 +1,187 @@
+{
+    "nodes": {
+        "5876": [
+            "endbr64",
+            "cmp 104 0",
+            "jz ADDR"
+        ],
+        "5886": [
+            "push REG",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "call ADDR",
+            "or REG CONSTANT",
+            "pop REG",
+            "retn"
+        ],
+        "5914": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "and REG CONSTANT",
+            "jz ADDR"
+        ],
+        "5927": [
+            "cmp 88 0",
+            "jz ADDR"
+        ],
+        "5933": [
+            "bt REG CONSTANT",
+            "jnb ADDR"
+        ],
+        "5939": [
+            "mov MEMACC CONSTANT",
+            "test 40 64",
+            "jnz ADDR"
+        ],
+        "5948": [
+            "mov REG MEMACC",
+            "or REG CONSTANT"
+        ],
+        "5954": [
+            "mov MEMACC REG",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "5964": [
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5968": [
+            "mov MEMACC CONSTANT"
+        ],
+        "5971": [
+            "mov REG MEMACC",
+            "or REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "5979": [
+            "mov REG MEMACC",
+            "cmp REG 32",
+            "jnz ADDR"
+        ],
+        "5987": [
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "or REG CONSTANT",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "6002": [
+            "xor REG REG",
+            "cmp REG 64",
+            "jnz ADDR"
+        ],
+        "6009": [
+            "mov MEMACC CONSTANT",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "or REG CONSTANT",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "6030": [
+            "or REG CONSTANT"
+        ],
+        "6033": [
+            "mov REG REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "5876": [
+            5886,
+            5914
+        ],
+        "5886": [],
+        "5914": [
+            5927,
+            5933
+        ],
+        "5927": [
+            5933,
+            6030
+        ],
+        "5933": [
+            5939,
+            5964
+        ],
+        "5939": [
+            5948,
+            5971
+        ],
+        "5948": [
+            5954
+        ],
+        "5954": [
+            6033
+        ],
+        "5964": [
+            5968,
+            5979
+        ],
+        "5968": [
+            5971
+        ],
+        "5971": [
+            5954
+        ],
+        "5979": [
+            5987,
+            6002
+        ],
+        "5987": [
+            6033
+        ],
+        "6002": [
+            6009,
+            6033
+        ],
+        "6009": [
+            6033
+        ],
+        "6030": [
+            6033
+        ],
+        "6033": []
+    },
+    "boundary": {
+        "5876": 5886,
+        "5886": 5914,
+        "5914": 5927,
+        "5927": 5933,
+        "5933": 5939,
+        "5939": 5948,
+        "5948": 5954,
+        "5954": 5964,
+        "5964": 5968,
+        "5968": 5971,
+        "5971": 5979,
+        "5979": 5987,
+        "5987": 6002,
+        "6002": 6009,
+        "6009": 6030,
+        "6030": 6033,
+        "6033": 6036
+    },
+    "jmp_instruction": {
+        "5876": "jz      short loc_171A",
+        "5886": "retn",
+        "5914": "jz      short loc_172D",
+        "5927": "jz      short loc_178E",
+        "5933": "jnb     short loc_174C",
+        "5939": "jnz     short loc_1753",
+        "5948": "or      edx, 0FFFFFFC8h",
+        "5954": "jmp     short loc_1791",
+        "5964": "jz      short loc_175B",
+        "5968": "mov     byte ptr [rax], 0FFh",
+        "5971": "jmp     short loc_1742",
+        "5979": "jnz     short loc_1772",
+        "5987": "jmp     short loc_1791",
+        "6002": "jnz     short loc_1791",
+        "6009": "jmp     short loc_1791",
+        "6030": "or      ecx, 0FFFFFFFFh",
+        "6033": "retn"
+    }
+}

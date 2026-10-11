@@ -1,0 +1,29 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall throttle_max_is_missing_limit(double *a1, __int64 a2, double a3, double a4)",
+        "{",
+        "  if ( a1[1] != 0.0 && *a1 == 0.0",
+        "    || a1[4] != 0.0 && a1[3] == 0.0",
+        "    || a1[7] != 0.0 && a1[6] == 0.0",
+        "    || a1[10] != 0.0 && a1[9] == 0.0",
+        "    || a1[13] != 0.0 && a1[12] == 0.0 )",
+        "  {",
+        "    goto LABEL_9;",
+        "  }",
+        "  if ( a1[16] == 0.0 )",
+        "    return 0LL;",
+        "  if ( a1[15] != 0.0 )",
+        "    return 0LL;",
+        "LABEL_9:",
+        "  error_setg_internal(",
+        "    a2,",
+        "    LC2,",
+        "    317LL,",
+        "    \"throttle_max_is_missing_limit\",",
+        "    \"bps_max/iops_max require corresponding bps/iops values\",",
+        "    0.0,",
+        "    a4);",
+        "  return 1LL;",
+        "}"
+    ]
+}

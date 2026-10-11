@@ -1,0 +1,33 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall qmp_query_block(__int64 a1)",
+        "{",
+        "  __int64 v2; // [rsp+10h] [rbp-30h] BYREF",
+        "  __int64 v3; // [rsp+18h] [rbp-28h] BYREF",
+        "  __int64 *v4; // [rsp+20h] [rbp-20h]",
+        "  __int64 i; // [rsp+28h] [rbp-18h]",
+        "  __int64 v6; // [rsp+30h] [rbp-10h]",
+        "  unsigned __int64 v7; // [rsp+38h] [rbp-8h]",
+        "",
+        "  v7 = __readfsqword(0x28u);",
+        "  v2 = 0LL;",
+        "  v4 = &v2;",
+        "  v3 = 0LL;",
+        "  for ( i = blk_next(0LL); i; i = blk_next(i) )",
+        "  {",
+        "    v6 = g_malloc0(16LL);",
+        "    bdrv_query_info(i, (__int64 *)(v6 + 8), (__int64)&v3);",
+        "    if ( v3 )",
+        "    {",
+        "      error_propagate(a1, v3);",
+        "      g_free(v6);",
+        "      qapi_free_BlockInfoList(v2);",
+        "      return 0LL;",
+        "    }",
+        "    *v4 = v6;",
+        "    v4 = (__int64 *)v6;",
+        "  }",
+        "  return v2;",
+        "}"
+    ]
+}

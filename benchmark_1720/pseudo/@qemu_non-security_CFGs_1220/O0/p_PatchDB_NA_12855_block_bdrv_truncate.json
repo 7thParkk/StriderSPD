@@ -1,0 +1,30 @@
+{
+    "pseudo_code": [
+        "int __cdecl bdrv_truncate(BdrvChild *child, int64_t offset)",
+        "{",
+        "  int ret; // [rsp+1Ch] [rbp-14h]",
+        "  BlockDriverState *bs; // [rsp+20h] [rbp-10h]",
+        "  BlockDriver *drv; // [rsp+28h] [rbp-8h]",
+        "",
+        "  bs = child->bs;",
+        "  drv = child->bs->drv;",
+        "  if ( (child->perm & 8) == 0 )",
+        "    _assert_fail(\"child->perm & BLK_PERM_RESIZE\", \"block.c\", 0xC36u, \"bdrv_truncate\");",
+        "  if ( !drv )",
+        "    return -123;",
+        "  if ( !drv->bdrv_truncate )",
+        "    return -95;",
+        "  if ( bs->read_only )",
+        "    return -13;",
+        "  ret = drv->bdrv_truncate(bs, offset);",
+        "  if ( !ret )",
+        "  {",
+        "    ret = refresh_total_sectors(bs, offset >> 9);",
+        "    bdrv_dirty_bitmap_truncate(bs);",
+        "    bdrv_parent_cb_resize(bs);",
+        "    ++bs->write_gen;",
+        "  }",
+        "  return ret;",
+        "}"
+    ]
+}

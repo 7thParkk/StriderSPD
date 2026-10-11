@@ -1,0 +1,120 @@
+{
+    "nodes": {
+        "8055": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "cmp MEMACC 0",
+            "jz ADDR"
+        ],
+        "8081": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "8097": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "xor REG CONSTANT",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "8116": [
+            "lea REG MEMACC",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "8156": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "8218": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "8232": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "8244": [
+            "nop",
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "8055": [
+            8081,
+            8116
+        ],
+        "8081": [
+            8097,
+            8116
+        ],
+        "8097": [
+            8116,
+            8156
+        ],
+        "8116": [],
+        "8156": [
+            8218,
+            8232
+        ],
+        "8218": [
+            8244
+        ],
+        "8232": [
+            8244
+        ],
+        "8244": []
+    },
+    "boundary": {
+        "8055": 8081,
+        "8081": 8097,
+        "8097": 8116,
+        "8116": 8156,
+        "8156": 8218,
+        "8218": 8232,
+        "8232": 8244,
+        "8244": 8247
+    },
+    "jmp_instruction": {
+        "8055": "jz      short loc_1FB4",
+        "8081": "jz      short loc_1FB4",
+        "8097": "jnz     short loc_1FDC",
+        "8116": "call    __assert_fail; PIC mode",
+        "8156": "jz      short loc_2028",
+        "8218": "jmp     short loc_2034",
+        "8232": "call    job_completed_txn_success",
+        "8244": "retn"
+    }
+}

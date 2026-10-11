@@ -1,0 +1,112 @@
+{
+    "nodes": {
+        "8495": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "cmp REG 9",
+            "jnz ADDR"
+        ],
+        "8528": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "8542": [
+            "movzx REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "xor REG CONSTANT",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "8579": [
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "8603": [
+            "mov REG MEMACC",
+            "movzx REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "8615": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "8629": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "8641": [
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "8495": [
+            8528,
+            8542
+        ],
+        "8528": [
+            8641
+        ],
+        "8542": [
+            8579,
+            8603
+        ],
+        "8579": [
+            8641
+        ],
+        "8603": [
+            8615,
+            8629
+        ],
+        "8615": [
+            8641
+        ],
+        "8629": [
+            8641
+        ],
+        "8641": []
+    },
+    "boundary": {
+        "8495": 8528,
+        "8528": 8542,
+        "8542": 8579,
+        "8579": 8603,
+        "8603": 8615,
+        "8615": 8629,
+        "8629": 8641,
+        "8641": 8643
+    },
+    "jmp_instruction": {
+        "8495": "jnz     short loc_215E",
+        "8528": "jmp     short locret_21C1",
+        "8542": "jz      short loc_219B",
+        "8579": "jmp     short locret_21C1",
+        "8603": "jz      short loc_21B5",
+        "8615": "jmp     short locret_21C1",
+        "8629": "call    job_enter; PIC mode",
+        "8641": "retn"
+    }
+}

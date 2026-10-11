@@ -1,0 +1,94 @@
+{
+    "nodes": {
+        "272": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "288": [
+            "mov REG MEMACC",
+            "call ADDR"
+        ],
+        "297": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "318": [
+            "mov REG REG",
+            "call ADDR",
+            "cmp REG 4",
+            "jbe ADDR"
+        ],
+        "332": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "353": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "xor REG REG",
+            "mov MEMACC REG"
+        ],
+        "371": [
+            "pop REG",
+            "xor REG REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "272": [
+            288,
+            297
+        ],
+        "288": [
+            297
+        ],
+        "297": [
+            318,
+            371
+        ],
+        "318": [
+            332,
+            371
+        ],
+        "332": [
+            353,
+            371
+        ],
+        "353": [
+            371
+        ],
+        "371": []
+    },
+    "boundary": {
+        "272": 288,
+        "288": 297,
+        "297": 318,
+        "318": 332,
+        "332": 353,
+        "353": 371,
+        "371": 378
+    },
+    "jmp_instruction": {
+        "272": "jz      short loc_129",
+        "288": "call    r_buf_buffer; PIC mode",
+        "297": "jz      short loc_173",
+        "318": "jbe     short loc_173",
+        "332": "jnz     short loc_173",
+        "353": "mov     [rbp+0D0h], rax",
+        "371": "retn"
+    }
+}

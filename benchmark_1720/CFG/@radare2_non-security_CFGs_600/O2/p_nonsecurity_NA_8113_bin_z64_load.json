@@ -1,0 +1,94 @@
+{
+    "nodes": {
+        "448": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "xor REG REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "473": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG REG"
+        ],
+        "485": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "506": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "cmp REG 4095",
+            "jbe ADDR"
+        ],
+        "544": [
+            "cmp MEMACC 1074935680",
+            "setz REG",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "576": [
+            "add REG CONSTANT",
+            "xor REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "448": [
+            473,
+            485
+        ],
+        "473": [
+            485
+        ],
+        "485": [
+            506,
+            576
+        ],
+        "506": [
+            544,
+            576
+        ],
+        "544": [],
+        "576": []
+    },
+    "boundary": {
+        "448": 473,
+        "473": 485,
+        "485": 506,
+        "506": 544,
+        "544": 566,
+        "576": 589
+    },
+    "jmp_instruction": {
+        "448": "jz      short loc_1E5",
+        "473": "mov     r12, rax",
+        "485": "jz      short loc_240",
+        "506": "jbe     short loc_240",
+        "544": "retn",
+        "576": "retn"
+    }
+}

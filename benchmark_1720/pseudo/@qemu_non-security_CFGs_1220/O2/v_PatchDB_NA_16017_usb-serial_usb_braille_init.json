@@ -1,0 +1,19 @@
+{
+    "pseudo_code": [
+        "__int64 usb_braille_init()",
+        "{",
+        "  __int64 v0; // rax",
+        "  __int64 v1; // rbp",
+        "  __int64 v2; // rbx",
+        "",
+        "  v0 = qemu_chr_open(\"braille\", \"braille\", 0LL);",
+        "  if ( !v0 )",
+        "    return 0LL;",
+        "  v1 = v0;",
+        "  v2 = usb_create(0LL, \"usb-braille\");",
+        "  qdev_prop_set_chr(v2, \"chardev\", v1);",
+        "  qdev_init(v2);",
+        "  return v2;",
+        "}"
+    ]
+}

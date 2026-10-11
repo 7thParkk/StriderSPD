@@ -1,0 +1,115 @@
+{
+    "nodes": {
+        "1296": [
+            "endbr64",
+            "mov REG CONSTANT",
+            "push REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "1319": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "imul REG REG",
+            "cmp REG 9999",
+            "ja ADDR"
+        ],
+        "1338": [
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "1343": [
+            "nop"
+        ],
+        "1344": [
+            "mov MEMACC REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1352": [
+            "cmp MEMACC 0",
+            "mov MEMACC REG",
+            "jz ADDR"
+        ],
+        "1361": [
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "1392": [
+            "pop REG",
+            "retn"
+        ],
+        "1400": [
+            "mov REG CONSTANT",
+            "cqo REG REG",
+            "idiv REG REG",
+            "mov REG REG",
+            "jmp ADDR"
+        ],
+        "0": []
+    },
+    "edges": {
+        "1296": [
+            1319,
+            1344
+        ],
+        "1319": [
+            1338,
+            1344
+        ],
+        "1338": [
+            1343,
+            1400
+        ],
+        "1343": [
+            1344
+        ],
+        "1344": [
+            1352,
+            1392
+        ],
+        "1352": [
+            1361,
+            1392
+        ],
+        "1361": [
+            0
+        ],
+        "1392": [],
+        "1400": [
+            1344
+        ],
+        "0": []
+    },
+    "boundary": {
+        "1296": 1319,
+        "1319": 1338,
+        "1338": 1343,
+        "1343": 1344,
+        "1344": 1352,
+        "1352": 1361,
+        "1361": 1384,
+        "1392": 1394,
+        "1400": 1415,
+        "0": 0
+    },
+    "jmp_instruction": {
+        "1296": "jnz     short loc_540",
+        "1319": "ja      short loc_540",
+        "1338": "jnz     short loc_578",
+        "1343": "nop",
+        "1344": "jz      short loc_570",
+        "1352": "jz      short loc_570",
+        "1361": "jmp     ptimer_reload",
+        "1392": "retn",
+        "1400": "jmp     short loc_540",
+        "0": ""
+    }
+}

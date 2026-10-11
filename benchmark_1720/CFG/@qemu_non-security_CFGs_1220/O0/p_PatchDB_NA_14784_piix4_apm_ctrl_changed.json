@@ -1,0 +1,112 @@
+{
+    "nodes": {
+        "497": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "cmp MEMACC 240",
+            "setz REG",
+            "movzx REG REG",
+            "cmp MEMACC 241",
+            "setz REG",
+            "movzx REG REG",
+            "mov REG MEMACC",
+            "add REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "cmp MEMACC 241",
+            "jz ADDR"
+        ],
+        "622": [
+            "cmp MEMACC 240",
+            "jz ADDR"
+        ],
+        "631": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "add REG CONSTANT",
+            "movzx REG MEMACC",
+            "movzx REG REG",
+            "and REG CONSTANT",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "656": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "672": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "693": [
+            "nop"
+        ],
+        "694": [
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "497": [
+            622,
+            693
+        ],
+        "622": [
+            631,
+            693
+        ],
+        "631": [
+            656,
+            694
+        ],
+        "656": [
+            672,
+            694
+        ],
+        "672": [
+            694
+        ],
+        "693": [
+            694
+        ],
+        "694": []
+    },
+    "boundary": {
+        "497": 622,
+        "622": 631,
+        "631": 656,
+        "656": 672,
+        "672": 693,
+        "693": 694,
+        "694": 696
+    },
+    "jmp_instruction": {
+        "497": "jz      short loc_2B5",
+        "622": "jz      short loc_2B5",
+        "631": "jz      short locret_2B6",
+        "656": "jz      short locret_2B6",
+        "672": "jmp     short locret_2B6",
+        "693": "nop",
+        "694": "retn"
+    }
+}

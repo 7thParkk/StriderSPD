@@ -1,0 +1,14 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall xilinx_uartlite_class_init(__int64 a1, __int64 a2, __int64 a3, __int64 a4, __int64 a5, __int64 a6)",
+        "{",
+        "  __int64 result; // rax",
+        "",
+        "  result = object_class_dynamic_cast_assert(a1, \"device\", &unk_690, 228LL, \"xilinx_uartlite_class_init\", a6, a2, a1);",
+        "  *(_QWORD *)(result + 136) = xilinx_uartlite_reset;",
+        "  *(_QWORD *)(result + 144) = xilinx_uartlite_realize;",
+        "  *(_BYTE *)(result + 128) = 1;",
+        "  return result;",
+        "}"
+    ]
+}

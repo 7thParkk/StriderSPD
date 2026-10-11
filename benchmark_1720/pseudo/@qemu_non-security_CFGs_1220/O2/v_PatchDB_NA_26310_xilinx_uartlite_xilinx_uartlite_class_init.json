@@ -1,0 +1,15 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall xilinx_uartlite_class_init(__int64 a1)",
+        "{",
+        "  __int64 result; // rax",
+        "",
+        "  result = object_class_dynamic_cast_assert(a1, \"device\", &LC0, 228LL, \"xilinx_uartlite_class_init\");",
+        "  *(_BYTE *)(result + 128) = 1;",
+        "  *(__m128i *)(result + 136) = _mm_unpacklo_epi64(",
+        "                                 (__m128i)(unsigned __int64)xilinx_uartlite_reset,",
+        "                                 (__m128i)(unsigned __int64)xilinx_uartlite_realize);",
+        "  return result;",
+        "}"
+    ]
+}

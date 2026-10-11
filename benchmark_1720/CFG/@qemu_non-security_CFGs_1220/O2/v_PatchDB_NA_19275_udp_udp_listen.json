@@ -1,0 +1,165 @@
+{
+    "nodes": {
+        "1264": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov MEMACC CONSTANT",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1339": [
+            "xor REG REG",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "lea REG 864",
+            "mov REG REG",
+            "lea REG 32",
+            "mov MEMACC REG",
+            "mov REG CONSTANT",
+            "mov REG MEMACC",
+            "add REG CONSTANT",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "call ADDR",
+            "test REG REG",
+            "js ADDR"
+        ],
+        "1449": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG MEMACC",
+            "lea REG 28",
+            "mov REG REG",
+            "call ADDR",
+            "movdqa REG MEMACC",
+            "mov REG REG",
+            "movups MEMACC REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "cmp REG 512",
+            "jz ADDR"
+        ],
+        "1534": [
+            "mov MEMACC CONSTANT"
+        ],
+        "1545": [
+            "mov REG MEMACC",
+            "and REG CONSTANT",
+            "or REG REG",
+            "or REG CONSTANT",
+            "mov MEMACC REG"
+        ],
+        "1569": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jnz ADDR"
+        ],
+        "1585": [
+            "add REG CONSTANT",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "1608": [
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "1616": [
+            "xor REG REG",
+            "jmp ADDR"
+        ],
+        "1621": [
+            "call ADDR"
+        ]
+    },
+    "edges": {
+        "1264": [
+            1339,
+            1616
+        ],
+        "1339": [
+            1449,
+            1608
+        ],
+        "1449": [
+            1534,
+            1545
+        ],
+        "1534": [
+            1545
+        ],
+        "1545": [
+            1569
+        ],
+        "1569": [
+            1585,
+            1621
+        ],
+        "1585": [],
+        "1608": [
+            1616
+        ],
+        "1616": [
+            1569
+        ],
+        "1621": []
+    },
+    "boundary": {
+        "1264": 1339,
+        "1339": 1449,
+        "1449": 1534,
+        "1534": 1545,
+        "1545": 1569,
+        "1569": 1585,
+        "1585": 1603,
+        "1608": 1616,
+        "1616": 1621,
+        "1621": 1626
+    },
+    "jmp_instruction": {
+        "1264": "jz      loc_650",
+        "1339": "js      loc_648",
+        "1449": "jz      short loc_609",
+        "1534": "mov     dword ptr [r14+148h], 0",
+        "1545": "mov     [r14+13Ch], eax",
+        "1569": "jnz     short loc_655",
+        "1585": "retn",
+        "1608": "call    udp_detach; PIC mode",
+        "1616": "jmp     short loc_621",
+        "1621": "call    __stack_chk_fail; PIC mode"
+    }
+}

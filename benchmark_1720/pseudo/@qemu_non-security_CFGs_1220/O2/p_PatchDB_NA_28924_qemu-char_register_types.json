@@ -1,0 +1,23 @@
+{
+    "pseudo_code": [
+        "__int64 register_types()",
+        "{",
+        "  register_char_driver((__int64)\"null\", 7, 0LL, (__int64)qemu_chr_open_null);",
+        "  register_char_driver((__int64)\"socket\", 4, (__int64)qemu_chr_parse_socket, (__int64)qmp_chardev_open_socket);",
+        "  register_char_driver((__int64)\"udp\", 5, (__int64)qemu_chr_parse_udp, (__int64)qmp_chardev_open_udp);",
+        "  register_char_driver((__int64)\"ringbuf\", 17, (__int64)qemu_chr_parse_ringbuf, 0LL);",
+        "  register_char_driver((__int64)\"file\", 0, (__int64)qemu_chr_parse_file_out, (__int64)qmp_chardev_open_file);",
+        "  register_char_driver((__int64)\"stdio\", 12, (__int64)qemu_chr_parse_stdio, 0LL);",
+        "  register_char_driver((__int64)\"serial\", 1, (__int64)qemu_chr_parse_serial, (__int64)qmp_chardev_open_serial);",
+        "  register_char_driver((__int64)\"tty\", 1, (__int64)qemu_chr_parse_serial, (__int64)qmp_chardev_open_serial);",
+        "  register_char_driver((__int64)\"parallel\", 2, (__int64)qemu_chr_parse_parallel, (__int64)qmp_chardev_open_parallel);",
+        "  register_char_driver((__int64)\"parport\", 2, (__int64)qemu_chr_parse_parallel, (__int64)qmp_chardev_open_parallel);",
+        "  register_char_driver((__int64)\"pty\", 6, 0LL, (__int64)qemu_chr_open_pty);",
+        "  register_char_driver((__int64)\"console\", 13, 0LL, 0LL);",
+        "  register_char_driver((__int64)\"pipe\", 3, (__int64)qemu_chr_parse_pipe, (__int64)qemu_chr_open_pipe);",
+        "  register_char_driver((__int64)\"mux\", 8, (__int64)qemu_chr_parse_mux, 0LL);",
+        "  register_char_driver((__int64)\"memory\", 18, (__int64)qemu_chr_parse_ringbuf, 0LL);",
+        "  return qemu_add_machine_init_done_notifier(muxes_realize_notify);",
+        "}"
+    ]
+}

@@ -1,0 +1,53 @@
+{
+    "nodes": {
+        "2336": [
+            "endbr64",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "2349": [
+            "cmp 64 0",
+            "jnz ADDR"
+        ],
+        "2355": [
+            "retn"
+        ],
+        "2360": [
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "jmp ADDR"
+        ],
+        "46872": []
+    },
+    "edges": {
+        "2336": [
+            2349,
+            2355
+        ],
+        "2349": [
+            2355,
+            2360
+        ],
+        "2355": [],
+        "2360": [
+            46872
+        ],
+        "46872": []
+    },
+    "boundary": {
+        "2336": 2349,
+        "2349": 2355,
+        "2355": 2356,
+        "2360": 2379,
+        "46872": 46872
+    },
+    "jmp_instruction": {
+        "2336": "jz      short locret_933",
+        "2349": "jnz     short loc_938",
+        "2355": "retn",
+        "2360": "jmp     bdrv_replace_node; PIC mode",
+        "46872": "extrn error_reportf_err:near"
+    }
+}

@@ -1,0 +1,136 @@
+{
+    "nodes": {
+        "4168": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "lea REG MEMACC",
+            "lea REG 144",
+            "mov REG REG"
+        ],
+        "4193": [
+            "xor REG REG",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "xor REG REG",
+            "stos MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "4230": [
+            "mov MEMACC CONSTANT",
+            "xor REG REG",
+            "mov REG REG",
+            "mov MEMACC CONSTANT",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "4259": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "4280": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "4301": [
+            "mov REG MEMACC",
+            "mov MEMACC CONSTANT",
+            "xor REG REG",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "4333": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT"
+        ],
+        "4352": [
+            "lea REG MEMACC",
+            "xor REG REG",
+            "call ADDR"
+        ],
+        "4366": [
+            "add REG CONSTANT",
+            "cmp REG REG",
+            "jnz ADDR"
+        ],
+        "4379": [
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "4168": [
+            4193
+        ],
+        "4193": [
+            4230,
+            4280
+        ],
+        "4230": [
+            4259,
+            4301
+        ],
+        "4259": [
+            4352
+        ],
+        "4280": [
+            4352
+        ],
+        "4301": [
+            4333,
+            4366
+        ],
+        "4333": [
+            4352
+        ],
+        "4352": [
+            4366
+        ],
+        "4366": [
+            4193,
+            4379
+        ],
+        "4379": []
+    },
+    "boundary": {
+        "4168": 4193,
+        "4193": 4230,
+        "4230": 4259,
+        "4259": 4280,
+        "4280": 4301,
+        "4301": 4333,
+        "4333": 4352,
+        "4352": 4366,
+        "4366": 4379,
+        "4379": 4384
+    },
+    "jmp_instruction": {
+        "4168": "mov     rbp, rbx",
+        "4193": "jz      short loc_10B8",
+        "4230": "jz      short loc_10CD",
+        "4259": "jmp     short loc_1100",
+        "4280": "jmp     short loc_1100",
+        "4301": "jz      short loc_110E",
+        "4333": "mov     edx, 15Dh",
+        "4352": "call    g_assertion_message_expr; PIC mode",
+        "4366": "jnz     loc_1061",
+        "4379": "retn"
+    }
+}

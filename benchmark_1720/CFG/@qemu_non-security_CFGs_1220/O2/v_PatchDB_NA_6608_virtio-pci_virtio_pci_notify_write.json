@@ -1,0 +1,53 @@
+{
+    "nodes": {
+        "14571": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "shr REG CONSTANT",
+            "mov MEMACC REG",
+            "cmp MEMACC 1023",
+            "ja ADDR"
+        ],
+        "14626": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "14643": [
+            "nop",
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "14571": [
+            14626,
+            14643
+        ],
+        "14626": [
+            14643
+        ],
+        "14643": []
+    },
+    "boundary": {
+        "14571": 14626,
+        "14626": 14643,
+        "14643": 14646
+    },
+    "jmp_instruction": {
+        "14571": "ja      short loc_3933",
+        "14626": "call    virtio_queue_notify; PIC mode",
+        "14643": "retn"
+    }
+}

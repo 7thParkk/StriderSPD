@@ -1,0 +1,105 @@
+{
+    "nodes": {
+        "607": [
+            "endbr64",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "push REG",
+            "mov REG REG",
+            "cmp MEMACC 0",
+            "jnz ADDR"
+        ],
+        "632": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "imul REG REG",
+            "cmp REG 9999",
+            "ja ADDR"
+        ],
+        "652": [
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "657": [
+            "mov REG CONSTANT",
+            "cqo REG REG",
+            "idiv REG REG"
+        ],
+        "667": [
+            "mov MEMACC REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "675": [
+            "cmp MEMACC 0",
+            "mov MEMACC REG",
+            "jz ADDR"
+        ],
+        "684": [
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "707": [
+            "pop REG",
+            "retn"
+        ],
+        "0": []
+    },
+    "edges": {
+        "607": [
+            632,
+            667
+        ],
+        "632": [
+            652,
+            667
+        ],
+        "652": [
+            657,
+            667
+        ],
+        "657": [
+            667
+        ],
+        "667": [
+            675,
+            707
+        ],
+        "675": [
+            684,
+            707
+        ],
+        "684": [
+            0
+        ],
+        "707": [],
+        "0": []
+    },
+    "boundary": {
+        "607": 632,
+        "632": 652,
+        "652": 657,
+        "657": 667,
+        "667": 675,
+        "675": 684,
+        "684": 707,
+        "707": 709,
+        "0": 0
+    },
+    "jmp_instruction": {
+        "607": "jnz     short loc_29B",
+        "632": "ja      short loc_29B",
+        "652": "jz      short loc_29B",
+        "657": "idiv    rcx",
+        "667": "jz      short loc_2C3",
+        "675": "jz      short loc_2C3",
+        "684": "jmp     ptimer_reload",
+        "707": "retn",
+        "0": ""
+    }
+}

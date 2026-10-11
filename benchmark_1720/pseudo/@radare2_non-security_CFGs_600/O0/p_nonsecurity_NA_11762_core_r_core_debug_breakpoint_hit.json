@@ -1,0 +1,21 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall r_core_debug_breakpoint_hit(__int64 a1, __int64 a2)",
+        "{",
+        "  __int64 result; // rax",
+        "  bool v3; // [rsp+17h] [rbp-9h]",
+        "  _BYTE *v4; // [rsp+18h] [rbp-8h]",
+        "",
+        "  v3 = *(_DWORD *)(*(_QWORD *)(a1 + 80) + 992LL) != 0;",
+        "  v4 = (_BYTE *)r_config_get(*(_QWORD *)(a1 + 8), \"cmd.bp\");",
+        "  *(_DWORD *)(*(_QWORD *)(a1 + 80) + 992LL) = 1;",
+        "  if ( v4 && *v4 )",
+        "    r_core_cmd0(a1, v4);",
+        "  if ( *(_QWORD *)(a2 + 120) && **(_BYTE **)(a2 + 120) )",
+        "    r_core_cmd0(a1, *(_QWORD *)(a2 + 120));",
+        "  result = *(_QWORD *)(a1 + 80);",
+        "  *(_DWORD *)(result + 992) = v3;",
+        "  return result;",
+        "}"
+    ]
+}

@@ -1,0 +1,8 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall omap2_gpio_module_readp(__int64 a1, __int64 a2)",
+        "{",
+        "  return (unsigned int)omap2_gpio_module_read(a1, a2 & 0xFFFFFFFFFFFFFFFCLL) >> ((8 * a2) & 0x18);",
+        "}"
+    ]
+}

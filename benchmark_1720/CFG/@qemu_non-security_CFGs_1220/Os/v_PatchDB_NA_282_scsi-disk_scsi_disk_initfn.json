@@ -1,0 +1,108 @@
+{
+    "nodes": {
+        "419": [
+            "endbr64",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "451": [
+            "mov REG REG",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "462": [
+            "xor REG REG",
+            "lea REG MEMACC",
+            "call ADDR",
+            "or REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "481": [
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "dec REG",
+            "setz REG",
+            "xor REG REG",
+            "movzx REG REG",
+            "mov MEMACC REG",
+            "mov REG REG",
+            "lea REG 1",
+            "mov MEMACC REG",
+            "shl REG CONSTANT",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "xor REG REG",
+            "mov REG REG",
+            "movsxd REG MEMACC",
+            "lea REG MEMACC",
+            "div REG REG",
+            "cmp MEMACC REG",
+            "adc REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "call ADDR",
+            "xor REG REG"
+        ],
+        "595": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jz ADDR"
+        ],
+        "611": [
+            "call ADDR"
+        ],
+        "616": [
+            "add REG CONSTANT",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "419": [
+            451,
+            462
+        ],
+        "451": [
+            462,
+            481
+        ],
+        "462": [
+            595
+        ],
+        "481": [
+            595
+        ],
+        "595": [
+            611,
+            616
+        ],
+        "611": [],
+        "616": []
+    },
+    "boundary": {
+        "419": 451,
+        "451": 462,
+        "462": 481,
+        "481": 595,
+        "595": 611,
+        "611": 616,
+        "616": 622
+    },
+    "jmp_instruction": {
+        "419": "jz      short loc_1CE",
+        "451": "jnz     short loc_1E1",
+        "462": "jmp     short loc_253",
+        "481": "xor     eax, eax",
+        "595": "jz      short loc_268",
+        "611": "call    __stack_chk_fail; PIC mode",
+        "616": "retn"
+    }
+}

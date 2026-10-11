@@ -1,0 +1,70 @@
+{
+    "nodes": {
+        "5352": [
+            "endbr64",
+            "cmp 48 0",
+            "jz ADDR"
+        ],
+        "5363": [
+            "push REG",
+            "cmp 64 0",
+            "mov REG REG",
+            "jz ADDR"
+        ],
+        "5373": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "xor REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG MEMACC",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "5430": [
+            "pop REG",
+            "retn"
+        ],
+        "5432": [
+            "retn"
+        ],
+        "42032": []
+    },
+    "edges": {
+        "5352": [
+            5363,
+            5432
+        ],
+        "5363": [
+            5373,
+            5430
+        ],
+        "5373": [
+            42032
+        ],
+        "5430": [],
+        "5432": [],
+        "42032": []
+    },
+    "boundary": {
+        "5352": 5363,
+        "5363": 5373,
+        "5373": 5430,
+        "5430": 5432,
+        "5432": 5433,
+        "42032": 42032
+    },
+    "jmp_instruction": {
+        "5352": "jz      short locret_1538",
+        "5363": "jz      short loc_1536",
+        "5373": "jmp     bdrv_unref; PIC mode",
+        "5430": "retn",
+        "5432": "retn",
+        "42032": "extrn qobject_destroy:near"
+    }
+}

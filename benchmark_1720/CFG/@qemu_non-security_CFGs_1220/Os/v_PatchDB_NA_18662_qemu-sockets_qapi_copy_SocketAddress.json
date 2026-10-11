@@ -1,0 +1,105 @@
+{
+    "nodes": {
+        "7119": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "xor REG REG",
+            "lea REG 8",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "7206": [
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "xor REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "7259": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR"
+        ],
+        "7290": [
+            "dec REG",
+            "mov MEMACC REG",
+            "jnz ADDR"
+        ],
+        "7299": [
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "7307": [
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "7119": [
+            7206,
+            7307
+        ],
+        "7206": [
+            7259,
+            7290
+        ],
+        "7259": [],
+        "7290": [
+            7299,
+            7307
+        ],
+        "7299": [
+            7307
+        ],
+        "7307": []
+    },
+    "boundary": {
+        "7119": 7206,
+        "7206": 7259,
+        "7259": 7290,
+        "7290": 7299,
+        "7299": 7307,
+        "7307": 7316
+    },
+    "jmp_instruction": {
+        "7119": "jz      short loc_1C8B",
+        "7206": "jnz     short loc_1C7A",
+        "7259": "call    __assert_fail; PIC mode",
+        "7290": "jnz     short loc_1C8B",
+        "7299": "call    qobject_destroy; PIC mode",
+        "7307": "retn"
+    }
+}

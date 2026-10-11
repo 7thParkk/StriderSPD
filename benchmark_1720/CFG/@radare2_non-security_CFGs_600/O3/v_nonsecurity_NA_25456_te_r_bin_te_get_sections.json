@@ -1,0 +1,176 @@
+{
+    "nodes": {
+        "1840": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov REG MEMACC",
+            "movzx REG MEMACC",
+            "lea REG 1",
+            "cdqe REG",
+            "lea REG MEMACC",
+            "sub REG REG",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1940": [
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1948": [
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "movzx REG REG",
+            "xor REG REG",
+            "lea REG MEMACC",
+            "mov MEMACC REG",
+            "sub REG REG",
+            "lea REG MEMACC",
+            "mov MEMACC REG",
+            "nop MEMACC"
+        ],
+        "1992": [
+            "cmp REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "cmovnb REG REG",
+            "mov REG REG",
+            "sub REG REG",
+            "cmp REG REG",
+            "mov REG REG",
+            "cmovnb REG REG",
+            "sub REG REG",
+            "mov REG REG",
+            "add REG REG",
+            "cmovb REG REG",
+            "sub REG REG",
+            "mov REG CONSTANT",
+            "add REG CONSTANT",
+            "add REG CONSTANT",
+            "add REG CONSTANT",
+            "add REG REG",
+            "call ADDR",
+            "mov MEMACC CONSTANT",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "sub REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "call ADDR",
+            "sub REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "cmp REG REG",
+            "jnz ADDR"
+        ],
+        "2152": [
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "sub REG REG",
+            "mov REG MEMACC",
+            "lea REG MEMACC"
+        ],
+        "2177": [
+            "mov MEMACC CONSTANT"
+        ],
+        "2184": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jnz ADDR"
+        ],
+        "2203": [
+            "mov REG MEMACC",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "2226": [
+            "call ADDR"
+        ],
+        "3693": []
+    },
+    "edges": {
+        "1840": [
+            1940,
+            3693
+        ],
+        "1940": [
+            1948,
+            2177
+        ],
+        "1948": [
+            1992
+        ],
+        "1992": [
+            2152,
+            1992
+        ],
+        "2152": [
+            2177
+        ],
+        "2177": [
+            2184
+        ],
+        "2184": [
+            2203,
+            2226
+        ],
+        "2203": [],
+        "2226": [],
+        "3693": []
+    },
+    "boundary": {
+        "1840": 1940,
+        "1940": 1948,
+        "1948": 1992,
+        "1992": 2152,
+        "2152": 2177,
+        "2177": 2184,
+        "2184": 2203,
+        "2203": 2226,
+        "2226": 2231,
+        "3693": 3693
+    },
+    "jmp_instruction": {
+        "1840": "jz      r_bin_te_get_sections_cold",
+        "1940": "jz      loc_881",
+        "1948": "nop     dword ptr [rax]",
+        "1992": "jnz     loc_7C8",
+        "2152": "lea     rax, [rsi+rax*8]",
+        "2177": "mov     dword ptr [rax+30h], 1",
+        "2184": "jnz     short loc_8B2",
+        "2203": "retn",
+        "2226": "call    __stack_chk_fail; PIC mode",
+        "3693": "jmp     loc_343"
+    }
+}

@@ -1,0 +1,150 @@
+{
+    "nodes": {
+        "2096": [
+            "endbr64",
+            "sub MEMACC CONSTANT",
+            "jnz ADDR"
+        ],
+        "2106": [
+            "push REG",
+            "cmp 20 10",
+            "mov REG REG",
+            "jnz ADDR"
+        ],
+        "2116": [
+            "lea REG 40",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "2129": [
+            "cmp 192 0",
+            "jnz ADDR"
+        ],
+        "2143": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "2156": [
+            "mov REG REG",
+            "call REG"
+        ],
+        "2161": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "2173": [
+            "mov REG MEMACC",
+            "mov MEMACC REG"
+        ],
+        "2187": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "2224": [
+            "retn"
+        ],
+        "2225": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR"
+        ],
+        "2256": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR"
+        ],
+        "2287": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR"
+        ],
+        "10648": []
+    },
+    "edges": {
+        "2096": [
+            2106,
+            2224
+        ],
+        "2106": [
+            2116,
+            2225
+        ],
+        "2116": [
+            2129,
+            2256
+        ],
+        "2129": [
+            2143,
+            2287
+        ],
+        "2143": [
+            2156,
+            2161
+        ],
+        "2156": [
+            2161
+        ],
+        "2161": [
+            2173,
+            2187
+        ],
+        "2173": [
+            2187
+        ],
+        "2187": [
+            10648
+        ],
+        "2224": [],
+        "2225": [],
+        "2256": [],
+        "2287": [],
+        "10648": []
+    },
+    "boundary": {
+        "2096": 2106,
+        "2106": 2116,
+        "2116": 2129,
+        "2129": 2143,
+        "2143": 2156,
+        "2156": 2161,
+        "2161": 2173,
+        "2173": 2187,
+        "2187": 2214,
+        "2224": 2225,
+        "2225": 2256,
+        "2256": 2287,
+        "2287": 2318,
+        "10648": 10648
+    },
+    "jmp_instruction": {
+        "2096": "jnz     short locret_8B0",
+        "2106": "jnz     short loc_8B1",
+        "2116": "jnz     short loc_8D0",
+        "2129": "jnz     loc_8EF",
+        "2143": "jz      short loc_871",
+        "2156": "call    rax",
+        "2161": "jz      short loc_88B",
+        "2173": "mov     [rax+0B8h], rdx",
+        "2187": "jmp     g_free; PIC mode",
+        "2224": "retn",
+        "2225": "call    __assert_fail; PIC mode",
+        "2256": "call    __assert_fail; PIC mode",
+        "2287": "call    __assert_fail; PIC mode",
+        "10648": "extrn aio_context_release:near"
+    }
+}

@@ -1,0 +1,208 @@
+{
+    "nodes": {
+        "3626": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "push REG",
+            "mov REG REG",
+            "call ADDR",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "3708": [
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "jmp ADDR"
+        ],
+        "3732": [
+            "mov REG REG",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "3740": [
+            "lea REG MEMACC"
+        ],
+        "3747": [
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "3763": [
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC"
+        ],
+        "3785": [
+            "lea REG MEMACC",
+            "xor REG REG"
+        ],
+        "3794": [
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "3804": [
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "3817": [
+            "mov REG REG",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "jmp ADDR"
+        ],
+        "3848": [
+            "mov REG MEMACC",
+            "push REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "lea REG 88",
+            "or REG CONSTANT",
+            "xor REG REG",
+            "push REG",
+            "mov REG MEMACC",
+            "call ADDR",
+            "pop REG",
+            "pop REG",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "3888": [
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "3932": [
+            "call ADDR"
+        ],
+        "3937": [
+            "or REG CONSTANT"
+        ],
+        "3940": [
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "3626": [
+            3708,
+            3732
+        ],
+        "3708": [
+            3785
+        ],
+        "3732": [
+            3740,
+            3747
+        ],
+        "3740": [
+            3747
+        ],
+        "3747": [
+            3763,
+            3804
+        ],
+        "3763": [
+            3785
+        ],
+        "3785": [
+            3794
+        ],
+        "3794": [
+            3937
+        ],
+        "3804": [
+            3817,
+            3848
+        ],
+        "3817": [
+            3794
+        ],
+        "3848": [
+            3888,
+            3937
+        ],
+        "3888": [
+            3932,
+            3940
+        ],
+        "3932": [],
+        "3937": [
+            3940
+        ],
+        "3940": []
+    },
+    "boundary": {
+        "3626": 3708,
+        "3708": 3732,
+        "3732": 3740,
+        "3740": 3747,
+        "3747": 3763,
+        "3763": 3785,
+        "3785": 3794,
+        "3794": 3804,
+        "3804": 3817,
+        "3817": 3848,
+        "3848": 3888,
+        "3888": 3932,
+        "3932": 3937,
+        "3937": 3940,
+        "3940": 3948
+    },
+    "jmp_instruction": {
+        "3626": "jnz     short loc_E94",
+        "3708": "jmp     short loc_EC9",
+        "3732": "jnz     short loc_EA3",
+        "3740": "lea     rbp, _LC76; \"qcow2\"",
+        "3747": "jnz     short loc_EDC",
+        "3763": "lea     rdx, __func___5; \"do_snapshot_blkdev\"",
+        "3785": "xor     eax, eax",
+        "3794": "jmp     loc_F61",
+        "3804": "jnz     short loc_F08",
+        "3817": "jmp     short loc_ED2",
+        "3848": "jnz     short loc_F61",
+        "3888": "jz      short loc_F64",
+        "3932": "call    abort; PIC mode",
+        "3937": "or      eax, 0FFFFFFFFh",
+        "3940": "retn"
+    }
+}

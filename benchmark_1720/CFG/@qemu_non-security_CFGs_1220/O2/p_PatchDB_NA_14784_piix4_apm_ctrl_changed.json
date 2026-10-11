@@ -1,0 +1,89 @@
+{
+    "nodes": {
+        "3296": [
+            "endbr64",
+            "push REG",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "push REG",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "push REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "xor REG REG",
+            "cmp REG 240",
+            "lea REG 2680",
+            "setz REG",
+            "xor REG REG",
+            "cmp REG 241",
+            "mov REG REG",
+            "setz REG",
+            "sub REG CONSTANT",
+            "call ADDR",
+            "cmp REG 1",
+            "jbe ADDR"
+        ],
+        "3392": [
+            "mov REG MEMACC",
+            "test 91 2",
+            "jz ADDR"
+        ],
+        "3403": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "3415": [
+            "pop REG",
+            "mov REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "3432": [
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "9600": []
+    },
+    "edges": {
+        "3296": [
+            3392,
+            3432
+        ],
+        "3392": [
+            3403,
+            3432
+        ],
+        "3403": [
+            3415,
+            3432
+        ],
+        "3415": [
+            9600
+        ],
+        "3432": [],
+        "9600": []
+    },
+    "boundary": {
+        "3296": 3392,
+        "3392": 3403,
+        "3403": 3415,
+        "3415": 3429,
+        "3432": 3437,
+        "9600": 9600
+    },
+    "jmp_instruction": {
+        "3296": "jbe     short loc_D68",
+        "3392": "jz      short loc_D68",
+        "3403": "jz      short loc_D68",
+        "3415": "jmp     qemu_set_irq; PIC mode",
+        "3432": "retn",
+        "9600": "extrn acpi_pm1_cnt_update:near"
+    }
+}

@@ -1,0 +1,99 @@
+{
+    "nodes": {
+        "721": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "shr REG CONSTANT",
+            "cmp REG 31",
+            "ja ADDR"
+        ],
+        "739": [
+            "mov REG CONSTANT",
+            "shl REG REG",
+            "test REG 154",
+            "jnz ADDR"
+        ],
+        "751": [
+            "test REG 100",
+            "jnz ADDR"
+        ],
+        "755": [
+            "mov REG MEMACC",
+            "and MEMACC CONSTANT",
+            "call ADDR"
+        ],
+        "773": [
+            "mov REG REG",
+            "pop REG",
+            "retn"
+        ],
+        "777": [
+            "mov REG MEMACC",
+            "jmp ADDR"
+        ],
+        "786": [
+            "and REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "814": [
+            "and REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "721": [
+            739,
+            814
+        ],
+        "739": [
+            751,
+            786
+        ],
+        "751": [
+            755,
+            777
+        ],
+        "755": [
+            773
+        ],
+        "773": [],
+        "777": [
+            773
+        ],
+        "786": [
+            773
+        ],
+        "814": [
+            773
+        ]
+    },
+    "boundary": {
+        "721": 739,
+        "739": 751,
+        "751": 755,
+        "755": 773,
+        "773": 777,
+        "777": 786,
+        "786": 814,
+        "814": 842
+    },
+    "jmp_instruction": {
+        "721": "ja      short loc_32E",
+        "739": "jnz     short loc_312",
+        "751": "jnz     short loc_309",
+        "755": "call    uart_update_irq",
+        "773": "retn",
+        "777": "jmp     short loc_305",
+        "786": "jmp     short loc_305",
+        "814": "jmp     short loc_305"
+    }
+}

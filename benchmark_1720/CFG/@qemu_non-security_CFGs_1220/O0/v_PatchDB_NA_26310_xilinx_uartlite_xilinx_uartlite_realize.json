@@ -1,0 +1,64 @@
+{
+    "nodes": {
+        "1116": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1210": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "1260": [
+            "nop",
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "1116": [
+            1210,
+            1260
+        ],
+        "1210": [
+            1260
+        ],
+        "1260": []
+    },
+    "boundary": {
+        "1116": 1210,
+        "1210": 1260,
+        "1260": 1263
+    },
+    "jmp_instruction": {
+        "1116": "jz      short loc_4EC",
+        "1210": "call    qemu_chr_add_handlers; PIC mode",
+        "1260": "retn"
+    }
+}

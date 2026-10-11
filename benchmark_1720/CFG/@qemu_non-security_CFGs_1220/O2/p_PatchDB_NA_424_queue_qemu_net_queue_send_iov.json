@@ -1,0 +1,113 @@
+{
+    "nodes": {
+        "1024": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "movzx REG MEMACC",
+            "mov MEMACC REG",
+            "test REG 1",
+            "jnz ADDR"
+        ],
+        "1070": [
+            "or REG CONSTANT",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call MEMACC",
+            "and MEMACC CONSTANT",
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1107": [
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "1115": [
+            "add REG CONSTANT",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "1136": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "1168": [
+            "add REG CONSTANT",
+            "xor REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "0": []
+    },
+    "edges": {
+        "1024": [
+            1070,
+            1168
+        ],
+        "1070": [
+            1107,
+            1136
+        ],
+        "1107": [
+            1115
+        ],
+        "1115": [],
+        "1136": [
+            1115
+        ],
+        "1168": [
+            0
+        ],
+        "0": []
+    },
+    "boundary": {
+        "1024": 1070,
+        "1070": 1107,
+        "1107": 1115,
+        "1115": 1133,
+        "1136": 1163,
+        "1168": 1190,
+        "0": 0
+    },
+    "jmp_instruction": {
+        "1024": "jnz     short loc_490",
+        "1070": "jz      short loc_470",
+        "1107": "call    qemu_net_queue_flush; PIC mode",
+        "1115": "retn",
+        "1136": "jmp     short loc_45B",
+        "1168": "jmp     qemu_net_queue_append_iov",
+        "0": ""
+    }
+}

@@ -1,0 +1,96 @@
+{
+    "nodes": {
+        "336": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "352": [
+            "mov REG MEMACC",
+            "call ADDR"
+        ],
+        "361": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "382": [
+            "mov REG REG",
+            "call ADDR",
+            "cmp REG 4",
+            "jbe ADDR"
+        ],
+        "396": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "417": [
+            "pop REG",
+            "xor REG REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "432": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "xor REG REG",
+            "mov MEMACC CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "336": [
+            352,
+            361
+        ],
+        "352": [
+            361
+        ],
+        "361": [
+            382,
+            417
+        ],
+        "382": [
+            396,
+            417
+        ],
+        "396": [
+            417,
+            432
+        ],
+        "417": [],
+        "432": []
+    },
+    "boundary": {
+        "336": 352,
+        "352": 361,
+        "361": 382,
+        "382": 396,
+        "396": 417,
+        "417": 424,
+        "432": 460
+    },
+    "jmp_instruction": {
+        "336": "jz      short loc_169",
+        "352": "call    r_buf_buffer; PIC mode",
+        "361": "jz      short loc_1A1",
+        "382": "jbe     short loc_1A1",
+        "396": "jz      short loc_1B0",
+        "417": "retn",
+        "432": "retn"
+    }
+}

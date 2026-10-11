@@ -1,0 +1,29 @@
+{
+    "nodes": {
+        "80": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "8424": []
+    },
+    "edges": {
+        "80": [
+            8424
+        ],
+        "8424": []
+    },
+    "boundary": {
+        "80": 104,
+        "8424": 8424
+    },
+    "jmp_instruction": {
+        "80": "jmp     g_free; PIC mode",
+        "8424": "extrn job_completed:near"
+    }
+}

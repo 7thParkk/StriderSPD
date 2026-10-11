@@ -1,0 +1,91 @@
+{
+    "nodes": {
+        "5616": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "lea REG 8",
+            "xor REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "cmp REG 6",
+            "ja ADDR"
+        ],
+        "5698": [
+            "cmp REG 4",
+            "jnz ADDR"
+        ],
+        "5703": [
+            "call ADDR",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "5767": [
+            "call ADDR"
+        ],
+        "5772": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR"
+        ]
+    },
+    "edges": {
+        "5616": [
+            5698,
+            5767
+        ],
+        "5698": [
+            5703,
+            5772
+        ],
+        "5703": [],
+        "5767": [],
+        "5772": []
+    },
+    "boundary": {
+        "5616": 5698,
+        "5698": 5703,
+        "5703": 5767,
+        "5767": 5772,
+        "5772": 5803
+    },
+    "jmp_instruction": {
+        "5616": "ja      short loc_1687",
+        "5698": "jnz     short loc_168C",
+        "5703": "retn",
+        "5767": "call    qobject_type_part_0",
+        "5772": "call    __assert_fail; PIC mode"
+    }
+}

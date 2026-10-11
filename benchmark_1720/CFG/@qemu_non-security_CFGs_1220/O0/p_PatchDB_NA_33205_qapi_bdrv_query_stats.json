@@ -1,0 +1,199 @@
+{
+    "nodes": {
+        "5156": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "movzx REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5210": [
+            "mov REG MEMACC",
+            "mov MEMACC CONSTANT",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG"
+        ],
+        "5256": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "movzx REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5275": [
+            "mov REG MEMACC",
+            "mov MEMACC CONSTANT",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG"
+        ],
+        "5322": [
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5356": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "5379": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5418": [
+            "mov REG MEMACC",
+            "mov MEMACC CONSTANT",
+            "movzx REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov MEMACC REG"
+        ],
+        "5462": [
+            "cmp MEMACC 0",
+            "jz ADDR"
+        ],
+        "5468": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5484": [
+            "mov REG MEMACC",
+            "mov MEMACC CONSTANT",
+            "movzx REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov MEMACC REG"
+        ],
+        "5528": [
+            "mov REG MEMACC",
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "5156": [
+            5210,
+            5256
+        ],
+        "5210": [
+            5256
+        ],
+        "5256": [
+            5275,
+            5322
+        ],
+        "5275": [
+            5322
+        ],
+        "5322": [
+            5356,
+            5379
+        ],
+        "5356": [
+            5379
+        ],
+        "5379": [
+            5418,
+            5462
+        ],
+        "5418": [
+            5462
+        ],
+        "5462": [
+            5468,
+            5528
+        ],
+        "5468": [
+            5484,
+            5528
+        ],
+        "5484": [
+            5528
+        ],
+        "5528": []
+    },
+    "boundary": {
+        "5156": 5210,
+        "5210": 5256,
+        "5256": 5275,
+        "5275": 5322,
+        "5322": 5356,
+        "5356": 5379,
+        "5379": 5418,
+        "5418": 5462,
+        "5462": 5468,
+        "5468": 5484,
+        "5484": 5528,
+        "5528": 5534
+    },
+    "jmp_instruction": {
+        "5156": "jz      short loc_1488",
+        "5210": "mov     [rax+8], rdx",
+        "5256": "jz      short loc_14CA",
+        "5275": "mov     [rax+18h], rdx",
+        "5322": "jz      short loc_1503",
+        "5356": "call    bdrv_query_blk_stats",
+        "5379": "jz      short loc_1556",
+        "5418": "mov     [rdx+30h], rax",
+        "5462": "jz      short loc_1598",
+        "5468": "jz      short loc_1598",
+        "5484": "mov     [rdx+40h], rax",
+        "5528": "retn"
+    }
+}

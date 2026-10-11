@@ -1,0 +1,19 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall esil_if(__int64 a1)",
+        "{",
+        "  _BOOL8 v2; // [rsp+18h] [rbp-18h] BYREF",
+        "  __int64 v3; // [rsp+20h] [rbp-10h]",
+        "  unsigned __int64 v4; // [rsp+28h] [rbp-8h]",
+        "",
+        "  v4 = __readfsqword(0x28u);",
+        "  v3 = r_anal_esil_pop(a1);",
+        "  if ( !v3 )",
+        "    return 0LL;",
+        "  esil_get_parm(a1, v3, &v2);",
+        "  if ( v2 )",
+        "    *(_DWORD *)(a1 + 276) = 1;",
+        "  return 1LL;",
+        "}"
+    ]
+}

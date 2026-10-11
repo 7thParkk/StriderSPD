@@ -1,0 +1,262 @@
+{
+    "nodes": {
+        "3040": [
+            "endbr64",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "and REG CONSTANT",
+            "and REG CONSTANT",
+            "mov REG REG",
+            "cmp REG 100",
+            "ja ADDR"
+        ],
+        "3069": [
+            "lea REG MEMACC",
+            "movsxd REG MEMACC",
+            "add REG REG",
+            "jmp REG"
+        ],
+        "3088": [
+            "lea REG MEMACC",
+            "cmp REG 36",
+            "ja ADDR"
+        ],
+        "3098": [
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "shl REG REG",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "3125": [
+            "test REG 17",
+            "jnz ADDR"
+        ],
+        "3133": [
+            "test REG 1114112",
+            "jnz ADDR"
+        ],
+        "3140": [
+            "sub REG CONSTANT",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "xor REG REG",
+            "call ADDR",
+            "xor REG REG",
+            "add REG CONSTANT",
+            "retn"
+        ],
+        "3192": [
+            "mov REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "3201": [
+            "movzx REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "3211": [
+            "mov REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "3220": [
+            "movzx REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "3232": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "shr REG REG",
+            "retn"
+        ],
+        "3243": [
+            "mov REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "3252": [
+            "mov REG CONSTANT",
+            "shr REG REG",
+            "retn"
+        ],
+        "3260": [
+            "mov REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "3269": [
+            "mov REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "3280": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "shr REG REG",
+            "retn"
+        ],
+        "3291": [
+            "mov REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "3304": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "shr REG REG",
+            "retn"
+        ],
+        "3315": [
+            "mov REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "3324": [
+            "mov REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "3333": [
+            "mov REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "3342": [
+            "mov REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "3351": [
+            "movzx REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "3361": [
+            "movzx REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "3040": [
+            3069,
+            3088
+        ],
+        "3069": [
+            3140,
+            3192,
+            3201,
+            3211,
+            3220,
+            3232,
+            3243,
+            3252,
+            3260,
+            3269,
+            3280,
+            3291,
+            3304,
+            3315,
+            3324,
+            3333,
+            3342,
+            3351,
+            3361
+        ],
+        "3088": [
+            3098,
+            3140
+        ],
+        "3098": [
+            3125,
+            3304
+        ],
+        "3125": [
+            3133,
+            3280
+        ],
+        "3133": [
+            3140,
+            3232
+        ],
+        "3140": [],
+        "3192": [],
+        "3201": [],
+        "3211": [],
+        "3220": [],
+        "3232": [],
+        "3243": [],
+        "3252": [],
+        "3260": [],
+        "3269": [],
+        "3280": [],
+        "3291": [],
+        "3304": [],
+        "3315": [],
+        "3324": [],
+        "3333": [],
+        "3342": [],
+        "3351": [],
+        "3361": []
+    },
+    "boundary": {
+        "3040": 3069,
+        "3069": 3086,
+        "3088": 3098,
+        "3098": 3125,
+        "3125": 3133,
+        "3133": 3140,
+        "3140": 3187,
+        "3192": 3201,
+        "3201": 3211,
+        "3211": 3220,
+        "3220": 3230,
+        "3232": 3243,
+        "3243": 3252,
+        "3252": 3260,
+        "3260": 3269,
+        "3269": 3278,
+        "3280": 3291,
+        "3291": 3300,
+        "3304": 3315,
+        "3315": 3324,
+        "3324": 3333,
+        "3333": 3342,
+        "3342": 3351,
+        "3351": 3361,
+        "3361": 3371
+    },
+    "jmp_instruction": {
+        "3040": "ja      short def_C0B; jumptable 0000000000000C0B default case",
+        "3069": "jmp     rax; switch jump",
+        "3088": "ja      short loc_C44; jumptable 0000000000000C0B cases 1-15,17-19,21-23,25-27,29-31,33-39,41-43,45-47,49-51,53-55,57-59,61-63,65-67,69-71,73-75,77-79,81-83,85-95,97-99",
+        "3098": "jnz     loc_CE8; jumptable 0000000000000C0B case 60",
+        "3125": "jnz     loc_CD0; jumptable 0000000000000C0B case 44",
+        "3133": "jnz     short loc_CA0; jumptable 0000000000000C0B case 32",
+        "3140": "retn",
+        "3192": "retn",
+        "3201": "retn",
+        "3211": "retn",
+        "3220": "retn",
+        "3232": "retn",
+        "3243": "retn",
+        "3252": "retn",
+        "3260": "retn",
+        "3269": "retn",
+        "3280": "retn",
+        "3291": "retn",
+        "3304": "retn",
+        "3315": "retn",
+        "3324": "retn",
+        "3333": "retn",
+        "3342": "retn",
+        "3351": "retn",
+        "3361": "retn"
+    }
+}

@@ -1,0 +1,27 @@
+{
+    "nodes": {
+        "2443": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "nop",
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "2443": []
+    },
+    "boundary": {
+        "2443": 2481
+    },
+    "jmp_instruction": {
+        "2443": "retn"
+    }
+}

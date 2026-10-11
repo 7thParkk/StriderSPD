@@ -29,7 +29,7 @@ def process_graph(a_ass, node_tokenizer):
     # Step2-2. 获取edges
     for src in a_ass["edges"]:
         for dst in a_ass["edges"][src]: # 有些node是叶子节点没有出度，则也不考虑edge type，所以将获取et的循环写在这个循环下面
-            src, dst = str(src), str(dst) # 边信息其实就是一些节点地址？那么要不要考虑把这个节点地址也嵌入到节点信息中，使得边信息和节点信息能勾连起来。如："6088": ["cmp 20 3","jg ADDR"]，原来只是读取"cmp 20 3","jg ADDR"，现在把"6088"即地址也加在前面
+            src, dst = str(src), str(dst) # lqy: 边信息其实就是一些节点地址？那么要不要考虑把这个节点地址也嵌入到节点信息中，使得边信息和节点信息能勾连起来。如："6088": ["cmp 20 3","jg ADDR"]，原来只是读取"cmp 20 3","jg ADDR"，现在把"6088"即地址也加在前面
             
             if (src not in block_index) or (dst not in block_index): continue
             a_edges_list.append([block_index[src], block_index[dst]])

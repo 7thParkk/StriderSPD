@@ -1,0 +1,8 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall fake_irqfd(__int64 a1)",
+        "{",
+        "  return msix_notify(*(_QWORD *)a1, *(unsigned int *)(a1 + 8));",
+        "}"
+    ]
+}

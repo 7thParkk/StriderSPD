@@ -1,0 +1,115 @@
+{
+    "nodes": {
+        "4697": [
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "and REG MEMACC",
+            "add REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "4747": [
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR"
+        ],
+        "4760": [
+            "mov REG MEMACC",
+            "lea REG 88",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "call ADDR",
+            "test REG REG",
+            "js ADDR"
+        ],
+        "4787": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "4797": [
+            "mov REG MEMACC",
+            "cmp 12368 0",
+            "jnz ADDR"
+        ],
+        "4811": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "xor REG REG",
+            "test REG REG",
+            "cmovg REG REG",
+            "jmp ADDR"
+        ],
+        "4835": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "call ADDR",
+            "test REG REG",
+            "jns ADDR"
+        ],
+        "4854": [
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "4697": [
+            4747,
+            4760
+        ],
+        "4747": [
+            4760
+        ],
+        "4760": [
+            4787,
+            4854
+        ],
+        "4787": [
+            4797,
+            4854
+        ],
+        "4797": [
+            4811,
+            4835
+        ],
+        "4811": [
+            4854
+        ],
+        "4835": [
+            4811,
+            4854
+        ],
+        "4854": []
+    },
+    "boundary": {
+        "4697": 4747,
+        "4747": 4760,
+        "4760": 4787,
+        "4787": 4797,
+        "4797": 4811,
+        "4811": 4835,
+        "4835": 4854,
+        "4854": 4859
+    },
+    "jmp_instruction": {
+        "4697": "jz      short loc_1298",
+        "4747": "call    bdrv_debug_event; PIC mode",
+        "4760": "js      short loc_12F6",
+        "4787": "jz      short loc_12F6",
+        "4797": "jnz     short loc_12E3",
+        "4811": "jmp     short loc_12F6",
+        "4835": "jns     short loc_12CB",
+        "4854": "retn"
+    }
+}

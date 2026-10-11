@@ -1,0 +1,159 @@
+{
+    "nodes": {
+        "3387": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC CONSTANT",
+            "jmp ADDR"
+        ],
+        "3525": [
+            "mov REG MEMACC",
+            "cdqe REG",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "add MEMACC CONSTANT"
+        ],
+        "3570": [
+            "cmp MEMACC 7",
+            "jle ADDR"
+        ],
+        "3576": [
+            "mov REG CONSTANT",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "add REG CONSTANT",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC CONSTANT",
+            "jmp ADDR"
+        ],
+        "3700": [
+            "mov REG MEMACC",
+            "cdqe REG",
+            "add REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "add MEMACC CONSTANT"
+        ],
+        "3749": [
+            "cmp MEMACC 7",
+            "jle ADDR"
+        ],
+        "3755": [
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "3387": [
+            3570
+        ],
+        "3525": [
+            3570
+        ],
+        "3570": [
+            3525,
+            3576
+        ],
+        "3576": [
+            3749
+        ],
+        "3700": [
+            3749
+        ],
+        "3749": [
+            3700,
+            3755
+        ],
+        "3755": []
+    },
+    "boundary": {
+        "3387": 3525,
+        "3525": 3570,
+        "3570": 3576,
+        "3576": 3700,
+        "3700": 3749,
+        "3749": 3755,
+        "3755": 3810
+    },
+    "jmp_instruction": {
+        "3387": "jmp     short loc_DF2",
+        "3525": "add     [rbp+var_2C], 1",
+        "3570": "jle     short loc_DC5",
+        "3576": "jmp     short loc_EA5",
+        "3700": "add     [rbp+var_2C], 1",
+        "3749": "jle     short loc_E74",
+        "3755": "retn"
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "nodes": {
+        "93": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "131": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "177": [
+            "mov REG REG",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "187": [
+            "mov REG REG",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "93": [
+            131,
+            187
+        ],
+        "131": [
+            177
+        ],
+        "177": [],
+        "187": [
+            177
+        ]
+    },
+    "boundary": {
+        "93": 131,
+        "131": 177,
+        "177": 187,
+        "187": 192
+    },
+    "jmp_instruction": {
+        "93": "jz      short loc_BB",
+        "131": "call    qdev_init; PIC mode",
+        "177": "retn",
+        "187": "jmp     short loc_B1"
+    }
+}

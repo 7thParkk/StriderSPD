@@ -1,0 +1,16 @@
+{
+    "pseudo_code": [
+        "_QWORD *__fastcall entity_init(_QWORD *a1, __int64 a2, __int64 a3)",
+        "{",
+        "  _QWORD *result; // rax",
+        "",
+        "  *a1 = xstrdup(a2);",
+        "  a1[1] = xstrdup(a3);",
+        "  a1[2] = xhash_init(entity_data_identify, entity_data_destroy);",
+        "  a1[3] = list_create(entity_node_destroy);",
+        "  result = a1;",
+        "  a1[4] = 0LL;",
+        "  return result;",
+        "}"
+    ]
+}

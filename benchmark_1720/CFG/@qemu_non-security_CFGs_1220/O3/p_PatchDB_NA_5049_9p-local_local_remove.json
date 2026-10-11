@@ -1,0 +1,134 @@
+{
+    "nodes": {
+        "8560": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "mov REG REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "cmp REG 18446744073709551615",
+            "jz ADDR"
+        ],
+        "8648": [
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "test REG REG",
+            "js ADDR"
+        ],
+        "8678": [
+            "mov REG MEMACC",
+            "xor REG REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "and REG CONSTANT",
+            "cmp REG 16384",
+            "setz REG",
+            "shl REG CONSTANT",
+            "call ADDR",
+            "mov REG REG"
+        ],
+        "8717": [
+            "call ADDR",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG"
+        ],
+        "8739": [
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jnz ADDR"
+        ],
+        "8774": [
+            "add REG CONSTANT",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "8800": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "8808": [
+            "call ADDR"
+        ]
+    },
+    "edges": {
+        "8560": [
+            8648,
+            8800
+        ],
+        "8648": [
+            8678,
+            8717
+        ],
+        "8678": [
+            8717
+        ],
+        "8717": [
+            8739
+        ],
+        "8739": [
+            8774,
+            8808
+        ],
+        "8774": [],
+        "8800": [
+            8739
+        ],
+        "8808": []
+    },
+    "boundary": {
+        "8560": 8648,
+        "8648": 8678,
+        "8678": 8717,
+        "8717": 8739,
+        "8739": 8774,
+        "8774": 8795,
+        "8800": 8808,
+        "8808": 8813
+    },
+    "jmp_instruction": {
+        "8560": "jz      loc_2260",
+        "8648": "js      short loc_220D",
+        "8678": "mov     r14d, eax",
+        "8717": "mov     [r13+0], r15d",
+        "8739": "jnz     short loc_2268",
+        "8774": "retn",
+        "8800": "jmp     short loc_2223",
+        "8808": "call    __stack_chk_fail; PIC mode"
+    }
+}

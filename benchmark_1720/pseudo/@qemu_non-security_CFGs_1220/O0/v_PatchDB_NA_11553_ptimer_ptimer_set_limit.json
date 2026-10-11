@@ -1,0 +1,26 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall ptimer_set_limit(_QWORD *a1, __int64 a2, int a3)",
+        "{",
+        "  __int64 result; // rax",
+        "  __int64 v4; // [rsp+10h] [rbp-10h]",
+        "",
+        "  v4 = a2;",
+        "  if ( (unsigned __int64)(a2 * a1[4]) <= 0x270F && a1[4] )",
+        "    v4 = 10000LL / a1[4];",
+        "  a1[1] = v4;",
+        "  if ( a3 )",
+        "    a1[2] = v4;",
+        "  result = *(unsigned __int8 *)a1;",
+        "  if ( (_BYTE)result )",
+        "  {",
+        "    if ( a3 )",
+        "    {",
+        "      a1[6] = qemu_clock_get_ns(1LL);",
+        "      return ptimer_reload((__int64)a1);",
+        "    }",
+        "  }",
+        "  return result;",
+        "}"
+    ]
+}

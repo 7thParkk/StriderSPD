@@ -1,0 +1,26 @@
+{
+    "nodes": {
+        "1808": [
+            "endbr64",
+            "movsxd REG REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "jmp ADDR"
+        ],
+        "4632": []
+    },
+    "edges": {
+        "1808": [
+            4632
+        ],
+        "4632": []
+    },
+    "boundary": {
+        "1808": 1830,
+        "4632": 4632
+    },
+    "jmp_instruction": {
+        "1808": "jmp     qemu_set_irq; PIC mode",
+        "4632": "extrn pci_bus_set_route_irq_fn:near"
+    }
+}

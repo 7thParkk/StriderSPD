@@ -1,0 +1,17 @@
+{
+    "pseudo_code": [
+        "int reopen_help()",
+        "{",
+        "  return puts(",
+        "           \"\\n\"",
+        "           \" Changes the open options of an already opened image\\n\"",
+        "           \"\\n\"",
+        "           \" Example:\\n\"",
+        "           \" 'reopen -o lazy-refcounts=on' - activates lazy refcount writeback on a qcow2 image\\n\"",
+        "           \"\\n\"",
+        "           \" -r, -- Reopen the image read-only\\n\"",
+        "           \" -c, -- Change the cache mode to the given value\\n\"",
+        "           \" -o, -- Changes block driver options (cf. 'open' command)\\n\");",
+        "}"
+    ]
+}

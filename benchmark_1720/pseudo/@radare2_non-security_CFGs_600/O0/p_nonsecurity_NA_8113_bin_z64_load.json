@@ -1,0 +1,28 @@
+{
+    "pseudo_code": [
+        "bool __fastcall load(__int64 a1)",
+        "{",
+        "  __int64 v1; // rax",
+        "  unsigned __int64 v2; // rax",
+        "  __int64 v4; // rbx",
+        "  void *v5; // [rsp+18h] [rbp-28h]",
+        "  unsigned __int64 v6; // [rsp+28h] [rbp-18h]",
+        "",
+        "  if ( a1 )",
+        "    v1 = r_buf_buffer(*(_QWORD *)(a1 + 24));",
+        "  else",
+        "    v1 = 0LL;",
+        "  v5 = (void *)v1;",
+        "  if ( a1 )",
+        "    v2 = r_buf_size(*(_QWORD *)(a1 + 24));",
+        "  else",
+        "    v2 = 0LL;",
+        "  v6 = v2;",
+        "  if ( !a1 || !*(_QWORD *)(a1 + 40) )",
+        "    return 0;",
+        "  v4 = *(_QWORD *)(a1 + 40);",
+        "  *(_QWORD *)(v4 + 208) = load_bytes(a1, v5, v2);",
+        "  return check_bytes((unsigned int *)v5, v6);",
+        "}"
+    ]
+}

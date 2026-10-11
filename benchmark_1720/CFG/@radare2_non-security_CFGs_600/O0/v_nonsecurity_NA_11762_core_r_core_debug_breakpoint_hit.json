@@ -1,0 +1,82 @@
+{
+    "nodes": {
+        "1979": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC CONSTANT",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "cmp MEMACC 0",
+            "jz ADDR"
+        ],
+        "2071": [
+            "mov REG MEMACC",
+            "movzx REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "2082": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "2101": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "nop",
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "1979": [
+            2071,
+            2101
+        ],
+        "2071": [
+            2082,
+            2101
+        ],
+        "2082": [
+            2101
+        ],
+        "2101": []
+    },
+    "boundary": {
+        "1979": 2071,
+        "2071": 2082,
+        "2082": 2101,
+        "2101": 2144
+    },
+    "jmp_instruction": {
+        "1979": "jz      short loc_835",
+        "2071": "jz      short loc_835",
+        "2082": "call    r_core_cmd0; PIC mode",
+        "2101": "retn"
+    }
+}

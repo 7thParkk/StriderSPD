@@ -1,0 +1,14 @@
+{
+    "pseudo_code": [
+        "__int64 pvpanic_port()",
+        "{",
+        "  __int64 v1; // [rsp+8h] [rbp-8h]",
+        "",
+        "  v1 = object_resolve_path_type(&unk_3F3, \"pvpanic\", 0LL);",
+        "  if ( v1 )",
+        "    return object_property_get_uint(v1, \"ioport\", 0LL);",
+        "  else",
+        "    return 0LL;",
+        "}"
+    ]
+}

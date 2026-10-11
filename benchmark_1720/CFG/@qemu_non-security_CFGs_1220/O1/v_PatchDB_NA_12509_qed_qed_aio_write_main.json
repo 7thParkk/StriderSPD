@@ -1,0 +1,165 @@
+{
+    "nodes": {
+        "5235": [
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "and REG MEMACC",
+            "add REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "5271": [
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5290": [
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR"
+        ],
+        "5303": [
+            "lea REG 88",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "mov REG CONSTANT",
+            "cmovle REG REG",
+            "mov REG REG",
+            "cmp 140 0",
+            "jz ADDR"
+        ],
+        "5347": [
+            "mov REG MEMACC",
+            "cmp 12368 0",
+            "jz ADDR"
+        ],
+        "5361": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG REG"
+        ],
+        "5378": [
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5382": [
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "5390": [
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "5395": [
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "5402": [
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "5412": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "5433": [
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "5235": [
+            5271,
+            5395
+        ],
+        "5271": [
+            5290,
+            5303
+        ],
+        "5290": [
+            5303
+        ],
+        "5303": [
+            5347,
+            5402
+        ],
+        "5347": [
+            5361,
+            5378
+        ],
+        "5361": [
+            5378
+        ],
+        "5378": [
+            5382,
+            5412
+        ],
+        "5382": [
+            5390
+        ],
+        "5390": [],
+        "5395": [
+            5390
+        ],
+        "5402": [
+            5390
+        ],
+        "5412": [
+            5382,
+            5433
+        ],
+        "5433": [
+            5390
+        ]
+    },
+    "boundary": {
+        "5235": 5271,
+        "5271": 5290,
+        "5290": 5303,
+        "5303": 5347,
+        "5347": 5361,
+        "5361": 5378,
+        "5378": 5382,
+        "5382": 5390,
+        "5390": 5395,
+        "5395": 5402,
+        "5402": 5412,
+        "5412": 5433,
+        "5433": 5443
+    },
+    "jmp_instruction": {
+        "5235": "jnz     short loc_1513",
+        "5271": "jz      short loc_14B7",
+        "5290": "call    bdrv_debug_event; PIC mode",
+        "5303": "jz      short loc_151A",
+        "5347": "jz      short loc_1502",
+        "5361": "mov     esi, eax",
+        "5378": "jz      short loc_1524",
+        "5382": "call    qed_aio_complete",
+        "5390": "retn",
+        "5395": "jmp     short loc_150E",
+        "5402": "jmp     short loc_150E",
+        "5412": "jnz     short loc_1506",
+        "5433": "jmp     short loc_150E"
+    }
+}

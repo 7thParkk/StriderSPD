@@ -1,0 +1,90 @@
+{
+    "nodes": {
+        "641": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "xor REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "662": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG REG"
+        ],
+        "674": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "695": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "742": [
+            "pop REG",
+            "xor REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "547": []
+    },
+    "edges": {
+        "641": [
+            662,
+            674
+        ],
+        "662": [
+            674
+        ],
+        "674": [
+            695,
+            742
+        ],
+        "695": [
+            547
+        ],
+        "742": [],
+        "547": []
+    },
+    "boundary": {
+        "641": 662,
+        "662": 674,
+        "674": 695,
+        "695": 742,
+        "742": 752,
+        "547": 547
+    },
+    "jmp_instruction": {
+        "641": "jz      short loc_2A2",
+        "662": "mov     rbp, rax",
+        "674": "jz      short loc_2E6",
+        "695": "jmp     check_bytes",
+        "742": "retn",
+        "547": "retn"
+    }
+}

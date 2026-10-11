@@ -1,0 +1,81 @@
+{
+    "nodes": {
+        "5043": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "5065": [
+            "cmp 192 0",
+            "jz ADDR"
+        ],
+        "5074": [
+            "cmp 242 0",
+            "jz ADDR"
+        ],
+        "5083": [
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "5091": [
+            "pop REG",
+            "retn"
+        ],
+        "5093": [
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "5103": [
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "5043": [
+            5065,
+            5093
+        ],
+        "5065": [
+            5074,
+            5083
+        ],
+        "5074": [
+            5083,
+            5103
+        ],
+        "5083": [
+            5091
+        ],
+        "5091": [],
+        "5093": [
+            5091
+        ],
+        "5103": [
+            5091
+        ]
+    },
+    "boundary": {
+        "5043": 5065,
+        "5065": 5074,
+        "5074": 5083,
+        "5083": 5091,
+        "5091": 5093,
+        "5093": 5103,
+        "5103": 5113
+    },
+    "jmp_instruction": {
+        "5043": "jnz     short loc_13E5",
+        "5065": "jz      short loc_13DB",
+        "5074": "jz      short loc_13EF",
+        "5083": "call    tcp_chr_connect",
+        "5091": "retn",
+        "5093": "jmp     short loc_13E3",
+        "5103": "jmp     short loc_13E3"
+    }
+}

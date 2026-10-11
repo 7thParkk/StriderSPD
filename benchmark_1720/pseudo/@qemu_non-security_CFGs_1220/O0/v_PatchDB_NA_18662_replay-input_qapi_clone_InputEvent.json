@@ -1,0 +1,30 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall qapi_clone_InputEvent(__int64 a1)",
+        "{",
+        "  __int64 v2; // [rsp+8h] [rbp-38h] BYREF",
+        "  __int64 v3; // [rsp+10h] [rbp-30h] BYREF",
+        "  __int64 v4; // [rsp+18h] [rbp-28h]",
+        "  __int64 visitor; // [rsp+20h] [rbp-20h]",
+        "  __int64 qobject; // [rsp+28h] [rbp-18h]",
+        "  __int64 v7; // [rsp+30h] [rbp-10h]",
+        "  unsigned __int64 v8; // [rsp+38h] [rbp-8h]",
+        "",
+        "  v2 = a1;",
+        "  v8 = __readfsqword(0x28u);",
+        "  v3 = 0LL;",
+        "  v4 = qmp_output_visitor_new();",
+        "  visitor = qmp_output_get_visitor(v4);",
+        "  visit_type_InputEvent(visitor, 0LL, &v2, &error_abort);",
+        "  qobject = qmp_output_get_qobject(v4);",
+        "  qmp_output_visitor_cleanup(v4);",
+        "  if ( !qobject )",
+        "    return 0LL;",
+        "  v7 = qmp_input_visitor_new(qobject, 1LL);",
+        "  visit_type_InputEvent(v7, 0LL, &v3, &error_abort);",
+        "  visit_free(v7);",
+        "  qobject_decref(qobject);",
+        "  return v3;",
+        "}"
+    ]
+}

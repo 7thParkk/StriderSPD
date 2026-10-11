@@ -1,0 +1,25 @@
+{
+    "nodes": {
+        "321": [
+            "endbr64",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "jmp ADDR"
+        ],
+        "2664": []
+    },
+    "edges": {
+        "321": [
+            2664
+        ],
+        "2664": []
+    },
+    "boundary": {
+        "321": 336,
+        "2664": 2664
+    },
+    "jmp_instruction": {
+        "321": "jmp     close; PIC mode",
+        "2664": "extrn qemu_fdatasync:near"
+    }
+}

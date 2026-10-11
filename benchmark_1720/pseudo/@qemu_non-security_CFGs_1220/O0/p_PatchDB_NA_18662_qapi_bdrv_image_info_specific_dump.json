@@ -1,0 +1,31 @@
+{
+    "pseudo_code": [
+        "void __cdecl bdrv_image_info_specific_dump(fprintf_function func_fprintf, void *f, ImageInfoSpecific *info_spec)",
+        "{",
+        "  __int64 visitor; // rax",
+        "  __int64 v4; // rax",
+        "  __int64 v5; // rax",
+        "  ImageInfoSpecific *info_speca; // [rsp+8h] [rbp-38h] BYREF",
+        "  void *fa; // [rsp+10h] [rbp-30h]",
+        "  fprintf_function func_fprintfa; // [rsp+18h] [rbp-28h]",
+        "  QmpOutputVisitor *ov; // [rsp+28h] [rbp-18h]",
+        "  QObject *obj; // [rsp+30h] [rbp-10h]",
+        "  QObject *data; // [rsp+38h] [rbp-8h]",
+        "",
+        "  func_fprintfa = func_fprintf;",
+        "  fa = f;",
+        "  info_speca = info_spec;",
+        "  ov = (QmpOutputVisitor *)qmp_output_visitor_new();",
+        "  visitor = qmp_output_get_visitor(ov);",
+        "  visit_type_ImageInfoSpecific(visitor, 0LL, &info_speca, &error_abort);",
+        "  obj = (QObject *)qmp_output_get_qobject(ov);",
+        "  if ( qobject_type(obj) != QType::QTYPE_QDICT )",
+        "    _assert_fail(\"qobject_type(obj) == QTYPE_QDICT\", \"block/qapi.c\", 0x2BBu, \"bdrv_image_info_specific_dump\");",
+        "  v4 = qobject_to_qdict(obj);",
+        "  data = (QObject *)qdict_get(v4, \"data\");",
+        "  dump_qobject(func_fprintfa, fa, 1, data);",
+        "  v5 = qmp_output_get_visitor(ov);",
+        "  visit_free(v5);",
+        "}"
+    ]
+}

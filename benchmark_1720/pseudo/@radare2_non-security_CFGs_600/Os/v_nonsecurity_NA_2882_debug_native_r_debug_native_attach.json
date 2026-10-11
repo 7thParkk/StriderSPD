@@ -1,0 +1,17 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall r_debug_native_attach(__int64 a1, __int64 a2)",
+        "{",
+        "  char s[128]; // [rsp+8h] [rbp-A0h] BYREF",
+        "  unsigned __int64 v4; // [rsp+88h] [rbp-20h]",
+        "",
+        "  v4 = __readfsqword(0x28u);",
+        "  if ( *(_DWORD *)(a1 + 8) != (_DWORD)a2 && (unsigned int)ptrace(PTRACE_ATTACH, a2, 0LL, 0LL) != -1 )",
+        "  {",
+        "    _snprintf_chk(s, 128LL, 2LL, 128LL, \"%s:%d %s\", LC25, 380, \"ptrace (PT_ATTACH)\");",
+        "    perror(s);",
+        "  }",
+        "  return (unsigned int)a2;",
+        "}"
+    ]
+}

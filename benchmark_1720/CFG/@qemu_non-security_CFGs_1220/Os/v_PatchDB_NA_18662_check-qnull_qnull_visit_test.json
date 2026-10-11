@@ -1,0 +1,116 @@
+{
+    "nodes": {
+        "223": [
+            "endbr64",
+            "push REG",
+            "mov REG CONSTANT",
+            "push REG",
+            "push REG",
+            "cmp 8 1",
+            "jnz ADDR"
+        ],
+        "250": [
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov MEMACC CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "xor REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "xor REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "cmp REG REG",
+            "jz ADDR"
+        ],
+        "357": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "378": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT"
+        ],
+        "397": [
+            "lea REG MEMACC",
+            "xor REG REG",
+            "call ADDR"
+        ],
+        "411": [
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "cmp 8 1",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "jnz ADDR"
+        ],
+        "453": [
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "223": [
+            250,
+            378
+        ],
+        "250": [
+            357,
+            411
+        ],
+        "357": [
+            397
+        ],
+        "378": [
+            397
+        ],
+        "397": [
+            411
+        ],
+        "411": [
+            397,
+            453
+        ],
+        "453": []
+    },
+    "boundary": {
+        "223": 250,
+        "250": 357,
+        "357": 378,
+        "378": 397,
+        "397": 411,
+        "411": 453,
+        "453": 458
+    },
+    "jmp_instruction": {
+        "223": "jnz     loc_17A",
+        "250": "jz      short loc_19B",
+        "357": "jmp     short loc_18D",
+        "378": "mov     edx, 31h ; '1'",
+        "397": "call    g_assertion_message_expr; PIC mode",
+        "411": "jnz     short loc_18D",
+        "453": "retn"
+    }
+}

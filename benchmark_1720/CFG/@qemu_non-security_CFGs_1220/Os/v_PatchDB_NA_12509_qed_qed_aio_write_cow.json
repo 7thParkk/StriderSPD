@@ -1,0 +1,85 @@
+{
+    "nodes": {
+        "5386": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "and REG REG",
+            "not REG",
+            "and REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5445": [
+            "pop REG",
+            "mov REG REG",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "5458": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "add REG MEMACC",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "and REG REG",
+            "not REG",
+            "and REG REG",
+            "add REG REG",
+            "mov REG REG",
+            "sub REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "967": [],
+        "4697": []
+    },
+    "edges": {
+        "5386": [
+            5445,
+            5458
+        ],
+        "5445": [
+            967
+        ],
+        "5458": [
+            4697
+        ],
+        "967": [],
+        "4697": []
+    },
+    "boundary": {
+        "5386": 5445,
+        "5445": 5458,
+        "5458": 5524,
+        "967": 967,
+        "4697": 4697
+    },
+    "jmp_instruction": {
+        "5386": "jz      short loc_1552",
+        "5445": "jmp     qed_aio_complete",
+        "5458": "jmp     qed_aio_write_main",
+        "967": "jmp     timer_mod; PIC mode",
+        "4697": "retn"
+    }
+}

@@ -1,0 +1,112 @@
+{
+    "nodes": {
+        "766": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "test 40 1",
+            "jnz ADDR"
+        ],
+        "810": [
+            "or MEMACC CONSTANT",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call MEMACC",
+            "mov REG REG",
+            "and MEMACC CONSTANT",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "844": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "854": [
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "876": [
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "jmp ADDR"
+        ],
+        "892": [
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "900": [
+            "mov REG REG",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "766": [
+            810,
+            876
+        ],
+        "810": [
+            844,
+            892
+        ],
+        "844": [
+            854,
+            892
+        ],
+        "854": [
+            900
+        ],
+        "876": [
+            900
+        ],
+        "892": [
+            900
+        ],
+        "900": []
+    },
+    "boundary": {
+        "766": 810,
+        "810": 844,
+        "844": 854,
+        "854": 876,
+        "876": 892,
+        "892": 900,
+        "900": 918
+    },
+    "jmp_instruction": {
+        "766": "jnz     short loc_36C",
+        "810": "jnz     short loc_37C",
+        "844": "jz      short loc_37C",
+        "854": "jmp     short loc_384",
+        "876": "jmp     short loc_384",
+        "892": "call    qemu_net_queue_flush; PIC mode",
+        "900": "retn"
+    }
+}

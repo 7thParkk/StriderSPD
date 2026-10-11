@@ -1,0 +1,12 @@
+{
+    "pseudo_code": [
+        "void __cdecl virtio_pci_notify_write(void *opaque, hwaddr addr, uint64_t val, unsigned int size)",
+        "{",
+        "  unsigned int queue; // [rsp+24h] [rbp-Ch]",
+        "",
+        "  queue = addr >> 12;",
+        "  if ( queue <= 0x3FF )",
+        "    virtio_queue_notify(opaque, queue);",
+        "}"
+    ]
+}

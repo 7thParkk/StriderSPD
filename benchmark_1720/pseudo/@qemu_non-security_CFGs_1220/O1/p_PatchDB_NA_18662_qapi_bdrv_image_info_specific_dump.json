@@ -1,0 +1,29 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall bdrv_image_info_specific_dump(__int64 (*a1)(__int64, const char *, ...), __int64 a2, __int64 a3)",
+        "{",
+        "  __int64 v4; // rbx",
+        "  __int64 visitor; // rax",
+        "  _DWORD *qobject; // rdi",
+        "  __int64 v7; // rax",
+        "  _DWORD *v8; // rax",
+        "  __int64 v9; // rax",
+        "  _QWORD v11[4]; // [rsp+8h] [rbp-20h] BYREF",
+        "",
+        "  v11[0] = a3;",
+        "  v4 = qmp_output_visitor_new();",
+        "  visitor = qmp_output_get_visitor(v4);",
+        "  visit_type_ImageInfoSpecific(visitor, 0LL, v11, &error_abort);",
+        "  qobject = (_DWORD *)qmp_output_get_qobject(v4);",
+        "  if ( (unsigned int)(*qobject - 1) > 6 )",
+        "    _assert_fail(\"QTYPE_NONE < obj->type && obj->type < QTYPE__MAX\", LC5, 0x5Cu, \"qobject_type\");",
+        "  if ( *qobject != 4 )",
+        "    _assert_fail(\"qobject_type(obj) == QTYPE_QDICT\", LC14, 0x2BBu, \"bdrv_image_info_specific_dump\");",
+        "  v7 = qobject_to_qdict(qobject);",
+        "  v8 = (_DWORD *)qdict_get(v7, \"data\");",
+        "  dump_qobject(a1, a2, 1, v8);",
+        "  v9 = qmp_output_get_visitor(v4);",
+        "  return visit_free(v9);",
+        "}"
+    ]
+}

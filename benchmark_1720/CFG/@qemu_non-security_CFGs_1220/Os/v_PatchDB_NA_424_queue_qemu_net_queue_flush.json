@@ -1,0 +1,172 @@
+{
+    "nodes": {
+        "475": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "push REG"
+        ],
+        "485": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "498": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "510": [
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "516": [
+            "mov MEMACC REG"
+        ],
+        "520": [
+            "mov REG MEMACC",
+            "movsxd REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "lea REG 40",
+            "mov REG MEMACC",
+            "or MEMACC CONSTANT",
+            "call MEMACC",
+            "and MEMACC CONSTANT",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "561": [
+            "cmp 32 0",
+            "jz ADDR"
+        ],
+        "568": [
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "580": [
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "586": [
+            "mov MEMACC REG"
+        ],
+        "590": [
+            "mov MEMACC REG",
+            "add REG CONSTANT",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "604": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "613": [
+            "mov REG MEMACC",
+            "movsxd REG REG",
+            "call REG"
+        ],
+        "622": [
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "635": [
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "475": [
+            485
+        ],
+        "485": [
+            498,
+            635
+        ],
+        "498": [
+            510,
+            516
+        ],
+        "510": [
+            520
+        ],
+        "516": [
+            520
+        ],
+        "520": [
+            561,
+            604
+        ],
+        "561": [
+            568,
+            604
+        ],
+        "568": [
+            580,
+            586
+        ],
+        "580": [
+            590
+        ],
+        "586": [
+            590
+        ],
+        "590": [
+            635
+        ],
+        "604": [
+            613,
+            622
+        ],
+        "613": [
+            622
+        ],
+        "622": [
+            485
+        ],
+        "635": []
+    },
+    "boundary": {
+        "475": 485,
+        "485": 498,
+        "498": 510,
+        "510": 516,
+        "516": 520,
+        "520": 561,
+        "561": 568,
+        "568": 580,
+        "580": 586,
+        "586": 590,
+        "590": 604,
+        "604": 613,
+        "613": 622,
+        "622": 635,
+        "635": 639
+    },
+    "jmp_instruction": {
+        "475": "push    rdx",
+        "485": "jz      loc_27B",
+        "498": "jz      short loc_204",
+        "510": "jmp     short loc_208",
+        "516": "mov     [rbp+20h], rdx",
+        "520": "jnz     short loc_25C",
+        "561": "jz      short loc_25C",
+        "568": "jz      short loc_24A",
+        "580": "jmp     short loc_24E",
+        "586": "mov     [rbp+20h], rbx",
+        "590": "jmp     short loc_27B",
+        "604": "jz      short loc_26E",
+        "613": "call    rdx",
+        "622": "jmp     loc_1E5",
+        "635": "retn"
+    }
+}

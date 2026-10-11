@@ -1,0 +1,112 @@
+{
+    "nodes": {
+        "578": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "xor REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "cmp REG 18446744073709551614",
+            "jz ADDR"
+        ],
+        "641": [
+            "cmp REG 18446744073709551594",
+            "jnz ADDR"
+        ],
+        "646": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "xor REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "xor REG REG",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "call ADDR"
+        ],
+        "677": [
+            "test REG REG",
+            "jns ADDR"
+        ],
+        "681": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "693": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jz ADDR"
+        ],
+        "709": [
+            "call ADDR"
+        ],
+        "714": [
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "578": [
+            641,
+            646
+        ],
+        "641": [
+            646,
+            677
+        ],
+        "646": [
+            677
+        ],
+        "677": [
+            681,
+            693
+        ],
+        "681": [
+            693
+        ],
+        "693": [
+            709,
+            714
+        ],
+        "709": [],
+        "714": []
+    },
+    "boundary": {
+        "578": 641,
+        "641": 646,
+        "646": 677,
+        "677": 681,
+        "681": 693,
+        "693": 709,
+        "709": 714,
+        "714": 725
+    },
+    "jmp_instruction": {
+        "578": "jz      short loc_286",
+        "641": "jnz     short loc_2A5",
+        "646": "call    bdrv_snapshot_delete; PIC mode",
+        "677": "jns     short loc_2B5",
+        "681": "call    error_propagate; PIC mode",
+        "693": "jz      short loc_2CA",
+        "709": "call    __stack_chk_fail; PIC mode",
+        "714": "retn"
+    }
+}

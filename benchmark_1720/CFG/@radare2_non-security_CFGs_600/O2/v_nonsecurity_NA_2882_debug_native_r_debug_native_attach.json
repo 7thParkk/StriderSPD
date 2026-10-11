@@ -1,0 +1,73 @@
+{
+    "nodes": {
+        "5136": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "cmp 8 REG",
+            "jz ADDR"
+        ],
+        "5175": [
+            "xor REG REG",
+            "xor REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "cmp REG 18446744073709551615",
+            "jnz ADDR"
+        ],
+        "5198": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jnz ADDR"
+        ],
+        "5217": [
+            "add REG CONSTANT",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "5229": [
+            "call ADDR"
+        ],
+        "9982": []
+    },
+    "edges": {
+        "5136": [
+            5175,
+            5198
+        ],
+        "5175": [
+            5198,
+            9982
+        ],
+        "5198": [
+            5217,
+            5229
+        ],
+        "5217": [],
+        "5229": [],
+        "9982": []
+    },
+    "boundary": {
+        "5136": 5175,
+        "5175": 5198,
+        "5198": 5217,
+        "5217": 5229,
+        "5229": 5234,
+        "9982": 9982
+    },
+    "jmp_instruction": {
+        "5136": "jz      short loc_144E",
+        "5175": "jnz     r_debug_native_attach_cold",
+        "5198": "jnz     short loc_146D",
+        "5217": "retn",
+        "5229": "call    __stack_chk_fail; PIC mode",
+        "9982": "jmp     loc_12B4"
+    }
+}

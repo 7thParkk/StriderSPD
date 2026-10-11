@@ -1,0 +1,185 @@
+{
+    "nodes": {
+        "7541": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test 32 8",
+            "jz ADDR"
+        ],
+        "7563": [
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "7575": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "7591": [
+            "cmp 4 0",
+            "jnz ADDR"
+        ],
+        "7603": [
+            "mov REG REG",
+            "call REG",
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "7614": [
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "7621": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR"
+        ],
+        "7652": [
+            "mov REG REG",
+            "sar REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "7690": [
+            "add MEMACC CONSTANT",
+            "jmp ADDR"
+        ],
+        "7701": [
+            "mov REG REG",
+            "call REG"
+        ],
+        "7706": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "7715": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "7728": [
+            "jmp ADDR"
+        ],
+        "7730": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "7737": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "7747": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "7541": [
+            7563,
+            7621
+        ],
+        "7563": [
+            7575,
+            7730
+        ],
+        "7575": [
+            7591,
+            7737
+        ],
+        "7591": [
+            7603,
+            7747
+        ],
+        "7603": [
+            7614,
+            7652
+        ],
+        "7614": [],
+        "7621": [],
+        "7652": [
+            7690,
+            7715
+        ],
+        "7690": [
+            7614
+        ],
+        "7701": [
+            7706
+        ],
+        "7706": [
+            7690,
+            7715
+        ],
+        "7715": [
+            7701,
+            7728
+        ],
+        "7728": [
+            7706
+        ],
+        "7730": [
+            7614
+        ],
+        "7737": [
+            7614
+        ],
+        "7747": [
+            7614
+        ]
+    },
+    "boundary": {
+        "7541": 7563,
+        "7563": 7575,
+        "7575": 7591,
+        "7591": 7603,
+        "7603": 7614,
+        "7614": 7621,
+        "7621": 7652,
+        "7652": 7690,
+        "7690": 7701,
+        "7701": 7706,
+        "7706": 7715,
+        "7715": 7728,
+        "7728": 7730,
+        "7730": 7737,
+        "7737": 7747,
+        "7747": 7757
+    },
+    "jmp_instruction": {
+        "7541": "jz      short loc_1DC5",
+        "7563": "jz      loc_1E32",
+        "7575": "jz      loc_1E39",
+        "7591": "jnz     loc_1E43",
+        "7603": "jz      short loc_1DE4",
+        "7614": "retn",
+        "7621": "call    __assert_fail; PIC mode",
+        "7652": "jnz     short loc_1E23",
+        "7690": "jmp     short loc_1DBE",
+        "7701": "call    rdx",
+        "7706": "jz      short loc_1E0A",
+        "7715": "jnz     short loc_1E15",
+        "7728": "jmp     short loc_1E1A",
+        "7730": "jmp     short loc_1DBE",
+        "7737": "jmp     loc_1DBE",
+        "7747": "jmp     loc_1DBE"
+    }
+}

@@ -1,0 +1,76 @@
+{
+    "nodes": {
+        "7120": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "xor REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "7142": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "7152": [
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "7168": [
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "7184": [
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "1424": [],
+        "2096": [],
+        "4928": []
+    },
+    "edges": {
+        "7120": [
+            7142,
+            7184
+        ],
+        "7142": [
+            7152,
+            7168
+        ],
+        "7152": [
+            1424
+        ],
+        "7168": [
+            2096
+        ],
+        "7184": [
+            4928
+        ],
+        "1424": [],
+        "2096": [],
+        "4928": []
+    },
+    "boundary": {
+        "7120": 7142,
+        "7142": 7152,
+        "7152": 7158,
+        "7168": 7174,
+        "7184": 7190,
+        "1424": 1424,
+        "2096": 2096,
+        "4928": 4928
+    },
+    "jmp_instruction": {
+        "7120": "jnz     short loc_1C10",
+        "7142": "jz      short loc_1C00",
+        "7152": "jmp     tcp_chr_telnet_init",
+        "7168": "jmp     tcp_chr_connect",
+        "7184": "jmp     tcp_chr_disconnect",
+        "1424": "align 10h",
+        "2096": "align 10h",
+        "4928": "align 20h"
+    }
+}

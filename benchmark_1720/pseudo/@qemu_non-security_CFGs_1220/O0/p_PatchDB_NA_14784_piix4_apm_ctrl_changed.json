@@ -1,0 +1,16 @@
+{
+    "pseudo_code": [
+        "void __cdecl apm_ctrl_changed(uint32_t val, void *arg)",
+        "{",
+        "  PCIDevice *d; // [rsp+18h] [rbp-8h]",
+        "",
+        "  d = (PCIDevice *)object_dynamic_cast_assert(arg, \"pci-device\", \"hw/acpi/piix4.c\", 111LL, \"apm_ctrl_changed\");",
+        "  acpi_pm1_cnt_update((char *)arg + 2680, val == 241, val == 240);",
+        "  if ( val != 241 && val != 240 && (d->config[91] & 2) != 0 )",
+        "  {",
+        "    if ( *((_QWORD *)arg + 513) )",
+        "      qemu_irq_raise(*((qemu_irq *)arg + 513));",
+        "  }",
+        "}"
+    ]
+}

@@ -1,0 +1,179 @@
+{
+    "nodes": {
+        "899": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "1010": [
+            "dec REG",
+            "jz ADDR"
+        ],
+        "1014": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "xor REG REG",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "jmp ADDR"
+        ],
+        "1045": [
+            "mov REG CONSTANT"
+        ],
+        "1048": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "call ADDR",
+            "cmp REG REG",
+            "jz ADDR"
+        ],
+        "1069": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "xor REG REG",
+            "call ADDR"
+        ],
+        "1086": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1142": [
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "xor REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1180": [
+            "mov REG MEMACC"
+        ],
+        "1183": [
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "1198": [
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "5008": []
+    },
+    "edges": {
+        "899": [
+            1010,
+            1045
+        ],
+        "1010": [
+            1014,
+            1045
+        ],
+        "1014": [
+            1048
+        ],
+        "1045": [
+            1048
+        ],
+        "1048": [
+            1069,
+            1086
+        ],
+        "1069": [
+            1086
+        ],
+        "1086": [
+            1142,
+            1198
+        ],
+        "1142": [
+            1180,
+            1183
+        ],
+        "1180": [
+            1183
+        ],
+        "1183": [
+            1198
+        ],
+        "1198": [
+            5008
+        ],
+        "5008": []
+    },
+    "boundary": {
+        "899": 1010,
+        "1010": 1014,
+        "1014": 1045,
+        "1045": 1048,
+        "1048": 1069,
+        "1069": 1086,
+        "1086": 1142,
+        "1142": 1180,
+        "1180": 1183,
+        "1183": 1198,
+        "1198": 1230,
+        "5008": 5008
+    },
+    "jmp_instruction": {
+        "899": "jnz     short loc_415",
+        "1010": "jz      short loc_415",
+        "1014": "jmp     short loc_418",
+        "1045": "mov     r14b, 1",
+        "1048": "jz      short loc_43E",
+        "1069": "call    bdrv_reopen; PIC mode",
+        "1086": "jz      short loc_4AE",
+        "1142": "jz      short loc_49F",
+        "1180": "mov     rsi, [rsi]",
+        "1183": "call    bdrv_replace_node; PIC mode",
+        "1198": "jmp     bdrv_unref; PIC mode",
+        "5008": "extrn bdrv_replace_node:near"
+    }
+}

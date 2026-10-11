@@ -1,0 +1,113 @@
+{
+    "nodes": {
+        "1861": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov MEMACC CONSTANT",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "cmp MEMACC REG",
+            "jnz ADDR"
+        ],
+        "1932": [
+            "mov REG MEMACC",
+            "jmp ADDR"
+        ],
+        "1943": [
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov MEMACC REG",
+            "cmp MEMACC 18446744073709551615",
+            "jz ADDR"
+        ],
+        "1991": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "2061": [
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC"
+        ],
+        "2079": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jz ADDR"
+        ],
+        "2094": [
+            "call ADDR"
+        ],
+        "2099": [
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "1861": [
+            1932,
+            1943
+        ],
+        "1932": [
+            2079
+        ],
+        "1943": [
+            1991,
+            2061
+        ],
+        "1991": [
+            2061
+        ],
+        "2061": [
+            2079
+        ],
+        "2079": [
+            2094,
+            2099
+        ],
+        "2094": [],
+        "2099": []
+    },
+    "boundary": {
+        "1861": 1932,
+        "1932": 1943,
+        "1943": 1991,
+        "1991": 2061,
+        "2061": 2079,
+        "2079": 2094,
+        "2094": 2099,
+        "2099": 2101
+    },
+    "jmp_instruction": {
+        "1861": "jnz     short loc_797",
+        "1932": "jmp     loc_81F",
+        "1943": "jz      short loc_80D",
+        "1991": "call    perror; PIC mode",
+        "2061": "mov     eax, [rbp+var_94]",
+        "2079": "jz      short locret_833",
+        "2094": "call    __stack_chk_fail; PIC mode",
+        "2099": "retn"
+    }
+}

@@ -1,0 +1,129 @@
+{
+    "nodes": {
+        "5127": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "cmp MEMACC 0",
+            "jz ADDR"
+        ],
+        "5161": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5173": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5192": [
+            "cmp MEMACC 0",
+            "jnz ADDR"
+        ],
+        "5199": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "5206": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "xor REG CONSTANT",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5232": [
+            "mov REG MEMACC",
+            "mov MEMACC CONSTANT",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "5263": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call REG",
+            "movzx REG REG"
+        ],
+        "5311": [
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "5127": [
+            5161,
+            5199
+        ],
+        "5161": [
+            5173,
+            5199
+        ],
+        "5173": [
+            5192,
+            5199
+        ],
+        "5192": [
+            5199,
+            5206
+        ],
+        "5199": [
+            5311
+        ],
+        "5206": [
+            5232,
+            5263
+        ],
+        "5232": [
+            5311
+        ],
+        "5263": [
+            5311
+        ],
+        "5311": []
+    },
+    "boundary": {
+        "5127": 5161,
+        "5161": 5173,
+        "5173": 5192,
+        "5192": 5199,
+        "5199": 5206,
+        "5206": 5232,
+        "5232": 5263,
+        "5263": 5311,
+        "5311": 5313
+    },
+    "jmp_instruction": {
+        "5127": "jz      short loc_144F",
+        "5161": "jz      short loc_144F",
+        "5173": "jz      short loc_144F",
+        "5192": "jnz     short loc_1456",
+        "5199": "jmp     short locret_14BF",
+        "5206": "jz      short loc_148F",
+        "5232": "jmp     short locret_14BF",
+        "5263": "movzx   eax, al",
+        "5311": "retn"
+    }
+}

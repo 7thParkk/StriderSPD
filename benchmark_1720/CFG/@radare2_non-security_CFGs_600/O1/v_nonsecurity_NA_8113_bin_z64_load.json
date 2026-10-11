@@ -1,0 +1,104 @@
+{
+    "nodes": {
+        "626": [
+            "endbr64",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "635": [
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "682": [
+            "mov REG REG",
+            "call ADDR",
+            "cmp REG 4",
+            "jbe ADDR"
+        ],
+        "696": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "717": [
+            "mov REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "731": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "762": [
+            "mov REG CONSTANT",
+            "retn"
+        ]
+    },
+    "edges": {
+        "626": [
+            635,
+            762
+        ],
+        "635": [
+            682,
+            717
+        ],
+        "682": [
+            696,
+            717
+        ],
+        "696": [
+            717,
+            731
+        ],
+        "717": [],
+        "731": [
+            717
+        ],
+        "762": []
+    },
+    "boundary": {
+        "626": 635,
+        "635": 682,
+        "682": 696,
+        "696": 717,
+        "717": 731,
+        "731": 762,
+        "762": 768
+    },
+    "jmp_instruction": {
+        "626": "jz      short loc_2FA",
+        "635": "jz      short loc_2CD",
+        "682": "jbe     short loc_2CD",
+        "696": "jz      short loc_2DB",
+        "717": "retn",
+        "731": "jmp     short loc_2CD",
+        "762": "retn"
+    }
+}

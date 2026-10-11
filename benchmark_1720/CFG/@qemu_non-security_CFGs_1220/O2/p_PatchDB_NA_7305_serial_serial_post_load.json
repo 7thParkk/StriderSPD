@@ -1,0 +1,268 @@
+{
+    "nodes": {
+        "2544": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "cmp REG 2",
+            "jg ADDR"
+        ],
+        "2557": [
+            "mov MEMACC CONSTANT"
+        ],
+        "2561": [
+            "cmp 16 18446744073709551615",
+            "jnz ADDR"
+        ],
+        "2567": [
+            "movzx REG MEMACC",
+            "and REG CONSTANT",
+            "cmp REG 2",
+            "setz REG",
+            "movzx REG REG",
+            "mov MEMACC REG"
+        ],
+        "2585": [
+            "movzx REG MEMACC",
+            "mov REG MEMACC",
+            "and REG CONSTANT",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "2603": [
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "2611": [
+            "cmp REG 4",
+            "jbe ADDR"
+        ],
+        "2616": [
+            "mov MEMACC CONSTANT"
+        ],
+        "2623": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "2634": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "call ADDR",
+            "mov MEMACC REG"
+        ],
+        "2661": [
+            "movzx REG MEMACC",
+            "movzx REG MEMACC",
+            "shr REG CONSTANT",
+            "and REG CONSTANT",
+            "mov MEMACC REG",
+            "movzx REG MEMACC",
+            "mov MEMACC REG",
+            "test REG 1",
+            "jz ADDR"
+        ],
+        "2689": [
+            "or REG CONSTANT",
+            "and REG CONSTANT",
+            "mov MEMACC REG",
+            "cmp REG 128",
+            "jz ADDR"
+        ],
+        "2702": [
+            "ja ADDR"
+        ],
+        "2704": [
+            "cmp REG 1",
+            "mov REG REG",
+            "sbb REG REG",
+            "and REG CONSTANT",
+            "add REG CONSTANT",
+            "mov MEMACC REG",
+            "call ADDR",
+            "xor REG REG",
+            "pop REG",
+            "retn"
+        ],
+        "2736": [
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "2740": [
+            "lea REG MEMACC",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "2760": [
+            "and REG CONSTANT",
+            "mov MEMACC REG"
+        ],
+        "2766": [
+            "mov REG REG",
+            "call ADDR",
+            "xor REG REG",
+            "pop REG",
+            "retn"
+        ],
+        "2784": [
+            "cmp REG 192",
+            "jnz ADDR"
+        ],
+        "2788": [
+            "mov MEMACC CONSTANT",
+            "jmp ADDR"
+        ],
+        "2800": [
+            "mov MEMACC CONSTANT",
+            "jmp ADDR"
+        ],
+        "2806": [
+            "lea REG MEMACC",
+            "xor REG REG",
+            "call ADDR"
+        ],
+        "2820": [
+            "mov REG CONSTANT",
+            "pop REG",
+            "retn"
+        ],
+        "2827": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR"
+        ]
+    },
+    "edges": {
+        "2544": [
+            2557,
+            2561
+        ],
+        "2557": [
+            2561
+        ],
+        "2561": [
+            2567,
+            2585
+        ],
+        "2567": [
+            2585
+        ],
+        "2585": [
+            2603,
+            2736
+        ],
+        "2603": [
+            2611,
+            2806
+        ],
+        "2611": [
+            2616,
+            2623
+        ],
+        "2616": [
+            2623
+        ],
+        "2623": [
+            2634,
+            2827
+        ],
+        "2634": [
+            2661
+        ],
+        "2661": [
+            2689,
+            2760
+        ],
+        "2689": [
+            2702,
+            2800
+        ],
+        "2702": [
+            2704,
+            2784
+        ],
+        "2704": [],
+        "2736": [
+            2661,
+            2740
+        ],
+        "2740": [
+            2820
+        ],
+        "2760": [
+            2766
+        ],
+        "2766": [],
+        "2784": [
+            2766,
+            2788
+        ],
+        "2788": [
+            2766
+        ],
+        "2800": [
+            2766
+        ],
+        "2806": [
+            2820
+        ],
+        "2820": [],
+        "2827": []
+    },
+    "boundary": {
+        "2544": 2557,
+        "2557": 2561,
+        "2561": 2567,
+        "2567": 2585,
+        "2585": 2603,
+        "2603": 2611,
+        "2611": 2616,
+        "2616": 2623,
+        "2623": 2634,
+        "2634": 2661,
+        "2661": 2689,
+        "2689": 2702,
+        "2702": 2704,
+        "2704": 2729,
+        "2736": 2740,
+        "2740": 2754,
+        "2760": 2766,
+        "2766": 2778,
+        "2784": 2788,
+        "2788": 2794,
+        "2800": 2806,
+        "2806": 2820,
+        "2820": 2827,
+        "2827": 2858
+    },
+    "jmp_instruction": {
+        "2544": "jg      short loc_A01",
+        "2557": "mov     byte ptr [rdi+0Dh], 0",
+        "2561": "jnz     short loc_A19",
+        "2567": "mov     [rbx+10h], eax",
+        "2585": "jz      loc_AB0",
+        "2603": "jnz     loc_AF6",
+        "2611": "jbe     short loc_A3F",
+        "2616": "mov     dword ptr [rbx+34h], 4",
+        "2623": "jnz     loc_B0B",
+        "2634": "mov     [rbx+38h], eax",
+        "2661": "jz      short loc_AC8",
+        "2689": "jz      short loc_AF0",
+        "2702": "ja      short loc_AE0",
+        "2704": "retn",
+        "2736": "jnz     short loc_A65",
+        "2740": "jmp     short loc_B04",
+        "2760": "mov     [rbx+6], dl",
+        "2766": "retn",
+        "2784": "jnz     short loc_ACE",
+        "2788": "jmp     short loc_ACE",
+        "2800": "jmp     short loc_ACE",
+        "2806": "call    error_report; PIC mode",
+        "2820": "retn",
+        "2827": "call    __assert_fail; PIC mode"
+    }
+}

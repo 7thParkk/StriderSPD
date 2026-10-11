@@ -1,0 +1,25 @@
+{
+    "nodes": {
+        "1376": [
+            "endbr64",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "jmp ADDR"
+        ],
+        "4416": []
+    },
+    "edges": {
+        "1376": [
+            4416
+        ],
+        "4416": []
+    },
+    "boundary": {
+        "1376": 1393,
+        "4416": 4416
+    },
+    "jmp_instruction": {
+        "1376": "jmp     g_free; PIC mode",
+        "4416": "extrn qemu_iovec_memset:near"
+    }
+}

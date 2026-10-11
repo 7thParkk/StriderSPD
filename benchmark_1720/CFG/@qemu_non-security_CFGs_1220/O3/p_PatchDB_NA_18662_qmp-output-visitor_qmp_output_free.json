@@ -1,0 +1,163 @@
+{
+    "nodes": {
+        "16": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "41": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "54": [
+            "nop MEMACC"
+        ],
+        "64": [
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "92": [
+            "mov REG REG",
+            "jmp ADDR"
+        ],
+        "104": [
+            "mov REG REG",
+            "nop MEMACC"
+        ],
+        "112": [
+            "mov MEMACC REG",
+            "mov REG REG",
+            "mov MEMACC CONSTANT",
+            "call ADDR"
+        ],
+        "134": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "146": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "155": [
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "jz ADDR"
+        ],
+        "165": [
+            "add REG CONSTANT",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "184": [
+            "call ADDR",
+            "add REG CONSTANT",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "203": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR"
+        ],
+        "5568": []
+    },
+    "edges": {
+        "16": [
+            41,
+            134
+        ],
+        "41": [
+            54,
+            104
+        ],
+        "54": [
+            64
+        ],
+        "64": [
+            92,
+            112
+        ],
+        "92": [
+            64
+        ],
+        "104": [
+            112
+        ],
+        "112": [
+            134
+        ],
+        "134": [
+            146,
+            165
+        ],
+        "146": [
+            155,
+            203
+        ],
+        "155": [
+            165,
+            184
+        ],
+        "165": [
+            5568
+        ],
+        "184": [
+            5568
+        ],
+        "203": [],
+        "5568": []
+    },
+    "boundary": {
+        "16": 41,
+        "41": 54,
+        "54": 64,
+        "64": 92,
+        "92": 97,
+        "104": 112,
+        "112": 134,
+        "134": 146,
+        "146": 155,
+        "155": 165,
+        "165": 179,
+        "184": 203,
+        "203": 234,
+        "5568": 5568
+    },
+    "jmp_instruction": {
+        "16": "jz      short loc_86",
+        "41": "jz      short loc_68",
+        "54": "nop     word ptr [rax+rax+00000000h]",
+        "64": "jz      short loc_70",
+        "92": "jmp     short loc_40",
+        "104": "nop     dword ptr [rax+rax+00h]",
+        "112": "call    g_free; PIC mode",
+        "134": "jz      short loc_A5",
+        "146": "jz      short loc_CB",
+        "155": "jz      short loc_B8",
+        "165": "jmp     g_free; PIC mode",
+        "184": "jmp     g_free; PIC mode",
+        "203": "call    __assert_fail; PIC mode",
+        "5568": "dd offset qmp_output_visitor_new - $"
+    }
+}

@@ -1,0 +1,12 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall tcp_chr_tls_handshake(__int64 a1, __int64 a2)",
+        "{",
+        "  if ( (unsigned __int8)qio_task_propagate_error(a1, 0LL) )",
+        "    return tcp_chr_disconnect(a2);",
+        "  if ( *(_DWORD *)(a2 + 192) )",
+        "    return tcp_chr_telnet_init(a2);",
+        "  return tcp_chr_connect(a2);",
+        "}"
+    ]
+}

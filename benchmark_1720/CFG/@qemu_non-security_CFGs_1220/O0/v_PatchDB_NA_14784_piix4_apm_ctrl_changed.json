@@ -1,0 +1,84 @@
+{
+    "nodes": {
+        "500": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "cmp MEMACC 240",
+            "setz REG",
+            "movzx REG REG",
+            "cmp MEMACC 241",
+            "setz REG",
+            "movzx REG REG",
+            "mov REG MEMACC",
+            "add REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "add REG CONSTANT",
+            "movzx REG MEMACC",
+            "movzx REG REG",
+            "and REG CONSTANT",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "641": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "657": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "676": [
+            "nop",
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "500": [
+            641,
+            676
+        ],
+        "641": [
+            657,
+            676
+        ],
+        "657": [
+            676
+        ],
+        "676": []
+    },
+    "boundary": {
+        "500": 641,
+        "641": 657,
+        "657": 676,
+        "676": 679
+    },
+    "jmp_instruction": {
+        "500": "jz      short loc_2A4",
+        "641": "jz      short loc_2A4",
+        "657": "call    qemu_irq_raise",
+        "676": "retn"
+    }
+}

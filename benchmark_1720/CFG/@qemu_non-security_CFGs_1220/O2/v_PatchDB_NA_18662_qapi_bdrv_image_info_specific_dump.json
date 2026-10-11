@@ -1,0 +1,89 @@
+{
+    "nodes": {
+        "5616": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "lea REG 8",
+            "xor REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "cmp REG 6",
+            "ja ADDR"
+        ],
+        "5698": [
+            "cmp REG 4",
+            "jnz ADDR"
+        ],
+        "5703": [
+            "call ADDR",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "5759": [
+            "call ADDR"
+        ],
+        "5764": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR"
+        ]
+    },
+    "edges": {
+        "5616": [
+            5698,
+            5759
+        ],
+        "5698": [
+            5703,
+            5764
+        ],
+        "5703": [],
+        "5759": [],
+        "5764": []
+    },
+    "boundary": {
+        "5616": 5698,
+        "5698": 5703,
+        "5703": 5759,
+        "5759": 5764,
+        "5764": 5795
+    },
+    "jmp_instruction": {
+        "5616": "ja      short loc_167F",
+        "5698": "jnz     short loc_1684",
+        "5703": "retn",
+        "5759": "call    qobject_type_part_0",
+        "5764": "call    __assert_fail; PIC mode"
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall qed_aio_write_cow(_QWORD *a1)",
+        "{",
+        "  __int64 v2; // rbp",
+        "  int v3; // eax",
+        "  __int64 v4; // rdi",
+        "  __int64 v5; // rcx",
+        "  int v6; // eax",
+        "",
+        "  v2 = *(_QWORD *)(a1[1] + 24LL);",
+        "  v3 = qed_copy_from_backing_file(",
+        "         (__int64 *)v2,",
+        "         a1[15] & ~(unsigned __int64)(unsigned int)(*(_DWORD *)(v2 + 20) - 1),",
+        "         (unsigned int)(*(_DWORD *)(v2 + 20) - 1) & a1[15],",
+        "         a1[16]);",
+        "  if ( v3 )",
+        "    return qed_aio_complete((__int64)a1, v3);",
+        "  v4 = a1[15];",
+        "  v5 = a1[13];",
+        "  v6 = qed_copy_from_backing_file(",
+        "         (__int64 *)v2,",
+        "         v4 + v5,",
+        "         (~(unsigned __int64)(unsigned int)(*(_DWORD *)(v2 + 20) - 1) & (v4 + v5 + *(unsigned int *)(v2 + 20) - 1))",
+        "       - (v4",
+        "        + v5),",
+        "         ((*(_DWORD *)(v2 + 20) - 1) & (unsigned int)v4) + a1[16] + v5);",
+        "  return qed_aio_write_main((__int64)a1, v6);",
+        "}"
+    ]
+}

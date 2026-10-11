@@ -1,0 +1,15 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall string_output_free(__int64 a1)",
+        "{",
+        "  __int64 v2; // [rsp+18h] [rbp-8h]",
+        "",
+        "  v2 = to_sov(a1);",
+        "  if ( *(_QWORD *)(v2 + 160) )",
+        "    g_string_free(*(_QWORD *)(v2 + 160), 1LL);",
+        "  g_list_foreach(*(_QWORD *)(v2 + 192), free_range, 0LL);",
+        "  g_list_free(*(_QWORD *)(v2 + 192));",
+        "  return g_free(v2);",
+        "}"
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "pseudo_code": [
+        "bool __fastcall throttle_max_is_missing_limit(double *a1)",
+        "{",
+        "  bool result; // al",
+        "",
+        "  if ( a1[1] != 0.0 && *a1 == 0.0",
+        "    || a1[4] != 0.0 && a1[3] == 0.0",
+        "    || a1[7] != 0.0 && a1[6] == 0.0",
+        "    || a1[10] != 0.0 && a1[9] == 0.0",
+        "    || a1[13] != 0.0 && a1[12] == 0.0 )",
+        "  {",
+        "    return 1;",
+        "  }",
+        "  result = 0;",
+        "  if ( a1[16] != 0.0 )",
+        "    return a1[15] == 0.0;",
+        "  return result;",
+        "}"
+    ]
+}

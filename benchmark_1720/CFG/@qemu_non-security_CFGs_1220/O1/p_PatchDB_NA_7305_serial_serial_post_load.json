@@ -1,0 +1,186 @@
+{
+    "nodes": {
+        "812": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "cmp REG 2",
+            "jg ADDR"
+        ],
+        "825": [
+            "mov MEMACC CONSTANT"
+        ],
+        "829": [
+            "cmp 16 18446744073709551615",
+            "jz ADDR"
+        ],
+        "835": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "846": [
+            "test 9 64",
+            "jnz ADDR"
+        ],
+        "852": [
+            "cmp REG 4",
+            "jbe ADDR"
+        ],
+        "857": [
+            "mov MEMACC CONSTANT"
+        ],
+        "864": [
+            "cmp 56 0",
+            "jnz ADDR"
+        ],
+        "870": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "899": [
+            "movzx REG MEMACC",
+            "and REG CONSTANT",
+            "cmp REG 2",
+            "setz REG",
+            "movzx REG REG",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "919": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "943": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR"
+        ],
+        "974": [
+            "test 9 64",
+            "jz ADDR"
+        ],
+        "980": [
+            "movzx REG MEMACC",
+            "shr REG CONSTANT",
+            "and REG CONSTANT",
+            "mov MEMACC REG",
+            "movzx REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG CONSTANT"
+        ],
+        "1018": [
+            "pop REG",
+            "retn"
+        ],
+        "1020": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "812": [
+            825,
+            829
+        ],
+        "825": [
+            829
+        ],
+        "829": [
+            835,
+            899
+        ],
+        "835": [
+            846,
+            974
+        ],
+        "846": [
+            852,
+            919
+        ],
+        "852": [
+            857,
+            864
+        ],
+        "857": [
+            864
+        ],
+        "864": [
+            870,
+            943
+        ],
+        "870": [
+            980
+        ],
+        "899": [
+            835
+        ],
+        "919": [
+            1018
+        ],
+        "943": [],
+        "974": [
+            980,
+            1020
+        ],
+        "980": [
+            1018
+        ],
+        "1018": [],
+        "1020": [
+            1018
+        ]
+    },
+    "boundary": {
+        "812": 825,
+        "825": 829,
+        "829": 835,
+        "835": 846,
+        "846": 852,
+        "852": 857,
+        "857": 864,
+        "864": 870,
+        "870": 899,
+        "899": 919,
+        "919": 943,
+        "943": 974,
+        "974": 980,
+        "980": 1018,
+        "1018": 1020,
+        "1020": 1044
+    },
+    "jmp_instruction": {
+        "812": "jg      short loc_33D",
+        "825": "mov     byte ptr [rdi+0Dh], 0",
+        "829": "jz      short loc_383",
+        "835": "jz      loc_3CE",
+        "846": "jnz     short loc_397",
+        "852": "jbe     short loc_360",
+        "857": "mov     dword ptr [rbx+34h], 4",
+        "864": "jnz     short loc_3AF",
+        "870": "jmp     short loc_3D4",
+        "899": "jmp     short loc_343",
+        "919": "jmp     short loc_3FA",
+        "943": "call    __assert_fail; PIC mode",
+        "974": "jz      short loc_3FC",
+        "980": "mov     eax, 0",
+        "1018": "retn",
+        "1020": "jmp     short loc_3FA"
+    }
+}

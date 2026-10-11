@@ -1,0 +1,77 @@
+{
+    "nodes": {
+        "1145": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "1197": [
+            "mov MEMACC CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "1222": [
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "1231": [
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "1145": [
+            1197,
+            1222
+        ],
+        "1197": [
+            1222,
+            1231
+        ],
+        "1222": [],
+        "1231": [
+            1222
+        ]
+    },
+    "boundary": {
+        "1145": 1197,
+        "1197": 1222,
+        "1222": 1231,
+        "1231": 1262
+    },
+    "jmp_instruction": {
+        "1145": "jnz     short loc_4C6",
+        "1197": "jnz     short loc_4CF",
+        "1222": "retn",
+        "1231": "jmp     short loc_4C6"
+    }
+}

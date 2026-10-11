@@ -1,0 +1,89 @@
+{
+    "nodes": {
+        "5953": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC CONSTANT",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "cmp REG 16",
+            "jz ADDR"
+        ],
+        "5989": [
+            "cmp REG 32",
+            "jz ADDR"
+        ],
+        "5994": [
+            "jmp ADDR"
+        ],
+        "5996": [
+            "lea REG MEMACC",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "6009": [
+            "lea REG MEMACC",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "6022": [
+            "lea REG MEMACC",
+            "mov MEMACC REG",
+            "nop"
+        ],
+        "6034": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "5953": [
+            5989,
+            5996
+        ],
+        "5989": [
+            5994,
+            6009
+        ],
+        "5994": [
+            6022
+        ],
+        "5996": [
+            6034
+        ],
+        "6009": [
+            6034
+        ],
+        "6022": [
+            6034
+        ],
+        "6034": []
+    },
+    "boundary": {
+        "5953": 5989,
+        "5989": 5994,
+        "5994": 5996,
+        "5996": 6009,
+        "6009": 6022,
+        "6022": 6034,
+        "6034": 6059
+    },
+    "jmp_instruction": {
+        "5953": "jz      short loc_176C",
+        "5989": "jz      short loc_1779",
+        "5994": "jmp     short loc_1786",
+        "5996": "jmp     short loc_1792",
+        "6009": "jmp     short loc_1792",
+        "6022": "nop",
+        "6034": "retn"
+    }
+}

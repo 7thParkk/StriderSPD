@@ -1,0 +1,31 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall local_remove(__int64 a1, __int64 a2)",
+        "{",
+        "  const char *dirname; // r12",
+        "  const char *basename; // rbp",
+        "  unsigned int v4; // ebx",
+        "  int v5; // r13d",
+        "  int v6; // edi",
+        "  stat buf; // [rsp+8h] [rbp-C0h] BYREF",
+        "  unsigned __int64 v9; // [rsp+98h] [rbp-30h]",
+        "",
+        "  v9 = __readfsqword(0x28u);",
+        "  dirname = (const char *)g_path_get_dirname(a2);",
+        "  basename = (const char *)g_path_get_basename(a2);",
+        "  v4 = local_opendir_nofollow(a1, dirname);",
+        "  if ( v4 != -1 )",
+        "  {",
+        "    v5 = -1;",
+        "    if ( fstatat(v4, basename, &buf, 256) >= 0 )",
+        "      v5 = local_unlinkat_common_isra_0(*(_DWORD *)(a1 + 16), v4, basename, ((buf.st_mode & 0xF000) == 0x4000) << 9);",
+        "    v6 = v4;",
+        "    v4 = v5;",
+        "    close_preserve_errno(v6);",
+        "  }",
+        "  g_free(basename);",
+        "  g_free(dirname);",
+        "  return v4;",
+        "}"
+    ]
+}

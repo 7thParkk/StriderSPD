@@ -1,0 +1,214 @@
+{
+    "nodes": {
+        "7472": [
+            "endbr64",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "7489": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "test REG 64",
+            "jz ADDR"
+        ],
+        "7500": [
+            "cmp 88 0",
+            "jz ADDR"
+        ],
+        "7510": [
+            "test REG 16777216",
+            "jnz ADDR"
+        ],
+        "7518": [
+            "and REG CONSTANT",
+            "jz ADDR"
+        ],
+        "7530": [
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "or REG CONSTANT",
+            "mov MEMACC REG"
+        ],
+        "7543": [
+            "mov REG REG",
+            "retn"
+        ],
+        "7552": [
+            "test REG 16777216",
+            "jnz ADDR"
+        ],
+        "7560": [
+            "and REG CONSTANT",
+            "jnz ADDR"
+        ],
+        "7568": [
+            "mov REG MEMACC",
+            "cmp REG 32",
+            "jz ADDR"
+        ],
+        "7576": [
+            "xor REG REG",
+            "cmp REG 64",
+            "jnz ADDR"
+        ],
+        "7583": [
+            "mov REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "or REG CONSTANT",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "7616": [
+            "mov MEMACC CONSTANT",
+            "test 40 64",
+            "jnz ADDR"
+        ],
+        "7625": [
+            "mov REG MEMACC",
+            "or REG CONSTANT",
+            "mov MEMACC REG"
+        ],
+        "7634": [
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "retn"
+        ],
+        "7648": [
+            "mov REG MEMACC",
+            "or REG CONSTANT",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "7664": [
+            "mov MEMACC CONSTANT",
+            "mov REG MEMACC",
+            "or REG CONSTANT",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "7678": [
+            "sub REG CONSTANT",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "add REG CONSTANT",
+            "retn"
+        ],
+        "7724": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "7472": [
+            7489,
+            7678
+        ],
+        "7489": [
+            7500,
+            7552
+        ],
+        "7500": [
+            7510,
+            7724
+        ],
+        "7510": [
+            7518,
+            7616
+        ],
+        "7518": [
+            7530,
+            7664
+        ],
+        "7530": [
+            7543
+        ],
+        "7543": [],
+        "7552": [
+            7560,
+            7616
+        ],
+        "7560": [
+            7530,
+            7568
+        ],
+        "7568": [
+            7530,
+            7576
+        ],
+        "7576": [
+            7543,
+            7583
+        ],
+        "7583": [
+            7543
+        ],
+        "7616": [
+            7625,
+            7648
+        ],
+        "7625": [
+            7634
+        ],
+        "7634": [],
+        "7648": [
+            7634
+        ],
+        "7664": [
+            7634
+        ],
+        "7678": [],
+        "7724": [
+            7543
+        ]
+    },
+    "boundary": {
+        "7472": 7489,
+        "7489": 7500,
+        "7500": 7510,
+        "7510": 7518,
+        "7518": 7530,
+        "7530": 7543,
+        "7543": 7546,
+        "7552": 7560,
+        "7560": 7568,
+        "7568": 7576,
+        "7576": 7583,
+        "7583": 7607,
+        "7616": 7625,
+        "7625": 7634,
+        "7634": 7642,
+        "7648": 7659,
+        "7664": 7678,
+        "7678": 7724,
+        "7724": 7734
+    },
+    "jmp_instruction": {
+        "7472": "jnz     loc_1DFE",
+        "7489": "jz      short loc_1D80",
+        "7500": "jz      loc_1E2C",
+        "7510": "jnz     short loc_1DC0",
+        "7518": "jz      loc_1DF0",
+        "7530": "mov     [rax], dl",
+        "7543": "retn",
+        "7552": "jnz     short loc_1DC0",
+        "7560": "jnz     short loc_1D6A",
+        "7568": "jz      short loc_1D6A",
+        "7576": "jnz     short loc_1D77",
+        "7583": "jmp     short loc_1D77",
+        "7616": "jnz     short loc_1DE0",
+        "7625": "mov     [rax+1], dl",
+        "7634": "retn",
+        "7648": "jmp     short loc_1DD2",
+        "7664": "jmp     short loc_1DD2",
+        "7678": "retn",
+        "7724": "jmp     loc_1D77"
+    }
+}

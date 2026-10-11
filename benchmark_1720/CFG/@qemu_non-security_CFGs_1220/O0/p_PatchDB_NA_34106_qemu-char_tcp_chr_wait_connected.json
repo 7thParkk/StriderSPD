@@ -1,0 +1,166 @@
+{
+    "nodes": {
+        "22885": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "22925": [
+            "mov REG MEMACC",
+            "movzx REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "22941": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "23169": [
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jns ADDR"
+        ],
+        "23209": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "23228": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "23259": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "23275": [
+            "mov REG CONSTANT"
+        ],
+        "23280": [
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "22885": [
+            23259
+        ],
+        "22925": [
+            22941,
+            23169
+        ],
+        "22941": [
+            23259
+        ],
+        "23169": [
+            23209,
+            23228
+        ],
+        "23209": [
+            23280
+        ],
+        "23228": [
+            23259
+        ],
+        "23259": [
+            22925,
+            23275
+        ],
+        "23275": [
+            23280
+        ],
+        "23280": []
+    },
+    "boundary": {
+        "22885": 22925,
+        "22925": 22941,
+        "22941": 23169,
+        "23169": 23209,
+        "23209": 23228,
+        "23228": 23259,
+        "23259": 23275,
+        "23275": 23280,
+        "23280": 23282
+    },
+    "jmp_instruction": {
+        "22885": "jmp     loc_5ADB",
+        "22925": "jz      loc_5A81",
+        "22941": "jmp     short loc_5ADB",
+        "23169": "jns     short loc_5ABC",
+        "23209": "jmp     short locret_5AF0",
+        "23228": "call    object_unref; PIC mode",
+        "23259": "jz      loc_598D",
+        "23275": "mov     eax, 0",
+        "23280": "retn"
+    }
+}

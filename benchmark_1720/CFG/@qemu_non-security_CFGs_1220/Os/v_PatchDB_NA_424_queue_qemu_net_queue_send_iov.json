@@ -1,0 +1,121 @@
+{
+    "nodes": {
+        "803": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "test REG 1",
+            "jz ADDR"
+        ],
+        "842": [
+            "add REG CONSTANT",
+            "xor REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "863": [
+            "or REG CONSTANT",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call MEMACC",
+            "and MEMACC CONSTANT",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "902": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "912": [
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "xor REG REG",
+            "jmp ADDR"
+        ],
+        "936": [
+            "mov REG REG",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG MEMACC"
+        ],
+        "954": [
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "105": []
+    },
+    "edges": {
+        "803": [
+            842,
+            863
+        ],
+        "842": [
+            105
+        ],
+        "863": [
+            902,
+            936
+        ],
+        "902": [
+            912,
+            936
+        ],
+        "912": [
+            954
+        ],
+        "936": [
+            954
+        ],
+        "954": [],
+        "105": []
+    },
+    "boundary": {
+        "803": 842,
+        "842": 863,
+        "863": 902,
+        "902": 912,
+        "912": 936,
+        "936": 954,
+        "954": 968,
+        "105": 105
+    },
+    "jmp_instruction": {
+        "803": "jz      short loc_35F",
+        "842": "jmp     qemu_net_queue_append_iov",
+        "863": "jnz     short loc_3A8",
+        "902": "jz      short loc_3A8",
+        "912": "jmp     short loc_3BA",
+        "936": "mov     rax, [rsp+38h+var_30]",
+        "954": "retn",
+        "105": "retn"
+    }
+}

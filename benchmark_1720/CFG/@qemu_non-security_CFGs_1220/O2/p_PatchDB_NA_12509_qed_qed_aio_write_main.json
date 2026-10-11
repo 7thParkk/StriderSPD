@@ -1,0 +1,114 @@
+{
+    "nodes": {
+        "5936": [
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "and REG MEMACC",
+            "add REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5986": [
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG MEMACC"
+        ],
+        "6010": [
+            "lea REG 88",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "js ADDR"
+        ],
+        "6026": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "6036": [
+            "mov REG MEMACC",
+            "cmp 12368 0",
+            "jz ADDR"
+        ],
+        "6050": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "call ADDR",
+            "test REG REG",
+            "js ADDR"
+        ],
+        "6069": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "xor REG REG",
+            "test REG REG",
+            "cmovg REG REG"
+        ],
+        "6091": [
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "5936": [
+            5986,
+            6010
+        ],
+        "5986": [
+            6010
+        ],
+        "6010": [
+            6026,
+            6091
+        ],
+        "6026": [
+            6036,
+            6091
+        ],
+        "6036": [
+            6050,
+            6069
+        ],
+        "6050": [
+            6069,
+            6091
+        ],
+        "6069": [
+            6091
+        ],
+        "6091": []
+    },
+    "boundary": {
+        "5936": 5986,
+        "5986": 6010,
+        "6010": 6026,
+        "6026": 6036,
+        "6036": 6050,
+        "6050": 6069,
+        "6069": 6091,
+        "6091": 6096
+    },
+    "jmp_instruction": {
+        "5936": "jz      short loc_177A",
+        "5986": "mov     rdi, [rax+3058h]",
+        "6010": "js      short loc_17CB",
+        "6026": "jz      short loc_17CB",
+        "6036": "jz      short loc_17B5",
+        "6050": "js      short loc_17CB",
+        "6069": "cmovg   eax, edx",
+        "6091": "retn"
+    }
+}

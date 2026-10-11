@@ -1,0 +1,112 @@
+{
+    "nodes": {
+        "5191": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "cmp MEMACC 2",
+            "jg ADDR"
+        ],
+        "5224": [
+            "mov REG MEMACC",
+            "mov MEMACC CONSTANT"
+        ],
+        "5232": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "cmp REG 18446744073709551615",
+            "jnz ADDR"
+        ],
+        "5244": [
+            "mov REG MEMACC",
+            "movzx REG MEMACC",
+            "movzx REG REG",
+            "and REG CONSTANT",
+            "cmp REG 2",
+            "setz REG",
+            "movzx REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG"
+        ],
+        "5274": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "cmp REG 4",
+            "jbe ADDR"
+        ],
+        "5286": [
+            "mov REG MEMACC",
+            "mov MEMACC CONSTANT"
+        ],
+        "5297": [
+            "mov REG MEMACC",
+            "movzx REG MEMACC",
+            "shr REG CONSTANT",
+            "movzx REG REG",
+            "and REG CONSTANT",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "movzx REG MEMACC",
+            "movzx REG REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "5191": [
+            5224,
+            5232
+        ],
+        "5224": [
+            5232
+        ],
+        "5232": [
+            5244,
+            5274
+        ],
+        "5244": [
+            5274
+        ],
+        "5274": [
+            5286,
+            5297
+        ],
+        "5286": [
+            5297
+        ],
+        "5297": []
+    },
+    "boundary": {
+        "5191": 5224,
+        "5224": 5232,
+        "5232": 5244,
+        "5244": 5274,
+        "5274": 5286,
+        "5286": 5297,
+        "5297": 5367
+    },
+    "jmp_instruction": {
+        "5191": "jg      short loc_1470",
+        "5224": "mov     byte ptr [rax+0Dh], 0",
+        "5232": "jnz     short loc_149A",
+        "5244": "mov     [rax+10h], edx",
+        "5274": "jbe     short loc_14B1",
+        "5286": "mov     dword ptr [rax+34h], 4",
+        "5297": "retn"
+    }
+}

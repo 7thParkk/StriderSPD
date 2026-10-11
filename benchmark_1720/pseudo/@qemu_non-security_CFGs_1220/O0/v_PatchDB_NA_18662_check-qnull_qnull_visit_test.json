@@ -1,0 +1,33 @@
+{
+    "pseudo_code": [
+        "__int64 qnull_visit_test()",
+        "{",
+        "  __int64 visitor; // rax",
+        "  __int64 result; // rax",
+        "  void *v2; // [rsp+8h] [rbp-18h]",
+        "  _QWORD *qobject; // [rsp+8h] [rbp-18h]",
+        "  __int64 v4; // [rsp+10h] [rbp-10h]",
+        "  __int64 v5; // [rsp+18h] [rbp-8h]",
+        "",
+        "  if ( qnull_[1] != 1LL )",
+        "    g_assertion_message_expr(0LL, &unk_4F0, 49LL, \"qnull_visit_test\", \"qnull_.refcnt == 1\");",
+        "  v2 = qnull();",
+        "  v4 = qmp_input_visitor_new(v2, 1LL);",
+        "  qobject_decref((__int64)v2);",
+        "  visit_type_null(v4, 0LL, &error_abort);",
+        "  visit_free(v4);",
+        "  v5 = qmp_output_visitor_new();",
+        "  visitor = qmp_output_get_visitor(v5);",
+        "  visit_type_null(visitor, 0LL, &error_abort);",
+        "  qobject = (_QWORD *)qmp_output_get_qobject(v5);",
+        "  if ( qobject != qnull_ )",
+        "    g_assertion_message_expr(0LL, &unk_4F0, 59LL, \"qnull_visit_test\", \"obj == &qnull_\");",
+        "  qobject_decref((__int64)qobject);",
+        "  qmp_output_visitor_cleanup(v5);",
+        "  result = qnull_[1];",
+        "  if ( result != 1 )",
+        "    return g_assertion_message_expr(0LL, &unk_4F0, 63LL, \"qnull_visit_test\", \"qnull_.refcnt == 1\");",
+        "  return result;",
+        "}"
+    ]
+}

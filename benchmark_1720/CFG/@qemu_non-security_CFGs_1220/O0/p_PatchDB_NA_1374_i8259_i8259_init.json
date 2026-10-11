@@ -1,0 +1,159 @@
+{
+    "nodes": {
+        "3381": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC CONSTANT",
+            "jmp ADDR"
+        ],
+        "3524": [
+            "mov REG MEMACC",
+            "cdqe REG",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "add MEMACC CONSTANT"
+        ],
+        "3569": [
+            "cmp MEMACC 7",
+            "jle ADDR"
+        ],
+        "3575": [
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "add REG CONSTANT",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC CONSTANT",
+            "jmp ADDR"
+        ],
+        "3696": [
+            "mov REG MEMACC",
+            "cdqe REG",
+            "add REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "add MEMACC CONSTANT"
+        ],
+        "3745": [
+            "cmp MEMACC 7",
+            "jle ADDR"
+        ],
+        "3751": [
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "3381": [
+            3569
+        ],
+        "3524": [
+            3569
+        ],
+        "3569": [
+            3524,
+            3575
+        ],
+        "3575": [
+            3745
+        ],
+        "3696": [
+            3745
+        ],
+        "3745": [
+            3696,
+            3751
+        ],
+        "3751": []
+    },
+    "boundary": {
+        "3381": 3524,
+        "3524": 3569,
+        "3569": 3575,
+        "3575": 3696,
+        "3696": 3745,
+        "3745": 3751,
+        "3751": 3806
+    },
+    "jmp_instruction": {
+        "3381": "jmp     short loc_DF1",
+        "3524": "add     [rbp+i], 1",
+        "3569": "jle     short loc_DC4",
+        "3575": "jmp     short loc_EA1",
+        "3696": "add     [rbp+i], 1",
+        "3745": "jle     short loc_E70",
+        "3751": "retn"
+    }
+}

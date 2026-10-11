@@ -1,0 +1,28 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall qemu_net_queue_send_iov(",
+        "        __int64 a1,",
+        "        __int64 a2,",
+        "        unsigned int a3,",
+        "        __int64 a4,",
+        "        unsigned int a5,",
+        "        __int64 a6)",
+        "{",
+        "  __int64 v11; // [rsp+38h] [rbp-8h]",
+        "",
+        "  if ( (*(_BYTE *)(a1 + 40) & 1) != 0 )",
+        "    return qemu_net_queue_append_iov(a1, a2, a3, a4, a5, 0LL);",
+        "  v11 = qemu_net_queue_deliver_iov(a1, a2, a3, a4, a5);",
+        "  if ( v11 )",
+        "  {",
+        "    qemu_net_queue_flush(a1);",
+        "    return v11;",
+        "  }",
+        "  else",
+        "  {",
+        "    qemu_net_queue_append_iov(a1, a2, a3, a4, a5, a6);",
+        "    return 0LL;",
+        "  }",
+        "}"
+    ]
+}

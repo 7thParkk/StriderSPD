@@ -1,0 +1,24 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall qmp_output_free(__int64 a1)",
+        "{",
+        "  __int64 i; // [rsp+18h] [rbp-18h]",
+        "  _QWORD *v3; // [rsp+20h] [rbp-10h]",
+        "  __int64 v4; // [rsp+28h] [rbp-8h]",
+        "",
+        "  v3 = (_QWORD *)to_qov(a1);",
+        "  for ( i = v3[19]; i; i = v4 )",
+        "  {",
+        "    v4 = *(_QWORD *)(i + 16);",
+        "    if ( v4 )",
+        "      *(_QWORD *)(*(_QWORD *)(i + 16) + 24LL) = *(_QWORD *)(i + 24);",
+        "    else",
+        "      v3[20] = *(_QWORD *)(i + 24);",
+        "    **(_QWORD **)(i + 24) = *(_QWORD *)(i + 16);",
+        "    g_free(i);",
+        "  }",
+        "  qobject_decref(v3[21]);",
+        "  return g_free(v3);",
+        "}"
+    ]
+}

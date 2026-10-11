@@ -1,0 +1,23 @@
+{
+    "pseudo_code": [
+        "unsigned __int64 __fastcall list_delete_retry(_QWORD *a1)",
+        "{",
+        "  _QWORD *v2; // [rsp+10h] [rbp-10h] BYREF",
+        "  unsigned __int64 v3; // [rsp+18h] [rbp-8h]",
+        "",
+        "  v3 = __readfsqword(0x28u);",
+        "  v2 = a1;",
+        "  if ( a1[1] )",
+        "    xfree(v2 + 1, &errnum, 611LL, &unk_1CF0);",
+        "  v2[1] = 0LL;",
+        "  if ( v2[2] )",
+        "    xfree(v2 + 2, &errnum, 612LL, &unk_1CF0);",
+        "  v2[2] = 0LL;",
+        "  if ( v2[4] )",
+        "    xfree(v2 + 4, &errnum, 614LL, &unk_1CF0);",
+        "  v2[4] = 0LL;",
+        "  xfree(&v2, &errnum, 616LL, &unk_1CF0);",
+        "  return v3 - __readfsqword(0x28u);",
+        "}"
+    ]
+}

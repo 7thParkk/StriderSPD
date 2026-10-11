@@ -1,0 +1,140 @@
+{
+    "nodes": {
+        "1877": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1899": [
+            "mov REG REG",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1910": [
+            "cmp 152 0",
+            "jz ADDR"
+        ],
+        "1920": [
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1928": [
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "1945": [
+            "mov MEMACC CONSTANT",
+            "mov MEMACC REG"
+        ],
+        "1955": [
+            "xor REG REG",
+            "jmp ADDR"
+        ],
+        "1960": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "call MEMACC",
+            "mov REG MEMACC",
+            "xor REG REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "call MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "2007": [
+            "cmp 32 0",
+            "jz ADDR"
+        ],
+        "2013": [
+            "mov MEMACC CONSTANT",
+            "mov MEMACC REG"
+        ],
+        "2023": [
+            "add REG CONSTANT",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "1877": [
+            1899,
+            1955
+        ],
+        "1899": [
+            1910,
+            1955
+        ],
+        "1910": [
+            1920,
+            1955
+        ],
+        "1920": [
+            1928,
+            1955
+        ],
+        "1928": [
+            1945,
+            1960
+        ],
+        "1945": [
+            1955
+        ],
+        "1955": [
+            2023
+        ],
+        "1960": [
+            2007,
+            2023
+        ],
+        "2007": [
+            2013,
+            2023
+        ],
+        "2013": [
+            2023
+        ],
+        "2023": []
+    },
+    "boundary": {
+        "1877": 1899,
+        "1899": 1910,
+        "1910": 1920,
+        "1920": 1928,
+        "1928": 1945,
+        "1945": 1955,
+        "1955": 1960,
+        "1960": 2007,
+        "2007": 2013,
+        "2013": 2023,
+        "2023": 2035
+    },
+    "jmp_instruction": {
+        "1877": "jz      short loc_7A3",
+        "1899": "jz      short loc_7A3",
+        "1910": "jz      short loc_7A3",
+        "1920": "jz      short loc_7A3",
+        "1928": "jnz     short loc_7A8",
+        "1945": "mov     [rbx+70h], ebp",
+        "1955": "jmp     short loc_7E7",
+        "1960": "jnz     short loc_7E7",
+        "2007": "jz      short loc_7E7",
+        "2013": "mov     [rbx+70h], ebp",
+        "2023": "retn"
+    }
+}

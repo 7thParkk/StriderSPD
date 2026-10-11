@@ -1,0 +1,174 @@
+{
+    "nodes": {
+        "1920": [
+            "endbr64",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1933": [
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1954": [
+            "cmp 152 0",
+            "jz ADDR"
+        ],
+        "1964": [
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1972": [
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jle ADDR"
+        ],
+        "1991": [
+            "movsxd REG REG",
+            "xor REG REG",
+            "mov REG REG",
+            "div REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "2007": [
+            "mov MEMACC CONSTANT",
+            "mov MEMACC REG",
+            "nop MEMACC"
+        ],
+        "2024": [
+            "xor REG REG",
+            "jmp ADDR"
+        ],
+        "2032": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "call MEMACC",
+            "mov REG MEMACC",
+            "xor REG REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "call MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "2081": [
+            "mov REG REG"
+        ],
+        "2083": [
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "2096": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "2103": [
+            "mov MEMACC CONSTANT",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "2120": [
+            "xor REG REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "1920": [
+            1933,
+            2120
+        ],
+        "1933": [
+            1954,
+            2024
+        ],
+        "1954": [
+            1964,
+            2024
+        ],
+        "1964": [
+            1972,
+            2024
+        ],
+        "1972": [
+            1991,
+            2032
+        ],
+        "1991": [
+            2007,
+            2032
+        ],
+        "2007": [
+            2024
+        ],
+        "2024": [
+            2083
+        ],
+        "2032": [
+            2081,
+            2096
+        ],
+        "2081": [
+            2083
+        ],
+        "2083": [],
+        "2096": [
+            2081,
+            2103
+        ],
+        "2103": [
+            2081
+        ],
+        "2120": []
+    },
+    "boundary": {
+        "1920": 1933,
+        "1933": 1954,
+        "1954": 1964,
+        "1964": 1972,
+        "1972": 1991,
+        "1991": 2007,
+        "2007": 2024,
+        "2024": 2028,
+        "2032": 2081,
+        "2081": 2083,
+        "2083": 2094,
+        "2096": 2103,
+        "2103": 2116,
+        "2120": 2123
+    },
+    "jmp_instruction": {
+        "1920": "jz      loc_848",
+        "1933": "jz      short loc_7E8",
+        "1954": "jz      short loc_7E8",
+        "1964": "jz      short loc_7E8",
+        "1972": "jle     short loc_7F0",
+        "1991": "jz      short loc_7F0",
+        "2007": "nop     word ptr [rax+rax+00h]",
+        "2024": "jmp     short loc_823",
+        "2032": "jz      short loc_830",
+        "2081": "mov     eax, ebp",
+        "2083": "retn",
+        "2096": "jz      short loc_821",
+        "2103": "jmp     short loc_821",
+        "2120": "retn"
+    }
+}

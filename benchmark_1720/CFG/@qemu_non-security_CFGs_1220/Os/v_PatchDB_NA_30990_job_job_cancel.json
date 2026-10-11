@@ -1,0 +1,98 @@
+{
+    "nodes": {
+        "5107": [
+            "endbr64",
+            "cmp 20 9",
+            "jnz ADDR"
+        ],
+        "5117": [
+            "jmp ADDR"
+        ],
+        "5122": [
+            "sub REG CONSTANT",
+            "movzx REG REG",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "cmp 32 0",
+            "jnz ADDR"
+        ],
+        "5152": [
+            "mov REG CONSTANT",
+            "add REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "5166": [
+            "cmp 97 0",
+            "jz ADDR"
+        ],
+        "5172": [
+            "add REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "5181": [
+            "add REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "2491": [],
+        "4848": [],
+        "4436": [],
+        "2993": []
+    },
+    "edges": {
+        "5107": [
+            5117,
+            5122
+        ],
+        "5117": [
+            2491
+        ],
+        "5122": [
+            5152,
+            5166
+        ],
+        "5152": [
+            4848
+        ],
+        "5166": [
+            5172,
+            5181
+        ],
+        "5172": [
+            4436
+        ],
+        "5181": [
+            2993
+        ],
+        "2491": [],
+        "4848": [],
+        "4436": [],
+        "2993": []
+    },
+    "boundary": {
+        "5107": 5117,
+        "5117": 5122,
+        "5122": 5152,
+        "5152": 5166,
+        "5166": 5172,
+        "5172": 5181,
+        "5181": 5190,
+        "2491": 2491,
+        "4848": 4848,
+        "4436": 4436,
+        "2993": 2993
+    },
+    "jmp_instruction": {
+        "5107": "jnz     short loc_1402",
+        "5117": "jmp     job_do_dismiss",
+        "5122": "jnz     short loc_142E",
+        "5152": "jmp     job_completed; PIC mode",
+        "5166": "jz      short loc_143D",
+        "5172": "jmp     job_completed_txn_abort",
+        "5181": "jmp     job_enter; PIC mode",
+        "2491": "retn",
+        "4848": "retn",
+        "4436": "retn",
+        "2993": "retn"
+    }
+}

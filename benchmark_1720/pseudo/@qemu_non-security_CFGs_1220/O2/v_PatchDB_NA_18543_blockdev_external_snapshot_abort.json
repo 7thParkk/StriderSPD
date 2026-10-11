@@ -1,0 +1,16 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall external_snapshot_abort(__int64 a1)",
+        "{",
+        "  __int64 result; // rax",
+        "",
+        "  result = *(_QWORD *)(a1 + 48);",
+        "  if ( result )",
+        "  {",
+        "    if ( *(_BYTE *)(a1 + 64) )",
+        "      return bdrv_replace_node(*(_QWORD *)(a1 + 48), *(_QWORD *)(a1 + 40), &error_abort);",
+        "  }",
+        "  return result;",
+        "}"
+    ]
+}

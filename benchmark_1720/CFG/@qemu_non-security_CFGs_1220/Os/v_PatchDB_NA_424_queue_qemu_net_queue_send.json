@@ -1,0 +1,121 @@
+{
+    "nodes": {
+        "639": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "test REG 1",
+            "jz ADDR"
+        ],
+        "678": [
+            "add REG CONSTANT",
+            "xor REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "699": [
+            "or REG CONSTANT",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call MEMACC",
+            "and MEMACC CONSTANT",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "737": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "747": [
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "xor REG REG",
+            "jmp ADDR"
+        ],
+        "771": [
+            "mov REG REG",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG MEMACC"
+        ],
+        "789": [
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "0": []
+    },
+    "edges": {
+        "639": [
+            678,
+            699
+        ],
+        "678": [
+            0
+        ],
+        "699": [
+            737,
+            771
+        ],
+        "737": [
+            747,
+            771
+        ],
+        "747": [
+            789
+        ],
+        "771": [
+            789
+        ],
+        "789": [],
+        "0": []
+    },
+    "boundary": {
+        "639": 678,
+        "678": 699,
+        "699": 737,
+        "737": 747,
+        "747": 771,
+        "771": 789,
+        "789": 803,
+        "0": 0
+    },
+    "jmp_instruction": {
+        "639": "jz      short loc_2BB",
+        "678": "jmp     qemu_net_queue_append",
+        "699": "jnz     short loc_303",
+        "737": "jz      short loc_303",
+        "747": "jmp     short loc_315",
+        "771": "mov     rax, [rsp+38h+var_30]",
+        "789": "retn",
+        "0": ""
+    }
+}

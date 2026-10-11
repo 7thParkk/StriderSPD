@@ -1,0 +1,31 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall nc_sendv_compat(__int64 a1, _QWORD *a2, unsigned int a3, char a4)",
+        "{",
+        "  _BYTE *v7; // rsi",
+        "  __int64 v8; // rdx",
+        "  __int64 (__fastcall *v9)(__int64, _BYTE *, __int64); // rax",
+        "  _BYTE v11[16]; // [rsp-10h] [rbp-11028h] BYREF",
+        "  char v12; // [rsp+0h] [rbp-11018h] BYREF",
+        "  _QWORD v13[8195]; // [rsp+1000h] [rbp-10018h] BYREF",
+        "",
+        "  while ( &v12 != (char *)&v13[-8704] )",
+        "    ;",
+        "  v13[0x1FFF] = __readfsqword(0x28u);",
+        "  if ( a3 == 1 )",
+        "  {",
+        "    v7 = (_BYTE *)*a2;",
+        "    v8 = a2[1];",
+        "  }",
+        "  else",
+        "  {",
+        "    v8 = ((__int64 (__fastcall *)(_QWORD *, _QWORD, _QWORD, _BYTE *, __int64))iov_to_buf)(a2, a3, 0LL, v11, 69632LL);",
+        "    v7 = v11;",
+        "  }",
+        "  if ( (a4 & 1) != 0 && (v9 = *(__int64 (__fastcall **)(__int64, _BYTE *, __int64))(*(_QWORD *)a1 + 24LL)) != 0LL )",
+        "    return v9(a1, v7, v8);",
+        "  else",
+        "    return (*(__int64 (__fastcall **)(__int64, _BYTE *, __int64))(*(_QWORD *)a1 + 16LL))(a1, v7, v8);",
+        "}"
+    ]
+}

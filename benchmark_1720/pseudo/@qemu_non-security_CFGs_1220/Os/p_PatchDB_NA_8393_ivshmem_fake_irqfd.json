@@ -1,0 +1,16 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall fake_irqfd(_QWORD *a1)",
+        "{",
+        "  __int64 v1; // rax",
+        "  __int64 v2; // rbp",
+        "  __int64 v3; // rax",
+        "  __int64 v5; // [rsp-8h] [rbp-18h]",
+        "",
+        "  v5 = v1;",
+        "  v2 = *a1;",
+        "  v3 = object_dynamic_cast_assert(*a1, \"ivshmem\", LC0, 289LL, \"fake_irqfd\");",
+        "  return msix_notify(v2, ((__int64)a1 - *(_QWORD *)(v3 + 3016)) >> 3, v5);",
+        "}"
+    ]
+}

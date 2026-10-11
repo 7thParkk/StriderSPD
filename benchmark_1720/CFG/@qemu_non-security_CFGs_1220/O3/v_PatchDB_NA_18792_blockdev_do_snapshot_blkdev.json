@@ -1,0 +1,182 @@
+{
+    "nodes": {
+        "4704": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "call ADDR",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "4792": [
+            "test REG REG",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "cmovz REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "4825": [
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "4842": [
+            "mov REG MEMACC",
+            "sub REG CONSTANT",
+            "lea REG 88",
+            "xor REG REG",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "push REG",
+            "call ADDR",
+            "pop REG",
+            "pop REG",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "4888": [
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "4938": [
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "4949": [
+            "mov REG REG",
+            "lea REG MEMACC",
+            "xor REG REG",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "nop MEMACC"
+        ],
+        "4992": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "4999": [
+            "mov REG REG",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "5035": [
+            "mov REG REG",
+            "lea REG MEMACC",
+            "xor REG REG",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "8002": []
+    },
+    "edges": {
+        "4704": [
+            4792,
+            5035
+        ],
+        "4792": [
+            4825,
+            4949
+        ],
+        "4825": [
+            4842,
+            4999
+        ],
+        "4842": [
+            4888,
+            4992
+        ],
+        "4888": [
+            4938,
+            8002
+        ],
+        "4938": [],
+        "4949": [
+            4992
+        ],
+        "4992": [
+            4938
+        ],
+        "4999": [
+            4992
+        ],
+        "5035": [
+            4992
+        ],
+        "8002": []
+    },
+    "boundary": {
+        "4704": 4792,
+        "4792": 4825,
+        "4825": 4842,
+        "4842": 4888,
+        "4888": 4938,
+        "4938": 4949,
+        "4949": 4992,
+        "4992": 4999,
+        "4999": 5035,
+        "5035": 5073,
+        "8002": 8002
+    },
+    "jmp_instruction": {
+        "4704": "jz      loc_13AB",
+        "4792": "jz      short loc_1355",
+        "4825": "jz      loc_1387",
+        "4842": "jnz     short loc_1380",
+        "4888": "jnz     do_snapshot_blkdev_cold",
+        "4938": "retn",
+        "4949": "nop     dword ptr [rax+00000000h]",
+        "4992": "jmp     short loc_134A",
+        "4999": "jmp     short loc_1380",
+        "5035": "jmp     short loc_1380",
+        "8002": "db 'do_commit',0"
+    }
+}

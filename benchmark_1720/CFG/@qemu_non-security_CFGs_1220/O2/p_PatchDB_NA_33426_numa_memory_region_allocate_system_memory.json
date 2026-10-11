@@ -1,0 +1,259 @@
+{
+    "nodes": {
+        "3408": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG CONSTANT",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "3467": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "3481": [
+            "mov REG CONSTANT",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "3496": [
+            "sub REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "xor REG REG",
+            "mov MEMACC CONSTANT",
+            "lea REG 24",
+            "mov REG REG",
+            "push REG",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG MEMACC",
+            "pop REG",
+            "pop REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "3549": [
+            "call ADDR",
+            "mov REG CONSTANT",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "3571": [
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "call ADDR"
+        ],
+        "3597": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jnz ADDR"
+        ],
+        "3617": [
+            "mov REG MEMACC",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "3648": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "xor REG REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "lea REG 8192",
+            "xchg REG REG"
+        ],
+        "3680": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "3692": [
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "3722": [
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "add REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "3762": [
+            "add REG CONSTANT",
+            "cmp REG REG",
+            "jnz ADDR"
+        ],
+        "3771": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jnz ADDR"
+        ],
+        "3787": [
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "3802": [
+            "mov REG REG",
+            "call ADDR",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "xor REG REG",
+            "call ADDR"
+        ],
+        "3827": [
+            "mov REG CONSTANT",
+            "call ADDR"
+        ],
+        "3837": [
+            "call ADDR"
+        ],
+        "14464": []
+    },
+    "edges": {
+        "3408": [
+            3467,
+            3481
+        ],
+        "3467": [
+            3481,
+            3648
+        ],
+        "3481": [
+            3496,
+            3571
+        ],
+        "3496": [
+            3549,
+            3597
+        ],
+        "3549": [
+            3571,
+            3827
+        ],
+        "3571": [
+            3597
+        ],
+        "3597": [
+            3617,
+            3837
+        ],
+        "3617": [
+            14464
+        ],
+        "3648": [
+            3680
+        ],
+        "3680": [
+            3692,
+            3762
+        ],
+        "3692": [
+            3722,
+            3802
+        ],
+        "3722": [
+            3762
+        ],
+        "3762": [
+            3680,
+            3771
+        ],
+        "3771": [
+            3787,
+            3837
+        ],
+        "3787": [],
+        "3802": [
+            3827
+        ],
+        "3827": [],
+        "3837": [],
+        "14464": []
+    },
+    "boundary": {
+        "3408": 3467,
+        "3467": 3481,
+        "3481": 3496,
+        "3496": 3549,
+        "3549": 3571,
+        "3571": 3597,
+        "3597": 3617,
+        "3617": 3641,
+        "3648": 3680,
+        "3680": 3692,
+        "3692": 3722,
+        "3722": 3762,
+        "3762": 3771,
+        "3771": 3787,
+        "3787": 3802,
+        "3802": 3827,
+        "3827": 3837,
+        "3837": 3842,
+        "14464": 14464
+    },
+    "jmp_instruction": {
+        "3408": "jz      short loc_D99",
+        "3467": "jnz     loc_E40",
+        "3481": "jz      short loc_DF3",
+        "3496": "jz      short loc_E0D",
+        "3549": "jnz     loc_EF3",
+        "3571": "call    memory_region_init_ram; PIC mode",
+        "3597": "jnz     loc_EFD",
+        "3617": "jmp     vmstate_register_ram_global; PIC mode",
+        "3648": "xchg    ax, ax",
+        "3680": "jz      short loc_EB2",
+        "3692": "jnz     short loc_EDA",
+        "3722": "call    vmstate_register_ram_global; PIC mode",
+        "3762": "jnz     short loc_E60",
+        "3771": "jnz     short loc_EFD",
+        "3787": "retn",
+        "3802": "call    error_report; PIC mode",
+        "3827": "call    exit; PIC mode",
+        "3837": "call    __stack_chk_fail; PIC mode",
+        "14464": "extrn memory_region_init_ram:near"
+    }
+}

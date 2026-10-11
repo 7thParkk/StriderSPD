@@ -1,0 +1,20 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall apm_ctrl_changed(int a1, __int64 a2)",
+        "{",
+        "  __int64 result; // rax",
+        "  __int64 v3; // [rsp+18h] [rbp-8h]",
+        "",
+        "  v3 = object_dynamic_cast_assert(a2, \"pci-device\", file, 111LL, \"apm_ctrl_changed\");",
+        "  acpi_pm1_cnt_update(a2 + 2680, a1 == 241, a1 == 240);",
+        "  result = *(_BYTE *)(*(_QWORD *)(v3 + 120) + 91LL) & 2;",
+        "  if ( (*(_BYTE *)(*(_QWORD *)(v3 + 120) + 91LL) & 2) != 0 )",
+        "  {",
+        "    result = *(_QWORD *)(a2 + 4104);",
+        "    if ( result )",
+        "      return qemu_irq_raise(*(_QWORD *)(a2 + 4104));",
+        "  }",
+        "  return result;",
+        "}"
+    ]
+}

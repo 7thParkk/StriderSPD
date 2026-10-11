@@ -1,0 +1,208 @@
+{
+    "nodes": {
+        "1509": [
+            "endbr64",
+            "mov REG MEMACC",
+            "cmp REG 2",
+            "jnz ADDR"
+        ],
+        "1523": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "1534": [
+            "mov REG MEMACC",
+            "bt REG CONSTANT",
+            "jnb ADDR"
+        ],
+        "1543": [
+            "mov MEMACC CONSTANT",
+            "jmp ADDR"
+        ],
+        "1548": [
+            "bt REG CONSTANT",
+            "jnb ADDR"
+        ],
+        "1554": [
+            "mov MEMACC CONSTANT",
+            "mov REG CONSTANT",
+            "retn"
+        ],
+        "1565": [
+            "bt REG CONSTANT",
+            "jnb ADDR"
+        ],
+        "1571": [
+            "mov MEMACC CONSTANT"
+        ],
+        "1574": [
+            "mov REG CONSTANT",
+            "retn"
+        ],
+        "1580": [
+            "mov REG MEMACC",
+            "or REG CONSTANT",
+            "test REG 128",
+            "jz ADDR"
+        ],
+        "1592": [
+            "movsx REG MEMACC",
+            "imul REG MEMACC",
+            "lea REG 128",
+            "cmp REG 383",
+            "ja ADDR"
+        ],
+        "1617": [
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "1622": [
+            "test 83 1",
+            "jz ADDR"
+        ],
+        "1628": [
+            "mov MEMACC CONSTANT",
+            "jmp ADDR"
+        ],
+        "1633": [
+            "bt REG CONSTANT",
+            "jnb ADDR"
+        ],
+        "1639": [
+            "mov MEMACC CONSTANT",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "1651": [
+            "mov MEMACC CONSTANT"
+        ],
+        "1654": [
+            "mov REG CONSTANT"
+        ],
+        "1659": [
+            "mov MEMACC REG",
+            "lea REG 1",
+            "retn"
+        ],
+        "1666": [
+            "xor REG REG"
+        ],
+        "1668": [
+            "retn"
+        ]
+    },
+    "edges": {
+        "1509": [
+            1523,
+            1580
+        ],
+        "1523": [
+            1534,
+            1666
+        ],
+        "1534": [
+            1543,
+            1548
+        ],
+        "1543": [
+            1574
+        ],
+        "1548": [
+            1554,
+            1565
+        ],
+        "1554": [],
+        "1565": [
+            1571,
+            1668
+        ],
+        "1571": [
+            1574
+        ],
+        "1574": [],
+        "1580": [
+            1592,
+            1668
+        ],
+        "1592": [
+            1617,
+            1668
+        ],
+        "1617": [
+            1622,
+            1651
+        ],
+        "1622": [
+            1628,
+            1633
+        ],
+        "1628": [
+            1654
+        ],
+        "1633": [
+            1639,
+            1651
+        ],
+        "1639": [
+            1659
+        ],
+        "1651": [
+            1654
+        ],
+        "1654": [
+            1659
+        ],
+        "1659": [],
+        "1666": [
+            1668
+        ],
+        "1668": []
+    },
+    "boundary": {
+        "1509": 1523,
+        "1523": 1534,
+        "1534": 1543,
+        "1543": 1548,
+        "1548": 1554,
+        "1554": 1565,
+        "1565": 1571,
+        "1571": 1574,
+        "1574": 1580,
+        "1580": 1592,
+        "1592": 1617,
+        "1617": 1622,
+        "1622": 1628,
+        "1628": 1633,
+        "1633": 1639,
+        "1639": 1651,
+        "1651": 1654,
+        "1654": 1659,
+        "1659": 1666,
+        "1666": 1668,
+        "1668": 1669
+    },
+    "jmp_instruction": {
+        "1509": "jnz     short loc_62C",
+        "1523": "jnz     loc_682",
+        "1534": "jnb     short loc_60C",
+        "1543": "jmp     short loc_626",
+        "1548": "jnb     short loc_61D",
+        "1554": "retn",
+        "1565": "jnb     short locret_684",
+        "1571": "mov     byte ptr [rsi], 0EDh",
+        "1574": "retn",
+        "1580": "jz      short locret_684",
+        "1592": "ja      short locret_684",
+        "1617": "jnz     short loc_673",
+        "1622": "jz      short loc_661",
+        "1628": "jmp     short loc_676",
+        "1633": "jnb     short loc_673",
+        "1639": "jmp     short loc_67B",
+        "1651": "mov     byte ptr [rsi], 0E7h",
+        "1654": "mov     edx, 1",
+        "1659": "retn",
+        "1666": "xor     eax, eax",
+        "1668": "retn"
+    }
+}

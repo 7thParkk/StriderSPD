@@ -1,0 +1,114 @@
+{
+    "nodes": {
+        "5235": [
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "and REG MEMACC",
+            "add REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5285": [
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR"
+        ],
+        "5298": [
+            "lea REG 88",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "js ADDR"
+        ],
+        "5325": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5335": [
+            "mov REG MEMACC",
+            "cmp 12368 0",
+            "jz ADDR"
+        ],
+        "5349": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "call ADDR",
+            "test REG REG",
+            "js ADDR"
+        ],
+        "5368": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "mov REG CONSTANT",
+            "cmovg REG REG"
+        ],
+        "5393": [
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "5235": [
+            5285,
+            5298
+        ],
+        "5285": [
+            5298
+        ],
+        "5298": [
+            5325,
+            5393
+        ],
+        "5325": [
+            5335,
+            5393
+        ],
+        "5335": [
+            5349,
+            5368
+        ],
+        "5349": [
+            5368,
+            5393
+        ],
+        "5368": [
+            5393
+        ],
+        "5393": []
+    },
+    "boundary": {
+        "5235": 5285,
+        "5285": 5298,
+        "5298": 5325,
+        "5325": 5335,
+        "5335": 5349,
+        "5349": 5368,
+        "5368": 5393,
+        "5393": 5398
+    },
+    "jmp_instruction": {
+        "5235": "jz      short loc_14B2",
+        "5285": "call    bdrv_debug_event; PIC mode",
+        "5298": "js      short loc_1511",
+        "5325": "jz      short loc_1511",
+        "5335": "jz      short loc_14F8",
+        "5349": "js      short loc_1511",
+        "5368": "cmovg   eax, edx",
+        "5393": "retn"
+    }
+}

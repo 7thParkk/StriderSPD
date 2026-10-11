@@ -1,0 +1,94 @@
+{
+    "nodes": {
+        "607": [
+            "endbr64",
+            "push REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "imul REG REG",
+            "cmp REG 9999",
+            "ja ADDR"
+        ],
+        "640": [
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "645": [
+            "mov REG CONSTANT",
+            "cqo REG REG",
+            "idiv REG REG"
+        ],
+        "655": [
+            "mov MEMACC REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "663": [
+            "cmp MEMACC 0",
+            "mov MEMACC REG",
+            "jz ADDR"
+        ],
+        "672": [
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "695": [
+            "pop REG",
+            "retn"
+        ],
+        "0": []
+    },
+    "edges": {
+        "607": [
+            640,
+            655
+        ],
+        "640": [
+            645,
+            655
+        ],
+        "645": [
+            655
+        ],
+        "655": [
+            663,
+            695
+        ],
+        "663": [
+            672,
+            695
+        ],
+        "672": [
+            0
+        ],
+        "695": [],
+        "0": []
+    },
+    "boundary": {
+        "607": 640,
+        "640": 645,
+        "645": 655,
+        "655": 663,
+        "663": 672,
+        "672": 695,
+        "695": 697,
+        "0": 0
+    },
+    "jmp_instruction": {
+        "607": "ja      short loc_28F",
+        "640": "jz      short loc_28F",
+        "645": "idiv    rcx",
+        "655": "jz      short loc_2B7",
+        "663": "jz      short loc_2B7",
+        "672": "jmp     ptimer_reload",
+        "695": "retn",
+        "0": ""
+    }
+}

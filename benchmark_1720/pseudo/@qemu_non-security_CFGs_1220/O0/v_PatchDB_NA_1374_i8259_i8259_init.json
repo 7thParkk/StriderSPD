@@ -1,0 +1,29 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall i8259_init(__int64 a1, __int64 a2)",
+        "{",
+        "  int i; // [rsp+14h] [rbp-2Ch]",
+        "  int j; // [rsp+14h] [rbp-2Ch]",
+        "  __int64 v5; // [rsp+18h] [rbp-28h]",
+        "  __int64 inited; // [rsp+20h] [rbp-20h]",
+        "  __int64 v7; // [rsp+20h] [rbp-20h]",
+        "  __int64 v8; // [rsp+28h] [rbp-18h]",
+        "  __int64 v9; // [rsp+28h] [rbp-18h]",
+        "",
+        "  v5 = g_malloc(128LL);",
+        "  inited = i8259_init_chip(\"isa-i8259\", a1, 1LL);",
+        "  v8 = object_dynamic_cast_assert(inited, \"device\", &unk_FD0, 478LL, \"i8259_init\");",
+        "  qdev_connect_gpio_out(v8, 0LL, a2);",
+        "  for ( i = 0; i <= 7; ++i )",
+        "    *(_QWORD *)(8LL * i + v5) = qdev_get_gpio_in(v8, (unsigned int)i);",
+        "  isa_pic = v8;",
+        "  v7 = i8259_init_chip(\"isa-i8259\", a1, 0LL);",
+        "  v9 = object_dynamic_cast_assert(v7, \"device\", &unk_FD0, 488LL, \"i8259_init\");",
+        "  qdev_connect_gpio_out(v9, 0LL, *(_QWORD *)(v5 + 16));",
+        "  for ( j = 0; j <= 7; ++j )",
+        "    *(_QWORD *)(8 * (j + 8LL) + v5) = qdev_get_gpio_in(v9, (unsigned int)j);",
+        "  slave_pic = object_dynamic_cast_assert(v9, \"pic-common\", &unk_FD0, 495LL, \"i8259_init\");",
+        "  return v5;",
+        "}"
+    ]
+}

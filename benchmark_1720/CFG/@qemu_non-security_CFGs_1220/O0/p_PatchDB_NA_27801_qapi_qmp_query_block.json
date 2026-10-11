@@ -1,0 +1,162 @@
+{
+    "nodes": {
+        "5671": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov MEMACC CONSTANT",
+            "lea REG MEMACC",
+            "mov MEMACC REG",
+            "mov MEMACC CONSTANT",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "5745": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "movzx REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5764": [
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "lea REG 8",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5814": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "5864": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "5885": [
+            "nop"
+        ],
+        "5886": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG"
+        ],
+        "5902": [
+            "cmp MEMACC 0",
+            "jnz ADDR"
+        ],
+        "5913": [
+            "mov REG MEMACC"
+        ],
+        "5917": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jz ADDR"
+        ],
+        "5932": [
+            "call ADDR"
+        ],
+        "5937": [
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "5671": [
+            5902
+        ],
+        "5745": [
+            5764,
+            5885
+        ],
+        "5764": [
+            5814,
+            5864
+        ],
+        "5814": [
+            5917
+        ],
+        "5864": [
+            5886
+        ],
+        "5885": [
+            5886
+        ],
+        "5886": [
+            5902
+        ],
+        "5902": [
+            5745,
+            5913
+        ],
+        "5913": [
+            5917
+        ],
+        "5917": [
+            5932,
+            5937
+        ],
+        "5932": [],
+        "5937": []
+    },
+    "boundary": {
+        "5671": 5745,
+        "5745": 5764,
+        "5764": 5814,
+        "5814": 5864,
+        "5864": 5885,
+        "5885": 5886,
+        "5886": 5902,
+        "5902": 5913,
+        "5913": 5917,
+        "5917": 5932,
+        "5932": 5937,
+        "5937": 5939
+    },
+    "jmp_instruction": {
+        "5671": "jmp     loc_170E",
+        "5745": "jz      short loc_16FD",
+        "5764": "jz      short loc_16E8",
+        "5814": "jmp     short loc_171D",
+        "5864": "jmp     short loc_16FE",
+        "5885": "nop",
+        "5886": "mov     [rbp+blk], rax",
+        "5902": "jnz     loc_1671",
+        "5913": "mov     rax, [rbp+head]",
+        "5917": "jz      short locret_1731",
+        "5932": "call    __stack_chk_fail; PIC mode",
+        "5937": "retn"
+    }
+}

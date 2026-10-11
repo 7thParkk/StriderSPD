@@ -1,0 +1,198 @@
+{
+    "nodes": {
+        "39": [
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test 380 1",
+            "jz ADDR"
+        ],
+        "99": [
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "129": [
+            "mov REG REG",
+            "sub REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "lea REG 2",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "238": [
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "247": [
+            "mov REG REG",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "326": [
+            "mov REG REG",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "344": [
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "jmp ADDR"
+        ],
+        "357": [
+            "lea REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "jmp ADDR"
+        ],
+        "377": [
+            "lea REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "jmp ADDR"
+        ],
+        "397": [
+            "lea REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "movsxd REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "39": [
+            99,
+            344
+        ],
+        "99": [
+            129,
+            397
+        ],
+        "129": [
+            238,
+            357
+        ],
+        "238": [
+            247,
+            377
+        ],
+        "247": [
+            326
+        ],
+        "326": [],
+        "344": [
+            326
+        ],
+        "357": [
+            238
+        ],
+        "377": [
+            247
+        ],
+        "397": [
+            326
+        ]
+    },
+    "boundary": {
+        "39": 99,
+        "99": 129,
+        "129": 238,
+        "238": 247,
+        "247": 326,
+        "326": 344,
+        "344": 357,
+        "357": 377,
+        "377": 397,
+        "397": 496
+    },
+    "jmp_instruction": {
+        "39": "jz      loc_158",
+        "99": "jz      loc_18D",
+        "129": "jz      short loc_165",
+        "238": "jz      loc_179",
+        "247": "call    free; PIC mode",
+        "326": "retn",
+        "344": "jmp     short loc_146",
+        "357": "jmp     loc_EE",
+        "377": "jmp     loc_F7",
+        "397": "jmp     loc_146"
+    }
+}

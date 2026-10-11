@@ -1,0 +1,94 @@
+{
+    "nodes": {
+        "1104": [
+            "endbr64",
+            "mov REG REG",
+            "lea REG 144",
+            "pxor REG REG",
+            "nop MEMACC"
+        ],
+        "1128": [
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "1135": [
+            "jz ADDR"
+        ],
+        "1137": [
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "1143": [
+            "jz ADDR"
+        ],
+        "1145": [
+            "add REG CONSTANT",
+            "cmp REG REG",
+            "jnz ADDR"
+        ],
+        "1154": [
+            "xor REG REG",
+            "retn"
+        ],
+        "1160": [
+            "sub REG CONSTANT",
+            "xor REG REG",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "add REG CONSTANT",
+            "retn"
+        ]
+    },
+    "edges": {
+        "1104": [
+            1128
+        ],
+        "1128": [
+            1135,
+            1137
+        ],
+        "1135": [
+            1137,
+            1145
+        ],
+        "1137": [
+            1143,
+            1145
+        ],
+        "1143": [
+            1145,
+            1160
+        ],
+        "1145": [
+            1128,
+            1154
+        ],
+        "1154": [],
+        "1160": []
+    },
+    "boundary": {
+        "1104": 1128,
+        "1128": 1135,
+        "1135": 1137,
+        "1137": 1143,
+        "1143": 1145,
+        "1145": 1154,
+        "1154": 1157,
+        "1160": 1210
+    },
+    "jmp_instruction": {
+        "1104": "nop     word ptr [rax+rax+00h]",
+        "1128": "jp      short loc_471",
+        "1135": "jz      short loc_479",
+        "1137": "jp      short loc_479",
+        "1143": "jz      short loc_488",
+        "1145": "jnz     short loc_468",
+        "1154": "retn",
+        "1160": "retn"
+    }
+}

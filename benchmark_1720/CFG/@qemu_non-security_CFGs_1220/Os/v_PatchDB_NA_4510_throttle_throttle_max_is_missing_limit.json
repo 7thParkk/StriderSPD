@@ -1,0 +1,83 @@
+{
+    "nodes": {
+        "833": [
+            "endbr64",
+            "xor REG REG",
+            "xorps REG REG"
+        ],
+        "842": [
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "850": [
+            "jz ADDR"
+        ],
+        "852": [
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "859": [
+            "jz ADDR"
+        ],
+        "861": [
+            "add REG CONSTANT",
+            "cmp REG 144",
+            "jnz ADDR"
+        ],
+        "873": [
+            "xor REG REG",
+            "retn"
+        ],
+        "876": [
+            "mov REG CONSTANT",
+            "retn"
+        ]
+    },
+    "edges": {
+        "833": [
+            842
+        ],
+        "842": [
+            850,
+            852
+        ],
+        "850": [
+            852,
+            861
+        ],
+        "852": [
+            859,
+            861
+        ],
+        "859": [
+            861,
+            876
+        ],
+        "861": [
+            842,
+            873
+        ],
+        "873": [],
+        "876": []
+    },
+    "boundary": {
+        "833": 842,
+        "842": 850,
+        "850": 852,
+        "852": 859,
+        "859": 861,
+        "861": 873,
+        "873": 876,
+        "876": 879
+    },
+    "jmp_instruction": {
+        "833": "xorps   xmm0, xmm0",
+        "842": "jp      short loc_354",
+        "850": "jz      short loc_35D",
+        "852": "jp      short loc_35D",
+        "859": "jz      short loc_36C",
+        "861": "jnz     short loc_34A",
+        "873": "retn",
+        "876": "retn"
+    }
+}

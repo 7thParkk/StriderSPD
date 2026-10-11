@@ -1,0 +1,55 @@
+{
+    "nodes": {
+        "26491": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "test REG REG",
+            "jns ADDR"
+        ],
+        "26537": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "26544": [
+            "mov REG CONSTANT"
+        ],
+        "26549": [
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "26491": [
+            26537,
+            26544
+        ],
+        "26537": [
+            26549
+        ],
+        "26544": [
+            26549
+        ],
+        "26549": []
+    },
+    "boundary": {
+        "26491": 26537,
+        "26537": 26544,
+        "26544": 26549,
+        "26549": 26551
+    },
+    "jmp_instruction": {
+        "26491": "jns     short loc_67B0",
+        "26537": "jmp     short locret_67B5",
+        "26544": "mov     eax, 0",
+        "26549": "retn"
+    }
+}

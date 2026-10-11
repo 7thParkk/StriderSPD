@@ -1,0 +1,70 @@
+{
+    "nodes": {
+        "1296": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "call ADDR",
+            "mov MEMACC CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "1345": [
+            "pop REG",
+            "xor REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "1360": [
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "xor REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "36016": []
+    },
+    "edges": {
+        "1296": [
+            1345,
+            1360
+        ],
+        "1345": [],
+        "1360": [
+            36016
+        ],
+        "36016": []
+    },
+    "boundary": {
+        "1296": 1345,
+        "1345": 1356,
+        "1360": 1394,
+        "36016": 36016
+    },
+    "jmp_instruction": {
+        "1296": "jnz     short loc_550",
+        "1345": "retn",
+        "1360": "jmp     r_io_desc_new; PIC mode",
+        "36016": "extrn getpid:near"
+    }
+}

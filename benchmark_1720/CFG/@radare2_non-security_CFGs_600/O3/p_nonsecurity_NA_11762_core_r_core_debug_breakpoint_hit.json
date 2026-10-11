@@ -1,0 +1,99 @@
+{
+    "nodes": {
+        "32": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "push REG",
+            "push REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "setnz REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov MEMACC CONSTANT",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "97": [
+            "cmp MEMACC 0",
+            "jnz ADDR"
+        ],
+        "102": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "112": [
+            "cmp MEMACC 0",
+            "jnz ADDR"
+        ],
+        "117": [
+            "mov REG MEMACC",
+            "movzx REG REG",
+            "mov MEMACC REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "144": [
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "160": [
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "32": [
+            97,
+            102
+        ],
+        "97": [
+            102,
+            160
+        ],
+        "102": [
+            112,
+            117
+        ],
+        "112": [
+            117,
+            144
+        ],
+        "117": [],
+        "144": [
+            117
+        ],
+        "160": [
+            102
+        ]
+    },
+    "boundary": {
+        "32": 97,
+        "97": 102,
+        "102": 112,
+        "112": 117,
+        "117": 136,
+        "144": 154,
+        "160": 173
+    },
+    "jmp_instruction": {
+        "32": "jz      short loc_66",
+        "97": "jnz     short loc_A0",
+        "102": "jz      short loc_75",
+        "112": "jnz     short loc_90",
+        "117": "retn",
+        "144": "jmp     short loc_75",
+        "160": "jmp     short loc_66"
+    }
+}

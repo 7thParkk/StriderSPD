@@ -1,0 +1,95 @@
+{
+    "nodes": {
+        "5490": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "lea REG 8",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "cmp REG 6",
+            "ja ADDR"
+        ],
+        "5575": [
+            "cmp REG 4",
+            "jnz ADDR"
+        ],
+        "5580": [
+            "call ADDR",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "5644": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR"
+        ],
+        "5675": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR"
+        ]
+    },
+    "edges": {
+        "5490": [
+            5575,
+            5644
+        ],
+        "5575": [
+            5580,
+            5675
+        ],
+        "5580": [],
+        "5644": [],
+        "5675": []
+    },
+    "boundary": {
+        "5490": 5575,
+        "5575": 5580,
+        "5580": 5644,
+        "5644": 5675,
+        "5675": 5706
+    },
+    "jmp_instruction": {
+        "5490": "ja      short loc_160C",
+        "5575": "jnz     short loc_162B",
+        "5580": "retn",
+        "5644": "call    __assert_fail; PIC mode",
+        "5675": "call    __assert_fail; PIC mode"
+    }
+}

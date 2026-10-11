@@ -1,0 +1,144 @@
+{
+    "nodes": {
+        "4944": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "xor REG REG",
+            "push REG",
+            "lea REG MEMACC",
+            "push REG",
+            "lea REG 144",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "nop MEMACC"
+        ],
+        "4984": [
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "xor REG REG",
+            "stos MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5023": [
+            "pxor REG REG",
+            "xor REG REG",
+            "mov REG REG",
+            "movups MEMACC REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "5044": [
+            "movq REG MEMACC",
+            "xor REG REG",
+            "mov REG REG",
+            "movups MEMACC REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "5069": [
+            "add REG CONSTANT",
+            "cmp REG REG",
+            "jnz ADDR"
+        ],
+        "5078": [
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "5089": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "xor REG REG",
+            "lea REG MEMACC",
+            "call ADDR"
+        ],
+        "5122": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "xor REG REG",
+            "lea REG MEMACC",
+            "call ADDR"
+        ],
+        "5155": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "xor REG REG",
+            "lea REG MEMACC",
+            "call ADDR",
+            "nop MEMACC",
+            "nop"
+        ],
+        "5200": []
+    },
+    "edges": {
+        "4944": [
+            4984
+        ],
+        "4984": [
+            5023,
+            5089
+        ],
+        "5023": [
+            5044,
+            5155
+        ],
+        "5044": [
+            5069,
+            5122
+        ],
+        "5069": [
+            4984,
+            5078
+        ],
+        "5078": [],
+        "5089": [
+            5122
+        ],
+        "5122": [
+            5155
+        ],
+        "5155": [
+            5200
+        ],
+        "5200": []
+    },
+    "boundary": {
+        "4944": 4984,
+        "4984": 5023,
+        "5023": 5044,
+        "5044": 5069,
+        "5069": 5078,
+        "5078": 5089,
+        "5089": 5122,
+        "5122": 5155,
+        "5155": 5200,
+        "5200": 5200
+    },
+    "jmp_instruction": {
+        "4944": "nop     word ptr [rax+rax+00h]",
+        "4984": "jz      short loc_13E1",
+        "5023": "jnz     short loc_1423",
+        "5044": "jnz     short loc_1402",
+        "5069": "jnz     short loc_1378",
+        "5078": "retn",
+        "5089": "call    g_assertion_message_expr; PIC mode",
+        "5122": "call    g_assertion_message_expr; PIC mode",
+        "5155": "nop",
+        "5200": "nop"
+    }
+}

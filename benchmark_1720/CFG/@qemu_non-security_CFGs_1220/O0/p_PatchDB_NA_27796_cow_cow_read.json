@@ -1,0 +1,194 @@
+{
+    "nodes": {
+        "1254": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "1313": [
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1340": [
+            "mov REG MEMACC",
+            "shl REG CONSTANT",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "shl REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "shl REG CONSTANT",
+            "cmp MEMACC REG",
+            "jz ADDR"
+        ],
+        "1404": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "1414": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1430": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "cmp MEMACC 0",
+            "jns ADDR"
+        ],
+        "1469": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "1476": [
+            "mov REG MEMACC",
+            "shl REG CONSTANT",
+            "movsxd REG REG",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "1502": [
+            "mov REG MEMACC",
+            "sub MEMACC REG",
+            "mov REG MEMACC",
+            "cdqe REG",
+            "add MEMACC REG",
+            "mov REG MEMACC",
+            "shl REG CONSTANT",
+            "cdqe REG",
+            "add MEMACC REG"
+        ],
+        "1529": [
+            "cmp MEMACC 0",
+            "jg ADDR"
+        ],
+        "1539": [
+            "mov REG CONSTANT"
+        ],
+        "1544": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jz ADDR"
+        ],
+        "1559": [
+            "call ADDR"
+        ],
+        "1564": [
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "1254": [
+            1529
+        ],
+        "1313": [
+            1340,
+            1414
+        ],
+        "1340": [
+            1404,
+            1502
+        ],
+        "1404": [
+            1544
+        ],
+        "1414": [
+            1430,
+            1476
+        ],
+        "1430": [
+            1469,
+            1502
+        ],
+        "1469": [
+            1544
+        ],
+        "1476": [
+            1502
+        ],
+        "1502": [
+            1529
+        ],
+        "1529": [
+            1313,
+            1539
+        ],
+        "1539": [
+            1544
+        ],
+        "1544": [
+            1559,
+            1564
+        ],
+        "1559": [],
+        "1564": []
+    },
+    "boundary": {
+        "1254": 1313,
+        "1313": 1340,
+        "1340": 1404,
+        "1404": 1414,
+        "1414": 1430,
+        "1430": 1469,
+        "1469": 1476,
+        "1476": 1502,
+        "1502": 1529,
+        "1529": 1539,
+        "1539": 1544,
+        "1544": 1559,
+        "1559": 1564,
+        "1564": 1566
+    },
+    "jmp_instruction": {
+        "1254": "jmp     loc_5F9",
+        "1313": "jz      short loc_586",
+        "1340": "jz      short loc_5DE",
+        "1404": "jmp     loc_608",
+        "1414": "jz      short loc_5C4",
+        "1430": "jns     short loc_5DE",
+        "1469": "jmp     short loc_608",
+        "1476": "call    memset; PIC mode",
+        "1502": "add     [rbp+s], rax",
+        "1529": "jg      loc_521",
+        "1539": "mov     eax, 0",
+        "1544": "jz      short locret_61C",
+        "1559": "call    __stack_chk_fail; PIC mode",
+        "1564": "retn"
+    }
+}

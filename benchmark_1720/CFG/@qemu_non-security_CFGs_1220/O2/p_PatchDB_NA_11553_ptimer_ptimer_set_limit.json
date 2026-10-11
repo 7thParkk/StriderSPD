@@ -1,0 +1,115 @@
+{
+    "nodes": {
+        "752": [
+            "endbr64",
+            "mov REG CONSTANT",
+            "push REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "775": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "imul REG REG",
+            "cmp REG 9999",
+            "ja ADDR"
+        ],
+        "794": [
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "799": [
+            "nop"
+        ],
+        "800": [
+            "mov MEMACC REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "808": [
+            "cmp MEMACC 0",
+            "mov MEMACC REG",
+            "jz ADDR"
+        ],
+        "817": [
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "848": [
+            "pop REG",
+            "retn"
+        ],
+        "856": [
+            "mov REG CONSTANT",
+            "cqo REG REG",
+            "idiv REG REG",
+            "mov REG REG",
+            "jmp ADDR"
+        ],
+        "0": []
+    },
+    "edges": {
+        "752": [
+            775,
+            800
+        ],
+        "775": [
+            794,
+            800
+        ],
+        "794": [
+            799,
+            856
+        ],
+        "799": [
+            800
+        ],
+        "800": [
+            808,
+            848
+        ],
+        "808": [
+            817,
+            848
+        ],
+        "817": [
+            0
+        ],
+        "848": [],
+        "856": [
+            800
+        ],
+        "0": []
+    },
+    "boundary": {
+        "752": 775,
+        "775": 794,
+        "794": 799,
+        "799": 800,
+        "800": 808,
+        "808": 817,
+        "817": 840,
+        "848": 850,
+        "856": 871,
+        "0": 0
+    },
+    "jmp_instruction": {
+        "752": "jnz     short loc_320",
+        "775": "ja      short loc_320",
+        "794": "jnz     short loc_358",
+        "799": "nop",
+        "800": "jz      short loc_350",
+        "808": "jz      short loc_350",
+        "817": "jmp     ptimer_reload",
+        "848": "retn",
+        "856": "jmp     short loc_320",
+        "0": ""
+    }
+}

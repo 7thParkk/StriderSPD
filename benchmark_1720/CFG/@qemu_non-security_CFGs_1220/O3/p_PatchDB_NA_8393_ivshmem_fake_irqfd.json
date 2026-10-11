@@ -1,0 +1,41 @@
+{
+    "nodes": {
+        "384": [
+            "endbr64",
+            "push REG",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "push REG",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "sub REG MEMACC",
+            "add REG CONSTANT",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "sar REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "11256": []
+    },
+    "edges": {
+        "384": [
+            11256
+        ],
+        "11256": []
+    },
+    "boundary": {
+        "384": 462,
+        "11256": 11256
+    },
+    "jmp_instruction": {
+        "384": "jmp     msix_notify; PIC mode",
+        "11256": "extrn object_dynamic_cast_assert:near"
+    }
+}

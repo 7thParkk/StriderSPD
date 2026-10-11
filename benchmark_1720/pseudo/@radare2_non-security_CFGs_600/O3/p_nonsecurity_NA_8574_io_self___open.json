@@ -1,0 +1,14 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall _open(__int64 a1, __int64 a2, unsigned int a3, unsigned int a4)",
+        "{",
+        "  unsigned int v6; // r14d",
+        "",
+        "  v6 = getpid();",
+        "  if ( !(unsigned int)r_sandbox_enable(0LL) && (*(_DWORD *)(a1 + 48) = 1, (unsigned int)update_self_regions(v6)) )",
+        "    return r_io_desc_new(&r_io_plugin_self, v6, a2, a3, a4, 0LL);",
+        "  else",
+        "    return 0LL;",
+        "}"
+    ]
+}

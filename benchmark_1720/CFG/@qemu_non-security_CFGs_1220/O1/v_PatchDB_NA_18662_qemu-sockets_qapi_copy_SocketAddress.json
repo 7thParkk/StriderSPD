@@ -1,0 +1,105 @@
+{
+    "nodes": {
+        "8263": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "mov MEMACC CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "lea REG 8",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "8355": [
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "8411": [
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "jz ADDR"
+        ],
+        "8421": [
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "8430": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR"
+        ],
+        "8461": [
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "8263": [
+            8355,
+            8421
+        ],
+        "8355": [
+            8411,
+            8430
+        ],
+        "8411": [
+            8421,
+            8461
+        ],
+        "8421": [],
+        "8430": [],
+        "8461": [
+            8421
+        ]
+    },
+    "boundary": {
+        "8263": 8355,
+        "8355": 8411,
+        "8411": 8421,
+        "8421": 8430,
+        "8430": 8461,
+        "8461": 8471
+    },
+    "jmp_instruction": {
+        "8263": "jz      short loc_20E5",
+        "8355": "jz      short loc_20EE",
+        "8411": "jz      short loc_210D",
+        "8421": "retn",
+        "8430": "call    __assert_fail; PIC mode",
+        "8461": "jmp     short loc_20E5"
+    }
+}

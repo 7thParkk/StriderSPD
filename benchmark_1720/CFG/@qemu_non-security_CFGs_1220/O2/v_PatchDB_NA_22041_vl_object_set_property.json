@@ -1,0 +1,136 @@
+{
+    "nodes": {
+        "26991": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov MEMACC CONSTANT",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "27072": [
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "27098": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "27105": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "27177": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "27208": [
+            "mov REG CONSTANT"
+        ],
+        "27213": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jz ADDR"
+        ],
+        "27228": [
+            "call ADDR"
+        ],
+        "27233": [
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "26991": [
+            27072,
+            27098
+        ],
+        "27072": [
+            27098,
+            27105
+        ],
+        "27098": [
+            27213
+        ],
+        "27105": [
+            27177,
+            27208
+        ],
+        "27177": [
+            27213
+        ],
+        "27208": [
+            27213
+        ],
+        "27213": [
+            27228,
+            27233
+        ],
+        "27228": [],
+        "27233": []
+    },
+    "boundary": {
+        "26991": 27072,
+        "27072": 27098,
+        "27098": 27105,
+        "27105": 27177,
+        "27177": 27208,
+        "27208": 27213,
+        "27213": 27228,
+        "27228": 27233,
+        "27233": 27235
+    },
+    "jmp_instruction": {
+        "26991": "jz      short loc_69DA",
+        "27072": "jnz     short loc_69E1",
+        "27098": "jmp     short loc_6A4D",
+        "27105": "jz      short loc_6A48",
+        "27177": "jmp     short loc_6A4D",
+        "27208": "mov     eax, 0",
+        "27213": "jz      short locret_6A61",
+        "27228": "call    __stack_chk_fail; PIC mode",
+        "27233": "retn"
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "pseudo_code": [
+        "void __cdecl qmp_send_key(KeyValueList *keys, bool has_hold_time, int64_t hold_time, Error **errp)",
+        "{",
+        "  KeyValue *v4; // rax",
+        "  unsigned int hold_timea; // [rsp+8h] [rbp-48h]",
+        "  int count; // [rsp+2Ch] [rbp-24h]",
+        "  KeyValue **up; // [rsp+38h] [rbp-18h]",
+        "",
+        "  hold_timea = hold_time;",
+        "  up = 0LL;",
+        "  count = 0;",
+        "  if ( !has_hold_time )",
+        "    hold_timea = 0;",
+        "  while ( keys )",
+        "  {",
+        "    v4 = copy_key_value(keys->value);",
+        "    qemu_input_event_send_key(0LL, v4, 1LL);",
+        "    qemu_input_event_send_key_delay(hold_timea);",
+        "    up = (KeyValue **)g_realloc(up, 8LL * (count + 1));",
+        "    up[count++] = copy_key_value(keys->value);",
+        "    keys = keys->next;",
+        "  }",
+        "  while ( count )",
+        "  {",
+        "    qemu_input_event_send_key(0LL, up[--count], 0LL);",
+        "    qemu_input_event_send_key_delay(hold_timea);",
+        "  }",
+        "  g_free(up);",
+        "}"
+    ]
+}

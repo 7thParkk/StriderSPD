@@ -1,0 +1,14 @@
+{
+    "pseudo_code": [
+        "void __cdecl qbus_initfn(Object *obj)",
+        "{",
+        "  BusState *bus; // [rsp+10h] [rbp-10h]",
+        "",
+        "  bus = (BusState *)object_dynamic_cast_assert(obj, \"bus\", \"hw/core/qdev.c\", 925LL, \"qbus_initfn\");",
+        "  bus->children.tqh_first = 0LL;",
+        "  bus->children.tqh_last = &bus->children.tqh_first;",
+        "  object_property_add_link(obj, \"hotplug-handler\", \"hotplug-handler\", &bus->hotplug_handler, 0LL);",
+        "  object_property_add_bool(obj, \"realized\", bus_get_realized, bus_set_realized, 0LL);",
+        "}"
+    ]
+}

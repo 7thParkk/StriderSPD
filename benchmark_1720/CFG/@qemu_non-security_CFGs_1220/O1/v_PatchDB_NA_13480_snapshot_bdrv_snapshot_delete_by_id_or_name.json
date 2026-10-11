@@ -1,0 +1,109 @@
+{
+    "nodes": {
+        "615": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov MEMACC CONSTANT",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "cmp REG 18446744073709551614",
+            "jz ADDR"
+        ],
+        "678": [
+            "cmp REG 18446744073709551594",
+            "jz ADDR"
+        ],
+        "683": [
+            "test REG REG",
+            "js ADDR"
+        ],
+        "687": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jnz ADDR"
+        ],
+        "703": [
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "712": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov MEMACC CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "750": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "764": [
+            "call ADDR"
+        ]
+    },
+    "edges": {
+        "615": [
+            678,
+            712
+        ],
+        "678": [
+            683,
+            712
+        ],
+        "683": [
+            687,
+            750
+        ],
+        "687": [
+            703,
+            764
+        ],
+        "703": [],
+        "712": [
+            683
+        ],
+        "750": [
+            687
+        ],
+        "764": []
+    },
+    "boundary": {
+        "615": 678,
+        "678": 683,
+        "683": 687,
+        "687": 703,
+        "703": 712,
+        "712": 750,
+        "750": 764,
+        "764": 769
+    },
+    "jmp_instruction": {
+        "615": "jz      short loc_2C8",
+        "678": "jz      short loc_2C8",
+        "683": "js      short loc_2EE",
+        "687": "jnz     short loc_2FC",
+        "703": "retn",
+        "712": "jmp     short loc_2AB",
+        "750": "jmp     short loc_2AF",
+        "764": "call    __stack_chk_fail; PIC mode"
+    }
+}

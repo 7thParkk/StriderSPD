@@ -1,0 +1,132 @@
+{
+    "nodes": {
+        "2376": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "call ADDR",
+            "lea REG 1",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "jmp ADDR"
+        ],
+        "2409": [
+            "movzx REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "2417": [
+            "cmp REG 44",
+            "jz ADDR"
+        ],
+        "2421": [
+            "cmp MEMACC 0",
+            "jz ADDR"
+        ],
+        "2426": [
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "cmp MEMACC 0",
+            "jz ADDR"
+        ],
+        "2448": [
+            "lea REG 1",
+            "cmp 1 0",
+            "jz ADDR"
+        ],
+        "2458": [
+            "mov REG REG",
+            "jmp ADDR"
+        ],
+        "2463": [
+            "mov REG CONSTANT"
+        ],
+        "2468": [
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "2483": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "2490": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "2376": [
+            2421
+        ],
+        "2409": [
+            2417,
+            2490
+        ],
+        "2417": [
+            2421,
+            2490
+        ],
+        "2421": [
+            2426,
+            2463
+        ],
+        "2426": [
+            2409,
+            2448
+        ],
+        "2448": [
+            2458,
+            2483
+        ],
+        "2458": [
+            2409
+        ],
+        "2463": [
+            2468
+        ],
+        "2468": [],
+        "2483": [
+            2468
+        ],
+        "2490": [
+            2468
+        ]
+    },
+    "boundary": {
+        "2376": 2409,
+        "2409": 2417,
+        "2417": 2421,
+        "2421": 2426,
+        "2426": 2448,
+        "2448": 2458,
+        "2458": 2463,
+        "2463": 2468,
+        "2468": 2483,
+        "2483": 2490,
+        "2490": 2497
+    },
+    "jmp_instruction": {
+        "2376": "jmp     short loc_975",
+        "2409": "jz      short loc_9BA",
+        "2417": "jz      short loc_9BA",
+        "2421": "jz      short loc_99F",
+        "2426": "jz      short loc_969",
+        "2448": "jz      short loc_9B3",
+        "2458": "jmp     short loc_969",
+        "2463": "mov     ebx, 1",
+        "2468": "retn",
+        "2483": "jmp     short loc_9A4",
+        "2490": "jmp     short loc_9A4"
+    }
+}

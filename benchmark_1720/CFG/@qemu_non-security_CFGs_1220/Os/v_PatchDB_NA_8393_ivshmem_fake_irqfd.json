@@ -1,0 +1,25 @@
+{
+    "nodes": {
+        "834": [
+            "endbr64",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "jmp ADDR"
+        ],
+        "9728": []
+    },
+    "edges": {
+        "834": [
+            9728
+        ],
+        "9728": []
+    },
+    "boundary": {
+        "834": 849,
+        "9728": 9728
+    },
+    "jmp_instruction": {
+        "834": "jmp     msix_notify; PIC mode",
+        "9728": "extrn memory_region_is_mapped:near"
+    }
+}

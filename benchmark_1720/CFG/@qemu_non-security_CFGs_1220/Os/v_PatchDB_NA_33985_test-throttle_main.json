@@ -1,0 +1,90 @@
+{
+    "nodes": {
+        "9709": [
+            "endbr64",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG CONSTANT",
+            "mov MEMACC REG",
+            "call ADDR",
+            "call ADDR",
+            "mov MEMACC REG",
+            "call ADDR"
+        ],
+        "9754": [
+            "xor REG REG",
+            "xor REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "9767": [
+            "xor REG REG",
+            "mov REG REG",
+            "lea REG 12",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "call ADDR",
+            "add REG CONSTANT",
+            "retn"
+        ]
+    },
+    "edges": {
+        "9709": [
+            9754
+        ],
+        "9754": [
+            9767,
+            9754
+        ],
+        "9767": []
+    },
+    "boundary": {
+        "9709": 9754,
+        "9754": 9767,
+        "9767": 10039
+    },
+    "jmp_instruction": {
+        "9709": "call    bdrv_init; PIC mode",
+        "9754": "jnz     short loc_261A",
+        "9767": "retn"
+    }
+}

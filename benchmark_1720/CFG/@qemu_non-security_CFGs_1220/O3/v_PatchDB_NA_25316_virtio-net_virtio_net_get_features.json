@@ -1,0 +1,114 @@
+{
+    "nodes": {
+        "7200": [
+            "endbr64",
+            "push REG",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "7269": [
+            "mov REG MEMACC",
+            "or REG CONSTANT",
+            "call ADDR",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov MEMACC REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "7303": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "7318": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "mov REG REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "7344": [
+            "and REG CONSTANT",
+            "or REG CONSTANT"
+        ],
+        "7353": [
+            "mov REG MEMACC",
+            "and REG CONSTANT",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "7371": [
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "21680": []
+    },
+    "edges": {
+        "7200": [
+            7269,
+            7344
+        ],
+        "7269": [
+            7303,
+            7353
+        ],
+        "7303": [
+            7318,
+            7371
+        ],
+        "7318": [
+            21680
+        ],
+        "7344": [
+            7353
+        ],
+        "7353": [
+            7318,
+            7371
+        ],
+        "7371": [],
+        "21680": []
+    },
+    "boundary": {
+        "7200": 7269,
+        "7269": 7303,
+        "7303": 7318,
+        "7318": 7342,
+        "7344": 7353,
+        "7353": 7371,
+        "7371": 7378,
+        "21680": 21680
+    },
+    "jmp_instruction": {
+        "7200": "jz      short loc_1CB0",
+        "7269": "jz      short loc_1CB9",
+        "7303": "jz      short loc_1CCB",
+        "7318": "jmp     vhost_net_get_features; PIC mode",
+        "7344": "or      ebx, 20h",
+        "7353": "jnz     short loc_1C96",
+        "7371": "retn",
+        "21680": "extrn qemu_has_ufo:near"
+    }
+}

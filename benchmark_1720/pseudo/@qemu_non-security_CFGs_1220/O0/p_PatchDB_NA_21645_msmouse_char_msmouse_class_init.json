@@ -1,0 +1,22 @@
+{
+    "pseudo_code": [
+        "_QWORD *__fastcall char_msmouse_class_init(__int64 a1, __int64 a2, __int64 a3, __int64 a4, __int64 a5, __int64 a6)",
+        "{",
+        "  _QWORD *result; // rax",
+        "",
+        "  result = (_QWORD *)object_class_dynamic_cast_assert(",
+        "                       a1,",
+        "                       \"chardev\",",
+        "                       \"backends/msmouse.c\",",
+        "                       170LL,",
+        "                       \"char_msmouse_class_init\",",
+        "                       a6,",
+        "                       a2,",
+        "                       a1);",
+        "  result[13] = msmouse_chr_open;",
+        "  result[14] = msmouse_chr_write;",
+        "  result[25] = msmouse_chr_accept_input;",
+        "  return result;",
+        "}"
+    ]
+}

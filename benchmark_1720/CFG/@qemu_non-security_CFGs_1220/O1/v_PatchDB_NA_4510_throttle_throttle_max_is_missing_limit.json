@@ -1,0 +1,85 @@
+{
+    "nodes": {
+        "1005": [
+            "endbr64",
+            "lea REG 144",
+            "pxor REG REG",
+            "jmp ADDR"
+        ],
+        "1022": [
+            "add REG CONSTANT",
+            "cmp REG REG",
+            "jz ADDR"
+        ],
+        "1031": [
+            "mov REG REG",
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "1041": [
+            "jz ADDR"
+        ],
+        "1043": [
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "1049": [
+            "jnz ADDR"
+        ],
+        "1051": [
+            "mov REG CONSTANT",
+            "retn"
+        ],
+        "1057": [
+            "mov REG CONSTANT",
+            "retn"
+        ]
+    },
+    "edges": {
+        "1005": [
+            1031
+        ],
+        "1022": [
+            1031,
+            1057
+        ],
+        "1031": [
+            1041,
+            1043
+        ],
+        "1041": [
+            1022,
+            1043
+        ],
+        "1043": [
+            1022,
+            1049
+        ],
+        "1049": [
+            1022,
+            1051
+        ],
+        "1051": [],
+        "1057": []
+    },
+    "boundary": {
+        "1005": 1022,
+        "1022": 1031,
+        "1031": 1041,
+        "1041": 1043,
+        "1043": 1049,
+        "1049": 1051,
+        "1051": 1057,
+        "1057": 1063
+    },
+    "jmp_instruction": {
+        "1005": "jmp     short loc_407",
+        "1022": "jz      short loc_421",
+        "1031": "jp      short loc_413",
+        "1041": "jz      short loc_3FE",
+        "1043": "jp      short loc_3FE",
+        "1049": "jnz     short loc_3FE",
+        "1051": "retn",
+        "1057": "retn"
+    }
+}

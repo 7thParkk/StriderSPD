@@ -1,0 +1,37 @@
+{
+    "nodes": {
+        "576": [
+            "endbr64",
+            "xor REG REG",
+            "cmp REG 4095",
+            "jbe ADDR"
+        ],
+        "591": [
+            "cmp MEMACC 1074935680",
+            "setz REG"
+        ],
+        "600": [
+            "retn"
+        ]
+    },
+    "edges": {
+        "576": [
+            591,
+            600
+        ],
+        "591": [
+            600
+        ],
+        "600": []
+    },
+    "boundary": {
+        "576": 591,
+        "591": 600,
+        "600": 601
+    },
+    "jmp_instruction": {
+        "576": "jbe     short locret_258",
+        "591": "setz    al",
+        "600": "retn"
+    }
+}

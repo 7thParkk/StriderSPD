@@ -1,0 +1,18 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall test_block_job_complete(__int64 a1, unsigned int a2)",
+        "{",
+        "  __int64 v2; // r12",
+        "  bool v3; // zf",
+        "  unsigned int v4; // eax",
+        "",
+        "  v2 = blk_bs(*(_QWORD *)(a1 + 224));",
+        "  v3 = (unsigned __int8)job_is_cancelled(a1) == 0;",
+        "  v4 = -125;",
+        "  if ( v3 )",
+        "    v4 = a2;",
+        "  job_completed(a1, v4, 0LL);",
+        "  return bdrv_unref(v2);",
+        "}"
+    ]
+}

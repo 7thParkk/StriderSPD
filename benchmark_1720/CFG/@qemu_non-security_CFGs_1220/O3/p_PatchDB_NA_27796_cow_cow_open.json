@@ -1,0 +1,115 @@
+{
+    "nodes": {
+        "1056": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "xor REG REG",
+            "mov REG CONSTANT",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "cmp REG 1056",
+            "jnz ADDR"
+        ],
+        "1128": [
+            "cmp MEMACC 1297043279",
+            "jnz ADDR"
+        ],
+        "1137": [
+            "cmp 4 33554432",
+            "jnz ADDR"
+        ],
+        "1147": [
+            "mov REG MEMACC",
+            "lea REG 1096",
+            "mov REG CONSTANT",
+            "bswap REG",
+            "test REG REG",
+            "lea REG 511",
+            "cmovns REG REG",
+            "lea REG 8",
+            "sar REG CONSTANT",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "add REG CONSTANT",
+            "sar REG CONSTANT",
+            "add REG CONSTANT",
+            "and REG CONSTANT",
+            "cdqe REG",
+            "mov MEMACC REG",
+            "xor REG REG"
+        ],
+        "1231": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jnz ADDR"
+        ],
+        "1250": [
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "1264": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "1271": [
+            "call ADDR"
+        ]
+    },
+    "edges": {
+        "1056": [
+            1128,
+            1264
+        ],
+        "1128": [
+            1137,
+            1264
+        ],
+        "1137": [
+            1147,
+            1264
+        ],
+        "1147": [
+            1231
+        ],
+        "1231": [
+            1250,
+            1271
+        ],
+        "1250": [],
+        "1264": [
+            1231
+        ],
+        "1271": []
+    },
+    "boundary": {
+        "1056": 1128,
+        "1128": 1137,
+        "1137": 1147,
+        "1147": 1231,
+        "1231": 1250,
+        "1250": 1260,
+        "1264": 1271,
+        "1271": 1276
+    },
+    "jmp_instruction": {
+        "1056": "jnz     loc_4F0",
+        "1128": "jnz     short loc_4F0",
+        "1137": "jnz     short loc_4F0",
+        "1147": "xor     eax, eax",
+        "1231": "jnz     short loc_4F7",
+        "1250": "retn",
+        "1264": "jmp     short loc_4CF",
+        "1271": "call    __stack_chk_fail; PIC mode"
+    }
+}

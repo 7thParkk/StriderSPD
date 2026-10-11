@@ -1,0 +1,99 @@
+{
+    "nodes": {
+        "5242": [
+            "endbr64",
+            "cmp 20 9",
+            "jnz ADDR"
+        ],
+        "5252": [
+            "jmp ADDR"
+        ],
+        "5257": [
+            "sub REG CONSTANT",
+            "movzx REG REG",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "cmp 32 0",
+            "jnz ADDR"
+        ],
+        "5287": [
+            "xor REG REG",
+            "mov REG CONSTANT",
+            "add REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "5303": [
+            "cmp 97 0",
+            "jz ADDR"
+        ],
+        "5309": [
+            "add REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "5318": [
+            "add REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "2534": [],
+        "4903": [],
+        "4491": [],
+        "3042": []
+    },
+    "edges": {
+        "5242": [
+            5252,
+            5257
+        ],
+        "5252": [
+            2534
+        ],
+        "5257": [
+            5287,
+            5303
+        ],
+        "5287": [
+            4903
+        ],
+        "5303": [
+            5309,
+            5318
+        ],
+        "5309": [
+            4491
+        ],
+        "5318": [
+            3042
+        ],
+        "2534": [],
+        "4903": [],
+        "4491": [],
+        "3042": []
+    },
+    "boundary": {
+        "5242": 5252,
+        "5252": 5257,
+        "5257": 5287,
+        "5287": 5303,
+        "5303": 5309,
+        "5309": 5318,
+        "5318": 5327,
+        "2534": 2534,
+        "4903": 4903,
+        "4491": 4491,
+        "3042": 3042
+    },
+    "jmp_instruction": {
+        "5242": "jnz     short loc_1489",
+        "5252": "jmp     job_do_dismiss",
+        "5257": "jnz     short loc_14B7",
+        "5287": "jmp     job_completed; PIC mode",
+        "5303": "jz      short loc_14C6",
+        "5309": "jmp     job_completed_txn_abort",
+        "5318": "jmp     job_enter; PIC mode",
+        "2534": "retn",
+        "4903": "retn",
+        "4491": "retn",
+        "3042": "retn"
+    }
+}

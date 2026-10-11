@@ -1,0 +1,90 @@
+{
+    "nodes": {
+        "8583": [
+            "endbr64",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "call ADDR",
+            "mov MEMACC REG",
+            "call ADDR"
+        ],
+        "8628": [
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "8647": [
+            "mov REG REG",
+            "lea REG 12",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "call ADDR",
+            "add REG CONSTANT",
+            "retn"
+        ]
+    },
+    "edges": {
+        "8583": [
+            8628
+        ],
+        "8628": [
+            8647,
+            8628
+        ],
+        "8647": []
+    },
+    "boundary": {
+        "8583": 8628,
+        "8628": 8647,
+        "8647": 8922
+    },
+    "jmp_instruction": {
+        "8583": "call    bdrv_init; PIC mode",
+        "8628": "jnz     short loc_21B4",
+        "8647": "retn"
+    }
+}

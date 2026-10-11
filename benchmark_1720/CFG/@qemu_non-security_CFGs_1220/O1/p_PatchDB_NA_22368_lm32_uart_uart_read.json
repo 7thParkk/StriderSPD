@@ -1,0 +1,106 @@
+{
+    "nodes": {
+        "721": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG REG",
+            "shr REG CONSTANT",
+            "cmp REG 31",
+            "ja ADDR"
+        ],
+        "744": [
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "shl REG REG",
+            "test REG 154",
+            "jnz ADDR"
+        ],
+        "759": [
+            "test REG 100",
+            "jnz ADDR"
+        ],
+        "763": [
+            "mov REG MEMACC",
+            "and MEMACC CONSTANT",
+            "call ADDR",
+            "mov REG MEMACC",
+            "call ADDR"
+        ],
+        "793": [
+            "mov REG REG",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "802": [
+            "mov REG MEMACC",
+            "jmp ADDR"
+        ],
+        "811": [
+            "and REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "839": [
+            "and REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "721": [
+            744,
+            839
+        ],
+        "744": [
+            759,
+            811
+        ],
+        "759": [
+            763,
+            802
+        ],
+        "763": [
+            793
+        ],
+        "793": [],
+        "802": [
+            793
+        ],
+        "811": [
+            793
+        ],
+        "839": [
+            793
+        ]
+    },
+    "boundary": {
+        "721": 744,
+        "744": 759,
+        "759": 763,
+        "763": 793,
+        "793": 802,
+        "802": 811,
+        "811": 839,
+        "839": 867
+    },
+    "jmp_instruction": {
+        "721": "ja      short loc_347",
+        "744": "jnz     short loc_32B",
+        "759": "jnz     short loc_322",
+        "763": "call    qemu_chr_accept_input; PIC mode",
+        "793": "retn",
+        "802": "jmp     short loc_319",
+        "811": "jmp     short loc_319",
+        "839": "jmp     short loc_319"
+    }
+}

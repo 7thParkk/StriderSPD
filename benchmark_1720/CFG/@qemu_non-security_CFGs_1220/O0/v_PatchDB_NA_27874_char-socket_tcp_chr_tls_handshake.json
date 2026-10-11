@@ -1,0 +1,99 @@
+{
+    "nodes": {
+        "6923": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "6980": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "6994": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "7008": [
+            "mov REG MEMACC",
+            "movzx REG MEMACC",
+            "xor REG CONSTANT",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "7026": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "7040": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "7052": [
+            "nop",
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "6923": [
+            6980,
+            6994
+        ],
+        "6980": [
+            7052
+        ],
+        "6994": [
+            7008,
+            7040
+        ],
+        "7008": [
+            7026,
+            7040
+        ],
+        "7026": [
+            7052
+        ],
+        "7040": [
+            7052
+        ],
+        "7052": []
+    },
+    "boundary": {
+        "6923": 6980,
+        "6980": 6994,
+        "6994": 7008,
+        "7008": 7026,
+        "7026": 7040,
+        "7040": 7052,
+        "7052": 7055
+    },
+    "jmp_instruction": {
+        "6923": "jz      short loc_1B52",
+        "6980": "jmp     short loc_1B8C",
+        "6994": "jz      short loc_1B80",
+        "7008": "jz      short loc_1B80",
+        "7026": "jmp     short loc_1B8C",
+        "7040": "call    tcp_chr_connect",
+        "7052": "retn"
+    }
+}

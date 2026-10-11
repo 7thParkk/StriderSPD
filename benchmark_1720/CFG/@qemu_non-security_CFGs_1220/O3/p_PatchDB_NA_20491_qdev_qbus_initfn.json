@@ -1,0 +1,45 @@
+{
+    "nodes": {
+        "2176": [
+            "endbr64",
+            "push REG",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "xor REG REG",
+            "lea REG 88",
+            "mov MEMACC CONSTANT",
+            "lea REG 72",
+            "mov MEMACC REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "xor REG REG",
+            "pop REG",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "jmp ADDR"
+        ],
+        "12992": []
+    },
+    "edges": {
+        "2176": [
+            12992
+        ],
+        "12992": []
+    },
+    "boundary": {
+        "2176": 2289,
+        "12992": 12992
+    },
+    "jmp_instruction": {
+        "2176": "jmp     object_property_add_bool; PIC mode",
+        "12992": "extrn object_property_add_link:near"
+    }
+}

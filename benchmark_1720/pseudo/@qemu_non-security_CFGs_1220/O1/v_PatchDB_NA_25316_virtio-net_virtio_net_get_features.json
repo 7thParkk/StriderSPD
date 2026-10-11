@@ -1,0 +1,31 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall virtio_net_get_features(__int64 a1, int a2)",
+        "{",
+        "  __int64 v2; // rbp",
+        "  __int64 queue; // r12",
+        "  unsigned int v4; // ebx",
+        "  __int64 vhost_net; // rax",
+        "",
+        "  v2 = object_dynamic_cast_assert(a1, \"virtio-net-device\", LC0, 446LL, \"virtio_net_get_features\");",
+        "  queue = qemu_get_queue(*(_QWORD *)(v2 + 232));",
+        "  if ( !*(_DWORD *)(v2 + 248) )",
+        "  {",
+        "    v4 = a2 & 0xFFFFC45C | 0x20;",
+        "LABEL_3:",
+        "    BYTE1(v4) &= 0xBBu;",
+        "    goto LABEL_4;",
+        "  }",
+        "  v4 = a2 | 0x20;",
+        "  if ( !(unsigned int)peer_has_ufo(v2) )",
+        "    goto LABEL_3;",
+        "LABEL_4:",
+        "  if ( get_vhost_net(*(_QWORD *)(queue + 32)) )",
+        "  {",
+        "    vhost_net = get_vhost_net(*(_QWORD *)(queue + 32));",
+        "    return (unsigned int)vhost_net_get_features(vhost_net, v4);",
+        "  }",
+        "  return v4;",
+        "}"
+    ]
+}

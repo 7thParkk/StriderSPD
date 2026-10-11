@@ -1,0 +1,60 @@
+{
+    "nodes": {
+        "303": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "push REG",
+            "push REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "375": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov MEMACC REG"
+        ],
+        "387": [
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "303": [
+            375,
+            387
+        ],
+        "375": [
+            387
+        ],
+        "387": []
+    },
+    "boundary": {
+        "303": 375,
+        "375": 387,
+        "387": 394
+    },
+    "jmp_instruction": {
+        "303": "jz      short loc_183",
+        "375": "mov     [rbx+28h], rax",
+        "387": "retn"
+    }
+}

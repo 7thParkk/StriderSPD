@@ -1,0 +1,80 @@
+{
+    "nodes": {
+        "756": [
+            "endbr64",
+            "mov REG CONSTANT",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "770": [
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "821": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "861": [
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "872": [
+            "retn"
+        ]
+    },
+    "edges": {
+        "756": [
+            770,
+            872
+        ],
+        "770": [
+            821,
+            861
+        ],
+        "821": [
+            861
+        ],
+        "861": [],
+        "872": []
+    },
+    "boundary": {
+        "756": 770,
+        "770": 821,
+        "821": 861,
+        "861": 872,
+        "872": 873
+    },
+    "jmp_instruction": {
+        "756": "jz      short locret_368",
+        "770": "jz      short loc_35D",
+        "821": "call    check_bytes",
+        "861": "retn",
+        "872": "retn"
+    }
+}

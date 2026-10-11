@@ -1,0 +1,170 @@
+{
+    "nodes": {
+        "10793": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "10837": [
+            "mov REG REG",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "jmp ADDR"
+        ],
+        "10863": [
+            "call ADDR",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "js ADDR"
+        ],
+        "10895": [
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "10914": [
+            "cmp 40 0",
+            "jnz ADDR"
+        ],
+        "10924": [
+            "cmp 104 0",
+            "jz ADDR"
+        ],
+        "10930": [
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "11104": [
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC CONSTANT"
+        ],
+        "11120": [
+            "mov REG MEMACC",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "11139": [
+            "mov MEMACC CONSTANT",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "10793": [
+            10837,
+            11139
+        ],
+        "10837": [
+            10924
+        ],
+        "10863": [
+            10895,
+            11104
+        ],
+        "10895": [
+            10914
+        ],
+        "10914": [
+            10924,
+            11120
+        ],
+        "10924": [
+            10863,
+            10930
+        ],
+        "10930": [
+            10914
+        ],
+        "11104": [
+            11120
+        ],
+        "11120": [],
+        "11139": [
+            11120
+        ]
+    },
+    "boundary": {
+        "10793": 10837,
+        "10837": 10863,
+        "10863": 10895,
+        "10895": 10914,
+        "10914": 10924,
+        "10924": 10930,
+        "10930": 11104,
+        "11104": 11120,
+        "11120": 11139,
+        "11139": 11149
+    },
+    "jmp_instruction": {
+        "10793": "jnz     loc_2B83",
+        "10837": "jmp     short loc_2AAC",
+        "10863": "js      loc_2B60",
+        "10895": "call    object_unref; PIC mode",
+        "10914": "jnz     loc_2B70",
+        "10924": "jz      short loc_2A6F",
+        "10930": "jmp     loc_2AA2",
+        "11104": "mov     [rsp+48h+var_3C], 0FFFFFFFFh",
+        "11120": "retn",
+        "11139": "jmp     short loc_2B70"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall xilinx_uartlite_realize(__int64 a1)",
+        "{",
+        "  __int64 result; // rax",
+        "  __int64 v2; // [rsp+8h] [rbp-10h]",
+        "",
+        "  v2 = object_dynamic_cast_assert(a1, \"xlnx.xps-uartlite\", &LC0, 207LL, \"xilinx_uartlite_realize\");",
+        "  result = qemu_char_get_next_serial();",
+        "  *(_QWORD *)(v2 + 1016) = result;",
+        "  if ( result )",
+        "    return qemu_chr_add_handlers(result, uart_can_rx, uart_rx, uart_event);",
+        "  return result;",
+        "}"
+    ]
+}

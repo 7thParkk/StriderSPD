@@ -1,0 +1,27 @@
+{
+    "pseudo_code": [
+        "int __cdecl object_set_property(const char *name, const char *value, void *opaque)",
+        "{",
+        "  __int64 visitor; // rax",
+        "  Error *local_err; // [rsp+20h] [rbp-20h] BYREF",
+        "  Object *obj; // [rsp+28h] [rbp-18h]",
+        "  StringInputVisitor *siv; // [rsp+30h] [rbp-10h]",
+        "  unsigned __int64 v8; // [rsp+38h] [rbp-8h]",
+        "",
+        "  v8 = __readfsqword(0x28u);",
+        "  obj = (Object *)opaque;",
+        "  local_err = 0LL;",
+        "  if ( !strcmp(name, \"qom-type\") || !strcmp(name, \"id\") || !strcmp(name, \"type\") )",
+        "    return 0;",
+        "  siv = (StringInputVisitor *)string_input_visitor_new(value);",
+        "  visitor = string_input_get_visitor(siv);",
+        "  object_property_set(obj, visitor, name, &local_err);",
+        "  string_input_visitor_cleanup(siv);",
+        "  if ( !local_err )",
+        "    return 0;",
+        "  qerror_report_err(local_err);",
+        "  error_free(local_err);",
+        "  return -1;",
+        "}"
+    ]
+}

@@ -1,0 +1,114 @@
+{
+    "nodes": {
+        "615": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov MEMACC CONSTANT",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "cmp REG 18446744073709551614",
+            "jz ADDR"
+        ],
+        "680": [
+            "mov REG REG",
+            "cmp REG 18446744073709551594",
+            "jz ADDR"
+        ],
+        "687": [
+            "test REG REG",
+            "js ADDR"
+        ],
+        "691": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jnz ADDR"
+        ],
+        "707": [
+            "mov REG REG",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "720": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov MEMACC CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "jmp ADDR"
+        ],
+        "760": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "774": [
+            "call ADDR"
+        ]
+    },
+    "edges": {
+        "615": [
+            680,
+            720
+        ],
+        "680": [
+            687,
+            720
+        ],
+        "687": [
+            691,
+            760
+        ],
+        "691": [
+            707,
+            774
+        ],
+        "707": [],
+        "720": [
+            687
+        ],
+        "760": [
+            691
+        ],
+        "774": []
+    },
+    "boundary": {
+        "615": 680,
+        "680": 687,
+        "687": 691,
+        "691": 707,
+        "707": 720,
+        "720": 760,
+        "760": 774,
+        "774": 779
+    },
+    "jmp_instruction": {
+        "615": "jz      short loc_2D0",
+        "680": "jz      short loc_2D0",
+        "687": "js      short loc_2F8",
+        "691": "jnz     short loc_306",
+        "707": "retn",
+        "720": "jmp     short loc_2AF",
+        "760": "jmp     short loc_2B3",
+        "774": "call    __stack_chk_fail; PIC mode"
+    }
+}

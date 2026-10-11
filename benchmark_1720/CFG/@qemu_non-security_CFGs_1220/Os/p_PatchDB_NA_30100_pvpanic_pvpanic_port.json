@@ -1,0 +1,45 @@
+{
+    "nodes": {
+        "429": [
+            "endbr64",
+            "push REG",
+            "lea REG MEMACC",
+            "xor REG REG",
+            "lea REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "xor REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "465": [
+            "xor REG REG",
+            "lea REG MEMACC",
+            "call ADDR"
+        ],
+        "479": [
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "429": [
+            465,
+            479
+        ],
+        "465": [
+            479
+        ],
+        "479": []
+    },
+    "boundary": {
+        "429": 465,
+        "465": 479,
+        "479": 481
+    },
+    "jmp_instruction": {
+        "429": "jz      short loc_1DF",
+        "465": "call    object_property_get_uint; PIC mode",
+        "479": "retn"
+    }
+}

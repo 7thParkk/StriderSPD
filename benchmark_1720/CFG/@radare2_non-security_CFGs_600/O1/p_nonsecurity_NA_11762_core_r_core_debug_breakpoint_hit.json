@@ -1,0 +1,98 @@
+{
+    "nodes": {
+        "36": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "cmp 992 0",
+            "setnz REG",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov MEMACC CONSTANT",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "100": [
+            "cmp MEMACC 0",
+            "jnz ADDR"
+        ],
+        "105": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "115": [
+            "cmp MEMACC 0",
+            "jnz ADDR"
+        ],
+        "120": [
+            "mov REG MEMACC",
+            "movzx REG REG",
+            "mov MEMACC REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "139": [
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "152": [
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "36": [
+            100,
+            105
+        ],
+        "100": [
+            105,
+            139
+        ],
+        "105": [
+            115,
+            120
+        ],
+        "115": [
+            120,
+            152
+        ],
+        "120": [],
+        "139": [
+            105
+        ],
+        "152": [
+            120
+        ]
+    },
+    "boundary": {
+        "36": 100,
+        "100": 105,
+        "105": 115,
+        "115": 120,
+        "120": 139,
+        "139": 152,
+        "152": 162
+    },
+    "jmp_instruction": {
+        "36": "jz      short loc_69",
+        "100": "jnz     short loc_8B",
+        "105": "jz      short loc_78",
+        "115": "jnz     short loc_98",
+        "120": "retn",
+        "139": "jmp     short loc_69",
+        "152": "jmp     short loc_78"
+    }
+}

@@ -1,0 +1,103 @@
+{
+    "nodes": {
+        "0": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "push REG",
+            "push REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "30": [
+            "xor REG REG",
+            "jmp ADDR"
+        ],
+        "34": [
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "call ADDR",
+            "movsxd REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "71": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "cmp REG 43",
+            "jbe ADDR"
+        ],
+        "86": [
+            "mov REG MEMACC",
+            "lea REG 24",
+            "mov REG CONSTANT",
+            "mov REG MEMACC",
+            "movs MEMACC MEMACC",
+            "jmp ADDR"
+        ],
+        "106": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "125": [
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "0": [
+            30,
+            34
+        ],
+        "30": [
+            125
+        ],
+        "34": [
+            71,
+            106
+        ],
+        "71": [
+            86,
+            106
+        ],
+        "86": [
+            125
+        ],
+        "106": [
+            30
+        ],
+        "125": []
+    },
+    "boundary": {
+        "0": 30,
+        "30": 34,
+        "34": 71,
+        "71": 86,
+        "86": 106,
+        "106": 125,
+        "125": 132
+    },
+    "jmp_instruction": {
+        "0": "jnz     short loc_22",
+        "30": "jmp     short loc_7D",
+        "34": "jz      short loc_6A",
+        "71": "jbe     short loc_6A",
+        "86": "jmp     short loc_7D",
+        "106": "jmp     short loc_1E",
+        "125": "retn"
+    }
+}

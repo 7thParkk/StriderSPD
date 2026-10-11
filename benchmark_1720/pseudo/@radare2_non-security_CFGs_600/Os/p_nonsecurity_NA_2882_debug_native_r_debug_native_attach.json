@@ -1,0 +1,33 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall r_debug_native_attach(_DWORD *a1, unsigned int a2)",
+        "{",
+        "  unsigned int v2; // ebx",
+        "  int v3; // ecx",
+        "  char s[128]; // [rsp+8h] [rbp-A0h] BYREF",
+        "  unsigned __int64 v6; // [rsp+88h] [rbp-20h]",
+        "",
+        "  v2 = a2;",
+        "  v3 = a1[76];",
+        "  v6 = __readfsqword(0x28u);",
+        "  if ( v3 )",
+        "    v3 = 38;",
+        "  if ( a1[78] )",
+        "    v3 |= 8u;",
+        "  if ( a1[77] )",
+        "    v3 |= 0x10u;",
+        "  if ( ptrace(PTRACE_SETOPTIONS, a2, 0LL, v3 | 0x40u) == -1 )",
+        "  {",
+        "    _snprintf_chk(s, 128LL, 2LL, 128LL, \"%s:%d %s\", LC3, 381, \"ptrace_setoptions\");",
+        "    v2 = -1;",
+        "    perror(s);",
+        "  }",
+        "  else if ( a1[2] != a2 && (unsigned int)ptrace(PTRACE_ATTACH, a2, 0LL, 0LL) != -1 )",
+        "  {",
+        "    _snprintf_chk(s, 128LL, 2LL, 128LL, \"%s:%d %s\", LC3, 401, \"ptrace (PT_ATTACH)\");",
+        "    perror(s);",
+        "  }",
+        "  return v2;",
+        "}"
+    ]
+}

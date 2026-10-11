@@ -1,0 +1,25 @@
+{
+    "nodes": {
+        "912": [
+            "endbr64",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "jmp ADDR"
+        ],
+        "4400": []
+    },
+    "edges": {
+        "912": [
+            4400
+        ],
+        "4400": []
+    },
+    "boundary": {
+        "912": 929,
+        "4400": 4400
+    },
+    "jmp_instruction": {
+        "912": "jmp     g_free; PIC mode",
+        "4400": "extrn __stack_chk_fail:near"
+    }
+}

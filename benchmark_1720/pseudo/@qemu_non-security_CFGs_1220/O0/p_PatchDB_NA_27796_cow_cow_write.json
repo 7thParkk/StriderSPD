@@ -1,0 +1,15 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall cow_write(__int64 a1, __int64 a2, __int64 a3, int a4)",
+        "{",
+        "  if ( (unsigned int)bdrv_pwrite(",
+        "                       *(_QWORD *)(a1 + 2152),",
+        "                       **(_QWORD **)(a1 + 64) + (a2 << 9),",
+        "                       a3,",
+        "                       (unsigned int)(a4 << 9)) == a4 << 9 )",
+        "    return cow_update_bitmap(a1, a2, a4);",
+        "  else",
+        "    return 0xFFFFFFFFLL;",
+        "}"
+    ]
+}

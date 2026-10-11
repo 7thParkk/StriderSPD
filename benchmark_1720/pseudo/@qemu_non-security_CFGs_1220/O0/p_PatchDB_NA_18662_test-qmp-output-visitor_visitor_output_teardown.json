@@ -1,0 +1,14 @@
+{
+    "pseudo_code": [
+        "_QWORD *__fastcall visitor_output_teardown(_QWORD *a1)",
+        "{",
+        "  _QWORD *result; // rax",
+        "",
+        "  visit_free(a1[1]);",
+        "  *a1 = 0LL;",
+        "  result = a1;",
+        "  a1[1] = 0LL;",
+        "  return result;",
+        "}"
+    ]
+}

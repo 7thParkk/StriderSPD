@@ -1,0 +1,41 @@
+{
+    "nodes": {
+        "720": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "call ADDR",
+            "xor REG REG",
+            "xor REG REG",
+            "lea REG MEMACC",
+            "mov MEMACC REG",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov MEMACC CONSTANT",
+            "mov MEMACC REG",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "720": []
+    },
+    "boundary": {
+        "720": 817
+    },
+    "jmp_instruction": {
+        "720": "retn"
+    }
+}

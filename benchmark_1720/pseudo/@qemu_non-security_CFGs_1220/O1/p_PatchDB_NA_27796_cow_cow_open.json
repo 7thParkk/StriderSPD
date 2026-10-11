@@ -1,0 +1,25 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall cow_open(__int64 *a1)",
+        "{",
+        "  _QWORD *v1; // rbx",
+        "  _DWORD v3[2]; // [rsp+0h] [rbp-448h] BYREF",
+        "  _BYTE v4[1032]; // [rsp+8h] [rbp-440h] BYREF",
+        "  unsigned __int64 v5; // [rsp+410h] [rbp-38h]",
+        "  unsigned __int64 v6; // [rsp+428h] [rbp-20h]",
+        "",
+        "  v6 = __readfsqword(0x28u);",
+        "  v1 = (_QWORD *)a1[8];",
+        "  if ( (unsigned int)bdrv_pread(a1[269], 0LL, v3, 1056LL) != 1056 )",
+        "    return 0xFFFFFFFFLL;",
+        "  if ( v3[0] != 1297043279 )",
+        "    return 0xFFFFFFFFLL;",
+        "  if ( v3[1] != 0x2000000 )",
+        "    return 0xFFFFFFFFLL;",
+        "  *a1 = (__int64)_byteswap_uint64(v5) / 512;",
+        "  pstrcpy(a1 + 137, 1024LL, v4);",
+        "  *v1 = (int)((((*a1 + 7) >> 3) + 1567) & 0xFFFFFE00);",
+        "  return 0LL;",
+        "}"
+    ]
+}

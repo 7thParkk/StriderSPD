@@ -1,0 +1,101 @@
+{
+    "nodes": {
+        "6368": [
+            "endbr64",
+            "push REG",
+            "cmp 20 9",
+            "mov REG REG",
+            "jz ADDR"
+        ],
+        "6382": [
+            "movzx REG REG",
+            "call ADDR",
+            "cmp 32 0",
+            "jz ADDR"
+        ],
+        "6398": [
+            "cmp 97 0",
+            "mov REG REG",
+            "jz ADDR"
+        ],
+        "6407": [
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "6416": [
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "6432": [
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "6448": [
+            "mov REG REG",
+            "xor REG REG",
+            "mov REG CONSTANT",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "5216": [],
+        "3216": [],
+        "2432": [],
+        "5888": []
+    },
+    "edges": {
+        "6368": [
+            6382,
+            6432
+        ],
+        "6382": [
+            6398,
+            6448
+        ],
+        "6398": [
+            6407,
+            6416
+        ],
+        "6407": [
+            5216
+        ],
+        "6416": [
+            3216
+        ],
+        "6432": [
+            2432
+        ],
+        "6448": [
+            5888
+        ],
+        "5216": [],
+        "3216": [],
+        "2432": [],
+        "5888": []
+    },
+    "boundary": {
+        "6368": 6382,
+        "6382": 6398,
+        "6398": 6407,
+        "6407": 6413,
+        "6416": 6422,
+        "6432": 6438,
+        "6448": 6464,
+        "5216": 5216,
+        "3216": 3216,
+        "2432": 2432,
+        "5888": 5888
+    },
+    "jmp_instruction": {
+        "6368": "jz      short loc_1920",
+        "6382": "jz      short loc_1930",
+        "6398": "jz      short loc_1910",
+        "6407": "jmp     job_completed_txn_abort",
+        "6416": "jmp     job_enter; PIC mode",
+        "6432": "jmp     job_do_dismiss",
+        "6448": "jmp     job_completed; PIC mode",
+        "5216": "call    __stack_chk_fail; PIC mode",
+        "3216": "align 10h",
+        "2432": "align 20h",
+        "5888": "align 20h"
+    }
+}

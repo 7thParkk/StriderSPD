@@ -1,0 +1,253 @@
+{
+    "nodes": {
+        "5984": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "6044": [
+            "mov REG REG",
+            "mov REG REG",
+            "cmp REG REG",
+            "jz ADDR"
+        ],
+        "6059": [
+            "shl REG CONSTANT",
+            "lea REG 48",
+            "movsxd REG REG",
+            "mov REG CONSTANT",
+            "mov MEMACC REG",
+            "shl REG CONSTANT",
+            "mov MEMACC REG",
+            "nop"
+        ],
+        "6096": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "js ADDR"
+        ],
+        "6121": [
+            "mov REG MEMACC",
+            "cmp REG REG",
+            "jb ADDR"
+        ],
+        "6135": [
+            "sar REG CONSTANT",
+            "mov REG REG",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "6146": [
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "js ADDR"
+        ],
+        "6159": [
+            "cmp REG REG",
+            "jge ADDR"
+        ],
+        "6164": [
+            "cmp 24 REG",
+            "jz ADDR"
+        ],
+        "6171": [
+            "mov REG MEMACC",
+            "add REG REG",
+            "cmp REG REG",
+            "cmovl REG REG"
+        ],
+        "6186": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "6198": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "6206": [
+            "cmp REG REG",
+            "jnz ADDR"
+        ],
+        "6211": [
+            "nop MEMACC"
+        ],
+        "6216": [
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG"
+        ],
+        "6225": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jnz ADDR"
+        ],
+        "6241": [
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "6256": [
+            "mov REG REG",
+            "jmp ADDR"
+        ],
+        "6264": [
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "6278": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR"
+        ],
+        "6309": [
+            "call ADDR"
+        ]
+    },
+    "edges": {
+        "5984": [
+            6044,
+            6216
+        ],
+        "6044": [
+            6059,
+            6216
+        ],
+        "6059": [
+            6096
+        ],
+        "6096": [
+            6121,
+            6225
+        ],
+        "6121": [
+            6135,
+            6278
+        ],
+        "6135": [
+            6146,
+            6264
+        ],
+        "6146": [
+            6159,
+            6225
+        ],
+        "6159": [
+            6164,
+            6186
+        ],
+        "6164": [
+            6171,
+            6256
+        ],
+        "6171": [
+            6186
+        ],
+        "6186": [
+            6198,
+            6216
+        ],
+        "6198": [
+            6206,
+            6216
+        ],
+        "6206": [
+            6096,
+            6211
+        ],
+        "6211": [
+            6216
+        ],
+        "6216": [
+            6225
+        ],
+        "6225": [
+            6241,
+            6309
+        ],
+        "6241": [],
+        "6256": [
+            6186
+        ],
+        "6264": [
+            6225
+        ],
+        "6278": [],
+        "6309": []
+    },
+    "boundary": {
+        "5984": 6044,
+        "6044": 6059,
+        "6059": 6096,
+        "6096": 6121,
+        "6121": 6135,
+        "6135": 6146,
+        "6146": 6159,
+        "6159": 6164,
+        "6164": 6171,
+        "6171": 6186,
+        "6186": 6198,
+        "6198": 6206,
+        "6206": 6211,
+        "6211": 6216,
+        "6216": 6225,
+        "6225": 6241,
+        "6241": 6256,
+        "6256": 6261,
+        "6264": 6278,
+        "6278": 6309,
+        "6309": 6314
+    },
+    "jmp_instruction": {
+        "5984": "jz      loc_1848",
+        "6044": "jz      loc_1848",
+        "6059": "nop",
+        "6096": "js      short loc_1851",
+        "6121": "jb      loc_1886",
+        "6135": "jnz     short loc_1878",
+        "6146": "js      short loc_1851",
+        "6159": "jge     short loc_182A",
+        "6164": "jz      short loc_1870",
+        "6171": "cmovl   ebx, r14d",
+        "6186": "jz      short loc_1848",
+        "6198": "jz      short loc_1848",
+        "6206": "jnz     short loc_17D0",
+        "6211": "nop     dword ptr [rax+rax+00h]",
+        "6216": "xor     eax, eax",
+        "6225": "jnz     short loc_18A5",
+        "6241": "retn",
+        "6256": "jmp     short loc_182A",
+        "6264": "jmp     short loc_1851",
+        "6278": "call    __assert_fail; PIC mode",
+        "6309": "call    __stack_chk_fail; PIC mode"
+    }
+}

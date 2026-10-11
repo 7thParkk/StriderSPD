@@ -1,0 +1,179 @@
+{
+    "nodes": {
+        "5248": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5261": [
+            "mov REG REG",
+            "mov REG REG",
+            "cmp 192 0",
+            "jz ADDR"
+        ],
+        "5276": [
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "5285": [
+            "mov MEMACC REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "cmp 120 0",
+            "jz ADDR"
+        ],
+        "5320": [
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "5328": [
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "5333": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR"
+        ],
+        "5364": [
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5394": [
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5406": [
+            "cmp 120 0",
+            "jnz ADDR"
+        ],
+        "5412": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "5424": [
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "5472": [
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "5485": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR"
+        ]
+    },
+    "edges": {
+        "5248": [
+            5261,
+            5333
+        ],
+        "5261": [
+            5276,
+            5333
+        ],
+        "5276": [
+            5285,
+            5333
+        ],
+        "5285": [
+            5320,
+            5364
+        ],
+        "5320": [
+            5328
+        ],
+        "5328": [],
+        "5333": [],
+        "5364": [
+            5394,
+            5424
+        ],
+        "5394": [
+            5328,
+            5406
+        ],
+        "5406": [
+            5412,
+            5485
+        ],
+        "5412": [
+            5394,
+            5424
+        ],
+        "5424": [
+            5328,
+            5472
+        ],
+        "5472": [
+            5328
+        ],
+        "5485": []
+    },
+    "boundary": {
+        "5248": 5261,
+        "5261": 5276,
+        "5276": 5285,
+        "5285": 5320,
+        "5320": 5328,
+        "5328": 5333,
+        "5333": 5364,
+        "5364": 5394,
+        "5394": 5406,
+        "5406": 5412,
+        "5412": 5424,
+        "5424": 5472,
+        "5472": 5485,
+        "5485": 5516
+    },
+    "jmp_instruction": {
+        "5248": "jz      short loc_14D5",
+        "5261": "jz      short loc_14D5",
+        "5276": "jnz     short loc_14D5",
+        "5285": "jz      short loc_14F4",
+        "5320": "call    job_completed_txn_abort",
+        "5328": "retn",
+        "5333": "call    __assert_fail; PIC mode",
+        "5364": "jz      short loc_1530",
+        "5394": "jz      short loc_14D0",
+        "5406": "jnz     short loc_156D",
+        "5412": "jnz     short loc_1512",
+        "5424": "jnz     loc_14D0",
+        "5472": "jmp     loc_14D0",
+        "5485": "call    __assert_fail; PIC mode"
+    }
+}

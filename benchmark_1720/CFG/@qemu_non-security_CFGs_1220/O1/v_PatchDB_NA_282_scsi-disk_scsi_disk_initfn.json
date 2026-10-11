@@ -1,0 +1,109 @@
+{
+    "nodes": {
+        "711": [
+            "endbr64",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "749": [
+            "mov REG REG",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "764": [
+            "mov MEMACC REG",
+            "call ADDR",
+            "cmp REG 1",
+            "setz REG",
+            "movzx REG REG",
+            "lea REG 1",
+            "mov MEMACC REG",
+            "shl REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC CONSTANT",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG MEMACC",
+            "movsxd REG MEMACC",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "div REG REG",
+            "cmp REG REG",
+            "adc REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "call ADDR",
+            "mov REG CONSTANT"
+        ],
+        "889": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jnz ADDR"
+        ],
+        "905": [
+            "add REG CONSTANT",
+            "pop REG",
+            "retn"
+        ],
+        "911": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "935": [
+            "call ADDR"
+        ]
+    },
+    "edges": {
+        "711": [
+            749,
+            911
+        ],
+        "749": [
+            764,
+            911
+        ],
+        "764": [
+            889
+        ],
+        "889": [
+            905,
+            935
+        ],
+        "905": [],
+        "911": [
+            889
+        ],
+        "935": []
+    },
+    "boundary": {
+        "711": 749,
+        "749": 764,
+        "764": 889,
+        "889": 905,
+        "905": 911,
+        "911": 935,
+        "935": 940
+    },
+    "jmp_instruction": {
+        "711": "jz      loc_38F",
+        "749": "jz      loc_38F",
+        "764": "mov     eax, 0",
+        "889": "jnz     short loc_3A7",
+        "905": "retn",
+        "911": "jmp     short loc_379",
+        "935": "call    __stack_chk_fail; PIC mode"
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "pseudo_code": [
+        "void __cdecl fake_irqfd(void *opaque, const uint8_t *buf, int size)",
+        "{",
+        "  unsigned int v3; // edx",
+        "  PCIDevice *pdev; // [rsp+30h] [rbp-10h]",
+        "",
+        "  pdev = *(PCIDevice **)opaque;",
+        "  v3 = ((__int64)opaque",
+        "      - *(_QWORD *)(object_dynamic_cast_assert(*(_QWORD *)opaque, \"ivshmem\", \"hw/misc/ivshmem.c\", 289LL, \"fake_irqfd\")",
+        "                  + 3016)) >> 3;",
+        "  msix_notify(pdev, v3);",
+        "}"
+    ]
+}

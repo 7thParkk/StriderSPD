@@ -1,0 +1,96 @@
+{
+    "nodes": {
+        "608": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "624": [
+            "mov REG MEMACC",
+            "call ADDR"
+        ],
+        "633": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "654": [
+            "mov REG REG",
+            "call ADDR",
+            "cmp REG 4",
+            "jbe ADDR"
+        ],
+        "668": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "689": [
+            "pop REG",
+            "xor REG REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "704": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "xor REG REG",
+            "mov MEMACC CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "608": [
+            624,
+            633
+        ],
+        "624": [
+            633
+        ],
+        "633": [
+            654,
+            689
+        ],
+        "654": [
+            668,
+            689
+        ],
+        "668": [
+            689,
+            704
+        ],
+        "689": [],
+        "704": []
+    },
+    "boundary": {
+        "608": 624,
+        "624": 633,
+        "633": 654,
+        "654": 668,
+        "668": 689,
+        "689": 696,
+        "704": 732
+    },
+    "jmp_instruction": {
+        "608": "jz      short loc_279",
+        "624": "call    r_buf_buffer; PIC mode",
+        "633": "jz      short loc_2B1",
+        "654": "jbe     short loc_2B1",
+        "668": "jz      short loc_2C0",
+        "689": "retn",
+        "704": "retn"
+    }
+}

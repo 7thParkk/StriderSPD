@@ -1,0 +1,84 @@
+{
+    "nodes": {
+        "96": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "xor REG REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "132": [
+            "mov REG REG",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "xor REG REG",
+            "xor REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "cmp REG 18446744073709551615",
+            "jz ADDR"
+        ],
+        "198": [
+            "lea REG MEMACC",
+            "xor REG REG",
+            "call ADDR",
+            "movsxd REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "shl REG CONSTANT",
+            "add REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "add REG CONSTANT",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "256": [
+            "xor REG REG",
+            "add REG CONSTANT",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "96": [
+            132,
+            256
+        ],
+        "132": [
+            198,
+            256
+        ],
+        "198": [],
+        "256": []
+    },
+    "boundary": {
+        "96": 132,
+        "132": 198,
+        "198": 255,
+        "256": 268
+    },
+    "jmp_instruction": {
+        "96": "jz      loc_100",
+        "132": "jz      short loc_100",
+        "198": "retn",
+        "256": "retn"
+    }
+}

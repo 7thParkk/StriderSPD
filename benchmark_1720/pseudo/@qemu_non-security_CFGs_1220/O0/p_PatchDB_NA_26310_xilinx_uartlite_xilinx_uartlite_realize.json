@@ -1,0 +1,18 @@
+{
+    "pseudo_code": [
+        "void __cdecl xilinx_uartlite_realize(DeviceState *dev, Error **errp)",
+        "{",
+        "  __int64 v2; // r9",
+        "  XilinxUARTLite *s; // [rsp+18h] [rbp-8h]",
+        "",
+        "  s = (XilinxUARTLite *)object_dynamic_cast_assert(",
+        "                          dev,",
+        "                          \"xlnx.xps-uartlite\",",
+        "                          \"hw/char/xilinx_uartlite.c\",",
+        "                          212LL,",
+        "                          \"xilinx_uartlite_realize\");",
+        "  if ( s->chr )",
+        "    qemu_chr_add_handlers(s->chr, uart_can_rx, uart_rx, uart_event, s, v2, errp, dev);",
+        "}"
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "nodes": {
+        "48": [
+            "endbr64",
+            "mov REG CONSTANT",
+            "cmp REG 4095",
+            "jbe ADDR"
+        ],
+        "66": [
+            "movzx REG MEMACC",
+            "shl REG CONSTANT",
+            "movzx REG MEMACC",
+            "shl REG CONSTANT",
+            "or REG REG",
+            "movzx REG MEMACC",
+            "or REG REG",
+            "movzx REG MEMACC",
+            "shl REG CONSTANT",
+            "or REG REG",
+            "cmp REG 18446744071565677120",
+            "setz REG"
+        ],
+        "104": [
+            "retn"
+        ]
+    },
+    "edges": {
+        "48": [
+            66,
+            104
+        ],
+        "66": [
+            104
+        ],
+        "104": []
+    },
+    "boundary": {
+        "48": 66,
+        "66": 104,
+        "104": 105
+    },
+    "jmp_instruction": {
+        "48": "jbe     short locret_68",
+        "66": "setz    al",
+        "104": "retn"
+    }
+}

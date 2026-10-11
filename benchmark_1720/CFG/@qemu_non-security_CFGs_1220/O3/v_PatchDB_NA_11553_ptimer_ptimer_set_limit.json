@@ -1,0 +1,95 @@
+{
+    "nodes": {
+        "1296": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "imul REG REG",
+            "cmp REG 9999",
+            "ja ADDR"
+        ],
+        "1329": [
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "1334": [
+            "mov MEMACC REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1342": [
+            "cmp MEMACC 0",
+            "mov MEMACC REG",
+            "jz ADDR"
+        ],
+        "1351": [
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "1376": [
+            "pop REG",
+            "retn"
+        ],
+        "1384": [
+            "mov REG CONSTANT",
+            "cqo REG REG",
+            "idiv REG REG",
+            "jmp ADDR"
+        ],
+        "0": []
+    },
+    "edges": {
+        "1296": [
+            1329,
+            1334
+        ],
+        "1329": [
+            1334,
+            1384
+        ],
+        "1334": [
+            1342,
+            1376
+        ],
+        "1342": [
+            1351,
+            1376
+        ],
+        "1351": [
+            0
+        ],
+        "1376": [],
+        "1384": [
+            1334
+        ],
+        "0": []
+    },
+    "boundary": {
+        "1296": 1329,
+        "1329": 1334,
+        "1334": 1342,
+        "1342": 1351,
+        "1351": 1374,
+        "1376": 1378,
+        "1384": 1396,
+        "0": 0
+    },
+    "jmp_instruction": {
+        "1296": "ja      short loc_536",
+        "1329": "jnz     short loc_568",
+        "1334": "jz      short loc_560",
+        "1342": "jz      short loc_560",
+        "1351": "jmp     ptimer_reload",
+        "1376": "retn",
+        "1384": "jmp     short loc_536",
+        "0": ""
+    }
+}

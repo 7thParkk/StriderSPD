@@ -1,0 +1,106 @@
+{
+    "nodes": {
+        "6672": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "and REG REG",
+            "not REG",
+            "and REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "6732": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "add REG MEMACC",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "and REG REG",
+            "not REG",
+            "and REG REG",
+            "add REG REG",
+            "mov REG REG",
+            "sub REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "6789": [
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "js ADDR"
+        ],
+        "6801": [
+            "add REG CONSTANT",
+            "mov REG REG",
+            "xor REG REG",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "6824": [
+            "add REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "1088": [],
+        "848": []
+    },
+    "edges": {
+        "6672": [
+            6732,
+            6824
+        ],
+        "6732": [
+            6789,
+            6824
+        ],
+        "6789": [
+            6801,
+            6824
+        ],
+        "6801": [
+            1088
+        ],
+        "6824": [
+            848
+        ],
+        "1088": [],
+        "848": []
+    },
+    "boundary": {
+        "6672": 6732,
+        "6732": 6789,
+        "6789": 6801,
+        "6801": 6817,
+        "6824": 6840,
+        "1088": 1088,
+        "848": 848
+    },
+    "jmp_instruction": {
+        "6672": "jnz     short loc_1AA8",
+        "6732": "jnz     short loc_1AA8",
+        "6789": "js      short loc_1AA8",
+        "6801": "jmp     qed_aio_next_io",
+        "6824": "jmp     qed_aio_complete",
+        "1088": "align 20h",
+        "848": "align 10h"
+    }
+}

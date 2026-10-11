@@ -1,0 +1,8 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall mpc85xx_pci_set_irq(__int64 a1, int a2, unsigned int a3)",
+        "{",
+        "  return qemu_set_irq(*(_QWORD *)(8LL * a2 + a1), a3);",
+        "}"
+    ]
+}

@@ -1,0 +1,89 @@
+{
+    "nodes": {
+        "67": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "xor REG REG",
+            "push REG",
+            "push REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "96": [
+            "xor REG REG",
+            "jmp ADDR"
+        ],
+        "100": [
+            "mov REG REG",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "xor REG REG",
+            "xor REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "cmp REG 18446744073709551615",
+            "jz ADDR"
+        ],
+        "166": [
+            "lea REG MEMACC",
+            "xor REG REG",
+            "call ADDR",
+            "movsxd REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "shl REG CONSTANT",
+            "add REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "213": [
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "67": [
+            96,
+            100
+        ],
+        "96": [
+            213
+        ],
+        "100": [
+            96,
+            166
+        ],
+        "166": [
+            213
+        ],
+        "213": []
+    },
+    "boundary": {
+        "67": 96,
+        "96": 100,
+        "100": 166,
+        "166": 213,
+        "213": 220
+    },
+    "jmp_instruction": {
+        "67": "jnz     short loc_64",
+        "96": "jmp     short loc_D5",
+        "100": "jz      short loc_60",
+        "166": "call    qdev_init_nofail; PIC mode",
+        "213": "retn"
+    }
+}

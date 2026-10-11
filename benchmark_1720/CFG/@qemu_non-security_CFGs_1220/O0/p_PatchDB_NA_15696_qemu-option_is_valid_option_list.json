@@ -1,0 +1,141 @@
+{
+    "nodes": {
+        "1954": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "add REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov MEMACC CONSTANT",
+            "jmp ADDR"
+        ],
+        "2020": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "movzx REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "2059": [
+            "add MEMACC CONSTANT",
+            "mov REG MEMACC",
+            "movzx REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "2075": [
+            "mov MEMACC CONSTANT",
+            "jmp ADDR"
+        ],
+        "2081": [
+            "mov REG MEMACC",
+            "movzx REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "2092": [
+            "mov REG MEMACC",
+            "movzx REG MEMACC",
+            "cmp REG 44",
+            "jnz ADDR"
+        ],
+        "2103": [
+            "mov MEMACC CONSTANT",
+            "jmp ADDR"
+        ],
+        "2109": [
+            "mov REG MEMACC",
+            "movzx REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "2120": [
+            "nop"
+        ],
+        "2121": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "movzx REG MEMACC",
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "1954": [
+            2109
+        ],
+        "2020": [
+            2059,
+            2081
+        ],
+        "2059": [
+            2075,
+            2081
+        ],
+        "2075": [
+            2121
+        ],
+        "2081": [
+            2092,
+            2103
+        ],
+        "2092": [
+            2103,
+            2109
+        ],
+        "2103": [
+            2121
+        ],
+        "2109": [
+            2020,
+            2120
+        ],
+        "2120": [
+            2121
+        ],
+        "2121": []
+    },
+    "boundary": {
+        "1954": 2020,
+        "2020": 2059,
+        "2059": 2075,
+        "2075": 2081,
+        "2081": 2092,
+        "2092": 2103,
+        "2103": 2109,
+        "2109": 2120,
+        "2120": 2121,
+        "2121": 2139
+    },
+    "jmp_instruction": {
+        "1954": "jmp     short loc_83D",
+        "2020": "jz      short loc_821",
+        "2059": "jnz     short loc_821",
+        "2075": "jmp     short loc_849",
+        "2081": "jz      short loc_837",
+        "2092": "jnz     short loc_83D",
+        "2103": "jmp     short loc_849",
+        "2109": "jnz     short loc_7E4",
+        "2120": "nop",
+        "2121": "retn"
+    }
+}

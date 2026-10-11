@@ -1,0 +1,24 @@
+{
+    "nodes": {
+        "311": [
+            "endbr64",
+            "mov REG MEMACC",
+            "jmp ADDR"
+        ],
+        "2576": []
+    },
+    "edges": {
+        "311": [
+            2576
+        ],
+        "2576": []
+    },
+    "boundary": {
+        "311": 327,
+        "2576": 2576
+    },
+    "jmp_instruction": {
+        "311": "jmp     bdrv_flush; PIC mode",
+        "2576": "extrn __stack_chk_fail:near"
+    }
+}

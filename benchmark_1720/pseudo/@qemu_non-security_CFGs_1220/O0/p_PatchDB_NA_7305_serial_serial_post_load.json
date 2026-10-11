@@ -1,0 +1,33 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall serial_post_load(__int64 a1, int a2)",
+        "{",
+        "  if ( a2 <= 2 )",
+        "    *(_BYTE *)(a1 + 13) = 0;",
+        "  if ( *(_DWORD *)(a1 + 16) == -1 )",
+        "    *(_DWORD *)(a1 + 16) = (*(_BYTE *)(a1 + 6) & 6) == 2;",
+        "  if ( *(_DWORD *)(a1 + 52) )",
+        "  {",
+        "    if ( (*(_BYTE *)(a1 + 9) & 0x40) != 0 )",
+        "    {",
+        "      error_report(\"inconsistent state in serial device (tsr empty, tsr_retry=%d\", *(_DWORD *)(a1 + 52));",
+        "      return 0xFFFFFFFFLL;",
+        "    }",
+        "    if ( *(_DWORD *)(a1 + 52) > 4u )",
+        "      *(_DWORD *)(a1 + 52) = 4;",
+        "    if ( *(_DWORD *)(a1 + 56) )",
+        "      _assert_fail(\"s->watch_tag == 0\", file, 0x294u, \"serial_post_load\");",
+        "    *(_DWORD *)(a1 + 56) = qemu_chr_fe_add_watch(*(_QWORD *)(a1 + 32), 20LL, serial_watch_cb, a1);",
+        "  }",
+        "  else if ( (*(_BYTE *)(a1 + 9) & 0x40) == 0 )",
+        "  {",
+        "    error_report(\"inconsistent state in serial device (tsr not empty, tsr_retry=0\");",
+        "    return 0xFFFFFFFFLL;",
+        "  }",
+        "  *(_DWORD *)(a1 + 40) = (*(_BYTE *)(a1 + 7) & 0x40) != 0;",
+        "  serial_write_fcr((_BYTE *)a1, *(_BYTE *)(a1 + 13));",
+        "  serial_update_parameters((unsigned __int16 *)a1);",
+        "  return 0LL;",
+        "}"
+    ]
+}

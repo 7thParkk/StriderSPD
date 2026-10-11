@@ -1,0 +1,174 @@
+{
+    "nodes": {
+        "1249": [
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "test REG REG",
+            "js ADDR"
+        ],
+        "1293": [
+            "mov REG MEMACC",
+            "movsxd REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "cmp REG REG",
+            "jz ADDR"
+        ],
+        "1319": [
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "1323": [
+            "cmp 2216 0",
+            "jz ADDR"
+        ],
+        "1333": [
+            "mov REG REG",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "cmp REG REG",
+            "jl ADDR"
+        ],
+        "1354": [
+            "xor REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "stos MEMACC REG",
+            "jmp ADDR"
+        ],
+        "1368": [
+            "cmp 4 0",
+            "jz ADDR"
+        ],
+        "1375": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "cmp REG REG",
+            "jz ADDR"
+        ],
+        "1398": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "cmp REG REG",
+            "jz ADDR"
+        ],
+        "1421": [
+            "test REG REG",
+            "jns ADDR"
+        ],
+        "1425": [
+            "call ADDR",
+            "mov REG MEMACC",
+            "neg REG"
+        ],
+        "1434": [
+            "add REG CONSTANT",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "1249": [
+            1293,
+            1434
+        ],
+        "1293": [
+            1319,
+            1434
+        ],
+        "1319": [
+            1323,
+            1368
+        ],
+        "1323": [
+            1333,
+            1368
+        ],
+        "1333": [
+            1354,
+            1368
+        ],
+        "1354": [
+            1434
+        ],
+        "1368": [
+            1375,
+            1421
+        ],
+        "1375": [
+            1398,
+            1434
+        ],
+        "1398": [
+            1421,
+            1434
+        ],
+        "1421": [
+            1425,
+            1434
+        ],
+        "1425": [
+            1434
+        ],
+        "1434": []
+    },
+    "boundary": {
+        "1249": 1293,
+        "1293": 1319,
+        "1319": 1323,
+        "1323": 1333,
+        "1333": 1354,
+        "1354": 1368,
+        "1368": 1375,
+        "1375": 1398,
+        "1398": 1421,
+        "1421": 1425,
+        "1425": 1434,
+        "1434": 1451
+    },
+    "jmp_instruction": {
+        "1249": "js      loc_59A",
+        "1293": "jz      short loc_59A",
+        "1319": "jnz     short loc_558",
+        "1323": "jz      short loc_558",
+        "1333": "jl      short loc_558",
+        "1354": "jmp     short loc_59A",
+        "1368": "jz      short loc_58D",
+        "1375": "jz      short loc_59A",
+        "1398": "jz      short loc_59A",
+        "1421": "jns     short loc_59A",
+        "1425": "neg     edx",
+        "1434": "retn"
+    }
+}

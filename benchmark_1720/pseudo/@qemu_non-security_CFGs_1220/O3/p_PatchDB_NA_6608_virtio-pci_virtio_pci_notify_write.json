@@ -1,0 +1,21 @@
+{
+    "pseudo_code": [
+        "void __cdecl virtio_pci_notify_write(void *opaque, hwaddr addr, uint64_t val, unsigned int size)",
+        "{",
+        "  __int64 v4; // rax",
+        "  unsigned int queue; // [rsp+2Ch] [rbp-14h]",
+        "  VirtIOPCIProxy *proxy; // [rsp+38h] [rbp-8h]",
+        "",
+        "  v4 = object_dynamic_cast_assert(opaque, \"device\", \"hw/virtio/virtio-pci.c\", 1379LL, \"virtio_pci_notify_write\");",
+        "  proxy = (VirtIOPCIProxy *)object_dynamic_cast_assert(",
+        "                              *(_QWORD *)(*(_QWORD *)(v4 + 72) + 40LL),",
+        "                              \"virtio-pci\",",
+        "                              \"hw/virtio/virtio-pci.c\",",
+        "                              1379LL,",
+        "                              \"virtio_pci_notify_write\");",
+        "  queue = addr / virtio_pci_queue_mem_mult(proxy);",
+        "  if ( queue <= 0x3FF )",
+        "    virtio_queue_notify(opaque, queue);",
+        "}"
+    ]
+}

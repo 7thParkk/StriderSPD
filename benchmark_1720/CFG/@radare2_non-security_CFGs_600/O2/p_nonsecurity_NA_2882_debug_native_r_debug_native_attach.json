@@ -1,0 +1,123 @@
+{
+    "nodes": {
+        "368": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "neg REG",
+            "sbb REG REG",
+            "and REG CONSTANT",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "426": [
+            "or REG CONSTANT"
+        ],
+        "429": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "439": [
+            "or REG CONSTANT"
+        ],
+        "442": [
+            "or REG CONSTANT",
+            "xor REG REG",
+            "xor REG REG",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "cmp REG 18446744073709551615",
+            "jz ADDR"
+        ],
+        "471": [
+            "cmp 8 REG",
+            "jz ADDR"
+        ],
+        "476": [
+            "xor REG REG",
+            "xor REG REG",
+            "xor REG REG",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "cmp REG 18446744073709551615",
+            "jnz ADDR"
+        ],
+        "503": [
+            "mov REG REG",
+            "jmp ADDR"
+        ],
+        "10010": [],
+        "10108": [],
+        "10079": []
+    },
+    "edges": {
+        "368": [
+            426,
+            429
+        ],
+        "426": [
+            429
+        ],
+        "429": [
+            439,
+            442
+        ],
+        "439": [
+            442
+        ],
+        "442": [
+            471,
+            10010
+        ],
+        "471": [
+            476,
+            503
+        ],
+        "476": [
+            503,
+            10108
+        ],
+        "503": [
+            10079
+        ],
+        "10010": [],
+        "10108": [],
+        "10079": []
+    },
+    "boundary": {
+        "368": 426,
+        "426": 429,
+        "429": 439,
+        "439": 442,
+        "442": 471,
+        "471": 476,
+        "476": 503,
+        "503": 510,
+        "10010": 10010,
+        "10108": 10108,
+        "10079": 10079
+    },
+    "jmp_instruction": {
+        "368": "jz      short loc_1AD",
+        "426": "or      ecx, 8",
+        "429": "jz      short loc_1BA",
+        "439": "or      ecx, 10h",
+        "442": "jz      r_debug_native_attach_cold",
+        "471": "jz      short loc_1F7",
+        "476": "jnz     loc_277C",
+        "503": "jmp     loc_275F",
+        "10010": "db 'Invalid DRX length (%d) must be 1, 2, 4, 8 bytes',0Ah,0",
+        "10108": "retn",
+        "10079": "or      eax, 0FFFFFFFFh"
+    }
+}

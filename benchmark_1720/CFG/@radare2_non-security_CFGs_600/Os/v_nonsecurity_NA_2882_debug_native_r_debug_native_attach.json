@@ -1,0 +1,92 @@
+{
+    "nodes": {
+        "4332": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "cmp 8 REG",
+            "jz ADDR"
+        ],
+        "4371": [
+            "xor REG REG",
+            "xor REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "inc REG",
+            "jz ADDR"
+        ],
+        "4389": [
+            "lea REG 8",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "push REG",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "push CONSTANT",
+            "lea REG MEMACC",
+            "xor REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "pop REG",
+            "pop REG"
+        ],
+        "4456": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jz ADDR"
+        ],
+        "4475": [
+            "call ADDR"
+        ],
+        "4480": [
+            "add REG CONSTANT",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "4332": [
+            4371,
+            4456
+        ],
+        "4371": [
+            4389,
+            4456
+        ],
+        "4389": [
+            4456
+        ],
+        "4456": [
+            4475,
+            4480
+        ],
+        "4475": [],
+        "4480": []
+    },
+    "boundary": {
+        "4332": 4371,
+        "4371": 4389,
+        "4389": 4456,
+        "4456": 4475,
+        "4475": 4480,
+        "4480": 4492
+    },
+    "jmp_instruction": {
+        "4332": "jz      short loc_1168",
+        "4371": "jz      short loc_1168",
+        "4389": "pop     rdx",
+        "4456": "jz      short loc_1180",
+        "4475": "call    __stack_chk_fail; PIC mode",
+        "4480": "retn"
+    }
+}

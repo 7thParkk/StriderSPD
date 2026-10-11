@@ -1,0 +1,17 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall xilinx_uartlite_realize(__int64 a1, __int64 a2)",
+        "{",
+        "  __int64 v2; // r9",
+        "  __int64 result; // rax",
+        "  __int64 v4; // [rsp+18h] [rbp-8h]",
+        "",
+        "  v4 = object_dynamic_cast_assert(a1, \"xlnx.xps-uartlite\", &unk_690, 207LL, \"xilinx_uartlite_realize\");",
+        "  *(_QWORD *)(v4 + 1016) = qemu_char_get_next_serial(a1, \"xlnx.xps-uartlite\");",
+        "  result = *(_QWORD *)(v4 + 1016);",
+        "  if ( result )",
+        "    return qemu_chr_add_handlers(*(_QWORD *)(v4 + 1016), uart_can_rx, uart_rx, uart_event, v4, v2, a2, a1);",
+        "  return result;",
+        "}"
+    ]
+}

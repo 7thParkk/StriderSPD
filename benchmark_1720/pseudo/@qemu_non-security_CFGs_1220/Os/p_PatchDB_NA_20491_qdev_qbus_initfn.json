@@ -1,0 +1,14 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall qbus_initfn(__int64 a1)",
+        "{",
+        "  __int64 v1; // rax",
+        "",
+        "  v1 = object_dynamic_cast_assert(a1, &LC1, LC0, 925LL, \"qbus_initfn\");",
+        "  *(_QWORD *)(v1 + 88) = 0LL;",
+        "  *(_QWORD *)(v1 + 96) = v1 + 88;",
+        "  object_property_add_link(a1, \"hotplug-handler\", \"hotplug-handler\", v1 + 72, 0LL);",
+        "  return object_property_add_bool(a1, \"realized\", bus_get_realized, bus_set_realized, 0LL);",
+        "}"
+    ]
+}

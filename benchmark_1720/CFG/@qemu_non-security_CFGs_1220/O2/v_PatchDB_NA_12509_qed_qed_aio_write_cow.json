@@ -1,0 +1,84 @@
+{
+    "nodes": {
+        "6720": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "and REG REG",
+            "not REG",
+            "and REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "6780": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "add REG MEMACC",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "and REG REG",
+            "not REG",
+            "and REG REG",
+            "add REG REG",
+            "mov REG REG",
+            "sub REG REG",
+            "call ADDR",
+            "add REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "6856": [
+            "add REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "5936": [],
+        "848": []
+    },
+    "edges": {
+        "6720": [
+            6780,
+            6856
+        ],
+        "6780": [
+            5936
+        ],
+        "6856": [
+            848
+        ],
+        "5936": [],
+        "848": []
+    },
+    "boundary": {
+        "6720": 6780,
+        "6780": 6849,
+        "6856": 6872,
+        "5936": 5936,
+        "848": 848
+    },
+    "jmp_instruction": {
+        "6720": "jnz     short loc_1AC8",
+        "6780": "jmp     qed_aio_write_main",
+        "6856": "jmp     qed_aio_complete",
+        "5936": "align 10h",
+        "848": "align 10h"
+    }
+}

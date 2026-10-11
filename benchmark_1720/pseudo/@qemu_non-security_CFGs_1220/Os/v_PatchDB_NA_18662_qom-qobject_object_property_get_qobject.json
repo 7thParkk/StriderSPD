@@ -1,0 +1,23 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall object_property_get_qobject(__int64 a1, __int64 a2, __int64 a3)",
+        "{",
+        "  __int64 v4; // rbx",
+        "  __int64 visitor; // rax",
+        "  __int64 qobject; // rbp",
+        "  _QWORD v8[7]; // [rsp+0h] [rbp-38h] BYREF",
+        "",
+        "  v8[1] = __readfsqword(0x28u);",
+        "  v8[0] = 0LL;",
+        "  v4 = qmp_output_visitor_new();",
+        "  visitor = qmp_output_get_visitor(v4);",
+        "  qobject = 0LL;",
+        "  object_property_get(a1, visitor, a2, v8);",
+        "  if ( !v8[0] )",
+        "    qobject = qmp_output_get_qobject(v4);",
+        "  error_propagate(a3, v8[0]);",
+        "  qmp_output_visitor_cleanup(v4);",
+        "  return qobject;",
+        "}"
+    ]
+}

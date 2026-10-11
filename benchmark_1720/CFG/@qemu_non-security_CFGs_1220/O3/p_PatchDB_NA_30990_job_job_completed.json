@@ -1,0 +1,341 @@
+{
+    "nodes": {
+        "6672": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "6695": [
+            "cmp 200 0",
+            "mov REG REG",
+            "jz ADDR"
+        ],
+        "6712": [
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "6730": [
+            "mov MEMACC REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "6741": [
+            "test REG REG",
+            "jns ADDR"
+        ],
+        "6749": [
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "call ADDR"
+        ],
+        "6777": [
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "xor REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "6813": [
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "6842": [
+            "jmp ADDR"
+        ],
+        "6848": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "6862": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "6874": [
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "6886": [
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "6904": [
+            "add REG CONSTANT",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "6928": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "6937": [
+            "jmp ADDR"
+        ],
+        "6944": [
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "6949": [
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "cmp 98 0",
+            "jnz ADDR"
+        ],
+        "6980": [
+            "lea REG 168",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "7001": [
+            "mov REG MEMACC",
+            "jmp ADDR"
+        ],
+        "7008": [
+            "cmp 98 0",
+            "mov REG MEMACC",
+            "jz ADDR"
+        ],
+        "7025": [
+            "mov REG REG"
+        ],
+        "7028": [
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "7033": [
+            "add REG CONSTANT",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "7051": [
+            "xor REG REG",
+            "jmp ADDR"
+        ],
+        "7055": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR"
+        ],
+        "7086": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR"
+        ],
+        "7117": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR"
+        ],
+        "5968": [],
+        "6272": []
+    },
+    "edges": {
+        "6672": [
+            6695,
+            7086
+        ],
+        "6695": [
+            6712,
+            7086
+        ],
+        "6712": [
+            6730,
+            7086
+        ],
+        "6730": [
+            6741,
+            6777
+        ],
+        "6741": [
+            6749,
+            7117
+        ],
+        "6749": [
+            6777
+        ],
+        "6777": [
+            6813,
+            6904
+        ],
+        "6813": [
+            6842,
+            6874
+        ],
+        "6842": [
+            7051
+        ],
+        "6848": [
+            6862,
+            7055
+        ],
+        "6862": [
+            6874,
+            6928
+        ],
+        "6874": [
+            6848,
+            6886
+        ],
+        "6886": [],
+        "6904": [
+            5968
+        ],
+        "6928": [
+            6937,
+            6949
+        ],
+        "6937": [
+            7051
+        ],
+        "6944": [
+            6949,
+            7001
+        ],
+        "6949": [
+            6944,
+            6980
+        ],
+        "6980": [
+            6949,
+            7001
+        ],
+        "7001": [
+            7028
+        ],
+        "7008": [
+            6886,
+            7025
+        ],
+        "7025": [
+            7028
+        ],
+        "7028": [
+            7008,
+            7033
+        ],
+        "7033": [
+            6272
+        ],
+        "7051": [
+            7028
+        ],
+        "7055": [],
+        "7086": [],
+        "7117": [],
+        "5968": [],
+        "6272": []
+    },
+    "boundary": {
+        "6672": 6695,
+        "6695": 6712,
+        "6712": 6730,
+        "6730": 6741,
+        "6741": 6749,
+        "6749": 6777,
+        "6777": 6813,
+        "6813": 6842,
+        "6842": 6847,
+        "6848": 6862,
+        "6862": 6874,
+        "6874": 6886,
+        "6886": 6897,
+        "6904": 6922,
+        "6928": 6937,
+        "6937": 6939,
+        "6944": 6949,
+        "6949": 6980,
+        "6980": 7001,
+        "7001": 7007,
+        "7008": 7025,
+        "7025": 7028,
+        "7028": 7033,
+        "7033": 7051,
+        "7051": 7055,
+        "7055": 7086,
+        "7086": 7117,
+        "7117": 7148,
+        "5968": 5968,
+        "6272": 6272
+    },
+    "jmp_instruction": {
+        "6672": "jz      loc_1BAE",
+        "6695": "jz      loc_1BAE",
+        "6712": "jnz     loc_1BAE",
+        "6730": "jz      short loc_1A79",
+        "6741": "jns     loc_1BCD",
+        "6749": "call    error_free; PIC mode",
+        "6777": "jnz     short loc_1AF8",
+        "6813": "jnz     short loc_1ADA",
+        "6842": "jmp     loc_1B8B",
+        "6848": "jnz     loc_1B8F",
+        "6862": "jz      short loc_1B10",
+        "6874": "jnz     short loc_1AC0",
+        "6886": "retn",
+        "6904": "jmp     job_completed_txn_abort",
+        "6928": "jnz     short loc_1B25",
+        "6937": "jmp     short loc_1B8B",
+        "6944": "jz      short loc_1B59",
+        "6949": "jnz     short loc_1B20",
+        "6980": "jnz     short loc_1B25",
+        "7001": "jmp     short loc_1B74",
+        "7008": "jz      loc_1AE6",
+        "7025": "mov     rax, rdx",
+        "7028": "jnz     short loc_1B60",
+        "7033": "jmp     job_do_finalize",
+        "7051": "jmp     short loc_1B74",
+        "7055": "call    __assert_fail; PIC mode",
+        "7086": "call    __assert_fail; PIC mode",
+        "7117": "call    __assert_fail; PIC mode",
+        "5968": "call    __stack_chk_fail; PIC mode",
+        "6272": "align 20h"
+    }
+}

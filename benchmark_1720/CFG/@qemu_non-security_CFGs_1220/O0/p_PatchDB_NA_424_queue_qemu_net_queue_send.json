@@ -1,0 +1,106 @@
+{
+    "nodes": {
+        "1045": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "movzx REG MEMACC",
+            "and REG CONSTANT",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1095": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "1133": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "cmp MEMACC 0",
+            "jnz ADDR"
+        ],
+        "1174": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "1218": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC"
+        ],
+        "1234": [
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "1045": [
+            1095,
+            1133
+        ],
+        "1095": [
+            1234
+        ],
+        "1133": [
+            1174,
+            1218
+        ],
+        "1174": [
+            1234
+        ],
+        "1218": [
+            1234
+        ],
+        "1234": []
+    },
+    "boundary": {
+        "1045": 1095,
+        "1095": 1133,
+        "1133": 1174,
+        "1174": 1218,
+        "1218": 1234,
+        "1234": 1236
+    },
+    "jmp_instruction": {
+        "1045": "jz      short loc_46D",
+        "1095": "jmp     short locret_4D2",
+        "1133": "jnz     short loc_4C2",
+        "1174": "jmp     short locret_4D2",
+        "1218": "mov     rax, [rbp+var_8]",
+        "1234": "retn"
+    }
+}

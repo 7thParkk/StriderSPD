@@ -1,0 +1,103 @@
+{
+    "nodes": {
+        "625": [
+            "endbr64",
+            "mov REG REG",
+            "push REG",
+            "shr REG CONSTANT",
+            "cmp REG 31",
+            "ja ADDR"
+        ],
+        "643": [
+            "mov REG CONSTANT",
+            "shl REG REG",
+            "test REG 154",
+            "jnz ADDR"
+        ],
+        "655": [
+            "test REG 100",
+            "jnz ADDR"
+        ],
+        "659": [
+            "and MEMACC CONSTANT",
+            "mov REG MEMACC",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "679": [
+            "mov REG MEMACC",
+            "jmp ADDR"
+        ],
+        "688": [
+            "and REG CONSTANT",
+            "lea REG MEMACC",
+            "jmp ADDR"
+        ],
+        "701": [
+            "and REG CONSTANT",
+            "lea REG MEMACC"
+        ],
+        "712": [
+            "xor REG REG",
+            "xor REG REG",
+            "call ADDR"
+        ],
+        "721": [
+            "mov REG REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "625": [
+            643,
+            701
+        ],
+        "643": [
+            655,
+            688
+        ],
+        "655": [
+            659,
+            679
+        ],
+        "659": [
+            721
+        ],
+        "679": [
+            721
+        ],
+        "688": [
+            712
+        ],
+        "701": [
+            712
+        ],
+        "712": [
+            721
+        ],
+        "721": []
+    },
+    "boundary": {
+        "625": 643,
+        "643": 655,
+        "655": 659,
+        "659": 679,
+        "679": 688,
+        "688": 701,
+        "701": 712,
+        "712": 721,
+        "721": 725
+    },
+    "jmp_instruction": {
+        "625": "ja      short loc_2BD",
+        "643": "jnz     short loc_2B0",
+        "655": "jnz     short loc_2A7",
+        "659": "jmp     short loc_2D1",
+        "679": "jmp     short loc_2D1",
+        "688": "jmp     short loc_2C8",
+        "701": "lea     rdi, _LC6; \"lm32_uart: read access to unknown regis\"...",
+        "712": "call    error_report; PIC mode",
+        "721": "retn"
+    }
+}

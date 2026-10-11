@@ -1,0 +1,47 @@
+{
+    "nodes": {
+        "109": [
+            "endbr64",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "cmp REG 16",
+            "jz ADDR"
+        ],
+        "128": [
+            "cmp REG 32",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "cmovnz REG REG"
+        ],
+        "149": [
+            "mov REG MEMACC",
+            "jmp ADDR"
+        ],
+        "8544": []
+    },
+    "edges": {
+        "109": [
+            128,
+            149
+        ],
+        "128": [
+            149
+        ],
+        "149": [
+            8544
+        ],
+        "8544": []
+    },
+    "boundary": {
+        "109": 128,
+        "128": 149,
+        "149": 158,
+        "8544": 8544
+    },
+    "jmp_instruction": {
+        "109": "jz      short loc_95",
+        "128": "cmovnz  rsi, rax",
+        "149": "jmp     r_reg_set_profile_string; PIC mode",
+        "8544": "dd offset x86_udis86_op - $"
+    }
+}

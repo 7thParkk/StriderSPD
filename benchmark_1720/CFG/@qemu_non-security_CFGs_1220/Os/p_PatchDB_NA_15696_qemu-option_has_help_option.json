@@ -1,0 +1,112 @@
+{
+    "nodes": {
+        "1981": [
+            "endbr64",
+            "push REG",
+            "lea REG MEMACC",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "call ADDR",
+            "lea REG 1",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG"
+        ],
+        "2022": [
+            "cmp MEMACC 0",
+            "jz ADDR"
+        ],
+        "2027": [
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "cmp MEMACC 1",
+            "sbb REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "2066": [
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "2085": [
+            "jmp ADDR"
+        ],
+        "2087": [
+            "xor REG REG",
+            "jmp ADDR"
+        ],
+        "2091": [
+            "mov REG CONSTANT"
+        ],
+        "2093": [
+            "mov REG REG",
+            "call ADDR",
+            "pop REG",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "1981": [
+            2022
+        ],
+        "2022": [
+            2027,
+            2087
+        ],
+        "2027": [
+            2066,
+            2091
+        ],
+        "2066": [
+            2085,
+            2091
+        ],
+        "2085": [
+            2022
+        ],
+        "2087": [
+            2093
+        ],
+        "2091": [
+            2093
+        ],
+        "2093": []
+    },
+    "boundary": {
+        "1981": 2022,
+        "2022": 2027,
+        "2027": 2066,
+        "2066": 2085,
+        "2085": 2087,
+        "2087": 2091,
+        "2091": 2093,
+        "2093": 2111
+    },
+    "jmp_instruction": {
+        "1981": "mov     rbp, rax",
+        "2022": "jz      short loc_827",
+        "2027": "jz      short loc_82B",
+        "2066": "jz      short loc_82B",
+        "2085": "jmp     short loc_7E6",
+        "2087": "jmp     short loc_82D",
+        "2091": "mov     bl, 1",
+        "2093": "retn"
+    }
+}

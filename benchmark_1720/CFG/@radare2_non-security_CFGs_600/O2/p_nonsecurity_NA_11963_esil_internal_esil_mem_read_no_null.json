@@ -1,0 +1,173 @@
+{
+    "nodes": {
+        "2832": [
+            "endbr64",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "2845": [
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "2870": [
+            "cmp 152 0",
+            "jz ADDR"
+        ],
+        "2884": [
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "2896": [
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jle ADDR"
+        ],
+        "2915": [
+            "movsxd REG REG",
+            "xor REG REG",
+            "mov REG REG",
+            "div REG REG",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "2931": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "call MEMACC",
+            "mov REG MEMACC",
+            "xor REG REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "call MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "2980": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "2987": [
+            "mov MEMACC CONSTANT",
+            "mov MEMACC REG"
+        ],
+        "2998": [
+            "mov REG REG",
+            "jmp ADDR"
+        ],
+        "3008": [
+            "mov MEMACC CONSTANT",
+            "mov MEMACC REG",
+            "nop MEMACC"
+        ],
+        "3024": [
+            "xor REG REG"
+        ],
+        "3026": [
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "3040": [
+            "xor REG REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "2832": [
+            2845,
+            3040
+        ],
+        "2845": [
+            2870,
+            3024
+        ],
+        "2870": [
+            2884,
+            3024
+        ],
+        "2884": [
+            2896,
+            3024
+        ],
+        "2896": [
+            2915,
+            2931
+        ],
+        "2915": [
+            2931,
+            3008
+        ],
+        "2931": [
+            2980,
+            2998
+        ],
+        "2980": [
+            2987,
+            2998
+        ],
+        "2987": [
+            2998
+        ],
+        "2998": [
+            3026
+        ],
+        "3008": [
+            3024
+        ],
+        "3024": [
+            3026
+        ],
+        "3026": [],
+        "3040": []
+    },
+    "boundary": {
+        "2832": 2845,
+        "2845": 2870,
+        "2870": 2884,
+        "2884": 2896,
+        "2896": 2915,
+        "2915": 2931,
+        "2931": 2980,
+        "2980": 2987,
+        "2987": 2998,
+        "2998": 3002,
+        "3008": 3024,
+        "3024": 3026,
+        "3026": 3037,
+        "3040": 3043
+    },
+    "jmp_instruction": {
+        "2832": "jz      loc_BE0",
+        "2845": "jz      loc_BD0",
+        "2870": "jz      loc_BD0",
+        "2884": "jz      loc_BD0",
+        "2896": "jle     short loc_B73",
+        "2915": "jnz     short loc_BC0",
+        "2931": "jnz     short loc_BB6",
+        "2980": "jz      short loc_BB6",
+        "2987": "mov     [rbx+70h], r12d",
+        "2998": "jmp     short loc_BD2",
+        "3008": "nop     dword ptr [rax+rax+00h]",
+        "3024": "xor     eax, eax",
+        "3026": "retn",
+        "3040": "retn"
+    }
+}

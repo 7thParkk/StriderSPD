@@ -1,0 +1,29 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall external_snapshot_abort(__int64 a1)",
+        "{",
+        "  __int64 v1; // rcx",
+        "  __int64 v2; // r8",
+        "  __int64 v3; // r9",
+        "  __int64 v4; // rsi",
+        "  __int64 v5; // rdx",
+        "  __int64 v6; // rcx",
+        "  __int64 v7; // r8",
+        "  __int64 v8; // r9",
+        "  __int64 result; // rax",
+        "",
+        "  if ( *(_QWORD *)(a1 + 48) )",
+        "  {",
+        "    if ( *(_BYTE *)(a1 + 64) )",
+        "    {",
+        "      bdrv_ref(*(_QWORD *)(a1 + 40));",
+        "      bdrv_set_backing_hd(*(_QWORD *)(a1 + 48), 0LL, &error_abort, v1, v2, v3);",
+        "      v4 = *(_QWORD *)(a1 + 40);",
+        "      bdrv_replace_node(*(_QWORD *)(a1 + 48), v4, &error_abort);",
+        "      return bdrv_unref(*(_QWORD *)(a1 + 40), v4, v5, v6, v7, v8);",
+        "    }",
+        "  }",
+        "  return result;",
+        "}"
+    ]
+}

@@ -1,0 +1,209 @@
+{
+    "nodes": {
+        "229": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov MEMACC CONSTANT",
+            "mov MEMACC CONSTANT"
+        ],
+        "304": [
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "js ADDR"
+        ],
+        "334": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "sub REG CONSTANT",
+            "push MEMACC",
+            "push CONSTANT",
+            "lea REG MEMACC",
+            "push REG",
+            "mov REG REG",
+            "call ADDR",
+            "add REG CONSTANT",
+            "test REG REG",
+            "js ADDR"
+        ],
+        "396": [
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "js ADDR"
+        ],
+        "426": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "sub REG REG",
+            "mov MEMACC REG",
+            "cmp MEMACC 500",
+            "ja ADDR"
+        ],
+        "451": [
+            "cmp MEMACC 99",
+            "ja ADDR"
+        ],
+        "458": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "shl REG CONSTANT",
+            "add REG REG",
+            "add REG REG",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "484": [
+            "mov REG MEMACC",
+            "imul REG REG CONSTANT",
+            "mov REG CONSTANT",
+            "div REG MEMACC",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "513": [
+            "nop",
+            "mov REG MEMACC",
+            "imul REG REG CONSTANT",
+            "mov REG CONSTANT",
+            "div REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "548": [
+            "nop",
+            "jmp ADDR"
+        ],
+        "551": [
+            "nop",
+            "jmp ADDR"
+        ],
+        "554": [
+            "nop"
+        ],
+        "555": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jz ADDR"
+        ],
+        "596": [
+            "call ADDR"
+        ],
+        "601": [
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "229": [
+            304
+        ],
+        "304": [
+            334,
+            548
+        ],
+        "334": [
+            396,
+            551
+        ],
+        "396": [
+            426,
+            554
+        ],
+        "426": [
+            451,
+            513
+        ],
+        "451": [
+            458,
+            484
+        ],
+        "458": [
+            304
+        ],
+        "484": [
+            304
+        ],
+        "513": [
+            555
+        ],
+        "548": [
+            555
+        ],
+        "551": [
+            555
+        ],
+        "554": [
+            555
+        ],
+        "555": [
+            596,
+            601
+        ],
+        "596": [],
+        "601": []
+    },
+    "boundary": {
+        "229": 304,
+        "304": 334,
+        "334": 396,
+        "396": 426,
+        "426": 451,
+        "451": 458,
+        "458": 484,
+        "484": 513,
+        "513": 548,
+        "548": 551,
+        "551": 554,
+        "554": 555,
+        "555": 596,
+        "596": 601,
+        "601": 603
+    },
+    "jmp_instruction": {
+        "229": "mov     [rbp+var_40], 8000h",
+        "304": "js      loc_224",
+        "334": "js      loc_227",
+        "396": "js      loc_22A",
+        "426": "ja      short loc_201",
+        "451": "ja      short loc_1E4",
+        "458": "jmp     loc_130",
+        "484": "jmp     loc_130",
+        "513": "jmp     short loc_22B",
+        "548": "jmp     short loc_22B",
+        "551": "jmp     short loc_22B",
+        "554": "nop",
+        "555": "jz      short locret_259",
+        "596": "call    __stack_chk_fail; PIC mode",
+        "601": "retn"
+    }
+}

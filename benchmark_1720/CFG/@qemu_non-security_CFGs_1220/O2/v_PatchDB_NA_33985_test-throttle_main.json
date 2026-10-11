@@ -1,0 +1,91 @@
+{
+    "nodes": {
+        "11568": [
+            "endbr64",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG CONSTANT",
+            "mov MEMACC REG",
+            "call ADDR",
+            "call ADDR",
+            "mov MEMACC REG",
+            "call ADDR",
+            "nop MEMACC"
+        ],
+        "11616": [
+            "xor REG REG",
+            "xor REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "11629": [
+            "xor REG REG",
+            "mov REG REG",
+            "lea REG 12",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "call ADDR",
+            "add REG CONSTANT",
+            "retn"
+        ]
+    },
+    "edges": {
+        "11568": [
+            11616
+        ],
+        "11616": [
+            11629,
+            11616
+        ],
+        "11629": []
+    },
+    "boundary": {
+        "11568": 11616,
+        "11616": 11629,
+        "11629": 11901
+    },
+    "jmp_instruction": {
+        "11568": "nop     dword ptr [rax]",
+        "11616": "jnz     short loc_2D60",
+        "11629": "retn"
+    }
+}

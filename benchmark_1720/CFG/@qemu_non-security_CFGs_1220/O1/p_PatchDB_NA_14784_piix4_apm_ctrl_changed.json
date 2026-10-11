@@ -1,0 +1,82 @@
+{
+    "nodes": {
+        "2200": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "cmp REG 240",
+            "setz REG",
+            "movzx REG REG",
+            "cmp REG 241",
+            "setz REG",
+            "movzx REG REG",
+            "lea REG 2680",
+            "call ADDR",
+            "sub REG CONSTANT",
+            "cmp REG 1",
+            "jbe ADDR"
+        ],
+        "2299": [
+            "mov REG MEMACC",
+            "test 91 2",
+            "jz ADDR"
+        ],
+        "2310": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "2322": [
+            "mov REG CONSTANT",
+            "call ADDR"
+        ],
+        "2332": [
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "2200": [
+            2299,
+            2332
+        ],
+        "2299": [
+            2310,
+            2332
+        ],
+        "2310": [
+            2322,
+            2332
+        ],
+        "2322": [
+            2332
+        ],
+        "2332": []
+    },
+    "boundary": {
+        "2200": 2299,
+        "2299": 2310,
+        "2310": 2322,
+        "2322": 2332,
+        "2332": 2337
+    },
+    "jmp_instruction": {
+        "2200": "jbe     short loc_91C",
+        "2299": "jz      short loc_91C",
+        "2310": "jz      short loc_91C",
+        "2322": "call    qemu_set_irq; PIC mode",
+        "2332": "retn"
+    }
+}

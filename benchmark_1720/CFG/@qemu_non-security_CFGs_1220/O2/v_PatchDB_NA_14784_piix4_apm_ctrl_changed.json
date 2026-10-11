@@ -1,0 +1,78 @@
+{
+    "nodes": {
+        "3296": [
+            "endbr64",
+            "push REG",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "xor REG REG",
+            "cmp REG 240",
+            "lea REG 2680",
+            "setz REG",
+            "xor REG REG",
+            "cmp REG 241",
+            "mov REG REG",
+            "setz REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "test 91 2",
+            "jz ADDR"
+        ],
+        "3392": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "3404": [
+            "pop REG",
+            "mov REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "3424": [
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "9600": []
+    },
+    "edges": {
+        "3296": [
+            3392,
+            3424
+        ],
+        "3392": [
+            3404,
+            3424
+        ],
+        "3404": [
+            9600
+        ],
+        "3424": [],
+        "9600": []
+    },
+    "boundary": {
+        "3296": 3392,
+        "3392": 3404,
+        "3404": 3418,
+        "3424": 3429,
+        "9600": 9600
+    },
+    "jmp_instruction": {
+        "3296": "jz      short loc_D60",
+        "3392": "jz      short loc_D60",
+        "3404": "jmp     qemu_set_irq; PIC mode",
+        "3424": "retn",
+        "9600": "extrn acpi_pm1_cnt_update:near"
+    }
+}

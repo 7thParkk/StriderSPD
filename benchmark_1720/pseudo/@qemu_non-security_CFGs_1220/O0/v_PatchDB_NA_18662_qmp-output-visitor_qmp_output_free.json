@@ -1,0 +1,11 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall qmp_output_free(__int64 a1)",
+        "{",
+        "  __int64 v2; // [rsp+18h] [rbp-8h]",
+        "",
+        "  v2 = to_qov(a1);",
+        "  return qmp_output_visitor_cleanup(v2);",
+        "}"
+    ]
+}

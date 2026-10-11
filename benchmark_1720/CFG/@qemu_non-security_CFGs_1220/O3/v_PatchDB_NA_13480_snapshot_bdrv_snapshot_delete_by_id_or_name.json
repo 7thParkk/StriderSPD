@@ -1,0 +1,114 @@
+{
+    "nodes": {
+        "704": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "xor REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov REG REG",
+            "mov MEMACC CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "cmp REG 18446744073709551614",
+            "jz ADDR"
+        ],
+        "769": [
+            "cmp REG 18446744073709551594",
+            "jz ADDR"
+        ],
+        "774": [
+            "test REG REG",
+            "js ADDR"
+        ],
+        "778": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jnz ADDR"
+        ],
+        "794": [
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "808": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "xor REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov MEMACC CONSTANT",
+            "call ADDR",
+            "test REG REG",
+            "jns ADDR"
+        ],
+        "845": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "859": [
+            "call ADDR"
+        ]
+    },
+    "edges": {
+        "704": [
+            769,
+            808
+        ],
+        "769": [
+            774,
+            808
+        ],
+        "774": [
+            778,
+            845
+        ],
+        "778": [
+            794,
+            859
+        ],
+        "794": [],
+        "808": [
+            778,
+            845
+        ],
+        "845": [
+            778
+        ],
+        "859": []
+    },
+    "boundary": {
+        "704": 769,
+        "769": 774,
+        "774": 778,
+        "778": 794,
+        "794": 805,
+        "808": 845,
+        "845": 859,
+        "859": 864
+    },
+    "jmp_instruction": {
+        "704": "jz      short loc_328",
+        "769": "jz      short loc_328",
+        "774": "js      short loc_34D",
+        "778": "jnz     short loc_35B",
+        "794": "retn",
+        "808": "jns     short loc_30A",
+        "845": "jmp     short loc_30A",
+        "859": "call    __stack_chk_fail; PIC mode"
+    }
+}

@@ -1,0 +1,93 @@
+{
+    "nodes": {
+        "833": [
+            "endbr64",
+            "mov REG REG",
+            "xor REG REG",
+            "xorps REG REG",
+            "mov REG REG"
+        ],
+        "848": [
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "856": [
+            "jz ADDR"
+        ],
+        "858": [
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "865": [
+            "jnz ADDR"
+        ],
+        "867": [
+            "push REG",
+            "mov REG CONSTANT",
+            "xor REG REG",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "pop REG",
+            "retn"
+        ],
+        "905": [
+            "add REG CONSTANT",
+            "cmp REG 144",
+            "jnz ADDR"
+        ],
+        "917": [
+            "xor REG REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "833": [
+            848
+        ],
+        "848": [
+            856,
+            858
+        ],
+        "856": [
+            858,
+            905
+        ],
+        "858": [
+            865,
+            905
+        ],
+        "865": [
+            867,
+            905
+        ],
+        "867": [],
+        "905": [
+            848,
+            917
+        ],
+        "917": []
+    },
+    "boundary": {
+        "833": 848,
+        "848": 856,
+        "856": 858,
+        "858": 865,
+        "865": 867,
+        "867": 905,
+        "905": 917,
+        "917": 920
+    },
+    "jmp_instruction": {
+        "833": "mov     rdi, rsi",
+        "848": "jp      short loc_35A",
+        "856": "jz      short loc_389",
+        "858": "jp      short loc_389",
+        "865": "jnz     short loc_389",
+        "867": "retn",
+        "905": "jnz     short loc_350",
+        "917": "retn"
+    }
+}

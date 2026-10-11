@@ -1,0 +1,22 @@
+{
+    "pseudo_code": [
+        "void __cdecl xilinx_uartlite_class_init(ObjectClass *klass, void *data)",
+        "{",
+        "  __int64 v2; // r9",
+        "  DeviceClass *dc; // [rsp+18h] [rbp-8h]",
+        "",
+        "  dc = (DeviceClass *)object_class_dynamic_cast_assert(",
+        "                        klass,",
+        "                        \"device\",",
+        "                        \"hw/char/xilinx_uartlite.c\",",
+        "                        231LL,",
+        "                        \"xilinx_uartlite_class_init\",",
+        "                        v2,",
+        "                        data,",
+        "                        klass);",
+        "  dc->reset = (void (*)(DeviceState *))xilinx_uartlite_reset;",
+        "  dc->realize = (DeviceRealize)xilinx_uartlite_realize;",
+        "  dc->props = xilinx_uartlite_properties;",
+        "}"
+    ]
+}

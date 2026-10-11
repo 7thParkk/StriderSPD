@@ -1,0 +1,15 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall job_cancel(__int64 a1, char a2)",
+        "{",
+        "  if ( *(_DWORD *)(a1 + 20) == 9 )",
+        "    return job_do_dismiss(a1);",
+        "  job_cancel_async(a1, a2);",
+        "  if ( !job_started(a1) )",
+        "    return job_completed(a1, 0xFFFFFF83, 0LL);",
+        "  if ( *(_BYTE *)(a1 + 97) )",
+        "    return job_completed_txn_abort(a1);",
+        "  return job_enter(a1);",
+        "}"
+    ]
+}

@@ -1,0 +1,15 @@
+{
+    "pseudo_code": [
+        "__int64 pvpanic_port()",
+        "{",
+        "  __int64 v0; // rdi",
+        "  __int64 result; // rax",
+        "",
+        "  v0 = object_resolve_path_type(&LC6, \"pvpanic\", 0LL);",
+        "  result = 0LL;",
+        "  if ( v0 )",
+        "    return object_property_get_int(v0, \"ioport\", 0LL);",
+        "  return result;",
+        "}"
+    ]
+}

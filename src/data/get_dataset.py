@@ -7,6 +7,7 @@ import numpy as np
 from config.logger import setup_logger
 from utils.helper import RunTime
 from data.process_graph import process_graph
+from utils.dataset_manifest import validate_dataset
 
 logger = setup_logger()
 
@@ -17,8 +18,7 @@ def GetDataset(node_tokenizer, seq_tokenizer, root_path, ass_path, pse_path, mod
     :return: dataset - list of torch_geometric.data.Data
     '''
 
-    with open(os.path.join(root_path, mode+r'_infos.json'), 'r') as f:
-        data_infos = json.load(f)
+    data_infos = validate_dataset(root_path, ass_path, pse_path, mode)
     
     inputs_list = []
 
@@ -39,19 +39,24 @@ def GetDataset(node_tokenizer, seq_tokenizer, root_path, ass_path, pse_path, mod
         label = 1 if label == "security" else 0 
 
         # 缺少原文件
-        if not (os.path.exists(a_ass_file) and os.path.exists(a_pse_file) and os.path.exists(b_ass_file) and os.path.exists(b_pse_file)):
-            with open('./errors.log', 'a') as errors:
-                id = str(info_item["id"])
-                errors.write(f"File(s) of item {id} dose not exist!\n")
-            continue
+        # validate_dataset has checked every representation; do not skip rows.
         
         # Step1. 处理pseudo code(因为比较简单...)
-        with open(a_pse_file, 'r') as f:
+        with open(a_pse_file, 'r', encoding='utf-8') as f:
             a_pse = json.load(f)
         a_pse_code = '\n'.join(a_pse["pseudo_code"])
-        with open(b_pse_file, 'r') as f:
+        with open(b_pse_file, 'r', encoding='utf-8') as f:
             b_pse = json.load(f)
         b_pse_code = '\n'.join(b_pse["pseudo_code"])
+        """
+        lqy:
+        "system": "You are now an expert in code vulnerability and patch fixes.",
+        "instruction": "[Task]\nHere is a defect function and a fixed function. Please determine if this fixed function fixes any software security vulnerabilities. If it is, output 'yes'. If not, output 'no' and do not output any other text.\n
+        [Defect function]\n + $a_pse_code$ + [Fixed function]\n + $b_pse_code$
+        另外，Qwen2.5、LLMCompiler和LLM4Decompile用的template分别是qwen、llama2和yi。
+        尝试把这些template从llamafactory或huggingface官网解析出来，对不同的模型写不同的instruction，看看会不会有好转。
+        有可能是LLMCompiler和LLM4Decompile对指令格式太敏感了。
+        """
 
         # qwen_7b
         # instruction = """
@@ -73,9 +78,9 @@ def GetDataset(node_tokenizer, seq_tokenizer, root_path, ass_path, pse_path, mod
         seq_input = seq_tokenizer(instruction, return_tensors='pt', padding='max_length', max_length=512 ,truncation=True, add_special_tokens=False)
 
         # Step2. 处理assembly code
-        with open(a_ass_file, 'r') as f:
+        with open(a_ass_file, 'r', encoding='utf-8') as f:
             a_ass = json.load(f)
-        with open(b_ass_file, 'r') as f:
+        with open(b_ass_file, 'r', encoding='utf-8') as f:
             b_ass = json.load(f)
 
         # diff

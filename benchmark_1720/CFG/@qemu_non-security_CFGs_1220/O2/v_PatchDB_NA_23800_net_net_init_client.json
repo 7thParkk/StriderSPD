@@ -1,0 +1,26 @@
+{
+    "nodes": {
+        "17888": [
+            "endbr64",
+            "mov REG REG",
+            "xor REG REG",
+            "xor REG REG",
+            "jmp ADDR"
+        ],
+        "17248": []
+    },
+    "edges": {
+        "17888": [
+            17248
+        ],
+        "17248": []
+    },
+    "boundary": {
+        "17888": 17904,
+        "17248": 17248
+    },
+    "jmp_instruction": {
+        "17888": "jmp     net_client_init; PIC mode",
+        "17248": "align 20h"
+    }
+}

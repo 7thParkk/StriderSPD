@@ -1,0 +1,90 @@
+{
+    "nodes": {
+        "88": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov MEMACC CONSTANT",
+            "mov MEMACC CONSTANT",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "196": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG"
+        ],
+        "212": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jz ADDR"
+        ],
+        "270": [
+            "call ADDR"
+        ],
+        "275": [
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "88": [
+            196,
+            212
+        ],
+        "196": [
+            212
+        ],
+        "212": [
+            270,
+            275
+        ],
+        "270": [],
+        "275": []
+    },
+    "boundary": {
+        "88": 196,
+        "196": 212,
+        "212": 270,
+        "270": 275,
+        "275": 277
+    },
+    "jmp_instruction": {
+        "88": "jnz     short loc_D4",
+        "196": "mov     [rbp+var_18], rax",
+        "212": "jz      short locret_113",
+        "270": "call    __stack_chk_fail; PIC mode",
+        "275": "retn"
+    }
+}

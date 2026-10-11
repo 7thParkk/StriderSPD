@@ -1,0 +1,86 @@
+{
+    "nodes": {
+        "1193": [
+            "endbr64",
+            "push REG",
+            "cmp REG 2",
+            "jg ADDR"
+        ],
+        "1203": [
+            "mov MEMACC CONSTANT"
+        ],
+        "1207": [
+            "cmp 16 18446744073709551615",
+            "jnz ADDR"
+        ],
+        "1213": [
+            "mov REG MEMACC",
+            "and REG CONSTANT",
+            "cmp REG 2",
+            "setz REG",
+            "movzx REG REG",
+            "mov MEMACC REG"
+        ],
+        "1230": [
+            "cmp 52 4",
+            "jbe ADDR"
+        ],
+        "1236": [
+            "mov MEMACC CONSTANT"
+        ],
+        "1243": [
+            "mov REG MEMACC",
+            "movzx REG MEMACC",
+            "shr REG CONSTANT",
+            "and REG CONSTANT",
+            "mov MEMACC REG",
+            "call ADDR",
+            "call ADDR",
+            "xor REG REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "1193": [
+            1203,
+            1207
+        ],
+        "1203": [
+            1207
+        ],
+        "1207": [
+            1213,
+            1230
+        ],
+        "1213": [
+            1230
+        ],
+        "1230": [
+            1236,
+            1243
+        ],
+        "1236": [
+            1243
+        ],
+        "1243": []
+    },
+    "boundary": {
+        "1193": 1203,
+        "1203": 1207,
+        "1207": 1213,
+        "1213": 1230,
+        "1230": 1236,
+        "1236": 1243,
+        "1243": 1273
+    },
+    "jmp_instruction": {
+        "1193": "jg      short loc_4B7",
+        "1203": "mov     byte ptr [rdi+0Dh], 0",
+        "1207": "jnz     short loc_4CE",
+        "1213": "mov     [rdi+10h], eax",
+        "1230": "jbe     short loc_4DB",
+        "1236": "mov     dword ptr [rdi+34h], 4",
+        "1243": "retn"
+    }
+}

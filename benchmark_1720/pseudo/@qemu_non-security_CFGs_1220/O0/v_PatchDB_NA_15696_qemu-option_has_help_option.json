@@ -1,0 +1,29 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall has_help_option(const char *a1)",
+        "{",
+        "  unsigned __int8 v2; // [rsp+17h] [rbp-19h]",
+        "  _BYTE *opt_value; // [rsp+18h] [rbp-18h]",
+        "  size_t v4; // [rsp+20h] [rbp-10h]",
+        "  char *ptr; // [rsp+28h] [rbp-8h]",
+        "",
+        "  v4 = strlen(a1) + 1;",
+        "  ptr = (char *)g_malloc0(v4);",
+        "  opt_value = a1;",
+        "  v2 = 0;",
+        "  while ( *opt_value )",
+        "  {",
+        "    opt_value = get_opt_value(ptr, v4, opt_value);",
+        "    if ( *opt_value )",
+        "      ++opt_value;",
+        "    if ( is_help_option(ptr) )",
+        "    {",
+        "      v2 = 1;",
+        "      break;",
+        "    }",
+        "  }",
+        "  free(ptr);",
+        "  return v2;",
+        "}"
+    ]
+}

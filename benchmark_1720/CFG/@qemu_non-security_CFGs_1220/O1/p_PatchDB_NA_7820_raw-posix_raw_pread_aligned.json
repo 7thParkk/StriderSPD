@@ -1,0 +1,186 @@
+{
+    "nodes": {
+        "1459": [
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "call ADDR",
+            "test REG REG",
+            "js ADDR"
+        ],
+        "1501": [
+            "movsxd REG REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "cmp REG REG",
+            "jz ADDR"
+        ],
+        "1525": [
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "1529": [
+            "cmp 2216 0",
+            "jnz ADDR"
+        ],
+        "1538": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "1546": [
+            "jmp ADDR"
+        ],
+        "1548": [
+            "mov REG REG",
+            "call ADDR",
+            "cmp REG REG",
+            "jl ADDR"
+        ],
+        "1561": [
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "jmp ADDR"
+        ],
+        "1581": [
+            "cmp 4 0",
+            "jz ADDR"
+        ],
+        "1588": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "cmp REG REG",
+            "jz ADDR"
+        ],
+        "1609": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "cmp REG REG",
+            "jz ADDR"
+        ],
+        "1630": [
+            "test REG REG",
+            "jns ADDR"
+        ],
+        "1634": [
+            "call ADDR",
+            "mov REG MEMACC",
+            "neg REG"
+        ],
+        "1643": [
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "1459": [
+            1501,
+            1643
+        ],
+        "1501": [
+            1525,
+            1643
+        ],
+        "1525": [
+            1529,
+            1581
+        ],
+        "1529": [
+            1538,
+            1548
+        ],
+        "1538": [
+            1546,
+            1588
+        ],
+        "1546": [
+            1643
+        ],
+        "1548": [
+            1538,
+            1561
+        ],
+        "1561": [
+            1643
+        ],
+        "1581": [
+            1588,
+            1630
+        ],
+        "1588": [
+            1609,
+            1643
+        ],
+        "1609": [
+            1630,
+            1643
+        ],
+        "1630": [
+            1634,
+            1643
+        ],
+        "1634": [
+            1643
+        ],
+        "1643": []
+    },
+    "boundary": {
+        "1459": 1501,
+        "1501": 1525,
+        "1525": 1529,
+        "1529": 1538,
+        "1538": 1546,
+        "1546": 1548,
+        "1548": 1561,
+        "1561": 1581,
+        "1581": 1588,
+        "1588": 1609,
+        "1609": 1630,
+        "1630": 1634,
+        "1634": 1643,
+        "1643": 1658
+    },
+    "jmp_instruction": {
+        "1459": "js      loc_66B",
+        "1501": "jz      short loc_66B",
+        "1525": "jnz     short loc_62D",
+        "1529": "jnz     short loc_60C",
+        "1538": "jnz     short loc_634",
+        "1546": "jmp     short loc_66B",
+        "1548": "jl      short loc_602",
+        "1561": "jmp     short loc_66B",
+        "1581": "jz      short loc_65E",
+        "1588": "jz      short loc_66B",
+        "1609": "jz      short loc_66B",
+        "1630": "jns     short loc_66B",
+        "1634": "neg     eax",
+        "1643": "retn"
+    }
+}

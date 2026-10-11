@@ -1,0 +1,29 @@
+{
+    "pseudo_code": [
+        "ssize_t __cdecl nc_sendv_compat(NetClientState *nc, const iovec *iov, int iovcnt, unsigned int flags)",
+        "{",
+        "  char flagsa; // [rsp+0h] [rbp-11038h]",
+        "  iovec buffer; // [rsp+18h] [rbp-11020h]",
+        "  uint8_t buf[69632]; // [rsp+28h] [rbp-11010h] BYREF",
+        "  unsigned __int64 v8; // [rsp+11030h] [rbp-8h]",
+        "",
+        "  while ( &buf[65552] != &buf[16] )",
+        "    ;",
+        "  flagsa = flags;",
+        "  v8 = __readfsqword(0x28u);",
+        "  if ( iovcnt == 1 )",
+        "  {",
+        "    buffer = *iov;",
+        "  }",
+        "  else",
+        "  {",
+        "    buffer.iov_base = buf;",
+        "    buffer.iov_len = iov_to_buf(iov, (unsigned int)iovcnt, 0LL, buf, 69632LL);",
+        "  }",
+        "  if ( (flagsa & 1) != 0 && nc->info->receive_raw )",
+        "    return nc->info->receive_raw(nc, (const uint8_t *)buffer.iov_base, buffer.iov_len);",
+        "  else",
+        "    return nc->info->receive(nc, (const uint8_t *)buffer.iov_base, buffer.iov_len);",
+        "}"
+    ]
+}

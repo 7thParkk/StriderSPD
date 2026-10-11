@@ -1,0 +1,25 @@
+{
+    "nodes": {
+        "160": [
+            "endbr64",
+            "mov MEMACC CONSTANT",
+            "xor REG REG",
+            "jmp ADDR"
+        ],
+        "5816": []
+    },
+    "edges": {
+        "160": [
+            5816
+        ],
+        "5816": []
+    },
+    "boundary": {
+        "160": 178,
+        "5816": 5816
+    },
+    "jmp_instruction": {
+        "160": "jmp     job_completed; PIC mode",
+        "5816": "extrn job_defer_to_main_loop:near"
+    }
+}

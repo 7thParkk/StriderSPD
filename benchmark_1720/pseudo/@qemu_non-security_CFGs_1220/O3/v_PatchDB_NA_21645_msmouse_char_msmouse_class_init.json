@@ -1,0 +1,16 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall char_msmouse_class_init(__int64 a1)",
+        "{",
+        "  __int64 result; // rax",
+        "",
+        "  result = object_class_dynamic_cast_assert(a1, \"chardev\", \"backends/msmouse.c\", 170LL, \"char_msmouse_class_init\");",
+        "  *(_QWORD *)(result + 200) = msmouse_chr_accept_input;",
+        "  *(_QWORD *)(result + 184) = msmouse_chr_free;",
+        "  *(__m128i *)(result + 104) = _mm_unpacklo_epi64(",
+        "                                 (__m128i)(unsigned __int64)msmouse_chr_open,",
+        "                                 (__m128i)(unsigned __int64)msmouse_chr_write);",
+        "  return result;",
+        "}"
+    ]
+}

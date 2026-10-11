@@ -1,0 +1,201 @@
+{
+    "nodes": {
+        "229": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "add REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov MEMACC CONSTANT"
+        ],
+        "287": [
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jns ADDR"
+        ],
+        "310": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "322": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "sub REG CONSTANT",
+            "push MEMACC",
+            "push CONSTANT",
+            "lea REG MEMACC",
+            "push REG",
+            "mov REG REG",
+            "call ADDR",
+            "add REG CONSTANT",
+            "test REG REG",
+            "jns ADDR"
+        ],
+        "374": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "386": [
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jns ADDR"
+        ],
+        "409": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "418": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "sub REG REG",
+            "mov MEMACC REG",
+            "cmp MEMACC 500",
+            "ja ADDR"
+        ],
+        "443": [
+            "cmp MEMACC 99",
+            "ja ADDR"
+        ],
+        "450": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "shl REG CONSTANT",
+            "add REG REG",
+            "add REG REG",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "476": [
+            "mov REG MEMACC",
+            "imul REG REG CONSTANT",
+            "mov REG CONSTANT",
+            "div REG MEMACC",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "505": [
+            "nop",
+            "mov REG MEMACC",
+            "imul REG REG CONSTANT",
+            "mov REG CONSTANT",
+            "div REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC"
+        ],
+        "534": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jz ADDR"
+        ],
+        "549": [
+            "call ADDR"
+        ],
+        "554": [
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "229": [
+            287
+        ],
+        "287": [
+            310,
+            322
+        ],
+        "310": [
+            534
+        ],
+        "322": [
+            374,
+            386
+        ],
+        "374": [
+            534
+        ],
+        "386": [
+            409,
+            418
+        ],
+        "409": [
+            534
+        ],
+        "418": [
+            443,
+            505
+        ],
+        "443": [
+            450,
+            476
+        ],
+        "450": [
+            287
+        ],
+        "476": [
+            287
+        ],
+        "505": [
+            534
+        ],
+        "534": [
+            549,
+            554
+        ],
+        "549": [],
+        "554": []
+    },
+    "boundary": {
+        "229": 287,
+        "287": 310,
+        "310": 322,
+        "322": 374,
+        "374": 386,
+        "386": 409,
+        "409": 418,
+        "418": 443,
+        "443": 450,
+        "450": 476,
+        "476": 505,
+        "505": 534,
+        "534": 549,
+        "549": 554,
+        "554": 556
+    },
+    "jmp_instruction": {
+        "229": "mov     [rbp+var_40], 8000h",
+        "287": "jns     short loc_142",
+        "310": "jmp     loc_216",
+        "322": "jns     short loc_182",
+        "374": "jmp     loc_216",
+        "386": "jns     short loc_1A2",
+        "409": "jmp     short loc_216",
+        "418": "ja      short loc_1F9",
+        "443": "ja      short loc_1DC",
+        "450": "jmp     loc_11F",
+        "476": "jmp     loc_11F",
+        "505": "mov     rax, [rbp+var_40]",
+        "534": "jz      short locret_22A",
+        "549": "call    __stack_chk_fail; PIC mode",
+        "554": "retn"
+    }
+}

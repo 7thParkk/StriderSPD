@@ -1,0 +1,91 @@
+{
+    "nodes": {
+        "650": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "imul REG REG",
+            "cmp REG 9999",
+            "ja ADDR"
+        ],
+        "683": [
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "688": [
+            "mov MEMACC REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "696": [
+            "mov MEMACC REG",
+            "cmp MEMACC 0",
+            "jnz ADDR"
+        ],
+        "705": [
+            "pop REG",
+            "retn"
+        ],
+        "707": [
+            "mov REG CONSTANT",
+            "cqo REG REG",
+            "idiv REG REG",
+            "jmp ADDR"
+        ],
+        "719": [
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "650": [
+            683,
+            688
+        ],
+        "683": [
+            688,
+            707
+        ],
+        "688": [
+            696,
+            705
+        ],
+        "696": [
+            705,
+            719
+        ],
+        "705": [],
+        "707": [
+            688
+        ],
+        "719": [
+            705
+        ]
+    },
+    "boundary": {
+        "650": 683,
+        "683": 688,
+        "688": 696,
+        "696": 705,
+        "705": 707,
+        "707": 719,
+        "719": 743
+    },
+    "jmp_instruction": {
+        "650": "ja      short loc_2B0",
+        "683": "jnz     short loc_2C3",
+        "688": "jz      short loc_2C1",
+        "696": "jnz     short loc_2CF",
+        "705": "retn",
+        "707": "jmp     short loc_2B0",
+        "719": "jmp     short loc_2C1"
+    }
+}

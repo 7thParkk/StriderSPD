@@ -1,0 +1,133 @@
+{
+    "nodes": {
+        "996": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "cmp REG 1056",
+            "jnz ADDR"
+        ],
+        "1071": [
+            "cmp MEMACC 1297043279",
+            "jnz ADDR"
+        ],
+        "1084": [
+            "cmp 4 33554432",
+            "jnz ADDR"
+        ],
+        "1098": [
+            "mov REG MEMACC",
+            "bswap REG",
+            "lea REG 511",
+            "test REG REG",
+            "cmovns REG REG",
+            "sar REG CONSTANT",
+            "mov MEMACC REG",
+            "lea REG 8",
+            "lea REG 1096",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG MEMACC",
+            "add REG CONSTANT",
+            "sar REG CONSTANT",
+            "add REG CONSTANT",
+            "and REG CONSTANT",
+            "cdqe REG",
+            "mov MEMACC REG",
+            "mov REG CONSTANT"
+        ],
+        "1185": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jnz ADDR"
+        ],
+        "1204": [
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "1214": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "1221": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "1228": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "1235": [
+            "call ADDR"
+        ]
+    },
+    "edges": {
+        "996": [
+            1071,
+            1214
+        ],
+        "1071": [
+            1084,
+            1221
+        ],
+        "1084": [
+            1098,
+            1228
+        ],
+        "1098": [
+            1185
+        ],
+        "1185": [
+            1204,
+            1235
+        ],
+        "1204": [],
+        "1214": [
+            1185
+        ],
+        "1221": [
+            1185
+        ],
+        "1228": [
+            1185
+        ],
+        "1235": []
+    },
+    "boundary": {
+        "996": 1071,
+        "1071": 1084,
+        "1084": 1098,
+        "1098": 1185,
+        "1185": 1204,
+        "1204": 1214,
+        "1214": 1221,
+        "1221": 1228,
+        "1228": 1235,
+        "1235": 1240
+    },
+    "jmp_instruction": {
+        "996": "jnz     loc_4BE",
+        "1071": "jnz     loc_4C5",
+        "1084": "jnz     loc_4CC",
+        "1098": "mov     eax, 0",
+        "1185": "jnz     short loc_4D3",
+        "1204": "retn",
+        "1214": "jmp     short loc_4A1",
+        "1221": "jmp     short loc_4A1",
+        "1228": "jmp     short loc_4A1",
+        "1235": "call    __stack_chk_fail; PIC mode"
+    }
+}

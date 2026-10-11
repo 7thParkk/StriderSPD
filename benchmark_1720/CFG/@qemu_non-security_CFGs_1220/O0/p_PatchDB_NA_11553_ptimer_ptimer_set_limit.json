@@ -1,0 +1,134 @@
+{
+    "nodes": {
+        "1427": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG CONSTANT",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "1463": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "imul REG MEMACC",
+            "cmp REG 9999",
+            "ja ADDR"
+        ],
+        "1484": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1497": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "cqo REG REG",
+            "idiv REG REG",
+            "mov MEMACC REG"
+        ],
+        "1519": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "cmp MEMACC 0",
+            "jz ADDR"
+        ],
+        "1537": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG"
+        ],
+        "1549": [
+            "mov REG MEMACC",
+            "movzx REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1560": [
+            "cmp MEMACC 0",
+            "jz ADDR"
+        ],
+        "1566": [
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "1596": [
+            "nop",
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "1427": [
+            1463,
+            1519
+        ],
+        "1463": [
+            1484,
+            1519
+        ],
+        "1484": [
+            1497,
+            1519
+        ],
+        "1497": [
+            1519
+        ],
+        "1519": [
+            1537,
+            1549
+        ],
+        "1537": [
+            1549
+        ],
+        "1549": [
+            1560,
+            1596
+        ],
+        "1560": [
+            1566,
+            1596
+        ],
+        "1566": [
+            1596
+        ],
+        "1596": []
+    },
+    "boundary": {
+        "1427": 1463,
+        "1463": 1484,
+        "1484": 1497,
+        "1497": 1519,
+        "1519": 1537,
+        "1537": 1549,
+        "1549": 1560,
+        "1560": 1566,
+        "1566": 1596,
+        "1596": 1599
+    },
+    "jmp_instruction": {
+        "1427": "jnz     short loc_5EF",
+        "1463": "ja      short loc_5EF",
+        "1484": "jz      short loc_5EF",
+        "1497": "mov     [rbp+var_10], rax",
+        "1519": "jz      short loc_60D",
+        "1537": "mov     [rax+10h], rdx",
+        "1549": "jz      short loc_63C",
+        "1560": "jz      short loc_63C",
+        "1566": "call    ptimer_reload",
+        "1596": "retn"
+    }
+}

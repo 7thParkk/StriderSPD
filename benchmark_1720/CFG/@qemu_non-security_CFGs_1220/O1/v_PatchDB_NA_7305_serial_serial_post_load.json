@@ -1,0 +1,90 @@
+{
+    "nodes": {
+        "514": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "cmp REG 2",
+            "jg ADDR"
+        ],
+        "527": [
+            "mov MEMACC CONSTANT"
+        ],
+        "531": [
+            "cmp 16 18446744073709551615",
+            "jz ADDR"
+        ],
+        "537": [
+            "cmp 52 4",
+            "jbe ADDR"
+        ],
+        "543": [
+            "mov MEMACC CONSTANT"
+        ],
+        "550": [
+            "movzx REG MEMACC",
+            "shr REG CONSTANT",
+            "and REG CONSTANT",
+            "mov MEMACC REG",
+            "movzx REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "pop REG",
+            "retn"
+        ],
+        "590": [
+            "movzx REG MEMACC",
+            "and REG CONSTANT",
+            "cmp REG 2",
+            "setz REG",
+            "movzx REG REG",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "514": [
+            527,
+            531
+        ],
+        "527": [
+            531
+        ],
+        "531": [
+            537,
+            590
+        ],
+        "537": [
+            543,
+            550
+        ],
+        "543": [
+            550
+        ],
+        "550": [],
+        "590": [
+            537
+        ]
+    },
+    "boundary": {
+        "514": 527,
+        "527": 531,
+        "531": 537,
+        "537": 543,
+        "543": 550,
+        "550": 590,
+        "590": 610
+    },
+    "jmp_instruction": {
+        "514": "jg      short loc_213",
+        "527": "mov     byte ptr [rdi+0Dh], 0",
+        "531": "jz      short loc_24E",
+        "537": "jbe     short loc_226",
+        "543": "mov     dword ptr [rbx+34h], 4",
+        "550": "retn",
+        "590": "jmp     short loc_219"
+    }
+}

@@ -1,0 +1,28 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall job_unref(__int64 a1)",
+        "{",
+        "  __int64 result; // rax",
+        "",
+        "  result = (unsigned int)--*(_DWORD *)(a1 + 16);",
+        "  if ( !(_DWORD)result )",
+        "  {",
+        "    if ( *(_DWORD *)(a1 + 20) != 10 )",
+        "      _assert_fail(\"job->status == JOB_STATUS_NULL\", file, 0x16Au, \"job_unref\");",
+        "    if ( (unsigned __int8)timer_pending(a1 + 40) == 1 )",
+        "      _assert_fail(\"!timer_pending(&job->sleep_timer)\", file, 0x16Bu, \"job_unref\");",
+        "    if ( *(_QWORD *)(a1 + 200) )",
+        "      _assert_fail(\"!job->txn\", file, 0x16Cu, \"job_unref\");",
+        "    if ( *(_QWORD *)(*(_QWORD *)(a1 + 8) + 96LL) )",
+        "      (*(void (__fastcall **)(__int64))(*(_QWORD *)(a1 + 8) + 96LL))(a1);",
+        "    if ( *(_QWORD *)(a1 + 184) )",
+        "      *(_QWORD *)(*(_QWORD *)(a1 + 184) + 192LL) = *(_QWORD *)(a1 + 192);",
+        "    **(_QWORD **)(a1 + 192) = *(_QWORD *)(a1 + 184);",
+        "    g_free(*(_QWORD *)(a1 + 120));",
+        "    g_free(*(_QWORD *)a1);",
+        "    return g_free(a1);",
+        "  }",
+        "  return result;",
+        "}"
+    ]
+}

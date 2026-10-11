@@ -1,0 +1,102 @@
+{
+    "nodes": {
+        "650": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "cmp MEMACC 0",
+            "jnz ADDR"
+        ],
+        "672": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "imul REG REG",
+            "cmp REG 9999",
+            "ja ADDR"
+        ],
+        "691": [
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "696": [
+            "mov MEMACC REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "704": [
+            "mov MEMACC REG",
+            "cmp MEMACC 0",
+            "jnz ADDR"
+        ],
+        "713": [
+            "pop REG",
+            "retn"
+        ],
+        "715": [
+            "mov REG CONSTANT",
+            "cqo REG REG",
+            "idiv REG REG",
+            "mov REG REG",
+            "jmp ADDR"
+        ],
+        "730": [
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "650": [
+            672,
+            696
+        ],
+        "672": [
+            691,
+            696
+        ],
+        "691": [
+            696,
+            715
+        ],
+        "696": [
+            704,
+            713
+        ],
+        "704": [
+            713,
+            730
+        ],
+        "713": [],
+        "715": [
+            696
+        ],
+        "730": [
+            713
+        ]
+    },
+    "boundary": {
+        "650": 672,
+        "672": 691,
+        "691": 696,
+        "696": 704,
+        "704": 713,
+        "713": 715,
+        "715": 730,
+        "730": 754
+    },
+    "jmp_instruction": {
+        "650": "jnz     short loc_2B8",
+        "672": "ja      short loc_2B8",
+        "691": "jnz     short loc_2CB",
+        "696": "jz      short loc_2C9",
+        "704": "jnz     short loc_2DA",
+        "713": "retn",
+        "715": "jmp     short loc_2B8",
+        "730": "jmp     short loc_2C9"
+    }
+}

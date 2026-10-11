@@ -1,0 +1,18 @@
+{
+    "pseudo_code": [
+        "unsigned __int64 __fastcall external_snapshot_abort(__int64 a1)",
+        "{",
+        "  unsigned __int64 v2; // [rsp+28h] [rbp-8h]",
+        "",
+        "  v2 = __readfsqword(0x28u);",
+        "  if ( *(_QWORD *)(a1 + 48) && *(_BYTE *)(a1 + 64) )",
+        "  {",
+        "    bdrv_ref(*(_QWORD *)(a1 + 40));",
+        "    bdrv_set_backing_hd(*(_QWORD *)(a1 + 48), 0LL, &error_abort);",
+        "    bdrv_replace_node(*(_QWORD *)(a1 + 48), *(_QWORD *)(a1 + 40), &error_abort);",
+        "    bdrv_unref(*(_QWORD *)(a1 + 40));",
+        "  }",
+        "  return v2 - __readfsqword(0x28u);",
+        "}"
+    ]
+}

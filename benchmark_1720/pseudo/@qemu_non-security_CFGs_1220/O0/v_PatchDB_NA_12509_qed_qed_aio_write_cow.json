@@ -1,0 +1,31 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall qed_aio_write_cow(_QWORD *a1)",
+        "{",
+        "  __int64 v2; // rbx",
+        "  int v3; // [rsp+4h] [rbp-4Ch]",
+        "  int v4; // [rsp+4h] [rbp-4Ch]",
+        "  __int64 v5; // [rsp+20h] [rbp-30h]",
+        "  unsigned __int64 v6; // [rsp+28h] [rbp-28h]",
+        "  __int64 v7; // [rsp+28h] [rbp-28h]",
+        "  __int64 v8; // [rsp+30h] [rbp-20h]",
+        "  __int64 v9; // [rsp+30h] [rbp-20h]",
+        "  __int64 v10; // [rsp+38h] [rbp-18h]",
+        "",
+        "  v5 = acb_to_s((__int64)a1);",
+        "  v6 = qed_start_of_cluster(v5, a1[15]);",
+        "  v8 = qed_offset_into_cluster(v5, a1[15]);",
+        "  trace_qed_aio_write_prefill();",
+        "  v3 = qed_copy_from_backing_file((_QWORD *)v5, v6, v8, a1[16]);",
+        "  if ( v3 )",
+        "    return qed_aio_complete((__int64)a1, v3);",
+        "  v7 = a1[15] + a1[13];",
+        "  v9 = qed_start_of_cluster(v5, *(unsigned int *)(v5 + 20) + v7 - 1) - v7;",
+        "  v2 = a1[16];",
+        "  v10 = v2 + qed_offset_into_cluster(v5, a1[15]) + a1[13];",
+        "  trace_qed_aio_write_postfill();",
+        "  v4 = qed_copy_from_backing_file((_QWORD *)v5, v7, v9, v10);",
+        "  return qed_aio_write_main((__int64)a1, v4);",
+        "}"
+    ]
+}

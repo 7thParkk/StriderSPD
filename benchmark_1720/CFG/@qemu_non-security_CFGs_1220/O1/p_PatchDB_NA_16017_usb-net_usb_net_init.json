@@ -1,0 +1,89 @@
+{
+    "nodes": {
+        "78": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "116": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "cmp REG 18446744073709551615",
+            "jz ADDR"
+        ],
+        "185": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "movsxd REG REG",
+            "shl REG CONSTANT",
+            "add REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "235": [
+            "mov REG REG",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "245": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "78": [
+            116,
+            235
+        ],
+        "116": [
+            185,
+            245
+        ],
+        "185": [
+            235
+        ],
+        "235": [],
+        "245": [
+            235
+        ]
+    },
+    "boundary": {
+        "78": 116,
+        "116": 185,
+        "185": 235,
+        "235": 245,
+        "245": 252
+    },
+    "jmp_instruction": {
+        "78": "jz      short loc_EB",
+        "116": "jz      short loc_F5",
+        "185": "call    qdev_init_nofail; PIC mode",
+        "235": "retn",
+        "245": "jmp     short loc_EB"
+    }
+}

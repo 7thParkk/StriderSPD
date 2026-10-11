@@ -1,0 +1,74 @@
+{
+    "nodes": {
+        "11247": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC CONSTANT",
+            "mov REG MEMACC",
+            "lea REG 88",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "lea REG 72",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "nop",
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jz ADDR"
+        ],
+        "11449": [
+            "call ADDR"
+        ],
+        "11454": [
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "11247": [
+            11449,
+            11454
+        ],
+        "11449": [],
+        "11454": []
+    },
+    "boundary": {
+        "11247": 11449,
+        "11449": 11454,
+        "11454": 11456
+    },
+    "jmp_instruction": {
+        "11247": "jz      short locret_2CBE",
+        "11449": "call    __stack_chk_fail; PIC mode",
+        "11454": "retn"
+    }
+}

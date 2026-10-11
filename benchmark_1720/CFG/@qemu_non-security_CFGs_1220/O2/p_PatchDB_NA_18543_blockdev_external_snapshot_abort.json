@@ -1,0 +1,77 @@
+{
+    "nodes": {
+        "5392": [
+            "endbr64",
+            "cmp 48 0",
+            "jz ADDR"
+        ],
+        "5403": [
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "cmp 64 0",
+            "jnz ADDR"
+        ],
+        "5418": [
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "5432": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "mov REG MEMACC",
+            "xor REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "5496": [
+            "retn"
+        ],
+        "46880": []
+    },
+    "edges": {
+        "5392": [
+            5403,
+            5496
+        ],
+        "5403": [
+            5418,
+            5432
+        ],
+        "5418": [],
+        "5432": [
+            46880
+        ],
+        "5496": [],
+        "46880": []
+    },
+    "boundary": {
+        "5392": 5403,
+        "5403": 5418,
+        "5418": 5425,
+        "5432": 5493,
+        "5496": 5497,
+        "46880": 46880
+    },
+    "jmp_instruction": {
+        "5392": "jz      short locret_1578",
+        "5403": "jnz     short loc_1538",
+        "5418": "retn",
+        "5432": "jmp     bdrv_unref; PIC mode",
+        "5496": "retn",
+        "46880": "extrn backup_job_create:near"
+    }
+}

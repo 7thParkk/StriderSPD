@@ -1,0 +1,208 @@
+{
+    "nodes": {
+        "4704": [
+            "endbr64",
+            "push REG",
+            "lea REG MEMACC",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "4782": [
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "4805": [
+            "test REG REG",
+            "lea REG MEMACC",
+            "cmovz REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "4839": [
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "4856": [
+            "mov REG MEMACC",
+            "sub REG CONSTANT",
+            "lea REG 88",
+            "xor REG REG",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "push REG",
+            "call ADDR",
+            "pop REG",
+            "pop REG",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "4902": [
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "4950": [
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "4959": [
+            "mov REG REG",
+            "lea REG MEMACC",
+            "xor REG REG",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "nop MEMACC"
+        ],
+        "5000": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "5007": [
+            "mov REG REG",
+            "lea REG MEMACC",
+            "xor REG REG",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "5045": [
+            "mov REG REG",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "5081": [
+            "mov REG REG",
+            "lea REG MEMACC",
+            "xor REG REG",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "8098": []
+    },
+    "edges": {
+        "4704": [
+            4782,
+            4959
+        ],
+        "4782": [
+            4805,
+            5081
+        ],
+        "4805": [
+            4839,
+            5007
+        ],
+        "4839": [
+            4856,
+            5045
+        ],
+        "4856": [
+            4902,
+            5000
+        ],
+        "4902": [
+            4950,
+            8098
+        ],
+        "4950": [],
+        "4959": [
+            5000
+        ],
+        "5000": [
+            4950
+        ],
+        "5007": [
+            5000
+        ],
+        "5045": [
+            5000
+        ],
+        "5081": [
+            5000
+        ],
+        "8098": []
+    },
+    "boundary": {
+        "4704": 4782,
+        "4782": 4805,
+        "4805": 4839,
+        "4839": 4856,
+        "4856": 4902,
+        "4902": 4950,
+        "4950": 4959,
+        "4959": 5000,
+        "5000": 5007,
+        "5007": 5045,
+        "5045": 5081,
+        "5081": 5119,
+        "8098": 8098
+    },
+    "jmp_instruction": {
+        "4704": "jz      loc_135F",
+        "4782": "jz      loc_13D9",
+        "4805": "jz      loc_138F",
+        "4839": "jz      loc_13B5",
+        "4856": "jnz     short loc_1388",
+        "4902": "jnz     do_snapshot_blkdev_cold",
+        "4950": "retn",
+        "4959": "nop     dword ptr [rax+rax+00h]",
+        "5000": "jmp     short loc_1356",
+        "5007": "jmp     short loc_1388",
+        "5045": "jmp     short loc_1388",
+        "5081": "jmp     short loc_1388",
+        "8098": "db 'do_commit',0"
+    }
+}

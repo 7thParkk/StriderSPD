@@ -1,0 +1,135 @@
+{
+    "nodes": {
+        "4944": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "lea REG MEMACC",
+            "push REG",
+            "lea REG 144",
+            "mov REG REG",
+            "nop MEMACC"
+        ],
+        "4976": [
+            "xor REG REG",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "stos MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "5012": [
+            "pxor REG REG",
+            "mov REG REG",
+            "movups MEMACC REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "5031": [
+            "movq REG MEMACC",
+            "mov REG REG",
+            "movups MEMACC REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "5054": [
+            "add REG CONSTANT",
+            "cmp REG REG",
+            "jnz ADDR"
+        ],
+        "5063": [
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "5068": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "xor REG REG",
+            "lea REG MEMACC",
+            "call ADDR"
+        ],
+        "5101": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "xor REG REG",
+            "lea REG MEMACC",
+            "call ADDR"
+        ],
+        "5134": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "xor REG REG",
+            "lea REG MEMACC",
+            "call ADDR",
+            "nop"
+        ],
+        "5168": []
+    },
+    "edges": {
+        "4944": [
+            4976
+        ],
+        "4976": [
+            5012,
+            5068
+        ],
+        "5012": [
+            5031,
+            5134
+        ],
+        "5031": [
+            5054,
+            5101
+        ],
+        "5054": [
+            4976,
+            5063
+        ],
+        "5063": [],
+        "5068": [
+            5101
+        ],
+        "5101": [
+            5134
+        ],
+        "5134": [
+            5168
+        ],
+        "5168": []
+    },
+    "boundary": {
+        "4944": 4976,
+        "4976": 5012,
+        "5012": 5031,
+        "5031": 5054,
+        "5054": 5063,
+        "5063": 5068,
+        "5068": 5101,
+        "5101": 5134,
+        "5134": 5168,
+        "5168": 5168
+    },
+    "jmp_instruction": {
+        "4944": "nop     dword ptr [rax+00000000h]",
+        "4976": "jz      short loc_13CC",
+        "5012": "jnz     short loc_140E",
+        "5031": "jnz     short loc_13ED",
+        "5054": "jnz     short loc_1370",
+        "5063": "retn",
+        "5068": "call    g_assertion_message_expr; PIC mode",
+        "5101": "call    g_assertion_message_expr; PIC mode",
+        "5134": "nop",
+        "5168": "nop"
+    }
+}

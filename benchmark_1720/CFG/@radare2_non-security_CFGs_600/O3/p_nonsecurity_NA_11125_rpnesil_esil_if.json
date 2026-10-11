@@ -1,0 +1,85 @@
+{
+    "nodes": {
+        "15216": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "xor REG REG",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "15259": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jnz ADDR"
+        ],
+        "15275": [
+            "add REG CONSTANT",
+            "pop REG",
+            "retn"
+        ],
+        "15288": [
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "cmp MEMACC 0",
+            "jnz ADDR"
+        ],
+        "15306": [
+            "mov MEMACC CONSTANT"
+        ],
+        "15316": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "15323": [
+            "call ADDR"
+        ]
+    },
+    "edges": {
+        "15216": [
+            15259,
+            15288
+        ],
+        "15259": [
+            15275,
+            15323
+        ],
+        "15275": [],
+        "15288": [
+            15306,
+            15316
+        ],
+        "15306": [
+            15316
+        ],
+        "15316": [
+            15259
+        ],
+        "15323": []
+    },
+    "boundary": {
+        "15216": 15259,
+        "15259": 15275,
+        "15275": 15281,
+        "15288": 15306,
+        "15306": 15316,
+        "15316": 15323,
+        "15323": 15328
+    },
+    "jmp_instruction": {
+        "15216": "jnz     short loc_3BB8",
+        "15259": "jnz     short loc_3BDB",
+        "15275": "retn",
+        "15288": "jnz     short loc_3BD4",
+        "15306": "mov     dword ptr [rbx+114h], 1",
+        "15316": "jmp     short loc_3B9B",
+        "15323": "call    __stack_chk_fail; PIC mode"
+    }
+}

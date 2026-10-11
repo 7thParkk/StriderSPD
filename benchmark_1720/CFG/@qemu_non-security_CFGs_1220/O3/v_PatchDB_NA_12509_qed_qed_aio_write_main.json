@@ -1,0 +1,151 @@
+{
+    "nodes": {
+        "6272": [
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "sub REG CONSTANT",
+            "and REG MEMACC",
+            "add REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "6310": [
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "6329": [
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG MEMACC"
+        ],
+        "6353": [
+            "lea REG 88",
+            "mov REG REG",
+            "call ADDR",
+            "xor REG REG",
+            "test REG REG",
+            "cmovle REG REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "6384": [
+            "mov REG MEMACC",
+            "cmp 12368 0",
+            "jz ADDR"
+        ],
+        "6398": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG REG"
+        ],
+        "6415": [
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "6419": [
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "6432": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "6453": [
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "784": [],
+        "1024": []
+    },
+    "edges": {
+        "6272": [
+            6310,
+            6419
+        ],
+        "6310": [
+            6329,
+            6353
+        ],
+        "6329": [
+            6353
+        ],
+        "6353": [
+            6384,
+            6453
+        ],
+        "6384": [
+            6398,
+            6415
+        ],
+        "6398": [
+            6415
+        ],
+        "6415": [
+            6419,
+            6432
+        ],
+        "6419": [
+            784
+        ],
+        "6432": [
+            6419,
+            6453
+        ],
+        "6453": [
+            1024
+        ],
+        "784": [],
+        "1024": []
+    },
+    "boundary": {
+        "6272": 6310,
+        "6310": 6329,
+        "6329": 6353,
+        "6353": 6384,
+        "6384": 6398,
+        "6398": 6415,
+        "6415": 6419,
+        "6419": 6431,
+        "6432": 6453,
+        "6453": 6465,
+        "784": 784,
+        "1024": 1024
+    },
+    "jmp_instruction": {
+        "6272": "jnz     short loc_1913",
+        "6310": "jz      short loc_18D1",
+        "6329": "mov     rdi, [rax+3058h]",
+        "6353": "jz      short loc_1935",
+        "6384": "jz      short loc_190F",
+        "6398": "mov     esi, eax",
+        "6415": "jz      short loc_1920",
+        "6419": "jmp     qed_aio_complete",
+        "6432": "jnz     short loc_1913",
+        "6453": "jmp     qed_aio_next_io",
+        "784": "align 10h",
+        "1024": "align 20h"
+    }
+}

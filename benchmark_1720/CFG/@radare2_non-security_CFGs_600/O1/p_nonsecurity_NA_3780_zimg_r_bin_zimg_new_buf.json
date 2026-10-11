@@ -1,0 +1,97 @@
+{
+    "nodes": {
+        "0": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "36": [
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "movsxd REG MEMACC",
+            "mov REG MEMACC",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "70": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "cmp REG 43",
+            "jbe ADDR"
+        ],
+        "85": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "movdqu REG MEMACC",
+            "movups MEMACC REG",
+            "movdqu REG MEMACC",
+            "movups MEMACC REG",
+            "movdqu REG MEMACC",
+            "movups MEMACC REG"
+        ],
+        "118": [
+            "mov REG REG",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "128": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "0": [
+            36,
+            118
+        ],
+        "36": [
+            70,
+            128
+        ],
+        "70": [
+            85,
+            128
+        ],
+        "85": [
+            118
+        ],
+        "118": [],
+        "128": [
+            118
+        ]
+    },
+    "boundary": {
+        "0": 36,
+        "36": 70,
+        "70": 85,
+        "85": 118,
+        "118": 128,
+        "128": 152
+    },
+    "jmp_instruction": {
+        "0": "jz      short loc_76",
+        "36": "jz      short loc_80",
+        "70": "jbe     short loc_80",
+        "85": "movups  xmmword ptr [rbx+34h], xmm2",
+        "118": "retn",
+        "128": "jmp     short loc_76"
+    }
+}

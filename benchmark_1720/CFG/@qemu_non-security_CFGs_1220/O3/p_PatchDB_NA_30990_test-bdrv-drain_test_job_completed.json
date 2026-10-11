@@ -1,0 +1,25 @@
+{
+    "nodes": {
+        "176": [
+            "endbr64",
+            "xor REG REG",
+            "xor REG REG",
+            "jmp ADDR"
+        ],
+        "19624": []
+    },
+    "edges": {
+        "176": [
+            19624
+        ],
+        "19624": []
+    },
+    "boundary": {
+        "176": 189,
+        "19624": 19624
+    },
+    "jmp_instruction": {
+        "176": "jmp     job_completed; PIC mode",
+        "19624": "extrn job_defer_to_main_loop:near"
+    }
+}

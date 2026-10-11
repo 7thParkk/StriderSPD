@@ -1,0 +1,29 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall i8259_init(__int64 a1, __int64 a2)",
+        "{",
+        "  __int64 v2; // rbp",
+        "  __int64 inited; // rax",
+        "  __int64 v4; // r12",
+        "  __int64 i; // rbx",
+        "  __int64 v6; // rax",
+        "  __int64 v7; // r12",
+        "  __int64 j; // rbx",
+        "",
+        "  v2 = g_malloc(128LL);",
+        "  inited = i8259_init_chip(\"isa-i8259\", a1, 1LL);",
+        "  v4 = object_dynamic_cast_assert(inited, \"device\", &LC0, 478LL, \"i8259_init\");",
+        "  qdev_connect_gpio_out(v4, 0LL, a2);",
+        "  for ( i = 0LL; i != 8; ++i )",
+        "    *(_QWORD *)(v2 + 8 * i) = qdev_get_gpio_in(v4, (unsigned int)i);",
+        "  isa_pic = v4;",
+        "  v6 = i8259_init_chip(\"isa-i8259\", a1, 0LL);",
+        "  v7 = object_dynamic_cast_assert(v6, \"device\", &LC0, 488LL, \"i8259_init\");",
+        "  qdev_connect_gpio_out(v7, 0LL, *(_QWORD *)(v2 + 16));",
+        "  for ( j = 0LL; j != 8; ++j )",
+        "    *(_QWORD *)(v2 + 8 * j + 64) = qdev_get_gpio_in(v7, (unsigned int)j);",
+        "  slave_pic = object_dynamic_cast_assert(v7, \"pic-common\", &LC0, 495LL, \"i8259_init\");",
+        "  return v2;",
+        "}"
+    ]
+}

@@ -1,0 +1,483 @@
+{
+    "nodes": {
+        "679": [
+            "endbr64",
+            "mov REG REG",
+            "xorps REG REG",
+            "push REG",
+            "mov REG REG",
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "699": [
+            "mov REG CONSTANT",
+            "jz ADDR"
+        ],
+        "706": [
+            "xorps REG REG",
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "716": [
+            "jnz ADDR"
+        ],
+        "718": [
+            "xor REG REG",
+            "ucomisd REG MEMACC",
+            "mov REG CONSTANT",
+            "setp REG",
+            "cmovnz REG REG",
+            "jmp ADDR"
+        ],
+        "738": [
+            "mov REG CONSTANT"
+        ],
+        "743": [
+            "xorps REG REG",
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "753": [
+            "mov REG CONSTANT",
+            "jz ADDR"
+        ],
+        "760": [
+            "xorps REG REG",
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "773": [
+            "jnz ADDR"
+        ],
+        "775": [
+            "xor REG REG",
+            "ucomisd REG MEMACC",
+            "mov REG CONSTANT",
+            "setp REG",
+            "cmovnz REG REG",
+            "jmp ADDR"
+        ],
+        "799": [
+            "mov REG CONSTANT"
+        ],
+        "804": [
+            "xorps REG REG",
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "814": [
+            "mov REG CONSTANT",
+            "jz ADDR"
+        ],
+        "821": [
+            "xorps REG REG",
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "831": [
+            "jnz ADDR"
+        ],
+        "833": [
+            "xor REG REG",
+            "ucomisd REG MEMACC",
+            "mov REG CONSTANT",
+            "setp REG",
+            "cmovnz REG REG",
+            "jmp ADDR"
+        ],
+        "855": [
+            "mov REG CONSTANT"
+        ],
+        "860": [
+            "xorps REG REG",
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "873": [
+            "mov REG CONSTANT",
+            "jz ADDR"
+        ],
+        "881": [
+            "xorps REG REG",
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "894": [
+            "jnz ADDR"
+        ],
+        "896": [
+            "xor REG REG",
+            "ucomisd REG MEMACC",
+            "mov REG CONSTANT",
+            "setp REG",
+            "cmovnz REG REG"
+        ],
+        "921": [
+            "or REG REG",
+            "lea REG 240",
+            "or REG REG",
+            "or REG REG",
+            "jnz ADDR"
+        ],
+        "937": [
+            "movsd REG MEMACC",
+            "xorps REG REG",
+            "xor REG REG",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "955": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "979": [
+            "movsd REG MEMACC",
+            "comisd REG REG",
+            "ja ADDR"
+        ],
+        "989": [
+            "movsd REG MEMACC",
+            "comisd REG REG",
+            "ja ADDR"
+        ],
+        "1000": [
+            "comisd REG REG",
+            "ja ADDR"
+        ],
+        "1006": [
+            "comisd REG REG",
+            "jbe ADDR"
+        ],
+        "1012": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "xor REG REG",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "call ADDR"
+        ],
+        "1055": [
+            "xor REG REG",
+            "jmp ADDR"
+        ],
+        "1062": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "1069": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "1090": [
+            "ucomisd REG REG",
+            "setnp REG",
+            "cmovnz REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1104": [
+            "dec REG",
+            "jz ADDR"
+        ],
+        "1108": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT"
+        ],
+        "1127": [
+            "lea REG MEMACC",
+            "xor REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "1143": [
+            "ucomisd REG REG",
+            "setnp REG",
+            "cmovnz REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1157": [
+            "ucomisd REG REG",
+            "setp REG",
+            "cmovnz REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1172": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "1193": [
+            "add REG CONSTANT",
+            "cmp REG REG",
+            "jnz ADDR"
+        ],
+        "1206": [
+            "mov REG CONSTANT"
+        ],
+        "1208": [
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "679": [
+            699,
+            706
+        ],
+        "699": [
+            706,
+            743
+        ],
+        "706": [
+            716,
+            738
+        ],
+        "716": [
+            718,
+            738
+        ],
+        "718": [
+            743
+        ],
+        "738": [
+            743
+        ],
+        "743": [
+            753,
+            760
+        ],
+        "753": [
+            760,
+            804
+        ],
+        "760": [
+            773,
+            799
+        ],
+        "773": [
+            775,
+            799
+        ],
+        "775": [
+            804
+        ],
+        "799": [
+            804
+        ],
+        "804": [
+            814,
+            821
+        ],
+        "814": [
+            821,
+            860
+        ],
+        "821": [
+            831,
+            855
+        ],
+        "831": [
+            833,
+            855
+        ],
+        "833": [
+            860
+        ],
+        "855": [
+            860
+        ],
+        "860": [
+            873,
+            881
+        ],
+        "873": [
+            881,
+            921
+        ],
+        "881": [
+            894,
+            955
+        ],
+        "894": [
+            896,
+            955
+        ],
+        "896": [
+            921
+        ],
+        "921": [
+            937,
+            955
+        ],
+        "937": [
+            979
+        ],
+        "955": [
+            1127
+        ],
+        "979": [
+            989,
+            1012
+        ],
+        "989": [
+            1000,
+            1012
+        ],
+        "1000": [
+            1006,
+            1012
+        ],
+        "1006": [
+            1012,
+            1062
+        ],
+        "1012": [
+            1055
+        ],
+        "1055": [
+            1208
+        ],
+        "1062": [
+            1069,
+            1090
+        ],
+        "1069": [
+            1127
+        ],
+        "1090": [
+            1104,
+            1143
+        ],
+        "1104": [
+            1108,
+            1143
+        ],
+        "1108": [
+            1127
+        ],
+        "1127": [
+            1055
+        ],
+        "1143": [
+            1157,
+            1193
+        ],
+        "1157": [
+            1172,
+            1193
+        ],
+        "1172": [
+            1127
+        ],
+        "1193": [
+            979,
+            1206
+        ],
+        "1206": [
+            1208
+        ],
+        "1208": []
+    },
+    "boundary": {
+        "679": 699,
+        "699": 706,
+        "706": 716,
+        "716": 718,
+        "718": 738,
+        "738": 743,
+        "743": 753,
+        "753": 760,
+        "760": 773,
+        "773": 775,
+        "775": 799,
+        "799": 804,
+        "804": 814,
+        "814": 821,
+        "821": 831,
+        "831": 833,
+        "833": 855,
+        "855": 860,
+        "860": 873,
+        "873": 881,
+        "881": 894,
+        "894": 896,
+        "896": 921,
+        "921": 937,
+        "937": 955,
+        "955": 979,
+        "979": 989,
+        "989": 1000,
+        "1000": 1006,
+        "1006": 1012,
+        "1012": 1055,
+        "1055": 1062,
+        "1062": 1069,
+        "1069": 1090,
+        "1090": 1104,
+        "1104": 1108,
+        "1108": 1127,
+        "1127": 1143,
+        "1143": 1157,
+        "1157": 1172,
+        "1172": 1193,
+        "1193": 1206,
+        "1206": 1208,
+        "1208": 1210
+    },
+    "jmp_instruction": {
+        "679": "jp      short loc_2C2",
+        "699": "jz      short loc_2E7",
+        "706": "jp      short loc_2E2",
+        "716": "jnz     short loc_2E2",
+        "718": "jmp     short loc_2E7",
+        "738": "mov     edx, 1",
+        "743": "jp      short loc_2F8",
+        "753": "jz      short loc_324",
+        "760": "jp      short loc_31F",
+        "773": "jnz     short loc_31F",
+        "775": "jmp     short loc_324",
+        "799": "mov     esi, 1",
+        "804": "jp      short loc_335",
+        "814": "jz      short loc_35C",
+        "821": "jp      short loc_357",
+        "831": "jnz     short loc_357",
+        "833": "jmp     short loc_35C",
+        "855": "mov     ecx, 1",
+        "860": "jp      short loc_371",
+        "873": "jz      short loc_399",
+        "881": "jp      short loc_3BB",
+        "894": "jnz     short loc_3BB",
+        "896": "cmovnz  r8d, r9d",
+        "921": "jnz     short loc_3BB",
+        "937": "jmp     short loc_3D3",
+        "955": "jmp     loc_467",
+        "979": "ja      short loc_3F4",
+        "989": "ja      short loc_3F4",
+        "1000": "ja      short loc_3F4",
+        "1006": "jbe     short loc_426",
+        "1012": "call    error_setg_internal; PIC mode",
+        "1055": "jmp     loc_4B8",
+        "1062": "jnz     short loc_442",
+        "1069": "jmp     short loc_467",
+        "1090": "jz      short loc_477",
+        "1104": "jz      short loc_477",
+        "1108": "mov     edx, 14Eh",
+        "1127": "jmp     short loc_41F",
+        "1143": "jz      short loc_4A9",
+        "1157": "jz      short loc_4A9",
+        "1172": "jmp     short loc_467",
+        "1193": "jnz     loc_3D3",
+        "1206": "mov     al, 1",
+        "1208": "retn"
+    }
+}

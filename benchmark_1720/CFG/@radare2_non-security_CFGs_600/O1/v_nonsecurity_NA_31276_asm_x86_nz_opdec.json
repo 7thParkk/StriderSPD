@@ -1,0 +1,190 @@
+{
+    "nodes": {
+        "13809": [
+            "endbr64",
+            "cmp 104 0",
+            "jnz ADDR"
+        ],
+        "13819": [
+            "mov REG REG",
+            "mov REG MEMACC",
+            "test REG 64",
+            "jz ADDR"
+        ],
+        "13834": [
+            "cmp 88 0",
+            "jz ADDR"
+        ],
+        "13840": [
+            "test REG 16777216",
+            "jz ADDR"
+        ],
+        "13848": [
+            "mov MEMACC CONSTANT",
+            "test 40 64",
+            "jz ADDR"
+        ],
+        "13857": [
+            "mov REG MEMACC",
+            "or REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG CONSTANT"
+        ],
+        "13871": [
+            "mov REG REG",
+            "retn"
+        ],
+        "13874": [
+            "sub REG CONSTANT",
+            "mov REG CONSTANT",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "add REG CONSTANT",
+            "retn"
+        ],
+        "13922": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "13929": [
+            "mov REG MEMACC",
+            "or REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "13945": [
+            "mov MEMACC CONSTANT",
+            "mov REG MEMACC",
+            "or REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "13964": [
+            "mov REG MEMACC",
+            "or REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "13979": [
+            "test REG 16777216",
+            "jnz ADDR"
+        ],
+        "13991": [
+            "mov REG MEMACC",
+            "cmp REG 32",
+            "jz ADDR"
+        ],
+        "13999": [
+            "mov REG CONSTANT",
+            "cmp REG 64",
+            "jnz ADDR"
+        ],
+        "14013": [
+            "mov MEMACC CONSTANT",
+            "mov MEMACC CONSTANT",
+            "mov REG MEMACC",
+            "or REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "13809": [
+            13819,
+            13874
+        ],
+        "13819": [
+            13834,
+            13979
+        ],
+        "13834": [
+            13840,
+            13922
+        ],
+        "13840": [
+            13848,
+            13945
+        ],
+        "13848": [
+            13857,
+            13929
+        ],
+        "13857": [
+            13871
+        ],
+        "13871": [],
+        "13874": [],
+        "13922": [
+            13871
+        ],
+        "13929": [
+            13871
+        ],
+        "13945": [
+            13871
+        ],
+        "13964": [
+            13871
+        ],
+        "13979": [
+            13848,
+            13991
+        ],
+        "13991": [
+            13964,
+            13999
+        ],
+        "13999": [
+            13871,
+            14013
+        ],
+        "14013": [
+            13871
+        ]
+    },
+    "boundary": {
+        "13809": 13819,
+        "13819": 13834,
+        "13834": 13840,
+        "13840": 13848,
+        "13848": 13857,
+        "13857": 13871,
+        "13871": 13874,
+        "13874": 13922,
+        "13922": 13929,
+        "13929": 13945,
+        "13945": 13964,
+        "13964": 13979,
+        "13979": 13991,
+        "13991": 13999,
+        "13999": 14013,
+        "14013": 14039
+    },
+    "jmp_instruction": {
+        "13809": "jnz     short loc_3632",
+        "13819": "jz      loc_369B",
+        "13834": "jz      short loc_3662",
+        "13840": "jz      short loc_3679",
+        "13848": "jz      short loc_3669",
+        "13857": "mov     ecx, 2",
+        "13871": "retn",
+        "13874": "retn",
+        "13922": "jmp     short loc_362F",
+        "13929": "jmp     short loc_362F",
+        "13945": "jmp     short loc_362F",
+        "13964": "jmp     short loc_362F",
+        "13979": "jnz     loc_3618",
+        "13991": "jz      short loc_368C",
+        "13999": "jnz     loc_362F",
+        "14013": "jmp     loc_362F"
+    }
+}

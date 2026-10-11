@@ -1,0 +1,192 @@
+{
+    "nodes": {
+        "2218": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "cmp MEMACC 0",
+            "jz ADDR"
+        ],
+        "2280": [
+            "cmp MEMACC 0",
+            "jz ADDR"
+        ],
+        "2287": [
+            "cmp MEMACC 0",
+            "jnz ADDR"
+        ],
+        "2294": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "2316": [
+            "mov MEMACC CONSTANT",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "2349": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "2385": [
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov MEMACC REG",
+            "cmp MEMACC 0",
+            "jz ADDR"
+        ],
+        "2406": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "sub REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "2458": [
+            "mov REG MEMACC",
+            "movzx REG MEMACC",
+            "movzx REG REG",
+            "add MEMACC REG",
+            "add MEMACC CONSTANT"
+        ],
+        "2477": [
+            "mov REG MEMACC",
+            "cmp REG MEMACC",
+            "jl ADDR"
+        ],
+        "2489": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC"
+        ],
+        "2505": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jz ADDR"
+        ],
+        "2520": [
+            "call ADDR"
+        ],
+        "2525": [
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "2218": [
+            2280,
+            2294
+        ],
+        "2280": [
+            2287,
+            2294
+        ],
+        "2287": [
+            2294,
+            2316
+        ],
+        "2294": [
+            2505
+        ],
+        "2316": [
+            2477
+        ],
+        "2349": [
+            2385,
+            2458
+        ],
+        "2385": [
+            2406,
+            2458
+        ],
+        "2406": [
+            2458
+        ],
+        "2458": [
+            2477
+        ],
+        "2477": [
+            2349,
+            2489
+        ],
+        "2489": [
+            2505
+        ],
+        "2505": [
+            2520,
+            2525
+        ],
+        "2520": [],
+        "2525": []
+    },
+    "boundary": {
+        "2218": 2280,
+        "2280": 2287,
+        "2287": 2294,
+        "2294": 2316,
+        "2316": 2349,
+        "2349": 2385,
+        "2385": 2406,
+        "2406": 2458,
+        "2458": 2477,
+        "2477": 2489,
+        "2489": 2505,
+        "2505": 2520,
+        "2520": 2525,
+        "2525": 2527
+    },
+    "jmp_instruction": {
+        "2218": "jz      short loc_8F6",
+        "2280": "jz      short loc_8F6",
+        "2287": "jnz     short loc_90C",
+        "2294": "jmp     loc_9C9",
+        "2316": "jmp     loc_9AD",
+        "2349": "jz      short loc_99A",
+        "2385": "jz      short loc_99A",
+        "2406": "call    r_list_append; PIC mode",
+        "2458": "add     [rbp+var_38], 1",
+        "2477": "jl      loc_92D",
+        "2489": "mov     rax, [rbp+var_18]",
+        "2505": "jz      short locret_9DD",
+        "2520": "call    __stack_chk_fail; PIC mode",
+        "2525": "retn"
+    }
+}

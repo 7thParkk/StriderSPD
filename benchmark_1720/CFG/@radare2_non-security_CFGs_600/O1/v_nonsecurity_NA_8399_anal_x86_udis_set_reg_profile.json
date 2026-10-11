@@ -1,0 +1,44 @@
+{
+    "nodes": {
+        "3706": [
+            "endbr64",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "cmp REG 16",
+            "jz ADDR"
+        ],
+        "3729": [
+            "cmp REG 32",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "cmovnz REG REG"
+        ],
+        "3750": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "add REG CONSTANT",
+            "retn"
+        ]
+    },
+    "edges": {
+        "3706": [
+            3729,
+            3750
+        ],
+        "3729": [
+            3750
+        ],
+        "3750": []
+    },
+    "boundary": {
+        "3706": 3729,
+        "3729": 3750,
+        "3750": 3764
+    },
+    "jmp_instruction": {
+        "3706": "jz      short loc_EA6",
+        "3729": "cmovnz  rsi, rax",
+        "3750": "retn"
+    }
+}

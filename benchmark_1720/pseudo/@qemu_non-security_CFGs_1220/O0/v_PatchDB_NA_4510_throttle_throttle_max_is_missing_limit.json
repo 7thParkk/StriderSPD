@@ -1,0 +1,15 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall throttle_max_is_missing_limit(__int64 a1)",
+        "{",
+        "  int i; // [rsp+14h] [rbp-4h]",
+        "",
+        "  for ( i = 0; i <= 5; ++i )",
+        "  {",
+        "    if ( *(double *)(a1 + 24LL * i + 8) != 0.0 && *(double *)(a1 + 24LL * i) == 0.0 )",
+        "      return 1LL;",
+        "  }",
+        "  return 0LL;",
+        "}"
+    ]
+}

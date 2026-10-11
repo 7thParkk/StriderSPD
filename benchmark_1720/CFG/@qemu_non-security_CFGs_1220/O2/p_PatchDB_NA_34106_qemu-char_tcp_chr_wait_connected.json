@@ -1,0 +1,187 @@
+{
+    "nodes": {
+        "12208": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "cmp MEMACC 0",
+            "jnz ADDR"
+        ],
+        "12243": [
+            "mov REG REG",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "jmp ADDR"
+        ],
+        "12272": [
+            "mov REG CONSTANT",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "xor REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "xor REG REG",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "call ADDR",
+            "xor REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "12425": [
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "12444": [
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "call ADDR",
+            "xor REG REG",
+            "xor REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "cmp MEMACC 0",
+            "jnz ADDR"
+        ],
+        "12489": [
+            "cmp 104 0",
+            "jnz ADDR"
+        ],
+        "12499": [
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "js ADDR"
+        ],
+        "12526": [
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "cmp MEMACC 0",
+            "jz ADDR"
+        ],
+        "12551": [
+            "add REG CONSTANT",
+            "xor REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "12576": [
+            "mov REG REG",
+            "call ADDR",
+            "add REG CONSTANT",
+            "mov REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "12208": [
+            12243,
+            12551
+        ],
+        "12243": [
+            12489
+        ],
+        "12272": [
+            12425,
+            12444
+        ],
+        "12425": [
+            12444
+        ],
+        "12444": [
+            12489,
+            12551
+        ],
+        "12489": [
+            12272,
+            12499
+        ],
+        "12499": [
+            12526,
+            12576
+        ],
+        "12526": [
+            12489,
+            12551
+        ],
+        "12551": [],
+        "12576": []
+    },
+    "boundary": {
+        "12208": 12243,
+        "12243": 12268,
+        "12272": 12425,
+        "12425": 12444,
+        "12444": 12489,
+        "12489": 12499,
+        "12499": 12526,
+        "12526": 12551,
+        "12551": 12568,
+        "12576": 12604
+    },
+    "jmp_instruction": {
+        "12208": "jnz     loc_3107",
+        "12243": "jmp     loc_30C9",
+        "12272": "jz      short loc_309C",
+        "12425": "call    object_unref; PIC mode",
+        "12444": "jnz     short loc_3107",
+        "12489": "jnz     loc_2FF0",
+        "12499": "js      short loc_3120",
+        "12526": "jz      short loc_30C9",
+        "12551": "retn",
+        "12576": "retn"
+    }
+}

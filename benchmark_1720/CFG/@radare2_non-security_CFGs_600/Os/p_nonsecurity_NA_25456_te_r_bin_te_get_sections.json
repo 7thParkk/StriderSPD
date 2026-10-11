@@ -1,0 +1,178 @@
+{
+    "nodes": {
+        "1686": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov REG MEMACC",
+            "movzx REG MEMACC",
+            "lea REG 1",
+            "mov MEMACC REG",
+            "movsxd REG REG",
+            "mov MEMACC REG",
+            "imul REG REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1774": [
+            "mov REG REG",
+            "xor REG REG",
+            "jmp ADDR"
+        ],
+        "1782": [
+            "lea REG 24",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "push REG",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "push CONSTANT",
+            "lea REG MEMACC",
+            "xor REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "1854": [
+            "imul REG REG CONSTANT",
+            "inc REG",
+            "lea REG MEMACC",
+            "cmp 4 REG",
+            "jle ADDR"
+        ],
+        "1875": [
+            "cmp REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "cmovnb REG REG",
+            "mov REG REG",
+            "sub REG REG",
+            "cmp REG REG",
+            "mov REG REG",
+            "cmovnb REG REG",
+            "sub REG REG",
+            "mov REG REG",
+            "add REG REG",
+            "cmovb REG REG",
+            "sub REG REG",
+            "mov REG CONSTANT",
+            "add REG CONSTANT",
+            "add REG CONSTANT",
+            "add REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "sub REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "sub REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "2030": [
+            "movzx REG MEMACC",
+            "imul REG REG CONSTANT",
+            "mov MEMACC CONSTANT"
+        ],
+        "2049": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jz ADDR"
+        ],
+        "2068": [
+            "call ADDR"
+        ],
+        "2073": [
+            "add REG CONSTANT",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "1686": [
+            1774,
+            1782
+        ],
+        "1774": [
+            1854
+        ],
+        "1782": [
+            2049
+        ],
+        "1854": [
+            1875,
+            2030
+        ],
+        "1875": [
+            1854
+        ],
+        "2030": [
+            2049
+        ],
+        "2049": [
+            2068,
+            2073
+        ],
+        "2068": [],
+        "2073": []
+    },
+    "boundary": {
+        "1686": 1774,
+        "1774": 1782,
+        "1782": 1854,
+        "1854": 1875,
+        "1875": 2030,
+        "2030": 2049,
+        "2049": 2068,
+        "2068": 2073,
+        "2073": 2094
+    },
+    "jmp_instruction": {
+        "1686": "jz      short loc_6F6",
+        "1774": "jmp     short loc_73E",
+        "1782": "jmp     loc_801",
+        "1854": "jle     loc_7EE",
+        "1875": "jmp     loc_73E",
+        "2030": "mov     dword ptr [rbp+r12+30h], 1",
+        "2049": "jz      short loc_819",
+        "2068": "call    __stack_chk_fail; PIC mode",
+        "2073": "retn"
+    }
+}

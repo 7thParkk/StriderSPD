@@ -1,0 +1,92 @@
+{
+    "nodes": {
+        "783": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "cmp 8 REG",
+            "jz ADDR"
+        ],
+        "822": [
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "cmp REG 18446744073709551615",
+            "jnz ADDR"
+        ],
+        "847": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jnz ADDR"
+        ],
+        "866": [
+            "mov REG REG",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "878": [
+            "mov REG REG",
+            "lea REG MEMACC",
+            "push REG",
+            "push CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "jmp ADDR"
+        ],
+        "949": [
+            "call ADDR"
+        ]
+    },
+    "edges": {
+        "783": [
+            822,
+            847
+        ],
+        "822": [
+            847,
+            878
+        ],
+        "847": [
+            866,
+            949
+        ],
+        "866": [],
+        "878": [
+            847
+        ],
+        "949": []
+    },
+    "boundary": {
+        "783": 822,
+        "822": 847,
+        "847": 866,
+        "866": 878,
+        "878": 949,
+        "949": 954
+    },
+    "jmp_instruction": {
+        "783": "jz      short loc_34F",
+        "822": "jnz     short loc_36E",
+        "847": "jnz     short loc_3B5",
+        "866": "retn",
+        "878": "jmp     short loc_34F",
+        "949": "call    __stack_chk_fail; PIC mode"
+    }
+}

@@ -1,0 +1,191 @@
+{
+    "nodes": {
+        "0": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov MEMACC CONSTANT",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "78": [
+            "cmp 12368 0",
+            "jz ADDR"
+        ],
+        "89": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "96": [
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "105": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "121": [
+            "mov REG MEMACC"
+        ],
+        "124": [
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "158": [
+            "call ADDR",
+            "mov MEMACC CONSTANT",
+            "nop MEMACC"
+        ],
+        "176": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "cmp REG REG",
+            "jz ADDR"
+        ],
+        "196": [
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "xor REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "xor REG REG",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "238": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jnz ADDR"
+        ],
+        "285": [
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "304": [
+            "xor REG REG",
+            "xor REG REG",
+            "jmp ADDR"
+        ],
+        "313": [
+            "call ADDR"
+        ]
+    },
+    "edges": {
+        "0": [
+            78,
+            176
+        ],
+        "78": [
+            89,
+            176
+        ],
+        "89": [
+            96,
+            176
+        ],
+        "96": [
+            105,
+            304
+        ],
+        "105": [
+            121,
+            124
+        ],
+        "121": [
+            124
+        ],
+        "124": [
+            158,
+            176
+        ],
+        "158": [
+            176
+        ],
+        "176": [
+            196,
+            238
+        ],
+        "196": [
+            238
+        ],
+        "238": [
+            285,
+            313
+        ],
+        "285": [],
+        "304": [
+            124
+        ],
+        "313": []
+    },
+    "boundary": {
+        "0": 78,
+        "78": 89,
+        "89": 96,
+        "96": 105,
+        "105": 121,
+        "121": 124,
+        "124": 158,
+        "158": 176,
+        "176": 196,
+        "196": 238,
+        "238": 285,
+        "285": 296,
+        "304": 313,
+        "313": 318
+    },
+    "jmp_instruction": {
+        "0": "jnz     short loc_B0",
+        "78": "jz      short loc_B0",
+        "89": "jnz     short loc_B0",
+        "96": "jz      loc_130",
+        "105": "jz      short loc_7C",
+        "121": "mov     rdx, [rdx]",
+        "124": "jz      short loc_B0",
+        "158": "nop     word ptr [rax+rax+00h]",
+        "176": "jz      short loc_EE",
+        "196": "call    bdrv_reopen; PIC mode",
+        "238": "jnz     short loc_139",
+        "285": "retn",
+        "304": "jmp     loc_7C",
+        "313": "call    __stack_chk_fail; PIC mode"
+    }
+}

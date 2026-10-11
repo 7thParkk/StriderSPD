@@ -1,0 +1,31 @@
+{
+    "nodes": {
+        "64": [
+            "endbr64",
+            "sub REG CONSTANT",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "movq REG REG",
+            "movq REG REG",
+            "mov MEMACC CONSTANT",
+            "punpcklqdq REG REG",
+            "movups MEMACC REG",
+            "add REG CONSTANT",
+            "retn"
+        ]
+    },
+    "edges": {
+        "64": []
+    },
+    "boundary": {
+        "64": 150
+    },
+    "jmp_instruction": {
+        "64": "retn"
+    }
+}

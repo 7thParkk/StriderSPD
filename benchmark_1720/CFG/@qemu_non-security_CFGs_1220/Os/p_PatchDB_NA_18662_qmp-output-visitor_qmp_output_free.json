@@ -1,0 +1,141 @@
+{
+    "nodes": {
+        "326": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG MEMACC"
+        ],
+        "343": [
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "348": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "361": [
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "367": [
+            "mov MEMACC REG"
+        ],
+        "374": [
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG REG",
+            "jmp ADDR"
+        ],
+        "391": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "403": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "412": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR"
+        ],
+        "443": [
+            "dec REG",
+            "mov MEMACC REG",
+            "jnz ADDR"
+        ],
+        "452": [
+            "call ADDR"
+        ],
+        "457": [
+            "pop REG",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "2832": []
+    },
+    "edges": {
+        "326": [
+            343
+        ],
+        "343": [
+            348,
+            391
+        ],
+        "348": [
+            361,
+            367
+        ],
+        "361": [
+            374
+        ],
+        "367": [
+            374
+        ],
+        "374": [
+            343
+        ],
+        "391": [
+            403,
+            457
+        ],
+        "403": [
+            412,
+            443
+        ],
+        "412": [],
+        "443": [
+            452,
+            457
+        ],
+        "452": [
+            457
+        ],
+        "457": [
+            2832
+        ],
+        "2832": []
+    },
+    "boundary": {
+        "326": 343,
+        "343": 348,
+        "348": 361,
+        "361": 367,
+        "367": 374,
+        "374": 391,
+        "391": 403,
+        "403": 412,
+        "412": 443,
+        "443": 452,
+        "452": 457,
+        "457": 468,
+        "2832": 2832
+    },
+    "jmp_instruction": {
+        "326": "mov     rdi, [rdi+98h]",
+        "343": "jz      short loc_187",
+        "348": "jz      short loc_16F",
+        "361": "jmp     short loc_176",
+        "367": "mov     [rbx+0A0h], rax",
+        "374": "jmp     short loc_157",
+        "391": "jz      short loc_1C9",
+        "403": "jnz     short loc_1BB",
+        "412": "call    __assert_fail; PIC mode",
+        "443": "jnz     short loc_1C9",
+        "452": "call    qobject_destroy; PIC mode",
+        "457": "jmp     g_free; PIC mode",
+        "2832": "extrn __assert_fail:near"
+    }
+}

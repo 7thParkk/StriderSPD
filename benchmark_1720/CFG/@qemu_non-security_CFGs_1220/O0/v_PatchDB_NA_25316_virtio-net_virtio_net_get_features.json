@@ -1,0 +1,173 @@
+{
+    "nodes": {
+        "6116": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "6238": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "6374": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "6390": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "6406": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "6440": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "6461": [
+            "mov REG MEMACC",
+            "jmp ADDR"
+        ],
+        "6466": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "6495": [
+            "mov REG MEMACC",
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "6116": [
+            6238,
+            6374
+        ],
+        "6238": [
+            6374
+        ],
+        "6374": [
+            6390,
+            6406
+        ],
+        "6390": [
+            6406,
+            6440
+        ],
+        "6406": [
+            6440
+        ],
+        "6440": [
+            6461,
+            6466
+        ],
+        "6461": [
+            6495
+        ],
+        "6466": [
+            6495
+        ],
+        "6495": []
+    },
+    "boundary": {
+        "6116": 6238,
+        "6238": 6374,
+        "6374": 6390,
+        "6390": 6406,
+        "6406": 6440,
+        "6440": 6461,
+        "6461": 6466,
+        "6466": 6495,
+        "6495": 6501
+    },
+    "jmp_instruction": {
+        "6116": "jnz     loc_18E6",
+        "6238": "call    virtio_clear_feature",
+        "6374": "jz      short loc_1906",
+        "6390": "jnz     short loc_1928",
+        "6406": "call    virtio_clear_feature",
+        "6440": "jnz     short loc_1942",
+        "6461": "jmp     short loc_195F",
+        "6466": "call    vhost_net_get_features; PIC mode",
+        "6495": "retn"
+    }
+}

@@ -1,0 +1,96 @@
+{
+    "nodes": {
+        "1005": [
+            "endbr64",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "add REG CONSTANT",
+            "pxor REG REG",
+            "jmp ADDR"
+        ],
+        "1031": [
+            "add REG CONSTANT",
+            "cmp REG REG",
+            "jz ADDR"
+        ],
+        "1040": [
+            "mov REG REG",
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "1050": [
+            "jz ADDR"
+        ],
+        "1052": [
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "1058": [
+            "jnz ADDR"
+        ],
+        "1060": [
+            "sub REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "add REG CONSTANT",
+            "retn"
+        ],
+        "1110": [
+            "mov REG CONSTANT",
+            "retn"
+        ]
+    },
+    "edges": {
+        "1005": [
+            1040
+        ],
+        "1031": [
+            1040,
+            1110
+        ],
+        "1040": [
+            1050,
+            1052
+        ],
+        "1050": [
+            1031,
+            1052
+        ],
+        "1052": [
+            1031,
+            1058
+        ],
+        "1058": [
+            1031,
+            1060
+        ],
+        "1060": [],
+        "1110": []
+    },
+    "boundary": {
+        "1005": 1031,
+        "1031": 1040,
+        "1040": 1050,
+        "1050": 1052,
+        "1052": 1058,
+        "1058": 1060,
+        "1060": 1110,
+        "1110": 1116
+    },
+    "jmp_instruction": {
+        "1005": "jmp     short loc_410",
+        "1031": "jz      short loc_456",
+        "1040": "jp      short loc_41C",
+        "1050": "jz      short loc_407",
+        "1052": "jp      short loc_407",
+        "1058": "jnz     short loc_407",
+        "1060": "retn",
+        "1110": "retn"
+    }
+}

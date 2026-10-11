@@ -1,0 +1,113 @@
+{
+    "nodes": {
+        "6609": [
+            "endbr64",
+            "push REG",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "cmp 248 0",
+            "mov REG REG",
+            "jz ADDR"
+        ],
+        "6677": [
+            "mov REG REG",
+            "or REG CONSTANT",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "6692": [
+            "jmp ADDR"
+        ],
+        "6694": [
+            "and REG CONSTANT",
+            "or REG CONSTANT"
+        ],
+        "6703": [
+            "and REG CONSTANT"
+        ],
+        "6706": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "6721": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "mov REG REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "6745": [
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "18512": []
+    },
+    "edges": {
+        "6609": [
+            6677,
+            6694
+        ],
+        "6677": [
+            6692,
+            6703
+        ],
+        "6692": [
+            6706
+        ],
+        "6694": [
+            6703
+        ],
+        "6703": [
+            6706
+        ],
+        "6706": [
+            6721,
+            6745
+        ],
+        "6721": [
+            18512
+        ],
+        "6745": [],
+        "18512": []
+    },
+    "boundary": {
+        "6609": 6677,
+        "6677": 6692,
+        "6692": 6694,
+        "6694": 6703,
+        "6703": 6706,
+        "6706": 6721,
+        "6721": 6745,
+        "6745": 6752,
+        "18512": 18512
+    },
+    "jmp_instruction": {
+        "6609": "jz      short loc_1A26",
+        "6677": "jz      short loc_1A2F",
+        "6692": "jmp     short loc_1A32",
+        "6694": "or      ebx, 20h",
+        "6703": "and     bh, 0BBh",
+        "6706": "jz      short loc_1A59",
+        "6721": "jmp     vhost_net_get_features; PIC mode",
+        "6745": "retn",
+        "18512": "extrn qemu_has_ufo:near"
+    }
+}

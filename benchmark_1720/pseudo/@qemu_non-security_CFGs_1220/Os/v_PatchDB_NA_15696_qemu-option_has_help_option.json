@@ -1,0 +1,32 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall has_help_option(const char *a1)",
+        "{",
+        "  char *v1; // rbx",
+        "  size_t v2; // rax",
+        "  int v3; // r12d",
+        "  char *v4; // rbp",
+        "  _BYTE *opt_value; // rax",
+        "",
+        "  v1 = (char *)a1;",
+        "  v2 = strlen(a1);",
+        "  v3 = v2 + 1;",
+        "  v4 = (char *)g_malloc0(v2 + 1);",
+        "  do",
+        "  {",
+        "    if ( !*v1 )",
+        "    {",
+        "      LODWORD(v1) = 0;",
+        "      goto LABEL_8;",
+        "    }",
+        "    opt_value = get_opt_value(v4, v3, v1);",
+        "    v1 = &opt_value[-(*opt_value == 0) + 1];",
+        "  }",
+        "  while ( strcmp(v4, \"?\") && strcmp(v4, \"help\") );",
+        "  LOBYTE(v1) = 1;",
+        "LABEL_8:",
+        "  free(v4);",
+        "  return (unsigned int)v1;",
+        "}"
+    ]
+}

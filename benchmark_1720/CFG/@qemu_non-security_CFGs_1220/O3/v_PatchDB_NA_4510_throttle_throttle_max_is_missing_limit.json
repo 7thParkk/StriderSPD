@@ -1,0 +1,288 @@
+{
+    "nodes": {
+        "1328": [
+            "endbr64",
+            "pxor REG REG",
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "1343": [
+            "jnz ADDR"
+        ],
+        "1345": [
+            "pxor REG REG",
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "1356": [
+            "jnz ADDR"
+        ],
+        "1358": [
+            "pxor REG REG",
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "1369": [
+            "jnz ADDR"
+        ],
+        "1371": [
+            "pxor REG REG",
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "1382": [
+            "jnz ADDR"
+        ],
+        "1384": [
+            "pxor REG REG",
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "1395": [
+            "jnz ADDR"
+        ],
+        "1397": [
+            "pxor REG REG",
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "1411": [
+            "mov REG CONSTANT",
+            "jnz ADDR"
+        ],
+        "1418": [
+            "retn"
+        ],
+        "1424": [
+            "pxor REG REG",
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "1434": [
+            "jnz ADDR"
+        ],
+        "1436": [
+            "mov REG CONSTANT",
+            "retn"
+        ],
+        "1448": [
+            "pxor REG REG",
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "1459": [
+            "jnz ADDR"
+        ],
+        "1461": [
+            "jmp ADDR"
+        ],
+        "1472": [
+            "pxor REG REG",
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "1483": [
+            "jnz ADDR"
+        ],
+        "1485": [
+            "jmp ADDR"
+        ],
+        "1488": [
+            "pxor REG REG",
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "1499": [
+            "jnz ADDR"
+        ],
+        "1501": [
+            "jmp ADDR"
+        ],
+        "1504": [
+            "pxor REG REG",
+            "ucomisd REG MEMACC",
+            "jp ADDR"
+        ],
+        "1515": [
+            "jnz ADDR"
+        ],
+        "1517": [
+            "jmp ADDR"
+        ],
+        "1520": [
+            "pxor REG REG",
+            "ucomisd REG MEMACC",
+            "mov REG CONSTANT",
+            "setnp REG",
+            "cmovnz REG REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "1328": [
+            1343,
+            1424
+        ],
+        "1343": [
+            1345,
+            1424
+        ],
+        "1345": [
+            1356,
+            1448
+        ],
+        "1356": [
+            1358,
+            1448
+        ],
+        "1358": [
+            1369,
+            1472
+        ],
+        "1369": [
+            1371,
+            1472
+        ],
+        "1371": [
+            1382,
+            1488
+        ],
+        "1382": [
+            1384,
+            1488
+        ],
+        "1384": [
+            1395,
+            1504
+        ],
+        "1395": [
+            1397,
+            1504
+        ],
+        "1397": [
+            1411,
+            1520
+        ],
+        "1411": [
+            1418,
+            1520
+        ],
+        "1418": [],
+        "1424": [
+            1345,
+            1434
+        ],
+        "1434": [
+            1345,
+            1436
+        ],
+        "1436": [],
+        "1448": [
+            1358,
+            1459
+        ],
+        "1459": [
+            1358,
+            1461
+        ],
+        "1461": [
+            1436
+        ],
+        "1472": [
+            1371,
+            1483
+        ],
+        "1483": [
+            1371,
+            1485
+        ],
+        "1485": [
+            1436
+        ],
+        "1488": [
+            1384,
+            1499
+        ],
+        "1499": [
+            1384,
+            1501
+        ],
+        "1501": [
+            1436
+        ],
+        "1504": [
+            1397,
+            1515
+        ],
+        "1515": [
+            1397,
+            1517
+        ],
+        "1517": [
+            1436
+        ],
+        "1520": []
+    },
+    "boundary": {
+        "1328": 1343,
+        "1343": 1345,
+        "1345": 1356,
+        "1356": 1358,
+        "1358": 1369,
+        "1369": 1371,
+        "1371": 1382,
+        "1382": 1384,
+        "1384": 1395,
+        "1395": 1397,
+        "1397": 1411,
+        "1411": 1418,
+        "1418": 1419,
+        "1424": 1434,
+        "1434": 1436,
+        "1436": 1442,
+        "1448": 1459,
+        "1459": 1461,
+        "1461": 1463,
+        "1472": 1483,
+        "1483": 1485,
+        "1485": 1487,
+        "1488": 1499,
+        "1499": 1501,
+        "1501": 1503,
+        "1504": 1515,
+        "1515": 1517,
+        "1517": 1519,
+        "1520": 1541
+    },
+    "jmp_instruction": {
+        "1328": "jp      short loc_590",
+        "1343": "jnz     short loc_590",
+        "1345": "jp      short loc_5A8",
+        "1356": "jnz     short loc_5A8",
+        "1358": "jp      short loc_5C0",
+        "1369": "jnz     short loc_5C0",
+        "1371": "jp      short loc_5D0",
+        "1382": "jnz     short loc_5D0",
+        "1384": "jp      short loc_5E0",
+        "1395": "jnz     short loc_5E0",
+        "1397": "jp      short loc_5F0",
+        "1411": "jnz     short loc_5F0",
+        "1418": "retn",
+        "1424": "jp      short loc_541",
+        "1434": "jnz     short loc_541",
+        "1436": "retn",
+        "1448": "jp      short loc_54E",
+        "1459": "jnz     short loc_54E",
+        "1461": "jmp     short loc_59C",
+        "1472": "jp      short loc_55B",
+        "1483": "jnz     short loc_55B",
+        "1485": "jmp     short loc_59C",
+        "1488": "jp      short loc_568",
+        "1499": "jnz     short loc_568",
+        "1501": "jmp     short loc_59C",
+        "1504": "jp      short loc_575",
+        "1515": "jnz     short loc_575",
+        "1517": "jmp     short loc_59C",
+        "1520": "retn"
+    }
+}

@@ -1,0 +1,112 @@
+{
+    "nodes": {
+        "8592": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov MEMACC CONSTANT",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "xor REG REG",
+            "lea REG 8",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "8689": [
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "xor REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "8738": [
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "jz ADDR"
+        ],
+        "8748": [
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "8768": [
+            "mov REG REG",
+            "call ADDR",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "8787": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR"
+        ]
+    },
+    "edges": {
+        "8592": [
+            8689,
+            8748
+        ],
+        "8689": [
+            8738,
+            8787
+        ],
+        "8738": [
+            8748,
+            8768
+        ],
+        "8748": [],
+        "8768": [],
+        "8787": []
+    },
+    "boundary": {
+        "8592": 8689,
+        "8689": 8738,
+        "8738": 8748,
+        "8748": 8759,
+        "8768": 8787,
+        "8787": 8818
+    },
+    "jmp_instruction": {
+        "8592": "jz      short loc_222C",
+        "8689": "jz      short loc_2253",
+        "8738": "jz      short loc_2240",
+        "8748": "retn",
+        "8768": "retn",
+        "8787": "call    __assert_fail; PIC mode"
+    }
+}

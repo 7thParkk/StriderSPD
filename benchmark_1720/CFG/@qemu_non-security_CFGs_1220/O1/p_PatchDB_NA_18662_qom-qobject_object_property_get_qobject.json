@@ -1,0 +1,90 @@
+{
+    "nodes": {
+        "75": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov MEMACC CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "cmp MEMACC 0",
+            "jz ADDR"
+        ],
+        "168": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jnz ADDR"
+        ],
+        "212": [
+            "mov REG REG",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "226": [
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "jmp ADDR"
+        ],
+        "239": [
+            "call ADDR"
+        ]
+    },
+    "edges": {
+        "75": [
+            168,
+            226
+        ],
+        "168": [
+            212,
+            239
+        ],
+        "212": [],
+        "226": [
+            168
+        ],
+        "239": []
+    },
+    "boundary": {
+        "75": 168,
+        "168": 212,
+        "212": 226,
+        "226": 239,
+        "239": 244
+    },
+    "jmp_instruction": {
+        "75": "jz      short loc_E2",
+        "168": "jnz     short loc_EF",
+        "212": "retn",
+        "226": "jmp     short loc_A8",
+        "239": "call    __stack_chk_fail; PIC mode"
+    }
+}

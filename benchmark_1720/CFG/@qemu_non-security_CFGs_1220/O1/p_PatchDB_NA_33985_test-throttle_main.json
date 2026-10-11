@@ -1,0 +1,93 @@
+{
+    "nodes": {
+        "8669": [
+            "endbr64",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "call ADDR",
+            "mov MEMACC REG",
+            "call ADDR"
+        ],
+        "8714": [
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "8733": [
+            "mov REG REG",
+            "lea REG 12",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "call ADDR",
+            "add REG CONSTANT",
+            "retn"
+        ]
+    },
+    "edges": {
+        "8669": [
+            8714
+        ],
+        "8714": [
+            8733,
+            8714
+        ],
+        "8733": []
+    },
+    "boundary": {
+        "8669": 8714,
+        "8714": 8733,
+        "8733": 9027
+    },
+    "jmp_instruction": {
+        "8669": "call    bdrv_init; PIC mode",
+        "8714": "jnz     short loc_220A",
+        "8733": "retn"
+    }
+}

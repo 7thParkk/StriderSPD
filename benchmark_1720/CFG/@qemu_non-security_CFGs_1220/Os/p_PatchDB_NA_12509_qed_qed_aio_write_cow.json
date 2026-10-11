@@ -1,0 +1,116 @@
+{
+    "nodes": {
+        "5356": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "and REG REG",
+            "not REG",
+            "and REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "5417": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "add REG MEMACC",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "and REG REG",
+            "not REG",
+            "and REG REG",
+            "add REG REG",
+            "mov REG REG",
+            "sub REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "5479": [
+            "call ADDR",
+            "mov REG REG",
+            "test REG REG",
+            "jns ADDR"
+        ],
+        "5490": [
+            "mov REG REG"
+        ],
+        "5493": [
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "5501": [
+            "pop REG",
+            "mov REG REG",
+            "xor REG REG",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "967": [],
+        "1163": []
+    },
+    "edges": {
+        "5356": [
+            5417,
+            5490
+        ],
+        "5417": [
+            5479,
+            5493
+        ],
+        "5479": [
+            5490,
+            5501
+        ],
+        "5490": [
+            5493
+        ],
+        "5493": [
+            967
+        ],
+        "5501": [
+            1163
+        ],
+        "967": [],
+        "1163": []
+    },
+    "boundary": {
+        "5356": 5417,
+        "5417": 5479,
+        "5479": 5490,
+        "5490": 5493,
+        "5493": 5501,
+        "5501": 5514,
+        "967": 967,
+        "1163": 1163
+    },
+    "jmp_instruction": {
+        "5356": "jnz     short loc_1572",
+        "5417": "jnz     short loc_1575",
+        "5479": "jns     short loc_157D",
+        "5490": "mov     rdi, rbx",
+        "5493": "jmp     qed_aio_complete",
+        "5501": "jmp     qed_aio_next_io",
+        "967": "jmp     timer_mod; PIC mode",
+        "1163": "retn"
+    }
+}

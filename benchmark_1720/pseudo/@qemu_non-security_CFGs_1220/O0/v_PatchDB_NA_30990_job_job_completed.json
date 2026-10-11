@@ -1,0 +1,16 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall job_completed(__int64 a1, unsigned int a2)",
+        "{",
+        "  if ( !a1 || !*(_QWORD *)(a1 + 192) || (unsigned __int8)job_is_completed(a1) == 1 )",
+        "    _assert_fail(\"job && job->txn && !job_is_completed(job)\", file, 0x35Cu, \"job_completed\");",
+        "  *(_DWORD *)(a1 + 120) = a2;",
+        "  job_update_rc(a1);",
+        "  trace_job_completed(a1, a2, *(unsigned int *)(a1 + 120));",
+        "  if ( *(_DWORD *)(a1 + 120) )",
+        "    return job_completed_txn_abort(a1);",
+        "  else",
+        "    return job_completed_txn_success((_QWORD *)a1);",
+        "}"
+    ]
+}

@@ -1,0 +1,262 @@
+{
+    "nodes": {
+        "3712": [
+            "endbr64",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "and REG CONSTANT",
+            "and REG CONSTANT",
+            "mov REG REG",
+            "cmp REG 100",
+            "ja ADDR"
+        ],
+        "3741": [
+            "lea REG MEMACC",
+            "movsxd REG MEMACC",
+            "add REG REG",
+            "jmp REG"
+        ],
+        "3760": [
+            "lea REG MEMACC",
+            "cmp REG 36",
+            "ja ADDR"
+        ],
+        "3770": [
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "shl REG REG",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "3797": [
+            "test REG 17",
+            "jnz ADDR"
+        ],
+        "3805": [
+            "test REG 1114112",
+            "jnz ADDR"
+        ],
+        "3812": [
+            "sub REG CONSTANT",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "xor REG REG",
+            "call ADDR",
+            "xor REG REG",
+            "add REG CONSTANT",
+            "retn"
+        ],
+        "3864": [
+            "mov REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "3873": [
+            "movzx REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "3883": [
+            "mov REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "3892": [
+            "movzx REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "3904": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "shr REG REG",
+            "retn"
+        ],
+        "3915": [
+            "mov REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "3924": [
+            "mov REG CONSTANT",
+            "shr REG REG",
+            "retn"
+        ],
+        "3932": [
+            "mov REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "3941": [
+            "mov REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "3952": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "shr REG REG",
+            "retn"
+        ],
+        "3963": [
+            "mov REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "3976": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "shr REG REG",
+            "retn"
+        ],
+        "3987": [
+            "mov REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "3996": [
+            "mov REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "4005": [
+            "mov REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "4014": [
+            "mov REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "4023": [
+            "movzx REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ],
+        "4033": [
+            "movzx REG MEMACC",
+            "shr REG REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "3712": [
+            3741,
+            3760
+        ],
+        "3741": [
+            3812,
+            3864,
+            3873,
+            3883,
+            3892,
+            3904,
+            3915,
+            3924,
+            3932,
+            3941,
+            3952,
+            3963,
+            3976,
+            3987,
+            3996,
+            4005,
+            4014,
+            4023,
+            4033
+        ],
+        "3760": [
+            3770,
+            3812
+        ],
+        "3770": [
+            3797,
+            3976
+        ],
+        "3797": [
+            3805,
+            3952
+        ],
+        "3805": [
+            3812,
+            3904
+        ],
+        "3812": [],
+        "3864": [],
+        "3873": [],
+        "3883": [],
+        "3892": [],
+        "3904": [],
+        "3915": [],
+        "3924": [],
+        "3932": [],
+        "3941": [],
+        "3952": [],
+        "3963": [],
+        "3976": [],
+        "3987": [],
+        "3996": [],
+        "4005": [],
+        "4014": [],
+        "4023": [],
+        "4033": []
+    },
+    "boundary": {
+        "3712": 3741,
+        "3741": 3758,
+        "3760": 3770,
+        "3770": 3797,
+        "3797": 3805,
+        "3805": 3812,
+        "3812": 3859,
+        "3864": 3873,
+        "3873": 3883,
+        "3883": 3892,
+        "3892": 3902,
+        "3904": 3915,
+        "3915": 3924,
+        "3924": 3932,
+        "3932": 3941,
+        "3941": 3950,
+        "3952": 3963,
+        "3963": 3972,
+        "3976": 3987,
+        "3987": 3996,
+        "3996": 4005,
+        "4005": 4014,
+        "4014": 4023,
+        "4023": 4033,
+        "4033": 4043
+    },
+    "jmp_instruction": {
+        "3712": "ja      short def_EAB; jumptable 0000000000000EAB default case",
+        "3741": "jmp     rax; switch jump",
+        "3760": "ja      short loc_EE4; jumptable 0000000000000EAB cases 1-15,17-19,21-23,25-27,29-31,33-39,41-43,45-47,49-51,53-55,57-59,61-63,65-67,69-71,73-75,77-79,81-83,85-95,97-99",
+        "3770": "jnz     loc_F88; jumptable 0000000000000EAB case 60",
+        "3797": "jnz     loc_F70; jumptable 0000000000000EAB case 44",
+        "3805": "jnz     short loc_F40; jumptable 0000000000000EAB case 32",
+        "3812": "retn",
+        "3864": "retn",
+        "3873": "retn",
+        "3883": "retn",
+        "3892": "retn",
+        "3904": "retn",
+        "3915": "retn",
+        "3924": "retn",
+        "3932": "retn",
+        "3941": "retn",
+        "3952": "retn",
+        "3963": "retn",
+        "3976": "retn",
+        "3987": "retn",
+        "3996": "retn",
+        "4005": "retn",
+        "4014": "retn",
+        "4023": "retn",
+        "4033": "retn"
+    }
+}

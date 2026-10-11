@@ -1,0 +1,89 @@
+{
+    "nodes": {
+        "2980": [
+            "endbr64",
+            "push REG",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "push REG",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "push REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "xor REG REG",
+            "cmp REG 240",
+            "lea REG 2680",
+            "setz REG",
+            "xor REG REG",
+            "cmp REG 241",
+            "mov REG REG",
+            "setz REG",
+            "sub REG CONSTANT",
+            "call ADDR",
+            "cmp REG 1",
+            "jbe ADDR"
+        ],
+        "3076": [
+            "mov REG MEMACC",
+            "test 91 2",
+            "jz ADDR"
+        ],
+        "3087": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "3099": [
+            "pop REG",
+            "mov REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "3113": [
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "9240": []
+    },
+    "edges": {
+        "2980": [
+            3076,
+            3113
+        ],
+        "3076": [
+            3087,
+            3113
+        ],
+        "3087": [
+            3099,
+            3113
+        ],
+        "3099": [
+            9240
+        ],
+        "3113": [],
+        "9240": []
+    },
+    "boundary": {
+        "2980": 3076,
+        "3076": 3087,
+        "3087": 3099,
+        "3099": 3113,
+        "3113": 3118,
+        "9240": 9240
+    },
+    "jmp_instruction": {
+        "2980": "jbe     short loc_C29",
+        "3076": "jz      short loc_C29",
+        "3087": "jz      short loc_C29",
+        "3099": "jmp     qemu_set_irq; PIC mode",
+        "3113": "retn",
+        "9240": "extrn acpi_pm1_cnt_update:near"
+    }
+}

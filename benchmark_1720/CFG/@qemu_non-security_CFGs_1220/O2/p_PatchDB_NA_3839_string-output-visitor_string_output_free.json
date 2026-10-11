@@ -1,0 +1,53 @@
+{
+    "nodes": {
+        "48": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "68": [
+            "mov REG CONSTANT",
+            "call ADDR"
+        ],
+        "78": [
+            "mov REG MEMACC",
+            "xor REG REG",
+            "lea REG MEMACC",
+            "call ADDR",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "4248": []
+    },
+    "edges": {
+        "48": [
+            68,
+            78
+        ],
+        "68": [
+            78
+        ],
+        "78": [
+            4248
+        ],
+        "4248": []
+    },
+    "boundary": {
+        "48": 68,
+        "68": 78,
+        "78": 120,
+        "4248": 4248
+    },
+    "jmp_instruction": {
+        "48": "jz      short loc_4E",
+        "68": "call    g_string_free; PIC mode",
+        "78": "jmp     g_free; PIC mode",
+        "4248": "extrn g_list_free:near"
+    }
+}

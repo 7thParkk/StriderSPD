@@ -1,0 +1,189 @@
+{
+    "nodes": {
+        "9740": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "add REG REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "9872": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "9902": [
+            "mov REG MEMACC",
+            "lea REG 88",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "cmp MEMACC 0",
+            "jns ADDR"
+        ],
+        "9948": [
+            "mov REG MEMACC",
+            "jmp ADDR"
+        ],
+        "9953": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "9967": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "9986": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "cmp MEMACC 0",
+            "jns ADDR"
+        ],
+        "10020": [
+            "mov REG MEMACC",
+            "jmp ADDR"
+        ],
+        "10025": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "cmp MEMACC 0",
+            "jns ADDR"
+        ],
+        "10060": [
+            "mov REG MEMACC",
+            "jmp ADDR"
+        ],
+        "10065": [
+            "mov REG CONSTANT"
+        ],
+        "10070": [
+            "mov REG MEMACC",
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "9740": [
+            9872,
+            9902
+        ],
+        "9872": [
+            9902
+        ],
+        "9902": [
+            9948,
+            9953
+        ],
+        "9948": [
+            10070
+        ],
+        "9953": [
+            9967,
+            10065
+        ],
+        "9967": [
+            9986,
+            10025
+        ],
+        "9986": [
+            10020,
+            10025
+        ],
+        "10020": [
+            10070
+        ],
+        "10025": [
+            10060,
+            10065
+        ],
+        "10060": [
+            10070
+        ],
+        "10065": [
+            10070
+        ],
+        "10070": []
+    },
+    "boundary": {
+        "9740": 9872,
+        "9872": 9902,
+        "9902": 9948,
+        "9948": 9953,
+        "9953": 9967,
+        "9967": 9986,
+        "9986": 10020,
+        "10020": 10025,
+        "10025": 10060,
+        "10060": 10065,
+        "10065": 10070,
+        "10070": 10076
+    },
+    "jmp_instruction": {
+        "9740": "jz      short loc_26AE",
+        "9872": "call    bdrv_debug_event; PIC mode",
+        "9902": "jns     short loc_26E1",
+        "9948": "jmp     short loc_2756",
+        "9953": "jz      short loc_2751",
+        "9967": "jz      short loc_2729",
+        "9986": "jns     short loc_2729",
+        "10020": "jmp     short loc_2756",
+        "10025": "jns     short loc_2751",
+        "10060": "jmp     short loc_2756",
+        "10065": "mov     eax, 0",
+        "10070": "retn"
+    }
+}

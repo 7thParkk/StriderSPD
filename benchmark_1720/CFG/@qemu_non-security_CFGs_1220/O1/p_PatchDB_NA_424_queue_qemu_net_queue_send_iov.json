@@ -1,0 +1,102 @@
+{
+    "nodes": {
+        "905": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "test 40 1",
+            "jnz ADDR"
+        ],
+        "949": [
+            "or MEMACC CONSTANT",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call MEMACC",
+            "mov REG REG",
+            "and MEMACC CONSTANT",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "984": [
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "992": [
+            "mov REG REG",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "1010": [
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "jmp ADDR"
+        ],
+        "1026": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "905": [
+            949,
+            1010
+        ],
+        "949": [
+            984,
+            1026
+        ],
+        "984": [
+            992
+        ],
+        "992": [],
+        "1010": [
+            992
+        ],
+        "1026": [
+            992
+        ]
+    },
+    "boundary": {
+        "905": 949,
+        "949": 984,
+        "984": 992,
+        "992": 1010,
+        "1010": 1026,
+        "1026": 1053
+    },
+    "jmp_instruction": {
+        "905": "jnz     short loc_3F2",
+        "949": "jz      short loc_402",
+        "984": "call    qemu_net_queue_flush; PIC mode",
+        "992": "retn",
+        "1010": "jmp     short loc_3E0",
+        "1026": "jmp     short loc_3E0"
+    }
+}

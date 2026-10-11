@@ -1,0 +1,91 @@
+{
+    "nodes": {
+        "5516": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "cmp 20 9",
+            "jz ADDR"
+        ],
+        "5530": [
+            "movzx REG REG",
+            "call ADDR",
+            "cmp 32 0",
+            "jz ADDR"
+        ],
+        "5546": [
+            "cmp 97 0",
+            "jz ADDR"
+        ],
+        "5552": [
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "5560": [
+            "pop REG",
+            "retn"
+        ],
+        "5562": [
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "5569": [
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "5584": [
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "5516": [
+            5530,
+            5562
+        ],
+        "5530": [
+            5546,
+            5569
+        ],
+        "5546": [
+            5552,
+            5584
+        ],
+        "5552": [
+            5560
+        ],
+        "5560": [],
+        "5562": [
+            5560
+        ],
+        "5569": [
+            5560
+        ],
+        "5584": [
+            5560
+        ]
+    },
+    "boundary": {
+        "5516": 5530,
+        "5530": 5546,
+        "5546": 5552,
+        "5552": 5560,
+        "5560": 5562,
+        "5562": 5569,
+        "5569": 5584,
+        "5584": 5594
+    },
+    "jmp_instruction": {
+        "5516": "jz      short loc_15BA",
+        "5530": "jz      short loc_15C1",
+        "5546": "jz      short loc_15D0",
+        "5552": "call    job_completed_txn_abort",
+        "5560": "retn",
+        "5562": "jmp     short loc_15B8",
+        "5569": "jmp     short loc_15B8",
+        "5584": "jmp     short loc_15B8"
+    }
+}

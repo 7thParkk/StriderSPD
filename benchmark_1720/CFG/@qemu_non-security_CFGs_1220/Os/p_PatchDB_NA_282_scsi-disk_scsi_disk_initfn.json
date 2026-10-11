@@ -1,0 +1,139 @@
+{
+    "nodes": {
+        "419": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "452": [
+            "mov REG REG",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "463": [
+            "lea REG MEMACC",
+            "jmp ADDR"
+        ],
+        "472": [
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "490": [
+            "lea REG MEMACC"
+        ],
+        "497": [
+            "xor REG REG",
+            "or REG CONSTANT",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "509": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "dec REG",
+            "setz REG",
+            "movzx REG REG",
+            "lea REG 1",
+            "mov MEMACC REG",
+            "shl REG CONSTANT",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "xor REG REG",
+            "mov REG REG",
+            "movsxd REG MEMACC",
+            "lea REG MEMACC",
+            "div REG REG",
+            "cmp MEMACC REG",
+            "adc REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "call ADDR"
+        ],
+        "621": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jz ADDR"
+        ],
+        "637": [
+            "call ADDR"
+        ],
+        "642": [
+            "add REG CONSTANT",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "419": [
+            452,
+            463
+        ],
+        "452": [
+            463,
+            472
+        ],
+        "463": [
+            497
+        ],
+        "472": [
+            490,
+            509
+        ],
+        "490": [
+            497
+        ],
+        "497": [
+            621
+        ],
+        "509": [
+            621
+        ],
+        "621": [
+            637,
+            642
+        ],
+        "637": [],
+        "642": []
+    },
+    "boundary": {
+        "419": 452,
+        "452": 463,
+        "463": 472,
+        "472": 490,
+        "490": 497,
+        "497": 509,
+        "509": 621,
+        "621": 637,
+        "637": 642,
+        "642": 651
+    },
+    "jmp_instruction": {
+        "419": "jz      short loc_1CF",
+        "452": "jnz     short loc_1D8",
+        "463": "jmp     short loc_1F1",
+        "472": "jz      short loc_1FD",
+        "490": "lea     rdi, _LC2; \"scsi-disk: unwanted /dev/sg*\\n\"",
+        "497": "jmp     short loc_26D",
+        "509": "call    qemu_add_vm_change_state_handler; PIC mode",
+        "621": "jz      short loc_282",
+        "637": "call    __stack_chk_fail; PIC mode",
+        "642": "retn"
+    }
+}

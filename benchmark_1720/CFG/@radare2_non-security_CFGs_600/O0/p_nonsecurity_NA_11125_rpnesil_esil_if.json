@@ -1,0 +1,99 @@
+{
+    "nodes": {
+        "7046": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "cmp MEMACC 0",
+            "jz ADDR"
+        ],
+        "7100": [
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "7132": [
+            "mov REG MEMACC",
+            "mov MEMACC CONSTANT"
+        ],
+        "7146": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "7153": [
+            "mov REG CONSTANT"
+        ],
+        "7158": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jz ADDR"
+        ],
+        "7173": [
+            "call ADDR"
+        ],
+        "7178": [
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "7046": [
+            7100,
+            7153
+        ],
+        "7100": [
+            7132,
+            7146
+        ],
+        "7132": [
+            7146
+        ],
+        "7146": [
+            7158
+        ],
+        "7153": [
+            7158
+        ],
+        "7158": [
+            7173,
+            7178
+        ],
+        "7173": [],
+        "7178": []
+    },
+    "boundary": {
+        "7046": 7100,
+        "7100": 7132,
+        "7132": 7146,
+        "7146": 7153,
+        "7153": 7158,
+        "7158": 7173,
+        "7173": 7178,
+        "7178": 7180
+    },
+    "jmp_instruction": {
+        "7046": "jz      short loc_1BF1",
+        "7100": "jnz     short loc_1BEA",
+        "7132": "mov     dword ptr [rax+114h], 1",
+        "7146": "jmp     short loc_1BF6",
+        "7153": "mov     eax, 0",
+        "7158": "jz      short locret_1C0A",
+        "7173": "call    __stack_chk_fail; PIC mode",
+        "7178": "retn"
+    }
+}

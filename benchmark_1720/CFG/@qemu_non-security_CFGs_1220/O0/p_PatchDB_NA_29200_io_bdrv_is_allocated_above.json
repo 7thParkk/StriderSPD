@@ -1,0 +1,253 @@
+{
+    "nodes": {
+        "20213": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "jmp ADDR"
+        ],
+        "20278": [
+            "mov REG MEMACC",
+            "cdqe REG",
+            "shl REG CONSTANT",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "shl REG CONSTANT",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "cmp MEMACC 0",
+            "jns ADDR"
+        ],
+        "20332": [
+            "mov REG MEMACC",
+            "jmp ADDR"
+        ],
+        "20340": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "cmp REG REG",
+            "jnb ADDR"
+        ],
+        "20362": [
+            "lea REG MEMACC",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "20402": [
+            "mov REG MEMACC",
+            "sar REG CONSTANT",
+            "mov MEMACC REG",
+            "cmp MEMACC 0",
+            "jz ADDR"
+        ],
+        "20419": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "20435": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "cmp MEMACC 0",
+            "jns ADDR"
+        ],
+        "20458": [
+            "mov REG MEMACC",
+            "jmp ADDR"
+        ],
+        "20464": [
+            "mov REG MEMACC",
+            "cmp REG MEMACC",
+            "jle ADDR"
+        ],
+        "20472": [
+            "mov REG MEMACC",
+            "cmp REG MEMACC",
+            "jz ADDR"
+        ],
+        "20482": [
+            "mov REG MEMACC",
+            "movsxd REG REG",
+            "mov REG MEMACC",
+            "add REG REG",
+            "cmp MEMACC REG",
+            "jle ADDR"
+        ],
+        "20501": [
+            "mov REG MEMACC",
+            "mov MEMACC REG"
+        ],
+        "20507": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG"
+        ],
+        "20523": [
+            "cmp MEMACC 0",
+            "jz ADDR"
+        ],
+        "20530": [
+            "mov REG MEMACC",
+            "cmp REG MEMACC",
+            "jnz ADDR"
+        ],
+        "20544": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG CONSTANT"
+        ],
+        "20558": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jz ADDR"
+        ],
+        "20573": [
+            "call ADDR"
+        ],
+        "20578": [
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "20213": [
+            20523
+        ],
+        "20278": [
+            20332,
+            20340
+        ],
+        "20332": [
+            20558
+        ],
+        "20340": [
+            20362,
+            20402
+        ],
+        "20362": [],
+        "20402": [
+            20419,
+            20435
+        ],
+        "20419": [
+            20558
+        ],
+        "20435": [
+            20458,
+            20464
+        ],
+        "20458": [
+            20558
+        ],
+        "20464": [
+            20472,
+            20507
+        ],
+        "20472": [
+            20482,
+            20501
+        ],
+        "20482": [
+            20501,
+            20507
+        ],
+        "20501": [
+            20507
+        ],
+        "20507": [
+            20523
+        ],
+        "20523": [
+            20530,
+            20544
+        ],
+        "20530": [
+            20278,
+            20544
+        ],
+        "20544": [
+            20558
+        ],
+        "20558": [
+            20573,
+            20578
+        ],
+        "20573": [],
+        "20578": []
+    },
+    "boundary": {
+        "20213": 20278,
+        "20278": 20332,
+        "20332": 20340,
+        "20340": 20362,
+        "20362": 20402,
+        "20402": 20419,
+        "20419": 20435,
+        "20435": 20458,
+        "20458": 20464,
+        "20464": 20472,
+        "20472": 20482,
+        "20482": 20501,
+        "20501": 20507,
+        "20507": 20523,
+        "20523": 20530,
+        "20530": 20544,
+        "20544": 20558,
+        "20558": 20573,
+        "20573": 20578,
+        "20578": 20580
+    },
+    "jmp_instruction": {
+        "20213": "jmp     loc_502B",
+        "20278": "jns     short loc_4F74",
+        "20332": "jmp     loc_504E",
+        "20340": "jnb     short loc_4FB2",
+        "20362": "call    __assert_fail; PIC mode",
+        "20402": "jz      short loc_4FD3",
+        "20419": "jmp     short loc_504E",
+        "20435": "jns     short loc_4FF0",
+        "20458": "jmp     short loc_504E",
+        "20464": "jle     short loc_501B",
+        "20472": "jz      short loc_5015",
+        "20482": "jle     short loc_501B",
+        "20501": "mov     [rbp+var_2C], eax",
+        "20507": "mov     [rbp+var_18], rax",
+        "20523": "jz      short loc_5040",
+        "20530": "jnz     loc_4F36",
+        "20544": "mov     eax, 0",
+        "20558": "jz      short locret_5062",
+        "20573": "call    __stack_chk_fail; PIC mode",
+        "20578": "retn"
+    }
+}

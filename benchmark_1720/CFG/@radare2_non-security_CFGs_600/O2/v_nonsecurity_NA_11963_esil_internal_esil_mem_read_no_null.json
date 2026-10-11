@@ -1,0 +1,133 @@
+{
+    "nodes": {
+        "2624": [
+            "endbr64",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "2637": [
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "2658": [
+            "cmp 152 0",
+            "jz ADDR"
+        ],
+        "2668": [
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "2676": [
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jle ADDR"
+        ],
+        "2696": [
+            "movsxd REG REG",
+            "xor REG REG",
+            "mov REG REG",
+            "div REG REG",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "2712": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "call MEMACC",
+            "add REG CONSTANT",
+            "pop REG",
+            "movzx REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "2752": [
+            "mov MEMACC CONSTANT",
+            "mov MEMACC REG"
+        ],
+        "2762": [
+            "add REG CONSTANT",
+            "xor REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "2784": [
+            "xor REG REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "2624": [
+            2637,
+            2784
+        ],
+        "2637": [
+            2658,
+            2762
+        ],
+        "2658": [
+            2668,
+            2762
+        ],
+        "2668": [
+            2676,
+            2762
+        ],
+        "2676": [
+            2696,
+            2712
+        ],
+        "2696": [
+            2712,
+            2752
+        ],
+        "2712": [],
+        "2752": [
+            2762
+        ],
+        "2762": [],
+        "2784": []
+    },
+    "boundary": {
+        "2624": 2637,
+        "2637": 2658,
+        "2658": 2668,
+        "2668": 2676,
+        "2676": 2696,
+        "2696": 2712,
+        "2712": 2751,
+        "2752": 2762,
+        "2762": 2775,
+        "2784": 2787
+    },
+    "jmp_instruction": {
+        "2624": "jz      loc_AE0",
+        "2637": "jz      short loc_ACA",
+        "2658": "jz      short loc_ACA",
+        "2668": "jz      short loc_ACA",
+        "2676": "jle     short loc_A98",
+        "2696": "jnz     short loc_AC0",
+        "2712": "retn",
+        "2752": "mov     [rbx+70h], ebp",
+        "2762": "retn",
+        "2784": "retn"
+    }
+}

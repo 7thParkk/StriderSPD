@@ -1,0 +1,116 @@
+{
+    "nodes": {
+        "1792": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "add REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov MEMACC CONSTANT",
+            "jmp ADDR"
+        ],
+        "1858": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "movzx REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1897": [
+            "add MEMACC CONSTANT"
+        ],
+        "1902": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1918": [
+            "mov MEMACC CONSTANT",
+            "jmp ADDR"
+        ],
+        "1924": [
+            "mov REG MEMACC",
+            "movzx REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "1935": [
+            "nop"
+        ],
+        "1936": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "movzx REG MEMACC",
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "1792": [
+            1924
+        ],
+        "1858": [
+            1897,
+            1902
+        ],
+        "1897": [
+            1902
+        ],
+        "1902": [
+            1918,
+            1924
+        ],
+        "1918": [
+            1936
+        ],
+        "1924": [
+            1858,
+            1935
+        ],
+        "1935": [
+            1936
+        ],
+        "1936": []
+    },
+    "boundary": {
+        "1792": 1858,
+        "1858": 1897,
+        "1897": 1902,
+        "1902": 1918,
+        "1918": 1924,
+        "1924": 1935,
+        "1935": 1936,
+        "1936": 1954
+    },
+    "jmp_instruction": {
+        "1792": "jmp     short loc_784",
+        "1858": "jz      short loc_76E",
+        "1897": "add     [rbp+var_18], 1",
+        "1902": "jz      short loc_784",
+        "1918": "jmp     short loc_790",
+        "1924": "jnz     short loc_742",
+        "1935": "nop",
+        "1936": "retn"
+    }
+}

@@ -1,0 +1,113 @@
+{
+    "nodes": {
+        "788": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "test REG 1",
+            "jz ADDR"
+        ],
+        "828": [
+            "add REG CONSTANT",
+            "xor REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "850": [
+            "or REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call MEMACC",
+            "and MEMACC CONSTANT",
+            "mov REG MEMACC",
+            "test REG REG",
+            "mov REG REG",
+            "jnz ADDR"
+        ],
+        "897": [
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "919": [
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "927": [
+            "add REG CONSTANT",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "105": []
+    },
+    "edges": {
+        "788": [
+            828,
+            850
+        ],
+        "828": [
+            105
+        ],
+        "850": [
+            897,
+            919
+        ],
+        "897": [
+            927
+        ],
+        "919": [
+            927
+        ],
+        "927": [],
+        "105": []
+    },
+    "boundary": {
+        "788": 828,
+        "828": 850,
+        "850": 897,
+        "897": 919,
+        "919": 927,
+        "927": 945,
+        "105": 105
+    },
+    "jmp_instruction": {
+        "788": "jz      short loc_352",
+        "828": "jmp     qemu_net_queue_append_iov",
+        "850": "jnz     short loc_397",
+        "897": "jmp     short loc_39F",
+        "919": "call    qemu_net_queue_flush; PIC mode",
+        "927": "retn",
+        "105": "retn"
+    }
+}

@@ -1,0 +1,187 @@
+{
+    "nodes": {
+        "3003": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "3051": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "cmp REG 10",
+            "jz ADDR"
+        ],
+        "3063": [
+            "lea REG MEMACC",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "3103": [
+            "mov REG MEMACC",
+            "add REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "xor REG CONSTANT",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "3126": [
+            "lea REG MEMACC",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "3166": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "3182": [
+            "lea REG MEMACC",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "3222": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "3239": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call REG"
+        ],
+        "3260": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "3276": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG"
+        ],
+        "3305": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "3357": [
+            "nop",
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "3003": [
+            3051,
+            3357
+        ],
+        "3051": [
+            3063,
+            3103
+        ],
+        "3063": [],
+        "3103": [
+            3126,
+            3166
+        ],
+        "3126": [],
+        "3166": [
+            3182,
+            3222
+        ],
+        "3182": [],
+        "3222": [
+            3239,
+            3260
+        ],
+        "3239": [
+            3260
+        ],
+        "3260": [
+            3276,
+            3305
+        ],
+        "3276": [
+            3305
+        ],
+        "3305": [
+            3357
+        ],
+        "3357": []
+    },
+    "boundary": {
+        "3003": 3051,
+        "3051": 3063,
+        "3063": 3103,
+        "3103": 3126,
+        "3126": 3166,
+        "3166": 3182,
+        "3182": 3222,
+        "3222": 3239,
+        "3239": 3260,
+        "3260": 3276,
+        "3276": 3305,
+        "3305": 3357,
+        "3357": 3360
+    },
+    "jmp_instruction": {
+        "3003": "jnz     loc_D1D",
+        "3051": "jz      short loc_C1F",
+        "3063": "call    __assert_fail; PIC mode",
+        "3103": "jnz     short loc_C5E",
+        "3126": "call    __assert_fail; PIC mode",
+        "3166": "jz      short loc_C96",
+        "3182": "call    __assert_fail; PIC mode",
+        "3222": "jz      short loc_CBC",
+        "3239": "call    rdx",
+        "3260": "jz      short loc_CE9",
+        "3276": "mov     [rax+0B8h], rdx",
+        "3305": "call    g_free; PIC mode",
+        "3357": "retn"
+    }
+}

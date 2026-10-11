@@ -1,0 +1,20 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall external_snapshot_abort(__int64 a1)",
+        "{",
+        "  __int64 result; // rax",
+        "",
+        "  if ( *(_QWORD *)(a1 + 48) )",
+        "  {",
+        "    if ( *(_BYTE *)(a1 + 64) )",
+        "    {",
+        "      bdrv_ref(*(_QWORD *)(a1 + 40));",
+        "      bdrv_set_backing_hd(*(_QWORD *)(a1 + 48), 0LL, &error_abort);",
+        "      bdrv_replace_node(*(_QWORD *)(a1 + 48), *(_QWORD *)(a1 + 40), &error_abort);",
+        "      return bdrv_unref(*(_QWORD *)(a1 + 40));",
+        "    }",
+        "  }",
+        "  return result;",
+        "}"
+    ]
+}

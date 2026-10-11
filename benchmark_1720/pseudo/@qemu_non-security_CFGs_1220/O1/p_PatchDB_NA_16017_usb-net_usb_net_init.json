@@ -1,0 +1,30 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall usb_net_init(__int64 a1)",
+        "{",
+        "  __int64 v1; // rax",
+        "  __int64 v2; // rbx",
+        "  int v3; // ebp",
+        "",
+        "  v1 = qemu_opts_parse(&qemu_net_opts, a1, 0LL);",
+        "  v2 = v1;",
+        "  if ( v1 )",
+        "  {",
+        "    qemu_opt_set(v1, \"type\", &LC0);",
+        "    qemu_opt_set(v2, \"model\", \"usb\");",
+        "    v3 = net_client_init(0LL, v2, 0LL);",
+        "    if ( v3 == -1 )",
+        "    {",
+        "      return 0LL;",
+        "    }",
+        "    else",
+        "    {",
+        "      v2 = usb_create(0LL, \"usb-net\");",
+        "      qdev_set_nic_properties(v2, (char *)&nd_table + 64 * (__int64)v3);",
+        "      qdev_init_nofail(v2);",
+        "    }",
+        "  }",
+        "  return v2;",
+        "}"
+    ]
+}

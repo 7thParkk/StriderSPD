@@ -1,0 +1,125 @@
+{
+    "nodes": {
+        "736": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "xor REG REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "760": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG REG"
+        ],
+        "772": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "797": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "cmp REG 4095",
+            "jbe ADDR"
+        ],
+        "815": [
+            "xor REG REG",
+            "cmp MEMACC 1074935680",
+            "jnz ADDR"
+        ],
+        "825": [
+            "movdqu REG MEMACC",
+            "lea REG MEMACC",
+            "movaps MEMACC REG",
+            "movdqu REG MEMACC",
+            "movaps MEMACC REG",
+            "movdqu REG MEMACC",
+            "movaps MEMACC REG",
+            "movdqu REG MEMACC",
+            "movaps MEMACC REG"
+        ],
+        "880": [
+            "mov MEMACC REG",
+            "cmp 0 1074935680",
+            "setz REG",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "912": [
+            "mov MEMACC CONSTANT"
+        ],
+        "923": [
+            "add REG CONSTANT",
+            "xor REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "736": [
+            760,
+            772
+        ],
+        "760": [
+            772
+        ],
+        "772": [
+            797,
+            923
+        ],
+        "797": [
+            815,
+            912
+        ],
+        "815": [
+            825,
+            880
+        ],
+        "825": [
+            880
+        ],
+        "880": [],
+        "912": [
+            923
+        ],
+        "923": []
+    },
+    "boundary": {
+        "736": 760,
+        "760": 772,
+        "772": 797,
+        "797": 815,
+        "815": 825,
+        "825": 880,
+        "880": 908,
+        "912": 923,
+        "923": 936
+    },
+    "jmp_instruction": {
+        "736": "jz      short loc_304",
+        "760": "mov     rbp, rax",
+        "772": "jz      loc_39B",
+        "797": "jbe     short loc_390",
+        "815": "jnz     short loc_370",
+        "825": "movaps  cs:xmmword_3F0, xmm3",
+        "880": "retn",
+        "912": "mov     qword ptr [r13+0D0h], 0",
+        "923": "retn"
+    }
+}

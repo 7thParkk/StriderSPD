@@ -1,0 +1,204 @@
+{
+    "nodes": {
+        "688": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "lea REG 36",
+            "mov MEMACC REG",
+            "test REG REG",
+            "jg ADDR"
+        ],
+        "753": [
+            "jmp ADDR"
+        ],
+        "768": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "shl REG CONSTANT",
+            "add REG MEMACC",
+            "mov REG REG",
+            "shl REG CONSTANT",
+            "movsxd REG REG",
+            "mov MEMACC REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "cmp REG REG",
+            "jnz ADDR"
+        ],
+        "827": [
+            "movsxd REG REG",
+            "sub REG REG",
+            "add REG REG",
+            "add REG REG",
+            "test REG REG",
+            "jle ADDR"
+        ],
+        "843": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "867": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "889": [
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "js ADDR"
+        ],
+        "907": [
+            "mov REG REG",
+            "movsxd REG REG",
+            "sub REG REG",
+            "shl REG CONSTANT",
+            "add REG REG",
+            "movsxd REG REG",
+            "add REG REG",
+            "test REG REG",
+            "jg ADDR"
+        ],
+        "932": [
+            "xor REG REG"
+        ],
+        "934": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jnz ADDR"
+        ],
+        "950": [
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "968": [
+            "mov REG REG",
+            "xor REG REG",
+            "mov REG REG",
+            "shl REG CONSTANT",
+            "movsxd REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "1000": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "1007": [
+            "call ADDR"
+        ]
+    },
+    "edges": {
+        "688": [
+            753,
+            843
+        ],
+        "753": [
+            932
+        ],
+        "768": [
+            827,
+            1000
+        ],
+        "827": [
+            843,
+            932
+        ],
+        "843": [
+            768,
+            867
+        ],
+        "867": [
+            889,
+            968
+        ],
+        "889": [
+            907,
+            1000
+        ],
+        "907": [
+            843,
+            932
+        ],
+        "932": [
+            934
+        ],
+        "934": [
+            950,
+            1007
+        ],
+        "950": [],
+        "968": [
+            827
+        ],
+        "1000": [
+            934
+        ],
+        "1007": []
+    },
+    "boundary": {
+        "688": 753,
+        "753": 758,
+        "768": 827,
+        "827": 843,
+        "843": 867,
+        "867": 889,
+        "889": 907,
+        "907": 932,
+        "932": 934,
+        "934": 950,
+        "950": 965,
+        "968": 995,
+        "1000": 1007,
+        "1007": 1012
+    },
+    "jmp_instruction": {
+        "688": "jg      short loc_34B",
+        "753": "jmp     loc_3A4",
+        "768": "jnz     loc_3E8",
+        "827": "jle     short loc_3A4",
+        "843": "jnz     short loc_300",
+        "867": "jz      short loc_3C8",
+        "889": "js      short loc_3E8",
+        "907": "jg      short loc_34B",
+        "932": "xor     eax, eax",
+        "934": "jnz     short loc_3EF",
+        "950": "retn",
+        "968": "jmp     loc_33B",
+        "1000": "jmp     short loc_3A6",
+        "1007": "call    __stack_chk_fail; PIC mode"
+    }
+}

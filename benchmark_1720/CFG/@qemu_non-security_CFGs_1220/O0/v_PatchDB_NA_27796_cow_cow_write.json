@@ -1,0 +1,76 @@
+{
+    "nodes": {
+        "1698": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "shl REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG MEMACC",
+            "shl REG CONSTANT",
+            "movsxd REG REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "shl REG CONSTANT",
+            "cmp MEMACC REG",
+            "jz ADDR"
+        ],
+        "1797": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "1804": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "1826": [
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "1698": [
+            1797,
+            1804
+        ],
+        "1797": [
+            1826
+        ],
+        "1804": [
+            1826
+        ],
+        "1826": []
+    },
+    "boundary": {
+        "1698": 1797,
+        "1797": 1804,
+        "1804": 1826,
+        "1826": 1828
+    },
+    "jmp_instruction": {
+        "1698": "jz      short loc_70C",
+        "1797": "jmp     short locret_722",
+        "1804": "call    cow_update_bitmap",
+        "1826": "retn"
+    }
+}

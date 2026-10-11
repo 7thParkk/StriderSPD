@@ -1,0 +1,283 @@
+{
+    "nodes": {
+        "7926": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC CONSTANT",
+            "mov MEMACC CONSTANT",
+            "lea REG 48",
+            "mov REG CONSTANT",
+            "stos MEMACC REG",
+            "lea REG 4",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "cmp REG 12",
+            "jnz ADDR"
+        ],
+        "8021": [
+            "mov REG MEMACC",
+            "cmp REG 632",
+            "ja ADDR"
+        ],
+        "8037": [
+            "mov REG REG",
+            "lea REG 48",
+            "mov REG MEMACC",
+            "call ADDR",
+            "cmp 12 REG",
+            "jnz ADDR"
+        ],
+        "8062": [
+            "mov REG MEMACC",
+            "cmp REG 1",
+            "jz ADDR"
+        ],
+        "8075": [
+            "cmp REG 2",
+            "jz ADDR"
+        ],
+        "8084": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "8111": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR"
+        ],
+        "8128": [
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov MEMACC CONSTANT"
+        ],
+        "8166": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jnz ADDR"
+        ],
+        "8189": [
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "8199": [
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "8223": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "8242": [
+            "lea REG 48",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "8255": [
+            "mov REG MEMACC",
+            "test REG 8",
+            "jz ADDR"
+        ],
+        "8264": [
+            "and REG CONSTANT",
+            "or REG CONSTANT",
+            "mov MEMACC REG",
+            "test REG REG",
+            "setnz REG",
+            "movzx REG REG",
+            "mov MEMACC REG",
+            "mov MEMACC CONSTANT",
+            "lea REG 4",
+            "mov MEMACC REG",
+            "mov MEMACC CONSTANT",
+            "lea REG 48",
+            "mov MEMACC REG",
+            "mov MEMACC CONSTANT",
+            "lea REG 16",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "cdqe REG",
+            "mov REG MEMACC",
+            "add REG CONSTANT",
+            "cmp REG REG",
+            "jz ADDR"
+        ],
+        "8370": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "8392": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "8404": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "8412": [
+            "mov REG REG",
+            "call REG",
+            "jmp ADDR"
+        ],
+        "8422": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "8432": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "8442": [
+            "call ADDR"
+        ]
+    },
+    "edges": {
+        "7926": [
+            8021,
+            8111
+        ],
+        "8021": [
+            8037,
+            8199
+        ],
+        "8037": [
+            8062,
+            8223
+        ],
+        "8062": [
+            8075,
+            8242
+        ],
+        "8075": [
+            8084,
+            8392
+        ],
+        "8084": [
+            8255
+        ],
+        "8111": [
+            8128
+        ],
+        "8128": [
+            8166
+        ],
+        "8166": [
+            8189,
+            8442
+        ],
+        "8189": [],
+        "8199": [
+            8128
+        ],
+        "8223": [
+            8128
+        ],
+        "8242": [
+            8255
+        ],
+        "8255": [
+            8166,
+            8264
+        ],
+        "8264": [
+            8166,
+            8370
+        ],
+        "8370": [
+            8128
+        ],
+        "8392": [
+            8404,
+            8422
+        ],
+        "8404": [
+            8412,
+            8432
+        ],
+        "8412": [
+            8255
+        ],
+        "8422": [
+            8255
+        ],
+        "8432": [
+            8255
+        ],
+        "8442": []
+    },
+    "boundary": {
+        "7926": 8021,
+        "8021": 8037,
+        "8037": 8062,
+        "8062": 8075,
+        "8075": 8084,
+        "8084": 8111,
+        "8111": 8128,
+        "8128": 8166,
+        "8166": 8189,
+        "8189": 8199,
+        "8199": 8223,
+        "8223": 8242,
+        "8242": 8255,
+        "8255": 8264,
+        "8264": 8370,
+        "8370": 8392,
+        "8392": 8404,
+        "8404": 8412,
+        "8412": 8422,
+        "8422": 8432,
+        "8432": 8442,
+        "8442": 8447
+    },
+    "jmp_instruction": {
+        "7926": "jnz     short loc_1FAF",
+        "8021": "ja      loc_2007",
+        "8037": "jnz     loc_201F",
+        "8062": "jz      loc_2032",
+        "8075": "jz      loc_20C8",
+        "8084": "jmp     loc_203F",
+        "8111": "call    error_report; PIC mode",
+        "8128": "mov     dword ptr [rbx+10h], 0FFFFFFFFh",
+        "8166": "jnz     loc_20FA",
+        "8189": "retn",
+        "8199": "jmp     short loc_1FC0",
+        "8223": "jmp     short loc_1FC0",
+        "8242": "call    vhost_backend_handle_iotlb_msg; PIC mode",
+        "8255": "jz      short loc_1FE6",
+        "8264": "jz      loc_1FE6",
+        "8370": "jmp     loc_1FC0",
+        "8392": "jz      short loc_20E6",
+        "8404": "jz      short loc_20F0",
+        "8412": "jmp     loc_203F",
+        "8422": "jmp     loc_203F",
+        "8432": "jmp     loc_203F",
+        "8442": "call    __stack_chk_fail; PIC mode"
+    }
+}

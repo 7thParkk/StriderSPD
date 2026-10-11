@@ -1,0 +1,38 @@
+{
+    "nodes": {
+        "547": [
+            "endbr64",
+            "xor REG REG",
+            "cmp REG 4095",
+            "jbe ADDR"
+        ],
+        "562": [
+            "call ADDR",
+            "cmp REG 18446744071565677120",
+            "setz REG"
+        ],
+        "575": [
+            "retn"
+        ]
+    },
+    "edges": {
+        "547": [
+            562,
+            575
+        ],
+        "562": [
+            575
+        ],
+        "575": []
+    },
+    "boundary": {
+        "547": 562,
+        "562": 575,
+        "575": 576
+    },
+    "jmp_instruction": {
+        "547": "jbe     short locret_23F",
+        "562": "setz    al",
+        "575": "retn"
+    }
+}

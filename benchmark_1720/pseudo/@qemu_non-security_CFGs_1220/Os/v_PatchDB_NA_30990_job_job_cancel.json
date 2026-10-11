@@ -1,0 +1,28 @@
+{
+    "pseudo_code": [
+        "void __fastcall job_cancel(__int64 a1, unsigned __int8 a2, __int64 a3)",
+        "{",
+        "  __int64 v3; // rdx",
+        "",
+        "  if ( *(_DWORD *)(a1 + 20) == 9 )",
+        "  {",
+        "    job_do_dismiss(a1);",
+        "  }",
+        "  else",
+        "  {",
+        "    job_cancel_async(a1, a2, a3);",
+        "    if ( *(_QWORD *)(a1 + 32) )",
+        "    {",
+        "      if ( *(_BYTE *)(a1 + 97) )",
+        "        job_completed_txn_abort(a1, a2, v3);",
+        "      else",
+        "        job_enter(a1);",
+        "    }",
+        "    else",
+        "    {",
+        "      job_completed(a1, 0xFFFFFF83);",
+        "    }",
+        "  }",
+        "}"
+    ]
+}

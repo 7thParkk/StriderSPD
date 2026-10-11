@@ -1,0 +1,75 @@
+{
+    "nodes": {
+        "6333": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "xor REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "6355": [
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "6361": [
+            "cmp 192 0",
+            "jz ADDR"
+        ],
+        "6370": [
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "6376": [
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "4365": [],
+        "1172": [],
+        "1801": []
+    },
+    "edges": {
+        "6333": [
+            6355,
+            6361
+        ],
+        "6355": [
+            4365
+        ],
+        "6361": [
+            6370,
+            6376
+        ],
+        "6370": [
+            1172
+        ],
+        "6376": [
+            1801
+        ],
+        "4365": [],
+        "1172": [],
+        "1801": []
+    },
+    "boundary": {
+        "6333": 6355,
+        "6355": 6361,
+        "6361": 6370,
+        "6370": 6376,
+        "6376": 6382,
+        "4365": 4365,
+        "1172": 1172,
+        "1801": 1801
+    },
+    "jmp_instruction": {
+        "6333": "jz      short loc_18D9",
+        "6355": "jmp     tcp_chr_disconnect",
+        "6361": "jz      short loc_18E8",
+        "6370": "jmp     tcp_chr_telnet_init",
+        "6376": "jmp     tcp_chr_connect",
+        "4365": "retn",
+        "1172": "jmp     g_free; PIC mode",
+        "1801": "retn"
+    }
+}

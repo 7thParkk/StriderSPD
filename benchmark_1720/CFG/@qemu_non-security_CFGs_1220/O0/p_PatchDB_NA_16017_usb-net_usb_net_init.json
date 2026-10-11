@@ -1,0 +1,110 @@
+{
+    "nodes": {
+        "7157": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "cmp MEMACC 0",
+            "jnz ADDR"
+        ],
+        "7211": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "7221": [
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov MEMACC REG",
+            "cmp MEMACC 18446744073709551615",
+            "jnz ADDR"
+        ],
+        "7310": [
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "7317": [
+            "lea REG MEMACC",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "cdqe REG",
+            "shl REG CONSTANT",
+            "mov REG CONSTANT",
+            "add REG REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC"
+        ],
+        "7391": [
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "7157": [
+            7211,
+            7221
+        ],
+        "7211": [
+            7391
+        ],
+        "7221": [
+            7310,
+            7317
+        ],
+        "7310": [
+            7391
+        ],
+        "7317": [
+            7391
+        ],
+        "7391": []
+    },
+    "boundary": {
+        "7157": 7211,
+        "7211": 7221,
+        "7221": 7310,
+        "7310": 7317,
+        "7317": 7391,
+        "7391": 7393
+    },
+    "jmp_instruction": {
+        "7157": "jnz     short loc_1C35",
+        "7211": "jmp     locret_1CDF",
+        "7221": "jnz     short loc_1C95",
+        "7310": "jmp     short locret_1CDF",
+        "7317": "mov     rax, [rbp+var_8]",
+        "7391": "retn"
+    }
+}

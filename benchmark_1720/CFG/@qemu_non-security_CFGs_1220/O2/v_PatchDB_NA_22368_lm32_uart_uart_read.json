@@ -1,0 +1,97 @@
+{
+    "nodes": {
+        "752": [
+            "endbr64",
+            "mov REG REG",
+            "push REG",
+            "shr REG CONSTANT",
+            "cmp REG 31",
+            "ja ADDR"
+        ],
+        "770": [
+            "mov REG CONSTANT",
+            "shl REG REG",
+            "test REG 154",
+            "jnz ADDR"
+        ],
+        "782": [
+            "test REG 100",
+            "jnz ADDR"
+        ],
+        "786": [
+            "and MEMACC CONSTANT",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "pop REG",
+            "retn"
+        ],
+        "816": [
+            "mov REG MEMACC",
+            "pop REG",
+            "retn"
+        ],
+        "832": [
+            "xor REG REG",
+            "and REG CONSTANT",
+            "lea REG MEMACC",
+            "call ADDR",
+            "xor REG REG"
+        ],
+        "852": [
+            "pop REG",
+            "retn"
+        ],
+        "864": [
+            "xor REG REG",
+            "and REG CONSTANT",
+            "lea REG MEMACC",
+            "call ADDR",
+            "xor REG REG",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "752": [
+            770,
+            864
+        ],
+        "770": [
+            782,
+            832
+        ],
+        "782": [
+            786,
+            816
+        ],
+        "786": [],
+        "816": [],
+        "832": [
+            852
+        ],
+        "852": [],
+        "864": [
+            852
+        ]
+    },
+    "boundary": {
+        "752": 770,
+        "770": 782,
+        "782": 786,
+        "786": 808,
+        "816": 825,
+        "832": 852,
+        "852": 854,
+        "864": 886
+    },
+    "jmp_instruction": {
+        "752": "ja      short loc_360",
+        "770": "jnz     short loc_340",
+        "782": "jnz     short loc_330",
+        "786": "retn",
+        "816": "retn",
+        "832": "xor     eax, eax",
+        "852": "retn",
+        "864": "jmp     short loc_354"
+    }
+}

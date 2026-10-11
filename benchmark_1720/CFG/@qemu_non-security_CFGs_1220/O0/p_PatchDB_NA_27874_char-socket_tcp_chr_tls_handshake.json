@@ -1,0 +1,86 @@
+{
+    "nodes": {
+        "6923": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "6980": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "6994": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "7008": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "7022": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "7034": [
+            "nop",
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "6923": [
+            6980,
+            6994
+        ],
+        "6980": [
+            7034
+        ],
+        "6994": [
+            7008,
+            7022
+        ],
+        "7008": [
+            7034
+        ],
+        "7022": [
+            7034
+        ],
+        "7034": []
+    },
+    "boundary": {
+        "6923": 6980,
+        "6980": 6994,
+        "6994": 7008,
+        "7008": 7022,
+        "7022": 7034,
+        "7034": 7037
+    },
+    "jmp_instruction": {
+        "6923": "jz      short loc_1B52",
+        "6980": "jmp     short loc_1B7A",
+        "6994": "jz      short loc_1B6E",
+        "7008": "jmp     short loc_1B7A",
+        "7022": "call    tcp_chr_connect",
+        "7034": "retn"
+    }
+}

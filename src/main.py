@@ -1,144 +1,88 @@
+"""Train the V1 joint model or evaluate its complete paper checkpoint."""
+
 import os
-os.environ["HF_ENDPOINT"] = "https:/hf-mirror.com"
-os.environ["PYTORCH_CUDA_ALLOC_CONF"] = "expandable_segments:True"
-import argparse
-import torch
-import time
-from transformers import (
-    AutoTokenizer,
-    GenerationConfig,
-    RobertaTokenizer
-)
-from torch_geometric.data import Data
-from torch.utils.data import DataLoader
+from pathlib import Path
 
-from utils.loader import load_model_tokenizer
-from utils.helper import RunTime
-from utils.seed import set_seed
-from model.base_llm import My_LLM
-from model.base_gnn import My_GNN,  My_GNN_ManualParallel
-from model.joint_attention_model import My_Model
-from data.get_dataset import GetDataset
-from trainer.trainer import train
-from trainer.eval import evaluate
-from torch.utils.data import SequentialSampler
-from torch.utils.data import RandomSampler
-from utils.collect import custom_collate_fn
-from tqdm import tqdm
-from utils.move_to_device import move_to_device 
-from torch.optim import AdamW
-from transformers import get_linear_schedule_with_warmup
-from torch.cuda.amp import GradScaler
+from config.arguments import parse_args
+from utils.dataset_manifest import validate_dataset
 
 
-def main():
-    llm_model_path = r"/home/res/vul/pretrained_models/qwen7b_merge"
-    # llm_model_path = r"/home/res/vul/pretrained_models/qwen3_8b_nothink_merge"
-    # llm_model_path = r"/home/res/vul/pretrained_models/llm4decompile_merge3"
-    # llm_model_path = r"/home/res/vul/pretrained_models/qwen0_5b_merge"
-    # llm_model_path = r"/home/res/vul/pretrained_models/dsc-7b-merge"
-    # llm_model_path = r"/home/res/vul/pretrained_models/yi-9b-merge"
-    # llm_model_path = r"/home/res/vul/pretrained_models/qwen3-8b/models--Qwen--Qwen3-8B/snapshots/b968826d9c46dd6066d109eabc6255188de91218"
-    # llm_model_path = r"/home/res/vul/pretrained_models/mistral-merge"
-    # llm_model_path = r"/home/res/vul/pretrained_models/llama3_1-merge"
-    # llm_model_path = r"/home/res/vul/pretrained_models/deepseek_1_3-merge"
-    # llm_model_path = r"/home/res/vul/pretrained_models/llmcompile-7b-merge"
-    # llm_model_path = r"/home/res/vul/pretrained_models/llama3.2_3b-merge"
-    # llm_model_path = r"/home/res/vul/pretrained_models/yi1.5b-merge"
-    # llm_model_path = r"/home/res/vul/pretrained_models/dsc16b_merge"
+def main(argv=None):
+    args = parse_args(argv)
+    splits = ("train", "dev") if args.do_train else (args.eval_split,)
+    for split in splits:
+        expected = args.expected_eval_samples if args.do_test else None
+        items = validate_dataset(args.root_path, args.ass_path, args.pse_path,
+                                 split, expected_count=expected or None)
+        print(f"DATA_OK split={split} samples={len(items)}")
+    if args.do_test and not Path(args.checkpoint_path).is_file():
+        raise FileNotFoundError(args.checkpoint_path)
+    if args.preflight:
+        print("PREFLIGHT_OK; model execution has not started")
+        return
 
-    pretrained_model_path = 'microsoft/unixcoder-base'
+    # Keep --help and dataset preflight usable without the GPU dependencies.
+    os.environ.setdefault("PYTORCH_CUDA_ALLOC_CONF", "expandable_segments:True")
+    os.environ["STRIDERSPD_LOG_DIR"] = args.log_dir
+    import torch
+    from transformers import AutoTokenizer, GenerationConfig
+    from utils.loader import load_model_tokenizer
+    from utils.seed import set_seed
+    from model.base_llm import My_LLM
+    from model.base_gnn import My_GNN_ManualParallel
+    from model.joint_attention_model import My_Model
+    from data.get_dataset import GetDataset
+    from trainer.trainer import train
+    from trainer.eval import evaluate
 
-    llm_model, llm_tokenizer, llm_config = load_model_tokenizer(llm_model_path)
-    node_tokenizer = AutoTokenizer.from_pretrained(pretrained_model_path)
-    
-    # set device
-    device = next(llm_model.parameters()).device
-
+    args.n_gpu = torch.cuda.device_count()
+    if not args.n_gpu:
+        raise RuntimeError("V1 execution requires CUDA GPUs with BF16 support.")
+    for device in args.gnn_devices:
+        index = int(device.split(":")[1])
+        if index >= args.n_gpu:
+            raise RuntimeError(
+                f"{device} is unavailable with {args.n_gpu} visible GPU(s). "
+                "Set --gnn_devices to three visible CUDA device roles; "
+                "for one sufficiently large GPU use cuda:0,cuda:0,cuda:0."
+            )
+    llm_model, llm_tokenizer, llm_config = load_model_tokenizer(
+        args, args.pretrained_llm_path)
+    node_tokenizer = AutoTokenizer.from_pretrained(args.unixcoder_path)
+    args.device = next(llm_model.parameters()).device
+    args.llm_hidden_size = llm_config.hidden_size
     generation_config = GenerationConfig(
         eos_token_id=llm_tokenizer.eos_token_id,
         pad_token_id=llm_tokenizer.pad_token_id,
-        max_new_tokens=4096,
-        num_return_sequences=1,
-        num_beams=1,
-        do_sample=False,
-        output_hidden_states=True,
-        return_dict_in_generate=True
+        max_new_tokens=4096, num_return_sequences=1, num_beams=1,
+        do_sample=False, output_hidden_states=True,
+        return_dict_in_generate=True,
     )
-
-    parser = argparse.ArgumentParser()
-
-    ## Required parameters
-    parser.add_argument("--do_train", default= False, action='store_true',
-                        help="Whether to run training.")
-    parser.add_argument("--do_test", default= False, action='store_true',
-                        help="Whether to run test.")
-    parser.add_argument("--batch_size", default=2, type=int,
-                        help="Batch size per GPU/CPU for training.")
-    parser.add_argument("--eval_batch_size", default=1, type=int,
-                        help="Batch size per GPU/CPU for evaluation.")
-    parser.add_argument("--learning_rate", default=1e-5, type=float,
-                        help="The initial learning rate for Adam.")
-    parser.add_argument("--weight_decay", default=1e-4, type=float,
-                        help="Weight deay if we apply some.")
-    parser.add_argument("--adam_epsilon", default=1e-8, type=float,
-                        help="Epsilon for Adam optimizer.")
-    parser.add_argument("--max_grad_norm", default=1.0, type=float,
-                        help="Max gradient norm.")
-    parser.add_argument("--epoch", default=4, type=int,
-                        help="Total number of training epochs to perform.")
-    parser.add_argument("--gradient_accumulation_steps", default=1, type=int,
-                        help="gradient_accumulation_steps.")
-    parser.add_argument('--seed', type=int, default=44,
-                        help="Random seed for initialization.")
-    parser.add_argument('--save_path', type=str, default=r'./joint_model',
-                        help="Path to save model.")
-    parser.add_argument('--root_path', type=str, default=r'/home/data/',
-                        help="Path to data information json file.")
-    parser.add_argument('--ass_path', type=str, default=r'/home/data/@CFGs',
-                        help="Path to assembly code data.")
-    parser.add_argument('--pse_path', type=str, default=r'/home/data/@Pseudos',
-                        help="Path to pseudo code data.")
-
-
-    parser.add_argument('--attention_layer_frequency', type=int, default=1,
-                        help="attention_layer_frequency")
-
-    # Set arguments
-    args = parser.parse_args()
-    args.n_gpu = torch.cuda.device_count()
-    args.device = device
-
-    # load LLM & GNN
-    llm = My_LLM(
-        model=llm_model,
-        config=llm_config,
-        tokenizer=llm_tokenizer,
-        generation_config=generation_config
-    )
+    llm = My_LLM(model=llm_model, config=llm_config,
+                 tokenizer=llm_tokenizer, generation_config=generation_config)
     gnn = My_GNN_ManualParallel(
-        model_name_or_path=pretrained_model_path,
-        gnn_out_dims=llm_config.hidden_size * (llm_config.num_hidden_layers / args.attention_layer_frequency + 1),
+        args=args, model_name_or_path=args.unixcoder_path,
+        gnn_out_dims=llm_config.hidden_size *
+                     (llm_config.num_hidden_layers // args.attention_layer_frequency + 1),
+        device_map=args.gnn_devices, target_device=str(args.device),
     )
-    # gnn = gnn.to(device)
+    joint_model = My_Model(base_gnn=gnn, base_llm=llm, args=args)
 
-    # load joint model
-    joint_model = My_Model(
-        base_gnn=gnn,
-        base_llm=llm,
-        args=args
-    )
-
-    # Set seed
+    # Preserve the V1 training initialization order.
     set_seed(args.seed)
-
     if args.do_train:
         train(args, joint_model, node_tokenizer, llm_tokenizer)
-    if args.do_test:
-        weight_path = r"/home/res/vul/joint_model/model_epoch6_best_acc_qwen7b_822.pth"
-        joint_model.load_state_dict(torch.load(weight_path, weights_only=True))
-        eval_dataset = GetDataset(node_tokenizer, llm_tokenizer, args.root_path, args.ass_path, args.pse_path, mode="benchmark_new")
-        evaluate(joint_model, eval_dataset, args)
+    else:
+        checkpoint = torch.load(args.checkpoint_path, map_location="cpu",
+                                weights_only=True)
+        joint_model.load_state_dict(checkpoint, strict=True)
+        del checkpoint
+        dataset = GetDataset(node_tokenizer, llm_tokenizer, args.root_path,
+                             args.ass_path, args.pse_path, mode=args.eval_split)
+        if args.expected_eval_samples and len(dataset) != args.expected_eval_samples:
+            raise RuntimeError(f"Expected {args.expected_eval_samples} samples, got {len(dataset)}")
+        evaluate(joint_model, dataset, args)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     main()

@@ -1,0 +1,26 @@
+{
+    "nodes": {
+        "1728": [
+            "endbr64",
+            "movsxd REG REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "jmp ADDR"
+        ],
+        "4424": []
+    },
+    "edges": {
+        "1728": [
+            4424
+        ],
+        "4424": []
+    },
+    "boundary": {
+        "1728": 1746,
+        "4424": 4424
+    },
+    "jmp_instruction": {
+        "1728": "jmp     qemu_set_irq; PIC mode",
+        "4424": "extrn sysbus_init_mmio:near"
+    }
+}

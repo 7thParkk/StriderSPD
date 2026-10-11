@@ -1,0 +1,77 @@
+{
+    "nodes": {
+        "1248": [
+            "endbr64",
+            "cmp 48 0",
+            "jz ADDR"
+        ],
+        "1259": [
+            "push REG",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "cmp 64 0",
+            "jnz ADDR"
+        ],
+        "1274": [
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "1288": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "mov REG MEMACC",
+            "xor REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "1352": [
+            "retn"
+        ],
+        "50528": []
+    },
+    "edges": {
+        "1248": [
+            1259,
+            1352
+        ],
+        "1259": [
+            1274,
+            1288
+        ],
+        "1274": [],
+        "1288": [
+            50528
+        ],
+        "1352": [],
+        "50528": []
+    },
+    "boundary": {
+        "1248": 1259,
+        "1259": 1274,
+        "1274": 1281,
+        "1288": 1349,
+        "1352": 1353,
+        "50528": 50528
+    },
+    "jmp_instruction": {
+        "1248": "jz      short locret_548",
+        "1259": "jnz     short loc_508",
+        "1274": "retn",
+        "1288": "jmp     bdrv_unref; PIC mode",
+        "1352": "retn",
+        "50528": "extrn __assert_fail:near"
+    }
+}

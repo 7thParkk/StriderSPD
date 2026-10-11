@@ -1,0 +1,17 @@
+{
+    "pseudo_code": [
+        "char __fastcall throttle_max_is_missing_limit(__int64 a1)",
+        "{",
+        "  __int64 v1; // rax",
+        "",
+        "  v1 = 0LL;",
+        "  while ( *(double *)(a1 + v1 + 8) == 0.0 || *(double *)(a1 + v1) != 0.0 )",
+        "  {",
+        "    v1 += 24LL;",
+        "    if ( v1 == 144 )",
+        "      return 0;",
+        "  }",
+        "  return 1;",
+        "}"
+    ]
+}

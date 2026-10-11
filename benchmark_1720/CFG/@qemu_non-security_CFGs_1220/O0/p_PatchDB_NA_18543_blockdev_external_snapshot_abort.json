@@ -1,0 +1,100 @@
+{
+    "nodes": {
+        "17824": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "17884": [
+            "mov REG MEMACC",
+            "movzx REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "17896": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "17990": [
+            "nop",
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jz ADDR"
+        ],
+        "18006": [
+            "call ADDR"
+        ],
+        "18011": [
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "17824": [
+            17884,
+            17990
+        ],
+        "17884": [
+            17896,
+            17990
+        ],
+        "17896": [
+            17990
+        ],
+        "17990": [
+            18006,
+            18011
+        ],
+        "18006": [],
+        "18011": []
+    },
+    "boundary": {
+        "17824": 17884,
+        "17884": 17896,
+        "17896": 17990,
+        "17990": 18006,
+        "18006": 18011,
+        "18011": 18013
+    },
+    "jmp_instruction": {
+        "17824": "jz      short loc_4646",
+        "17884": "jz      short loc_4646",
+        "17896": "call    bdrv_unref; PIC mode",
+        "17990": "jz      short locret_465B",
+        "18006": "call    __stack_chk_fail; PIC mode",
+        "18011": "retn"
+    }
+}

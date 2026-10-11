@@ -1,0 +1,50 @@
+{
+    "nodes": {
+        "3455": [
+            "endbr64",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "3468": [
+            "cmp 64 0",
+            "jnz ADDR"
+        ],
+        "3474": [
+            "retn"
+        ],
+        "3475": [
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "add REG CONSTANT",
+            "retn"
+        ]
+    },
+    "edges": {
+        "3455": [
+            3468,
+            3474
+        ],
+        "3468": [
+            3474,
+            3475
+        ],
+        "3474": [],
+        "3475": []
+    },
+    "boundary": {
+        "3455": 3468,
+        "3468": 3474,
+        "3474": 3475,
+        "3475": 3503
+    },
+    "jmp_instruction": {
+        "3455": "jz      short locret_D92",
+        "3468": "jnz     short loc_D93",
+        "3474": "retn",
+        "3475": "retn"
+    }
+}

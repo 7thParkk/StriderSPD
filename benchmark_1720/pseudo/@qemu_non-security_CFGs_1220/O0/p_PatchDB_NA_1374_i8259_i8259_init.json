@@ -1,0 +1,29 @@
+{
+    "pseudo_code": [
+        "qemu_irq *__cdecl i8259_init(ISABus *bus, qemu_irq parent_irq)",
+        "{",
+        "  int i; // [rsp+14h] [rbp-2Ch]",
+        "  int ia; // [rsp+14h] [rbp-2Ch]",
+        "  qemu_irq *irq_set; // [rsp+18h] [rbp-28h]",
+        "  ISADevice *isadev; // [rsp+20h] [rbp-20h]",
+        "  ISADevice *isadeva; // [rsp+20h] [rbp-20h]",
+        "  DeviceState *dev; // [rsp+28h] [rbp-18h]",
+        "  DeviceState *deva; // [rsp+28h] [rbp-18h]",
+        "",
+        "  irq_set = (qemu_irq *)g_malloc0_n(16LL, 8LL);",
+        "  isadev = (ISADevice *)i8259_init_chip(\"isa-i8259\", bus, 1LL);",
+        "  dev = (DeviceState *)object_dynamic_cast_assert(isadev, \"device\", \"hw/intc/i8259.c\", 478LL, \"i8259_init\");",
+        "  qdev_connect_gpio_out(dev, 0LL, parent_irq);",
+        "  for ( i = 0; i <= 7; ++i )",
+        "    irq_set[i] = (qemu_irq)qdev_get_gpio_in(dev, (unsigned int)i);",
+        "  isa_pic = dev;",
+        "  isadeva = (ISADevice *)i8259_init_chip(\"isa-i8259\", bus, 0LL);",
+        "  deva = (DeviceState *)object_dynamic_cast_assert(isadeva, \"device\", \"hw/intc/i8259.c\", 488LL, \"i8259_init\");",
+        "  qdev_connect_gpio_out(deva, 0LL, irq_set[2]);",
+        "  for ( ia = 0; ia <= 7; ++ia )",
+        "    irq_set[ia + 8] = (qemu_irq)qdev_get_gpio_in(deva, (unsigned int)ia);",
+        "  slave_pic = (PICCommonState *)object_dynamic_cast_assert(deva, \"pic-common\", \"hw/intc/i8259.c\", 495LL, \"i8259_init\");",
+        "  return irq_set;",
+        "}"
+    ]
+}

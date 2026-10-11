@@ -1,0 +1,32 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall uart_read(__int64 a1, unsigned __int64 a2)",
+        "{",
+        "  unsigned __int64 v2; // rcx",
+        "  unsigned int v3; // ebx",
+        "",
+        "  v2 = a2 >> 2;",
+        "  if ( a2 > 0x1F )",
+        "  {",
+        "    error_report(\"lm32_uart: read access to unknown register 0x%016lx\", a2 & 0xFFFFFFFFFFFFFFFCLL);",
+        "    return 0;",
+        "  }",
+        "  else if ( ((1LL << v2) & 0x9A) != 0 )",
+        "  {",
+        "    error_report(\"lm32_uart: read access to write only register 0x%016lx\", a2 & 0xFFFFFFFFFFFFFFFCLL);",
+        "    return 0;",
+        "  }",
+        "  else if ( ((1LL << v2) & 0x64) != 0 )",
+        "  {",
+        "    return *(unsigned int *)(a1 + 4 * v2 + 9192);",
+        "  }",
+        "  else",
+        "  {",
+        "    v3 = *(_DWORD *)(a1 + 9192);",
+        "    *(_DWORD *)(a1 + 9212) &= ~1u;",
+        "    uart_update_irq(a1);",
+        "  }",
+        "  return v3;",
+        "}"
+    ]
+}

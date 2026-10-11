@@ -1,0 +1,176 @@
+{
+    "nodes": {
+        "8178": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "cmp MEMACC 0",
+            "jz ADDR"
+        ],
+        "8208": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "8224": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "xor REG CONSTANT",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "8243": [
+            "lea REG MEMACC",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "8283": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "cmp MEMACC 0",
+            "jz ADDR"
+        ],
+        "8303": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "js ADDR"
+        ],
+        "8317": [
+            "lea REG MEMACC",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "8357": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "8408": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "8466": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "8480": [
+            "mov REG MEMACC",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "8492": [
+            "nop",
+            "leave",
+            "retn"
+        ]
+    },
+    "edges": {
+        "8178": [
+            8208,
+            8243
+        ],
+        "8208": [
+            8224,
+            8243
+        ],
+        "8224": [
+            8243,
+            8283
+        ],
+        "8243": [],
+        "8283": [
+            8303,
+            8408
+        ],
+        "8303": [
+            8317,
+            8357
+        ],
+        "8317": [],
+        "8357": [
+            8408
+        ],
+        "8408": [
+            8466,
+            8480
+        ],
+        "8466": [
+            8492
+        ],
+        "8480": [
+            8492
+        ],
+        "8492": []
+    },
+    "boundary": {
+        "8178": 8208,
+        "8208": 8224,
+        "8224": 8243,
+        "8243": 8283,
+        "8283": 8303,
+        "8303": 8317,
+        "8317": 8357,
+        "8357": 8408,
+        "8408": 8466,
+        "8466": 8480,
+        "8480": 8492,
+        "8492": 8495
+    },
+    "jmp_instruction": {
+        "8178": "jz      short loc_2033",
+        "8208": "jz      short loc_2033",
+        "8224": "jnz     short loc_205B",
+        "8243": "call    __assert_fail; PIC mode",
+        "8283": "jz      short loc_20D8",
+        "8303": "js      short loc_20A5",
+        "8317": "call    __assert_fail; PIC mode",
+        "8357": "call    error_free; PIC mode",
+        "8408": "jz      short loc_2120",
+        "8466": "jmp     short loc_212C",
+        "8480": "call    job_completed_txn_success",
+        "8492": "retn"
+    }
+}

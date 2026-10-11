@@ -1,0 +1,26 @@
+{
+    "pseudo_code": [
+        "bool __fastcall load(__int64 a1)",
+        "{",
+        "  bool result; // al",
+        "  __m128i *v2; // rbp",
+        "  unsigned __int64 v3; // r12",
+        "  __int64 v4; // r13",
+        "",
+        "  result = 0;",
+        "  if ( a1 )",
+        "  {",
+        "    v2 = (__m128i *)r_buf_buffer(*(_QWORD *)(a1 + 24));",
+        "    v3 = r_buf_size(*(_QWORD *)(a1 + 24));",
+        "    v4 = *(_QWORD *)(a1 + 40);",
+        "    result = 0;",
+        "    if ( v4 )",
+        "    {",
+        "      *(_QWORD *)(v4 + 208) = load_bytes(a1, v2, v3);",
+        "      return check_bytes((unsigned int *)v2, v3);",
+        "    }",
+        "  }",
+        "  return result;",
+        "}"
+    ]
+}

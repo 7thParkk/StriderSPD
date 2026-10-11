@@ -1,0 +1,175 @@
+{
+    "nodes": {
+        "783": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov REG MEMACC",
+            "neg REG",
+            "sbb REG REG",
+            "and REG CONSTANT",
+            "cmp 312 0",
+            "jz ADDR"
+        ],
+        "842": [
+            "or REG CONSTANT"
+        ],
+        "845": [
+            "cmp 308 0",
+            "jz ADDR"
+        ],
+        "854": [
+            "or REG CONSTANT"
+        ],
+        "857": [
+            "or REG CONSTANT",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "cmp REG 18446744073709551615",
+            "jz ADDR"
+        ],
+        "888": [
+            "cmp 8 REG",
+            "jz ADDR"
+        ],
+        "893": [
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "cmp REG 18446744073709551615",
+            "jnz ADDR"
+        ],
+        "925": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jnz ADDR"
+        ],
+        "948": [
+            "mov REG REG",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "960": [
+            "mov REG REG",
+            "lea REG MEMACC",
+            "push REG",
+            "push CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ],
+        "1036": [
+            "mov REG REG",
+            "lea REG MEMACC",
+            "push REG",
+            "push CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "jmp ADDR"
+        ],
+        "1110": [
+            "call ADDR"
+        ]
+    },
+    "edges": {
+        "783": [
+            842,
+            845
+        ],
+        "842": [
+            845
+        ],
+        "845": [
+            854,
+            857
+        ],
+        "854": [
+            857
+        ],
+        "857": [
+            888,
+            960
+        ],
+        "888": [
+            893,
+            925
+        ],
+        "893": [
+            925,
+            1036
+        ],
+        "925": [
+            948,
+            1110
+        ],
+        "948": [],
+        "960": [
+            925
+        ],
+        "1036": [
+            925
+        ],
+        "1110": []
+    },
+    "boundary": {
+        "783": 842,
+        "842": 845,
+        "845": 854,
+        "854": 857,
+        "857": 888,
+        "888": 893,
+        "893": 925,
+        "925": 948,
+        "948": 960,
+        "960": 1036,
+        "1036": 1110,
+        "1110": 1115
+    },
+    "jmp_instruction": {
+        "783": "jz      short loc_34D",
+        "842": "or      ecx, 8",
+        "845": "jz      short loc_359",
+        "854": "or      ecx, 10h",
+        "857": "jz      short loc_3C0",
+        "888": "jz      short loc_39D",
+        "893": "jnz     short loc_40C",
+        "925": "jnz     loc_456",
+        "948": "retn",
+        "960": "jmp     short loc_39D",
+        "1036": "jmp     loc_39D",
+        "1110": "call    __stack_chk_fail; PIC mode"
+    }
+}

@@ -1,0 +1,84 @@
+{
+    "nodes": {
+        "10300": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "sub REG CONSTANT",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "xor REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "10343": [
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "cmp MEMACC 0",
+            "jnz ADDR"
+        ],
+        "10361": [
+            "mov MEMACC CONSTANT"
+        ],
+        "10371": [
+            "mov REG CONSTANT"
+        ],
+        "10376": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jz ADDR"
+        ],
+        "10392": [
+            "call ADDR"
+        ],
+        "10397": [
+            "add REG CONSTANT",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "10300": [
+            10343,
+            10376
+        ],
+        "10343": [
+            10361,
+            10371
+        ],
+        "10361": [
+            10371
+        ],
+        "10371": [
+            10376
+        ],
+        "10376": [
+            10392,
+            10397
+        ],
+        "10392": [],
+        "10397": []
+    },
+    "boundary": {
+        "10300": 10343,
+        "10343": 10361,
+        "10361": 10371,
+        "10371": 10376,
+        "10376": 10392,
+        "10392": 10397,
+        "10397": 10403
+    },
+    "jmp_instruction": {
+        "10300": "jz      short loc_2888",
+        "10343": "jnz     short loc_2883",
+        "10361": "mov     dword ptr [rbx+114h], 1",
+        "10371": "mov     eax, 1",
+        "10376": "jz      short loc_289D",
+        "10392": "call    __stack_chk_fail; PIC mode",
+        "10397": "retn"
+    }
+}

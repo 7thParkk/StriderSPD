@@ -1,0 +1,193 @@
+{
+    "nodes": {
+        "208": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "push REG",
+            "mov REG CONSTANT",
+            "cmp 8 1",
+            "jnz ADDR"
+        ],
+        "234": [
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov MEMACC CONSTANT",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "271": [
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "jz ADDR"
+        ],
+        "281": [
+            "mov REG CONSTANT",
+            "xor REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "xor REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "cmp REG REG",
+            "jnz ADDR"
+        ],
+        "351": [
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "360": [
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "jz ADDR"
+        ],
+        "370": [
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "cmp 8 1",
+            "jnz ADDR"
+        ],
+        "393": [
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "400": [
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "416": [
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "426": [
+            "call ADDR"
+        ],
+        "431": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "xor REG REG",
+            "lea REG MEMACC",
+            "call ADDR"
+        ],
+        "464": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "xor REG REG",
+            "lea REG MEMACC",
+            "call ADDR"
+        ],
+        "497": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "xor REG REG",
+            "lea REG MEMACC",
+            "call ADDR"
+        ],
+        "530": []
+    },
+    "edges": {
+        "208": [
+            234,
+            464
+        ],
+        "234": [
+            271,
+            426
+        ],
+        "271": [
+            281,
+            400
+        ],
+        "281": [
+            351,
+            431
+        ],
+        "351": [
+            360,
+            426
+        ],
+        "360": [
+            370,
+            416
+        ],
+        "370": [
+            393,
+            497
+        ],
+        "393": [],
+        "400": [
+            281
+        ],
+        "416": [
+            370
+        ],
+        "426": [],
+        "431": [
+            464
+        ],
+        "464": [
+            497
+        ],
+        "497": [
+            530
+        ],
+        "530": []
+    },
+    "boundary": {
+        "208": 234,
+        "234": 271,
+        "271": 281,
+        "281": 351,
+        "351": 360,
+        "360": 370,
+        "370": 393,
+        "393": 398,
+        "400": 413,
+        "416": 426,
+        "426": 431,
+        "431": 464,
+        "464": 497,
+        "497": 530,
+        "530": 530
+    },
+    "jmp_instruction": {
+        "208": "jnz     loc_1D0",
+        "234": "jz      loc_1AA",
+        "271": "jz      short loc_190",
+        "281": "jnz     short loc_1AF",
+        "351": "jz      short loc_1AA",
+        "360": "jz      short loc_1A0",
+        "370": "jnz     short loc_1F1",
+        "393": "retn",
+        "400": "jmp     loc_119",
+        "416": "jmp     short loc_172",
+        "426": "call    qobject_decref_part_0",
+        "431": "call    g_assertion_message_expr; PIC mode",
+        "464": "call    g_assertion_message_expr; PIC mode",
+        "497": "call    g_assertion_message_expr; PIC mode",
+        "530": "call    g_assertion_message_expr; PIC mode"
+    }
+}

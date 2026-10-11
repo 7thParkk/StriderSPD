@@ -1,0 +1,25 @@
+{
+    "nodes": {
+        "384": [
+            "endbr64",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "jmp ADDR"
+        ],
+        "11128": []
+    },
+    "edges": {
+        "384": [
+            11128
+        ],
+        "11128": []
+    },
+    "boundary": {
+        "384": 399,
+        "11128": 11128
+    },
+    "jmp_instruction": {
+        "384": "jmp     msix_notify; PIC mode",
+        "11128": "extrn pci_default_write_config:near"
+    }
+}

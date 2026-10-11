@@ -1,0 +1,108 @@
+{
+    "nodes": {
+        "752": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "shr REG CONSTANT",
+            "sub REG CONSTANT",
+            "cmp REG 31",
+            "ja ADDR"
+        ],
+        "775": [
+            "mov REG CONSTANT",
+            "shl REG REG",
+            "test REG 154",
+            "jnz ADDR"
+        ],
+        "787": [
+            "mov REG REG",
+            "test REG 100",
+            "jnz ADDR"
+        ],
+        "794": [
+            "and MEMACC CONSTANT",
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG MEMACC",
+            "call ADDR",
+            "add REG CONSTANT",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "840": [
+            "mov REG MEMACC",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "864": [
+            "xor REG REG",
+            "and REG CONSTANT",
+            "lea REG MEMACC",
+            "call ADDR",
+            "xor REG REG"
+        ],
+        "884": [
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "896": [
+            "xor REG REG",
+            "and REG CONSTANT",
+            "lea REG MEMACC",
+            "call ADDR",
+            "xor REG REG",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "752": [
+            775,
+            896
+        ],
+        "775": [
+            787,
+            864
+        ],
+        "787": [
+            794,
+            840
+        ],
+        "794": [],
+        "840": [],
+        "864": [
+            884
+        ],
+        "884": [],
+        "896": [
+            884
+        ]
+    },
+    "boundary": {
+        "752": 775,
+        "775": 787,
+        "787": 794,
+        "794": 833,
+        "840": 854,
+        "864": 884,
+        "884": 891,
+        "896": 918
+    },
+    "jmp_instruction": {
+        "752": "ja      short loc_380",
+        "775": "jnz     short loc_360",
+        "787": "jnz     short loc_348",
+        "794": "retn",
+        "840": "retn",
+        "864": "xor     eax, eax",
+        "884": "retn",
+        "896": "jmp     short loc_374"
+    }
+}

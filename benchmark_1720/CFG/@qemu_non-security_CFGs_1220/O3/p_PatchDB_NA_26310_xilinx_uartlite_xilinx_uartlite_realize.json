@@ -1,0 +1,52 @@
+{
+    "nodes": {
+        "256": [
+            "endbr64",
+            "sub REG CONSTANT",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "307": [
+            "mov REG REG",
+            "lea REG MEMACC",
+            "add REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "jmp ADDR"
+        ],
+        "344": [
+            "add REG CONSTANT",
+            "retn"
+        ],
+        "2448": []
+    },
+    "edges": {
+        "256": [
+            307,
+            344
+        ],
+        "307": [
+            2448
+        ],
+        "344": [],
+        "2448": []
+    },
+    "boundary": {
+        "256": 307,
+        "307": 340,
+        "344": 349,
+        "2448": 2448
+    },
+    "jmp_instruction": {
+        "256": "jz      short loc_158",
+        "307": "jmp     qemu_chr_add_handlers; PIC mode",
+        "344": "retn",
+        "2448": "extrn object_dynamic_cast_assert:near"
+    }
+}

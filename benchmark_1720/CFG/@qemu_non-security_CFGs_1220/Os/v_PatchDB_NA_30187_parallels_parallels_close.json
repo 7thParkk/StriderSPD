@@ -1,0 +1,25 @@
+{
+    "nodes": {
+        "1040": [
+            "endbr64",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "jmp ADDR"
+        ],
+        "3832": []
+    },
+    "edges": {
+        "1040": [
+            3832
+        ],
+        "3832": []
+    },
+    "boundary": {
+        "1040": 1057,
+        "3832": 3832
+    },
+    "jmp_instruction": {
+        "1040": "jmp     g_free; PIC mode",
+        "3832": "extrn bdrv_co_readv:near"
+    }
+}

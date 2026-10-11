@@ -1,0 +1,21 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall r_debug_native_attach(_DWORD *a1, unsigned int a2)",
+        "{",
+        "  int v2; // ecx",
+        "",
+        "  v2 = a1[76] != 0 ? 0x26 : 0;",
+        "  if ( a1[78] )",
+        "    v2 |= 8u;",
+        "  if ( a1[77] )",
+        "    v2 |= 0x10u;",
+        "  if ( ptrace(PTRACE_SETOPTIONS, a2, 0LL, v2 | 0x40u) != -1 )",
+        "  {",
+        "    if ( a1[2] != a2 && (unsigned int)ptrace(PTRACE_ATTACH, a2, 0LL, 0LL) != -1 )",
+        "      JUMPOUT(0x277CLL);",
+        "    JUMPOUT(0x275FLL);",
+        "  }",
+        "  return r_debug_native_attach_cold();",
+        "}"
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall throttle_max_is_missing_limit(double *a1, __int64 a2)",
+        "{",
+        "  double *v2; // rax",
+        "",
+        "  v2 = a1;",
+        "  do",
+        "  {",
+        "    if ( v2[1] != 0.0 && *v2 == 0.0 )",
+        "    {",
+        "      error_setg_internal(",
+        "        a2,",
+        "        LC2,",
+        "        317LL,",
+        "        \"throttle_max_is_missing_limit\",",
+        "        \"bps_max/iops_max require corresponding bps/iops values\",",
+        "        0.0);",
+        "      return 1LL;",
+        "    }",
+        "    v2 += 3;",
+        "  }",
+        "  while ( v2 != a1 + 18 );",
+        "  return 0LL;",
+        "}"
+    ]
+}

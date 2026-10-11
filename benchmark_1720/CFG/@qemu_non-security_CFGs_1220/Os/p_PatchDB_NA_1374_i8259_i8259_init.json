@@ -1,0 +1,124 @@
+{
+    "nodes": {
+        "1821": [
+            "endbr64",
+            "push REG",
+            "lea REG MEMACC",
+            "push REG",
+            "lea REG MEMACC",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "push REG",
+            "push REG",
+            "push REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "xor REG REG",
+            "xor REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "1934": [
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "inc REG",
+            "cmp REG 8",
+            "jnz ADDR"
+        ],
+        "1958": [
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "xor REG REG",
+            "mov REG REG",
+            "xor REG REG",
+            "mov MEMACC REG",
+            "call ADDR",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "call ADDR",
+            "mov REG MEMACC",
+            "xor REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR"
+        ],
+        "2031": [
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov MEMACC REG",
+            "inc REG",
+            "cmp REG 8",
+            "jnz ADDR"
+        ],
+        "2056": [
+            "lea REG MEMACC",
+            "mov REG REG",
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "call ADDR",
+            "mov MEMACC REG",
+            "pop REG",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "1821": [
+            1934
+        ],
+        "1934": [
+            1958,
+            1934
+        ],
+        "1958": [
+            2031
+        ],
+        "2031": [
+            2056,
+            2031
+        ],
+        "2056": []
+    },
+    "boundary": {
+        "1821": 1934,
+        "1934": 1958,
+        "1958": 2031,
+        "2031": 2056,
+        "2056": 2112
+    },
+    "jmp_instruction": {
+        "1821": "call    qdev_connect_gpio_out; PIC mode",
+        "1934": "jnz     short loc_78E",
+        "1958": "call    qdev_connect_gpio_out; PIC mode",
+        "2031": "jnz     short loc_7EF",
+        "2056": "retn"
+    }
+}

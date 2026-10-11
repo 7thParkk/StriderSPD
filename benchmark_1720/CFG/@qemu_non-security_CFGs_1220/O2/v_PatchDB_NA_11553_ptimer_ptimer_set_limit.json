@@ -1,0 +1,95 @@
+{
+    "nodes": {
+        "752": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "mov REG MEMACC",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "imul REG REG",
+            "cmp REG 9999",
+            "ja ADDR"
+        ],
+        "785": [
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "790": [
+            "mov MEMACC REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "798": [
+            "cmp MEMACC 0",
+            "mov MEMACC REG",
+            "jz ADDR"
+        ],
+        "807": [
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "832": [
+            "pop REG",
+            "retn"
+        ],
+        "840": [
+            "mov REG CONSTANT",
+            "cqo REG REG",
+            "idiv REG REG",
+            "jmp ADDR"
+        ],
+        "0": []
+    },
+    "edges": {
+        "752": [
+            785,
+            790
+        ],
+        "785": [
+            790,
+            840
+        ],
+        "790": [
+            798,
+            832
+        ],
+        "798": [
+            807,
+            832
+        ],
+        "807": [
+            0
+        ],
+        "832": [],
+        "840": [
+            790
+        ],
+        "0": []
+    },
+    "boundary": {
+        "752": 785,
+        "785": 790,
+        "790": 798,
+        "798": 807,
+        "807": 830,
+        "832": 834,
+        "840": 852,
+        "0": 0
+    },
+    "jmp_instruction": {
+        "752": "ja      short loc_316",
+        "785": "jnz     short loc_348",
+        "790": "jz      short loc_340",
+        "798": "jz      short loc_340",
+        "807": "jmp     ptimer_reload",
+        "832": "retn",
+        "840": "jmp     short loc_316",
+        "0": ""
+    }
+}

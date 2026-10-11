@@ -1,0 +1,85 @@
+{
+    "nodes": {
+        "0": [
+            "endbr64",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov REG REG",
+            "mov REG CONSTANT",
+            "mov REG CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "36": [
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov MEMACC REG",
+            "movsxd REG MEMACC",
+            "mov REG MEMACC",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "70": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "movdqu REG MEMACC",
+            "movups MEMACC REG",
+            "movdqu REG MEMACC",
+            "movups MEMACC REG",
+            "movdqu REG MEMACC",
+            "movups MEMACC REG"
+        ],
+        "103": [
+            "mov REG REG",
+            "add REG CONSTANT",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "113": [
+            "mov REG MEMACC",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "jmp ADDR"
+        ]
+    },
+    "edges": {
+        "0": [
+            36,
+            103
+        ],
+        "36": [
+            70,
+            113
+        ],
+        "70": [
+            103
+        ],
+        "103": [],
+        "113": [
+            103
+        ]
+    },
+    "boundary": {
+        "0": 36,
+        "36": 70,
+        "70": 103,
+        "103": 113,
+        "113": 137
+    },
+    "jmp_instruction": {
+        "0": "jz      short loc_67",
+        "36": "jz      short loc_71",
+        "70": "movups  xmmword ptr [rbx+34h], xmm2",
+        "103": "retn",
+        "113": "jmp     short loc_67"
+    }
+}

@@ -1,0 +1,33 @@
+{
+    "pseudo_code": [
+        "__int64 __fastcall qed_aio_write_main(__int64 a1)",
+        "{",
+        "  _DWORD *v1; // r12",
+        "  __int64 v2; // rbp",
+        "  _QWORD *v3; // rax",
+        "  __int64 result; // rax",
+        "",
+        "  v1 = *(_DWORD **)(*(_QWORD *)(a1 + 8) + 24LL);",
+        "  v2 = *(_QWORD *)(a1 + 128) + (*(_QWORD *)(a1 + 120) & (unsigned int)(v1[5] - 1));",
+        "  v3 = *(_QWORD **)(*(_QWORD *)v1 + 12376LL);",
+        "  if ( v3 )",
+        "    bdrv_debug_event(*v3, 12LL);",
+        "  result = bdrv_pwritev(*(_QWORD *)(*(_QWORD *)v1 + 12376LL), v2);",
+        "  if ( (int)result >= 0 )",
+        "  {",
+        "    result = *(unsigned int *)(a1 + 140);",
+        "    if ( (_DWORD)result )",
+        "    {",
+        "      if ( !*(_QWORD *)(*(_QWORD *)v1 + 12368LL)",
+        "        || (result = bdrv_flush(**(_QWORD **)(*(_QWORD *)v1 + 12376LL)), (int)result >= 0) )",
+        "      {",
+        "        result = qed_aio_write_l2_update(a1, *(_QWORD *)(a1 + 128));",
+        "        if ( (int)result > 0 )",
+        "          return 0LL;",
+        "      }",
+        "    }",
+        "  }",
+        "  return result;",
+        "}"
+    ]
+}

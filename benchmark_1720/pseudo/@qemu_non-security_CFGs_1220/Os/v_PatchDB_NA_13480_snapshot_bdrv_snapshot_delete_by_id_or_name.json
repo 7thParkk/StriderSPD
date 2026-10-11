@@ -1,0 +1,23 @@
+{
+    "pseudo_code": [
+        "unsigned __int64 __fastcall bdrv_snapshot_delete_by_id_or_name(__int64 a1, __int64 a2, __int64 a3)",
+        "{",
+        "  int v4; // eax",
+        "  __int64 v6; // [rsp+0h] [rbp-38h] BYREF",
+        "  unsigned __int64 v7; // [rsp+8h] [rbp-30h]",
+        "",
+        "  v7 = __readfsqword(0x28u);",
+        "  v6 = 0LL;",
+        "  v4 = bdrv_snapshot_delete(a1, a2, 0LL, (__int64)&v6);",
+        "  if ( v4 == -2 || v4 == -22 )",
+        "  {",
+        "    error_free(v6);",
+        "    v6 = 0LL;",
+        "    v4 = bdrv_snapshot_delete(a1, 0LL, a2, (__int64)&v6);",
+        "  }",
+        "  if ( v4 < 0 )",
+        "    error_propagate(a3, v6);",
+        "  return v7 - __readfsqword(0x28u);",
+        "}"
+    ]
+}

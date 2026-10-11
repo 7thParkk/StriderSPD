@@ -1,0 +1,109 @@
+{
+    "nodes": {
+        "1724": [
+            "endbr64",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1747": [
+            "mov REG REG",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1758": [
+            "cmp 152 0",
+            "jz ADDR"
+        ],
+        "1768": [
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "1773": [
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "test REG REG",
+            "mov REG MEMACC",
+            "jnz ADDR"
+        ],
+        "1801": [
+            "mov MEMACC CONSTANT",
+            "mov MEMACC REG"
+        ],
+        "1811": [
+            "xor REG REG",
+            "jmp ADDR"
+        ],
+        "1815": [
+            "mov REG MEMACC",
+            "mov REG MEMACC",
+            "call MEMACC",
+            "movzx REG REG"
+        ],
+        "1834": [
+            "add REG CONSTANT",
+            "pop REG",
+            "retn"
+        ]
+    },
+    "edges": {
+        "1724": [
+            1747,
+            1811
+        ],
+        "1747": [
+            1758,
+            1811
+        ],
+        "1758": [
+            1768,
+            1811
+        ],
+        "1768": [
+            1773,
+            1811
+        ],
+        "1773": [
+            1801,
+            1815
+        ],
+        "1801": [
+            1811
+        ],
+        "1811": [
+            1834
+        ],
+        "1815": [
+            1834
+        ],
+        "1834": []
+    },
+    "boundary": {
+        "1724": 1747,
+        "1747": 1758,
+        "1758": 1768,
+        "1768": 1773,
+        "1773": 1801,
+        "1801": 1811,
+        "1811": 1815,
+        "1815": 1834,
+        "1834": 1840
+    },
+    "jmp_instruction": {
+        "1724": "jz      short loc_713",
+        "1747": "jz      short loc_713",
+        "1758": "jz      short loc_713",
+        "1768": "jz      short loc_713",
+        "1773": "jnz     short loc_717",
+        "1801": "mov     [rbx+70h], esi",
+        "1811": "jmp     short loc_72A",
+        "1815": "movzx   eax, al",
+        "1834": "retn"
+    }
+}

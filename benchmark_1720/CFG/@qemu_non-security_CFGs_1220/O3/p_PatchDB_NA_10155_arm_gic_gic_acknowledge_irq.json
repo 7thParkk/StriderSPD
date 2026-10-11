@@ -1,0 +1,290 @@
+{
+    "nodes": {
+        "3632": [
+            "endbr64",
+            "movsxd REG REG",
+            "lea REG MEMACC",
+            "movzx REG MEMACC",
+            "cmp REG 1023",
+            "jz ADDR"
+        ],
+        "3660": [
+            "mov REG REG",
+            "mov REG REG",
+            "cmp REG 31",
+            "jle ADDR"
+        ],
+        "3675": [
+            "lea REG MEMACC",
+            "movsxd REG REG",
+            "movzx REG MEMACC",
+            "movzx REG MEMACC",
+            "cmp REG REG",
+            "jle ADDR"
+        ],
+        "3706": [
+            "mov REG CONSTANT",
+            "movsxd REG REG",
+            "push REG",
+            "lea REG MEMACC",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "movzx REG MEMACC",
+            "shl REG REG",
+            "lea REG 8728",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "lea REG MEMACC",
+            "cmp REG 18446744073709551613",
+            "jbe ADDR"
+        ],
+        "3770": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "xor REG REG",
+            "cmp 9077 0",
+            "jz ADDR"
+        ],
+        "3794": [
+            "lea REG MEMACC",
+            "mov MEMACC REG",
+            "mov MEMACC REG",
+            "cmp REG 31",
+            "jle ADDR"
+        ],
+        "3823": [
+            "lea REG MEMACC",
+            "mov REG REG",
+            "movsxd REG REG",
+            "movzx REG MEMACC"
+        ],
+        "3839": [
+            "mov MEMACC REG",
+            "call ADDR",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "3864": [
+            "movsxd REG REG",
+            "lea REG MEMACC",
+            "movzx REG MEMACC",
+            "movzx REG MEMACC",
+            "cmp REG REG",
+            "jg ADDR"
+        ],
+        "3896": [
+            "mov REG CONSTANT",
+            "retn"
+        ],
+        "3904": [
+            "cmp REG 15",
+            "jg ADDR"
+        ],
+        "3909": [
+            "add REG REG",
+            "add REG REG",
+            "movzx REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "3932": [
+            "movzx REG REG",
+            "tzcnt REG REG",
+            "shl REG REG",
+            "not REG",
+            "and REG REG",
+            "mov MEMACC REG",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "3961": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "cmp 9077 0",
+            "movzx REG MEMACC",
+            "jz ADDR"
+        ],
+        "3987": [
+            "lea REG MEMACC",
+            "mov MEMACC REG"
+        ],
+        "3999": [
+            "mov REG REG",
+            "mov MEMACC REG",
+            "shl REG CONSTANT",
+            "or REG REG"
+        ],
+        "4014": [
+            "lea REG MEMACC",
+            "movzx REG MEMACC",
+            "jmp ADDR"
+        ],
+        "4032": [
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "xor REG REG",
+            "cmp 9077 0",
+            "jnz ADDR"
+        ],
+        "4056": [
+            "movzx REG MEMACC",
+            "not REG",
+            "and REG REG",
+            "jmp ADDR"
+        ],
+        "4080": [
+            "mov REG REG",
+            "not REG",
+            "and REG MEMACC",
+            "jmp ADDR"
+        ],
+        "4096": [
+            "mov REG REG",
+            "jmp ADDR"
+        ],
+        "4104": [
+            "mov REG REG",
+            "not REG",
+            "and REG REG",
+            "jmp ADDR"
+        ],
+        "4118": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR"
+        ]
+    },
+    "edges": {
+        "3632": [
+            3660,
+            3896
+        ],
+        "3660": [
+            3675,
+            3864
+        ],
+        "3675": [
+            3706,
+            3896
+        ],
+        "3706": [
+            3770,
+            3904
+        ],
+        "3770": [
+            3794,
+            4080
+        ],
+        "3794": [
+            3823,
+            4096
+        ],
+        "3823": [
+            3839
+        ],
+        "3839": [],
+        "3864": [
+            3706,
+            3896
+        ],
+        "3896": [],
+        "3904": [
+            3909,
+            4032
+        ],
+        "3909": [
+            3932,
+            4118
+        ],
+        "3932": [
+            3961,
+            3999
+        ],
+        "3961": [
+            3987,
+            4104
+        ],
+        "3987": [
+            3999
+        ],
+        "3999": [
+            4014
+        ],
+        "4014": [
+            3839
+        ],
+        "4032": [
+            3794,
+            4056
+        ],
+        "4056": [
+            3794
+        ],
+        "4080": [
+            3794
+        ],
+        "4096": [
+            4014
+        ],
+        "4104": [
+            3987
+        ],
+        "4118": []
+    },
+    "boundary": {
+        "3632": 3660,
+        "3660": 3675,
+        "3675": 3706,
+        "3706": 3770,
+        "3770": 3794,
+        "3794": 3823,
+        "3823": 3839,
+        "3839": 3858,
+        "3864": 3896,
+        "3896": 3902,
+        "3904": 3909,
+        "3909": 3932,
+        "3932": 3961,
+        "3961": 3987,
+        "3987": 3999,
+        "3999": 4014,
+        "4014": 4032,
+        "4032": 4056,
+        "4056": 4073,
+        "4080": 4096,
+        "4096": 4100,
+        "4104": 4118,
+        "4118": 4149
+    },
+    "jmp_instruction": {
+        "3632": "jz      loc_F38",
+        "3660": "jle     loc_F18",
+        "3675": "jle     loc_F38",
+        "3706": "jbe     loc_F40",
+        "3770": "jz      loc_FF0",
+        "3794": "jle     loc_1000",
+        "3823": "movzx   ecx, byte ptr [rdi+rcx+4055h]",
+        "3839": "retn",
+        "3864": "jg      loc_E7A",
+        "3896": "retn",
+        "3904": "jg      short loc_FC0",
+        "3909": "jz      loc_1016",
+        "3932": "jnz     short loc_F9F",
+        "3961": "jz      short loc_1008",
+        "3987": "mov     [rdi+r11*2+2372h], r10b",
+        "3999": "or      ebx, eax",
+        "4014": "jmp     loc_EFF",
+        "4032": "jnz     loc_ED2",
+        "4056": "jmp     loc_ED2",
+        "4080": "jmp     loc_ED2",
+        "4096": "jmp     short loc_FAE",
+        "4104": "jmp     loc_F93",
+        "4118": "call    __assert_fail; PIC mode"
+    }
+}

@@ -1,0 +1,82 @@
+{
+    "nodes": {
+        "744": [
+            "endbr64",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "mov REG REG",
+            "push REG",
+            "call ADDR",
+            "xor REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jnz ADDR"
+        ],
+        "786": [
+            "mov MEMACC CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "805": [
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "xor REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "jmp ADDR"
+        ],
+        "839": [
+            "pop REG",
+            "xor REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "35440": []
+    },
+    "edges": {
+        "744": [
+            786,
+            839
+        ],
+        "786": [
+            805,
+            839
+        ],
+        "805": [
+            35440
+        ],
+        "839": [],
+        "35440": []
+    },
+    "boundary": {
+        "744": 786,
+        "786": 805,
+        "805": 839,
+        "839": 850,
+        "35440": 35440
+    },
+    "jmp_instruction": {
+        "744": "jnz     short loc_347",
+        "786": "jz      short loc_347",
+        "805": "jmp     r_io_desc_new; PIC mode",
+        "839": "retn",
+        "35440": "extrn r_sandbox_enable:near"
+    }
+}

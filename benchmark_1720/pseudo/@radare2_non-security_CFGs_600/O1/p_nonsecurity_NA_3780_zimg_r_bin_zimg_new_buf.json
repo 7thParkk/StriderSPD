@@ -1,0 +1,32 @@
+{
+    "pseudo_code": [
+        "_QWORD *__fastcall r_bin_zimg_new_buf(_QWORD *a1)",
+        "{",
+        "  _QWORD *v1; // rbx",
+        "  __int64 v2; // rax",
+        "  __int64 v3; // rax",
+        "",
+        "  v1 = calloc(1uLL, 0x78uLL);",
+        "  if ( v1 )",
+        "  {",
+        "    *(_DWORD *)v1 = a1[1];",
+        "    v2 = r_buf_new();",
+        "    v1[2] = v2;",
+        "    if ( (unsigned int)r_buf_set_bytes(v2, *a1, *(int *)v1) && (unsigned __int64)r_buf_size(v1[2]) > 0x2B )",
+        "    {",
+        "      v3 = *(_QWORD *)v1[2];",
+        "      *(__m128i *)(v1 + 3) = _mm_loadu_si128((const __m128i *)v3);",
+        "      *(__m128i *)(v1 + 5) = _mm_loadu_si128((const __m128i *)(v3 + 16));",
+        "      *(__m128i *)((char *)v1 + 52) = _mm_loadu_si128((const __m128i *)(v3 + 28));",
+        "    }",
+        "    else",
+        "    {",
+        "      r_buf_free(v1[2]);",
+        "      free(v1);",
+        "      return 0LL;",
+        "    }",
+        "  }",
+        "  return v1;",
+        "}"
+    ]
+}

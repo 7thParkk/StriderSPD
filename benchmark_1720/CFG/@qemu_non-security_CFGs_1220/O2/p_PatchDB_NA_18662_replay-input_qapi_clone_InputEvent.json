@@ -1,0 +1,134 @@
+{
+    "nodes": {
+        "0": [
+            "push REG",
+            "push REG",
+            "push REG",
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "mov REG MEMACC",
+            "mov MEMACC REG",
+            "xor REG REG",
+            "mov MEMACC CONSTANT",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG CONSTANT",
+            "xor REG REG",
+            "lea REG 8",
+            "mov REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "106": [
+            "mov REG CONSTANT",
+            "mov REG REG",
+            "call ADDR",
+            "lea REG 16",
+            "mov REG REG",
+            "xor REG REG",
+            "mov REG REG",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG REG",
+            "call ADDR",
+            "mov REG MEMACC",
+            "test REG REG",
+            "jz ADDR"
+        ],
+        "157": [
+            "sub REG CONSTANT",
+            "mov MEMACC REG",
+            "jz ADDR"
+        ],
+        "167": [
+            "mov REG MEMACC"
+        ],
+        "172": [
+            "mov REG MEMACC",
+            "sub REG MEMACC",
+            "jnz ADDR"
+        ],
+        "188": [
+            "add REG CONSTANT",
+            "mov REG REG",
+            "pop REG",
+            "pop REG",
+            "pop REG",
+            "retn"
+        ],
+        "208": [
+            "mov REG REG",
+            "call ADDR",
+            "jmp ADDR"
+        ],
+        "218": [
+            "call ADDR"
+        ],
+        "223": [
+            "lea REG MEMACC",
+            "mov REG CONSTANT",
+            "lea REG MEMACC",
+            "lea REG MEMACC",
+            "call ADDR"
+        ]
+    },
+    "edges": {
+        "0": [
+            106,
+            172
+        ],
+        "106": [
+            157,
+            223
+        ],
+        "157": [
+            167,
+            208
+        ],
+        "167": [
+            172
+        ],
+        "172": [
+            188,
+            218
+        ],
+        "188": [],
+        "208": [
+            167
+        ],
+        "218": [],
+        "223": []
+    },
+    "boundary": {
+        "0": 106,
+        "106": 157,
+        "157": 167,
+        "167": 172,
+        "172": 188,
+        "188": 200,
+        "208": 218,
+        "218": 223,
+        "223": 254
+    },
+    "jmp_instruction": {
+        "0": "jz      short loc_AC",
+        "106": "jz      short loc_DF",
+        "157": "jz      short loc_D0",
+        "167": "mov     rbx, [rsp+38h+var_28]",
+        "172": "jnz     short loc_DA",
+        "188": "retn",
+        "208": "jmp     short loc_A7",
+        "218": "call    __stack_chk_fail; PIC mode",
+        "223": "call    __assert_fail; PIC mode"
+    }
+}
