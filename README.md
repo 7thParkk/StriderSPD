@@ -1,6 +1,6 @@
 # StriderSPD
 
-StriderSPD identifies security patches from paired pre/post binary control-flow graphs (CFGs) and decompiled pseudo-code. This repository contains the local V1 joint-training and inference code, the 1,720-sample evaluation benchmark, and the original `baseline/` directory.
+Repository for the TSE paper "StriderSPD: Structure-Guided Joint Representation Learning for Binary Security Patch Detection".
 
 ## Install
 
@@ -127,4 +127,3 @@ Archived predictions from this exact checkpoint reproduce these benchmark result
 | Samples | Accuracy | Precision | Recall | F1 | FPR |
 | --- | --- | --- | --- | --- | --- |
 | 1,720 | 0.854070 | 0.822979 | 0.957426 | 0.885126 | 0.292958 |
-
