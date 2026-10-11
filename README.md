@@ -128,6 +128,3 @@ Archived predictions from this exact checkpoint reproduce these benchmark result
 | --- | --- | --- | --- | --- | --- |
 | 1,720 | 0.854070 | 0.822979 | 0.957426 | 0.885126 | 0.292958 |
 
-Confusion matrix: TP 967, TN 502, FP 208, FN 43. The reference export computes FPR as `FP / (FP + TN + 0.0001)`. `release_metadata/` includes the original per-sample predictions, metrics, benchmark hashes and model checksum.
-
-The checkpoint SHA256, benchmark bytes and archived metrics have been verified. GPU training/inference with this portable release has not been rerun. The archived evaluation used local LoRA-merged Qwen3 config/tokenizer assets; their bytes have not been compared with the public scaffold assets. Original `baseline/` files are retained unchanged.
