@@ -1,0 +1,199 @@
+{
+  "boundary": {
+    "1049616": 1049645, 
+    "1049586": 1049590, 
+    "1049811": 1049842, 
+    "1049590": 1049616, 
+    "1049538": 1049544, 
+    "1049349": 1049538, 
+    "1049735": 1049811, 
+    "1049544": 1049586, 
+    "1049645": 1049735
+  }, 
+  "edges": {
+    "1049616": [
+      1049645
+    ], 
+    "1049586": [
+      1049590
+    ], 
+    "1049811": [], 
+    "1049590": [
+      1049616, 
+      1049645
+    ], 
+    "1049538": [
+      1049544, 
+      1049586
+    ], 
+    "1049349": [
+      1049538, 
+      1049586
+    ], 
+    "1049735": [
+      1049811
+    ], 
+    "1049544": [
+      1049590
+    ], 
+    "1049645": [
+      1049735, 
+      1049811
+    ]
+  }, 
+  "nodes": {
+    "1049616": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG CONSTANT", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR"
+    ], 
+    "1049586": [
+      "mov MEMACC CONSTANT"
+    ], 
+    "1049811": [
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "nop", 
+      "mov REG MEMACC", 
+      "leave", 
+      "ret"
+    ], 
+    "1049590": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "cmp REG REG", 
+      "jz ADDR"
+    ], 
+    "1049538": [
+      "cmp -76 0", 
+      "jnz ADDR"
+    ], 
+    "1049349": [
+      "endbr64", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "sub REG CONSTANT", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "mov MEMACC CONSTANT", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "xor REG CONSTANT", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1049735": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "lea REG 1056944", 
+      "mov PROCESS_SPECIFIC REG", 
+      "mov REG CONSTANT", 
+      "mov REG CONSTANT", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "lea REG 1056944", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR"
+    ], 
+    "1049544": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov MEMACC REG", 
+      "jmp ADDR"
+    ], 
+    "1049645": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG CONSTANT", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "cmp -77 0", 
+      "jz ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1049616": "CALL 0x00102090", 
+    "1049586": "MOV byte ptr [RBP + -0x4d],0x1", 
+    "1049811": "RET", 
+    "1049590": "JZ 0x0010042d", 
+    "1049538": "JNZ 0x001003f2", 
+    "1049349": "JZ 0x001003f2", 
+    "1049735": "CALL 0x001020c0", 
+    "1049544": "JMP 0x001003f6", 
+    "1049645": "JZ 0x001004d3"
+  }
+}

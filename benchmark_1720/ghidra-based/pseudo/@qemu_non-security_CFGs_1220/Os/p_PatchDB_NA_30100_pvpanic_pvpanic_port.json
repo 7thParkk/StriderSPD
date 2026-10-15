@@ -1,0 +1,21 @@
+{
+  "pseudo_code": [
+    "undefined1  [16] pvpanic_port(void)", 
+    "", 
+    "{", 
+    "  long lVar1;", 
+    "  undefined8 uVar2;", 
+    "  undefined8 in_RCX;", 
+    "  undefined1 auVar3 [16];", 
+    "", 
+    "  lVar1 = object_resolve_path_type(&_LC6,\"pvpanic\",0);", 
+    "  uVar2 = 0;", 
+    "  if (lVar1 != 0) {", 
+    "    uVar2 = object_property_get_uint(lVar1,\"ioport\",0);", 
+    "  }", 
+    "  auVar3._8_8_ = in_RCX;", 
+    "  auVar3._0_8_ = uVar2;", 
+    "  return auVar3;", 
+    "}"
+  ]
+}

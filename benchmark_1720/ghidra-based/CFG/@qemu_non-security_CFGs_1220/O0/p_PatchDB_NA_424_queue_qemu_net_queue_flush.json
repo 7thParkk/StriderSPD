@@ -1,0 +1,210 @@
+{
+  "boundary": {
+    "1050224": 1050240, 
+    "1050360": 1050372, 
+    "1050457": 1050474, 
+    "1050203": 1050224, 
+    "1050240": 1050315, 
+    "1050402": 1050415, 
+    "1050179": 1050203, 
+    "1050372": 1050402, 
+    "1050342": 1050360, 
+    "1050474": 1050475, 
+    "1050315": 1050342, 
+    "1050475": 1050478, 
+    "1050445": 1050457, 
+    "1050158": 1050179, 
+    "1050415": 1050445
+  }, 
+  "edges": {
+    "1050224": [
+      1050240
+    ], 
+    "1050360": [
+      1050372
+    ], 
+    "1050457": [
+      1050179, 
+      1050474
+    ], 
+    "1050203": [
+      1050240
+    ], 
+    "1050240": [
+      1050315, 
+      1050402
+    ], 
+    "1050402": [
+      1050415, 
+      1050445
+    ], 
+    "1050179": [
+      1050203, 
+      1050224
+    ], 
+    "1050372": [
+      1050475
+    ], 
+    "1050342": [
+      1050372
+    ], 
+    "1050474": [
+      1050475
+    ], 
+    "1050315": [
+      1050342, 
+      1050360
+    ], 
+    "1050475": [], 
+    "1050445": [
+      1050457
+    ], 
+    "1050158": [
+      1050457
+    ], 
+    "1050415": [
+      1050445
+    ]
+  }, 
+  "nodes": {
+    "1050224": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG"
+    ], 
+    "1050360": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG"
+    ], 
+    "1050457": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jnz ADDR"
+    ], 
+    "1050203": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "jmp ADDR"
+    ], 
+    "1050240": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "movsxd REG REG", 
+      "mov REG MEMACC", 
+      "lea REG 40", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov MEMACC REG", 
+      "cmp -12 0", 
+      "jnz ADDR"
+    ], 
+    "1050402": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1050179": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1050372": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "lea REG 24", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "jmp ADDR"
+    ], 
+    "1050342": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "jmp ADDR"
+    ], 
+    "1050474": [
+      "nop"
+    ], 
+    "1050315": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1050475": [
+      "nop", 
+      "leave", 
+      "ret"
+    ], 
+    "1050445": [
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR"
+    ], 
+    "1050158": [
+      "endbr64", 
+      "push REG", 
+      "mov REG REG", 
+      "sub REG CONSTANT", 
+      "mov MEMACC REG", 
+      "jmp ADDR"
+    ], 
+    "1050415": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "movsxd REG REG", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call REG"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1050224": "MOV qword ptr [RAX + 0x20],RDX", 
+    "1050360": "MOV qword ptr [RAX + 0x20],RDX", 
+    "1050457": "JNZ 0x00100643", 
+    "1050203": "JMP 0x00100680", 
+    "1050240": "JNZ 0x00100722", 
+    "1050402": "JZ 0x0010074d", 
+    "1050179": "JZ 0x00100670", 
+    "1050372": "JMP 0x0010076b", 
+    "1050342": "JMP 0x00100704", 
+    "1050474": "NOP", 
+    "1050315": "JZ 0x001006f8", 
+    "1050475": "RET", 
+    "1050445": "CALL 0x00101008", 
+    "1050158": "JMP 0x00100759", 
+    "1050415": "CALL RCX"
+  }
+}

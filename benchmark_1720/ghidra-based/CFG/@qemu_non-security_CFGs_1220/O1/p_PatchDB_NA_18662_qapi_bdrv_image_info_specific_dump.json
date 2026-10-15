@@ -1,0 +1,95 @@
+{
+  "boundary": {
+    "1054066": 1054151, 
+    "1054151": 1054156, 
+    "1054251": 1054282, 
+    "1054156": 1054220, 
+    "1054220": 1054251
+  }, 
+  "edges": {
+    "1054066": [
+      1054151, 
+      1054220
+    ], 
+    "1054151": [
+      1054156, 
+      1054251
+    ], 
+    "1054251": [], 
+    "1054156": [], 
+    "1054220": []
+  }, 
+  "nodes": {
+    "1054066": [
+      "endbr64", 
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "sub REG CONSTANT", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov MEMACC REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "lea PROCESS_SPECIFIC 8", 
+      "lea REG 1061440", 
+      "mov REG CONSTANT", 
+      "call ADDR", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "lea REG -1", 
+      "cmp REG 6", 
+      "ja ADDR"
+    ], 
+    "1054151": [
+      "cmp REG 4", 
+      "jnz ADDR"
+    ], 
+    "1054251": [
+      "lea REG 1055888", 
+      "mov REG CONSTANT", 
+      "lea REG 1055552", 
+      "lea REG 1055688", 
+      "call ADDR"
+    ], 
+    "1054156": [
+      "call ADDR", 
+      "mov REG REG", 
+      "lea REG 1055261", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG CONSTANT", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "call ADDR", 
+      "add REG CONSTANT", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1054220": [
+      "lea REG 1055872", 
+      "mov REG CONSTANT", 
+      "lea REG 1055432", 
+      "lea REG 1055496", 
+      "call ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1054066": "JA 0x0010160c", 
+    "1054151": "JNZ 0x0010162b", 
+    "1054251": "CALL 0x00103060", 
+    "1054156": "RET", 
+    "1054220": "CALL 0x00103060"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "boundary": {
+    "1049269": 1049285, 
+    "1049217": 1049222, 
+    "1049154": 1049217, 
+    "1049253": 1049257, 
+    "1049285": 1049290, 
+    "1049222": 1049253, 
+    "1049257": 1049269, 
+    "1049290": 1049301
+  }, 
+  "edges": {
+    "1049269": [
+      1049285, 
+      1049290
+    ], 
+    "1049217": [
+      1049222, 
+      1049253
+    ], 
+    "1049154": [
+      1049217, 
+      1049222
+    ], 
+    "1049253": [
+      1049257, 
+      1049269
+    ], 
+    "1049285": [], 
+    "1049222": [
+      1049253
+    ], 
+    "1049257": [
+      1049269
+    ], 
+    "1049290": []
+  }, 
+  "nodes": {
+    "1049269": [
+      "mov REG MEMACC", 
+      "sub REG MEMACC", 
+      "jz ADDR"
+    ], 
+    "1049217": [
+      "cmp REG -22", 
+      "jnz ADDR"
+    ], 
+    "1049154": [
+      "endbr64", 
+      "push REG", 
+      "push REG", 
+      "mov REG REG", 
+      "xor REG REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "mov REG REG", 
+      "sub REG CONSTANT", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "xor REG REG", 
+      "mov REG REG", 
+      "mov MEMACC REG", 
+      "xor REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "cmp REG -2", 
+      "jz ADDR"
+    ], 
+    "1049253": [
+      "test REG REG", 
+      "jns ADDR"
+    ], 
+    "1049285": [
+      "call ADDR"
+    ], 
+    "1049222": [
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "xor REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "xor REG REG", 
+      "mov REG REG", 
+      "mov MEMACC REG", 
+      "call ADDR"
+    ], 
+    "1049257": [
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR"
+    ], 
+    "1049290": [
+      "add REG CONSTANT", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1049269": "JZ 0x001002ca", 
+    "1049217": "JNZ 0x001002a5", 
+    "1049154": "JZ 0x00100286", 
+    "1049253": "JNS 0x001002b5", 
+    "1049285": "CALL 0x00101040", 
+    "1049222": "CALL 0x00100129", 
+    "1049257": "CALL 0x00101038", 
+    "1049290": "RET"
+  }
+}

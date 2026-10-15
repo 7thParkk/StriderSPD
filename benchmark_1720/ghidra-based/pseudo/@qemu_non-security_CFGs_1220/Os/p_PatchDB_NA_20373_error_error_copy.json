@@ -1,0 +1,22 @@
+{
+  "pseudo_code": [
+    "undefined1  [16]", 
+    "error_copy(undefined8 *param_1,undefined8 param_2,undefined8 param_3,undefined8 param_4)", 
+    "", 
+    "{", 
+    "  undefined8 uVar1;", 
+    "  undefined1 auVar2 [16];", 
+    "", 
+    "  auVar2._0_8_ = (undefined8 *)g_malloc0(0x30);", 
+    "  uVar1 = g_strdup(*param_1);", 
+    "  auVar2._0_8_[2] = param_1[2];", 
+    "  auVar2._0_8_[3] = param_1[3];", 
+    "  if ((undefined8 *)param_1[5] != (undefined8 *)0x0) {", 
+    "    uVar1 = g_string_new(*(undefined8 *)param_1[5]);", 
+    "    auVar2._0_8_[5] = uVar1;", 
+    "  }", 
+    "  auVar2._8_8_ = param_4;", 
+    "  return auVar2;", 
+    "}"
+  ]
+}

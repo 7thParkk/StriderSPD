@@ -1,0 +1,29 @@
+{
+  "pseudo_code": [
+    "void job_cancel(long param_1,undefined1 param_2)", 
+    "", 
+    "{", 
+    "  char cVar1;", 
+    "", 
+    "  if (*(int *)(param_1 + 0x14) == 9) {", 
+    "    job_do_dismiss(param_1);", 
+    "  }", 
+    "  else {", 
+    "    job_cancel_async(param_1,param_2);", 
+    "    cVar1 = job_started(param_1);", 
+    "    if (cVar1 == '\\x01') {", 
+    "      if (*(char *)(param_1 + 0x61) == '\\0') {", 
+    "        job_enter(param_1);", 
+    "      }", 
+    "      else {", 
+    "        job_completed_txn_abort(param_1);", 
+    "      }", 
+    "    }", 
+    "    else {", 
+    "      job_completed(param_1,0xffffff83);", 
+    "    }", 
+    "  }", 
+    "  return;", 
+    "}"
+  ]
+}

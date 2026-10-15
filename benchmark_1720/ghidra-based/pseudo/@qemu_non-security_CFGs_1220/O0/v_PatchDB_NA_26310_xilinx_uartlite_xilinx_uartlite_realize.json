@@ -1,0 +1,20 @@
+{
+  "pseudo_code": [
+    "void xilinx_uartlite_realize(undefined8 param_1,undefined8 param_2)", 
+    "", 
+    "{", 
+    "  long lVar1;", 
+    "  undefined8 uVar2;", 
+    "  undefined8 in_R9;", 
+    "", 
+    "  lVar1 = object_dynamic_cast_assert", 
+    "                    (param_1,\"xlnx.xps-uartlite\",&DAT_00100690,0xcf,\"xilinx_uartlite_realize\",in_R9,", 
+    "                     param_2);", 
+    "  uVar2 = qemu_char_get_next_serial();", 
+    "  if (*(long *)(lVar1 + 0x3f8) != 0) {", 
+    "    qemu_chr_add_handlers(*(undefined8 *)(lVar1 + 0x3f8),uart_can_rx,uart_rx,uart_event,lVar1);", 
+    "  }", 
+    "  return;", 
+    "}"
+  ]
+}

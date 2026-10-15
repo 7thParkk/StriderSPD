@@ -1,0 +1,139 @@
+{
+  "boundary": {
+    "1051058": 1051062, 
+    "1050995": 1051005, 
+    "1050869": 1050901, 
+    "1050901": 1050945, 
+    "1051062": 1051072, 
+    "1051005": 1051058, 
+    "1051072": 1051077, 
+    "1050945": 1050955, 
+    "1051077": 1051079, 
+    "1050955": 1050995
+  }, 
+  "edges": {
+    "1051058": [
+      1051062
+    ], 
+    "1050995": [
+      1051005, 
+      1051058
+    ], 
+    "1050869": [
+      1051062
+    ], 
+    "1050901": [
+      1050945, 
+      1050955
+    ], 
+    "1051062": [
+      1050901, 
+      1051072
+    ], 
+    "1051005": [
+      1051077
+    ], 
+    "1051072": [
+      1051077
+    ], 
+    "1050945": [
+      1050955, 
+      1051058
+    ], 
+    "1051077": [], 
+    "1050955": [
+      1050995, 
+      1051058
+    ]
+  }, 
+  "nodes": {
+    "1051058": [
+      "add MEMACC CONSTANT"
+    ], 
+    "1050995": [
+      "pxor REG REG", 
+      "ucomisd REG REG", 
+      "jnz ADDR"
+    ], 
+    "1050869": [
+      "endbr64", 
+      "push REG", 
+      "mov REG REG", 
+      "sub REG CONSTANT", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "mov MEMACC CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1050901": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "movsxd REG REG", 
+      "mov REG REG", 
+      "add REG REG", 
+      "add REG REG", 
+      "shl REG CONSTANT", 
+      "add REG REG", 
+      "add REG CONSTANT", 
+      "movsd REG MEMACC", 
+      "pxor REG REG", 
+      "ucomisd REG REG", 
+      "jp ADDR"
+    ], 
+    "1051062": [
+      "cmp -4 5", 
+      "jle ADDR"
+    ], 
+    "1051005": [
+      "mov REG MEMACC", 
+      "lea REG 1052632", 
+      "lea REG 1052768", 
+      "mov PROCESS_SPECIFIC REG", 
+      "mov REG CONSTANT", 
+      "lea REG 1052480", 
+      "mov REG REG", 
+      "mov REG CONSTANT", 
+      "call ADDR", 
+      "mov REG CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1051072": [
+      "mov REG CONSTANT"
+    ], 
+    "1050945": [
+      "pxor REG REG", 
+      "ucomisd REG REG", 
+      "jz ADDR"
+    ], 
+    "1051077": [
+      "leave", 
+      "ret"
+    ], 
+    "1050955": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "movsxd REG REG", 
+      "mov REG REG", 
+      "add REG REG", 
+      "add REG REG", 
+      "shl REG CONSTANT", 
+      "add REG REG", 
+      "movsd REG MEMACC", 
+      "pxor REG REG", 
+      "ucomisd REG REG", 
+      "jp ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1051058": "ADD dword ptr [RBP + -0x4],0x1", 
+    "1050995": "JNZ 0x001009b2", 
+    "1050869": "JMP 0x001009b6", 
+    "1050901": "JP 0x0010094b", 
+    "1051062": "JLE 0x00100915", 
+    "1051005": "JMP 0x001009c5", 
+    "1051072": "MOV EAX,0x0", 
+    "1050945": "JZ 0x001009b2", 
+    "1051077": "RET", 
+    "1050955": "JP 0x001009b2"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "boundary": {
+    "1050642": 1050661, 
+    "1050557": 1050598, 
+    "1050661": 1050663, 
+    "1050598": 1050603, 
+    "1050663": 1050667, 
+    "1050603": 1050642, 
+    "1050667": 1050669, 
+    "1050669": 1050687
+  }, 
+  "edges": {
+    "1050642": [
+      1050661, 
+      1050667
+    ], 
+    "1050557": [
+      1050598
+    ], 
+    "1050661": [
+      1050598
+    ], 
+    "1050598": [
+      1050603, 
+      1050663
+    ], 
+    "1050663": [
+      1050669
+    ], 
+    "1050603": [
+      1050642, 
+      1050667
+    ], 
+    "1050667": [
+      1050669
+    ], 
+    "1050669": []
+  }, 
+  "nodes": {
+    "1050642": [
+      "lea REG 1055435", 
+      "mov REG REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1050557": [
+      "endbr64", 
+      "push REG", 
+      "lea REG 1055433", 
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "call ADDR", 
+      "lea REG 1", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG"
+    ], 
+    "1050661": [
+      "jmp ADDR"
+    ], 
+    "1050598": [
+      "cmp MEMACC 0", 
+      "jz ADDR"
+    ], 
+    "1050663": [
+      "xor REG REG", 
+      "jmp ADDR"
+    ], 
+    "1050603": [
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov PROCESS_SPECIFIC REG", 
+      "mov REG REG", 
+      "cmp MEMACC 1", 
+      "sbb REG CONSTANT", 
+      "mov REG REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1050667": [
+      "mov REG CONSTANT"
+    ], 
+    "1050669": [
+      "mov REG REG", 
+      "call ADDR", 
+      "pop REG", 
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1050642": "JZ 0x0010082b", 
+    "1050557": "MOV RBP,RAX", 
+    "1050661": "JMP 0x001007e6", 
+    "1050598": "JZ 0x00100827", 
+    "1050663": "JMP 0x0010082d", 
+    "1050603": "JZ 0x0010082b", 
+    "1050667": "MOV BL,0x1", 
+    "1050669": "RET"
+  }
+}

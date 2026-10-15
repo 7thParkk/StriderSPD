@@ -1,0 +1,17 @@
+{
+  "pseudo_code": [
+    "bool check_bytes(undefined8 param_1,ulong param_2)", 
+    "", 
+    "{", 
+    "  int iVar1;", 
+    "  bool bVar2;", 
+    "", 
+    "  bVar2 = false;", 
+    "  if (0xfff < param_2) {", 
+    "    iVar1 = r_read_be32();", 
+    "    bVar2 = iVar1 == -0x7fc8edc0;", 
+    "  }", 
+    "  return bVar2;", 
+    "}"
+  ]
+}

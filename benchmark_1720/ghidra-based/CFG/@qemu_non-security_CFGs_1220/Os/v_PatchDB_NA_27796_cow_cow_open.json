@@ -1,0 +1,158 @@
+{
+  "boundary": {
+    "1049589": 1049669, 
+    "1049569": 1049579, 
+    "1049698": 1049703, 
+    "1049540": 1049569, 
+    "1049669": 1049676, 
+    "1049703": 1049717, 
+    "1049579": 1049589, 
+    "1049676": 1049679, 
+    "1049453": 1049518, 
+    "1049518": 1049540, 
+    "1049679": 1049698
+  }, 
+  "edges": {
+    "1049589": [
+      1049679
+    ], 
+    "1049569": [
+      1049579, 
+      1049669
+    ], 
+    "1049698": [], 
+    "1049540": [
+      1049569, 
+      1049669
+    ], 
+    "1049669": [
+      1049676
+    ], 
+    "1049703": [], 
+    "1049579": [
+      1049589, 
+      1049669
+    ], 
+    "1049676": [
+      1049679
+    ], 
+    "1049453": [
+      1049518, 
+      1049540
+    ], 
+    "1049518": [
+      1049540, 
+      1049676
+    ], 
+    "1049679": [
+      1049698, 
+      1049703
+    ]
+  }, 
+  "nodes": {
+    "1049589": [
+      "mov REG MEMACC", 
+      "mov REG CONSTANT", 
+      "mov REG CONSTANT", 
+      "lea REG 1096", 
+      "bswap REG", 
+      "cqo", 
+      "idiv REG", 
+      "lea PROCESS_SPECIFIC 16", 
+      "mov MEMACC REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "add REG CONSTANT", 
+      "sar REG CONSTANT", 
+      "add REG CONSTANT", 
+      "and REG CONSTANT", 
+      "cdqe", 
+      "mov MEMACC REG", 
+      "xor REG REG", 
+      "jmp ADDR"
+    ], 
+    "1049569": [
+      "cmp 8 1297043279", 
+      "jnz ADDR"
+    ], 
+    "1049698": [
+      "call ADDR"
+    ], 
+    "1049540": [
+      "mov MEMACC REG", 
+      "xor REG REG", 
+      "lea PROCESS_SPECIFIC 8", 
+      "mov REG CONSTANT", 
+      "mov REG REG", 
+      "call ADDR", 
+      "cmp REG 1056", 
+      "jnz ADDR"
+    ], 
+    "1049669": [
+      "mov REG REG", 
+      "call ADDR"
+    ], 
+    "1049703": [
+      "add REG CONSTANT", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1049579": [
+      "cmp 12 33554432", 
+      "jnz ADDR"
+    ], 
+    "1049676": [
+      "or REG CONSTANT"
+    ], 
+    "1049453": [
+      "endbr64", 
+      "push REG", 
+      "mov REG REG", 
+      "mov REG CONSTANT", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "push REG", 
+      "sub REG CONSTANT", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "xor REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "test REG REG", 
+      "jns ADDR"
+    ], 
+    "1049518": [
+      "xor REG REG", 
+      "mov REG REG", 
+      "xor REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "test REG REG", 
+      "js ADDR"
+    ], 
+    "1049679": [
+      "mov REG MEMACC", 
+      "sub REG MEMACC", 
+      "jz ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1049589": "JMP 0x0010044f", 
+    "1049569": "JNZ 0x00100445", 
+    "1049698": "CALL 0x00101018", 
+    "1049540": "JNZ 0x00100445", 
+    "1049669": "CALL 0x00101028", 
+    "1049703": "RET", 
+    "1049579": "JNZ 0x00100445", 
+    "1049676": "OR EAX,0xffffffff", 
+    "1049453": "JNS 0x001003c4", 
+    "1049518": "JS 0x0010044c", 
+    "1049679": "JZ 0x00100467"
+  }
+}

@@ -1,0 +1,205 @@
+{
+  "boundary": {
+    "1049104": 1049113, 
+    "1049075": 1049091, 
+    "1049268": 1049273, 
+    "1048982": 1049066, 
+    "1049207": 1049218, 
+    "1049239": 1049254, 
+    "1049113": 1049165, 
+    "1049218": 1049223, 
+    "1049091": 1049100, 
+    "1049254": 1049261, 
+    "1049223": 1049239, 
+    "1049066": 1049075, 
+    "1049100": 1049104, 
+    "1049165": 1049207, 
+    "1049261": 1049268
+  }, 
+  "edges": {
+    "1049104": [
+      1049113, 
+      1049218
+    ], 
+    "1049075": [
+      1049113
+    ], 
+    "1049268": [], 
+    "1048982": [
+      1049066, 
+      1049254
+    ], 
+    "1049207": [
+      1049100
+    ], 
+    "1049239": [], 
+    "1049113": [
+      1049091, 
+      1049165
+    ], 
+    "1049218": [
+      1049223
+    ], 
+    "1049091": [
+      1049100
+    ], 
+    "1049254": [
+      1049223
+    ], 
+    "1049223": [
+      1049239, 
+      1049268
+    ], 
+    "1049066": [
+      1049075, 
+      1049261
+    ], 
+    "1049100": [
+      1049104, 
+      1049223
+    ], 
+    "1049165": [
+      1049104, 
+      1049207
+    ], 
+    "1049261": [
+      1049223
+    ]
+  }, 
+  "nodes": {
+    "1049104": [
+      "add REG CONSTANT", 
+      "cmp REG REG", 
+      "jz ADDR"
+    ], 
+    "1049075": [
+      "mov REG REG", 
+      "movsxd REG REG", 
+      "add REG REG", 
+      "lea PROCESS_SPECIFIC 7", 
+      "jmp ADDR"
+    ], 
+    "1049268": [
+      "call ADDR"
+    ], 
+    "1048982": [
+      "endbr64", 
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "sub REG CONSTANT", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "xor REG REG", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "shl REG CONSTANT", 
+      "mov REG REG", 
+      "shl REG CONSTANT", 
+      "add REG MEMACC", 
+      "movsxd REG REG", 
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "cmp REG REG", 
+      "jnz ADDR"
+    ], 
+    "1049207": [
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "neg REG", 
+      "jmp ADDR"
+    ], 
+    "1049239": [
+      "add REG CONSTANT", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1049113": [
+      "mov REG MEMACC", 
+      "lea REG 7", 
+      "test REG REG", 
+      "cmovns REG REG", 
+      "sar REG CONSTANT", 
+      "add REG CONSTANT", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG CONSTANT", 
+      "mov REG REG", 
+      "call ADDR", 
+      "cmp REG 1", 
+      "jnz ADDR"
+    ], 
+    "1049218": [
+      "mov REG CONSTANT"
+    ], 
+    "1049091": [
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "neg REG"
+    ], 
+    "1049254": [
+      "mov REG CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1049223": [
+      "mov REG MEMACC", 
+      "sub REG MEMACC", 
+      "jnz ADDR"
+    ], 
+    "1049066": [
+      "test REG REG", 
+      "jle ADDR"
+    ], 
+    "1049100": [
+      "test REG REG", 
+      "jnz ADDR"
+    ], 
+    "1049165": [
+      "mov REG REG", 
+      "and REG CONSTANT", 
+      "mov REG CONSTANT", 
+      "shl REG REG", 
+      "or MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG CONSTANT", 
+      "mov REG REG", 
+      "call ADDR", 
+      "cmp REG 1", 
+      "jz ADDR"
+    ], 
+    "1049261": [
+      "mov REG CONSTANT", 
+      "jmp ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1049104": "JZ 0x00100282", 
+    "1049075": "JMP 0x00100219", 
+    "1049268": "CALL 0x00101018", 
+    "1048982": "JNZ 0x001002a6", 
+    "1049207": "JMP 0x0010020c", 
+    "1049239": "RET", 
+    "1049113": "JNZ 0x00100203", 
+    "1049218": "MOV EAX,0x0", 
+    "1049091": "NEG EAX", 
+    "1049254": "JMP 0x00100287", 
+    "1049223": "JNZ 0x001002b4", 
+    "1049066": "JLE 0x001002ad", 
+    "1049100": "JNZ 0x00100287", 
+    "1049165": "JZ 0x00100210", 
+    "1049261": "JMP 0x00100287"
+  }
+}

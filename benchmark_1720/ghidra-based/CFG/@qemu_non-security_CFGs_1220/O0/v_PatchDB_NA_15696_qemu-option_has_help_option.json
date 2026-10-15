@@ -1,0 +1,116 @@
+{
+  "boundary": {
+    "1050512": 1050530, 
+    "1050494": 1050500, 
+    "1050368": 1050434, 
+    "1050434": 1050473, 
+    "1050500": 1050511, 
+    "1050473": 1050478, 
+    "1050478": 1050494, 
+    "1050511": 1050512
+  }, 
+  "edges": {
+    "1050512": [], 
+    "1050494": [
+      1050512
+    ], 
+    "1050368": [
+      1050500
+    ], 
+    "1050434": [
+      1050473, 
+      1050478
+    ], 
+    "1050500": [
+      1050434, 
+      1050511
+    ], 
+    "1050473": [
+      1050478
+    ], 
+    "1050478": [
+      1050494, 
+      1050500
+    ], 
+    "1050511": [
+      1050512
+    ]
+  }, 
+  "nodes": {
+    "1050512": [
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "movzx REG MEMACC", 
+      "leave", 
+      "ret"
+    ], 
+    "1050494": [
+      "mov MEMACC CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1050368": [
+      "endbr64", 
+      "push REG", 
+      "mov REG REG", 
+      "sub REG CONSTANT", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "add REG CONSTANT", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "mov MEMACC CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1050434": [
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "movzx REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1050500": [
+      "mov REG MEMACC", 
+      "movzx REG MEMACC", 
+      "test REG REG", 
+      "jnz ADDR"
+    ], 
+    "1050473": [
+      "add MEMACC CONSTANT"
+    ], 
+    "1050478": [
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1050511": [
+      "nop"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1050512": "RET", 
+    "1050494": "JMP 0x00100790", 
+    "1050368": "JMP 0x00100784", 
+    "1050434": "JZ 0x0010076e", 
+    "1050500": "JNZ 0x00100742", 
+    "1050473": "ADD qword ptr [RBP + -0x18],0x1", 
+    "1050478": "JZ 0x00100784", 
+    "1050511": "NOP"
+  }
+}

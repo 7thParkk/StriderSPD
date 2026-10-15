@@ -1,0 +1,33 @@
+{
+  "pseudo_code": [
+    "void test_max_is_missing_limit(void)", 
+    "", 
+    "{", 
+    "  char cVar1;", 
+    "  int local_c;", 
+    "", 
+    "  for (local_c = 0; local_c < 6; local_c = local_c + 1) {", 
+    "    memset(cfg,0,0x98);", 
+    "    cVar1 = throttle_max_is_missing_limit(cfg);", 
+    "    if (cVar1 == '\\0') {", 
+    "      g_assertion_message_expr", 
+    "                (0,&DAT_00102920,0x155,\"test_max_is_missing_limit\",", 
+    "                 \"throttle_max_is_missing_limit(&cfg)\");", 
+    "    }", 
+    "    cVar1 = throttle_max_is_missing_limit(cfg);", 
+    "    if (cVar1 == '\\x01') {", 
+    "      g_assertion_message_expr", 
+    "                (0,&DAT_00102920,0x159,\"test_max_is_missing_limit\",", 
+    "                 \"!throttle_max_is_missing_limit(&cfg)\");", 
+    "    }", 
+    "    cVar1 = throttle_max_is_missing_limit(cfg);", 
+    "    if (cVar1 == '\\x01') {", 
+    "      g_assertion_message_expr", 
+    "                (0,&DAT_00102920,0x15d,\"test_max_is_missing_limit\",", 
+    "                 \"!throttle_max_is_missing_limit(&cfg)\");", 
+    "    }", 
+    "  }", 
+    "  return;", 
+    "}"
+  ]
+}

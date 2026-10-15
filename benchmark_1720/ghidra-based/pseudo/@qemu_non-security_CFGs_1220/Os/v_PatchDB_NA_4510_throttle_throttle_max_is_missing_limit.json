@@ -1,0 +1,18 @@
+{
+  "pseudo_code": [
+    "undefined8 throttle_max_is_missing_limit(long param_1)", 
+    "", 
+    "{", 
+    "  long lVar1;", 
+    "", 
+    "  lVar1 = 0;", 
+    "  while ((*(double *)(param_1 + 8 + lVar1) == 0.0 || (*(double *)(param_1 + lVar1) != 0.0))) {", 
+    "    lVar1 = lVar1 + 0x18;", 
+    "    if (lVar1 == 0x90) {", 
+    "      return 0;", 
+    "    }", 
+    "  }", 
+    "  return CONCAT71((int7)((ulong)lVar1 >> 8),1);", 
+    "}"
+  ]
+}

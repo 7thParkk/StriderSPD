@@ -1,0 +1,122 @@
+{
+  "boundary": {
+    "1050129": 1050159, 
+    "1050003": 1050047, 
+    "1050100": 1050112, 
+    "1050047": 1050060, 
+    "1050112": 1050123, 
+    "1050082": 1050100, 
+    "1050123": 1050129, 
+    "1050060": 1050082, 
+    "1050159": 1050162
+  }, 
+  "edges": {
+    "1050129": [
+      1050159
+    ], 
+    "1050003": [
+      1050047, 
+      1050082
+    ], 
+    "1050100": [
+      1050112
+    ], 
+    "1050047": [
+      1050060, 
+      1050082
+    ], 
+    "1050112": [
+      1050123, 
+      1050159
+    ], 
+    "1050082": [
+      1050100, 
+      1050112
+    ], 
+    "1050123": [
+      1050129, 
+      1050159
+    ], 
+    "1050060": [
+      1050082
+    ], 
+    "1050159": []
+  }, 
+  "nodes": {
+    "1050129": [
+      "mov REG CONSTANT", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR"
+    ], 
+    "1050003": [
+      "endbr64", 
+      "push REG", 
+      "mov REG REG", 
+      "sub REG CONSTANT", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "imul REG MEMACC", 
+      "cmp REG 9999", 
+      "ja ADDR"
+    ], 
+    "1050100": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG"
+    ], 
+    "1050047": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1050112": [
+      "mov REG MEMACC", 
+      "movzx REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1050082": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "cmp -20 0", 
+      "jz ADDR"
+    ], 
+    "1050123": [
+      "cmp -20 0", 
+      "jz ADDR"
+    ], 
+    "1050060": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG CONSTANT", 
+      "cqo", 
+      "idiv REG", 
+      "mov MEMACC REG"
+    ], 
+    "1050159": [
+      "nop", 
+      "leave", 
+      "ret"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1050129": "CALL 0x001000ff", 
+    "1050003": "JA 0x001005e2", 
+    "1050100": "MOV qword ptr [RAX + 0x10],RDX", 
+    "1050047": "JZ 0x001005e2", 
+    "1050112": "JZ 0x0010062f", 
+    "1050082": "JZ 0x00100600", 
+    "1050123": "JZ 0x0010062f", 
+    "1050060": "MOV qword ptr [RBP + -0x10],RAX", 
+    "1050159": "RET"
+  }
+}

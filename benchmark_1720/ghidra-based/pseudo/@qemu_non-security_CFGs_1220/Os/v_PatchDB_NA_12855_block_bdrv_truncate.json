@@ -1,0 +1,33 @@
+{
+  "pseudo_code": [
+    "int bdrv_truncate(long *param_1,long param_2)", 
+    "", 
+    "{", 
+    "  long lVar1;", 
+    "  code *pcVar2;", 
+    "  int iVar3;", 
+    "  long lVar4;", 
+    "", 
+    "  lVar1 = *param_1;", 
+    "  iVar3 = -0x7b;", 
+    "  if (*(long *)(lVar1 + 0x10) != 0) {", 
+    "    pcVar2 = *(code **)(*(long *)(lVar1 + 0x10) + 0x120);", 
+    "    iVar3 = -0x5f;", 
+    "    if ((pcVar2 != (code *)0x0) && (iVar3 = -0xd, *(char *)(lVar1 + 4) == '\\0')) {", 
+    "      iVar3 = (*pcVar2)(lVar1);", 
+    "      if (iVar3 == 0) {", 
+    "        iVar3 = refresh_total_sectors(lVar1,param_2 >> 9);", 
+    "        bdrv_dirty_bitmap_truncate(lVar1);", 
+    "        for (lVar4 = *(long *)(lVar1 + 0x3190); lVar4 != 0; lVar4 = *(long *)(lVar4 + 0x40)) {", 
+    "          pcVar2 = *(code **)(*(long *)(lVar4 + 0x10) + 0x18);", 
+    "          if (pcVar2 != (code *)0x0) {", 
+    "            (*pcVar2)(lVar4);", 
+    "          }", 
+    "        }", 
+    "      }", 
+    "    }", 
+    "  }", 
+    "  return iVar3;", 
+    "}"
+  ]
+}

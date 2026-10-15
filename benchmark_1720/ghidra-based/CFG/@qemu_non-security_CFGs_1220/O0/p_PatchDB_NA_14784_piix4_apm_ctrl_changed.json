@@ -1,0 +1,112 @@
+{
+  "boundary": {
+    "1049232": 1049248, 
+    "1049073": 1049198, 
+    "1049269": 1049270, 
+    "1049270": 1049272, 
+    "1049207": 1049232, 
+    "1049248": 1049269, 
+    "1049198": 1049207
+  }, 
+  "edges": {
+    "1049232": [
+      1049248, 
+      1049270
+    ], 
+    "1049073": [
+      1049198, 
+      1049269
+    ], 
+    "1049269": [
+      1049270
+    ], 
+    "1049270": [], 
+    "1049207": [
+      1049232, 
+      1049270
+    ], 
+    "1049248": [
+      1049270
+    ], 
+    "1049198": [
+      1049207, 
+      1049269
+    ]
+  }, 
+  "nodes": {
+    "1049232": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1049073": [
+      "endbr64", 
+      "push REG", 
+      "mov REG REG", 
+      "sub REG CONSTANT", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "lea REG 1055408", 
+      "mov REG CONSTANT", 
+      "lea REG 1054624", 
+      "lea REG 1054640", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov MEMACC REG", 
+      "cmp -20 240", 
+      "setz REG", 
+      "movzx REG REG", 
+      "cmp -20 241", 
+      "setz REG", 
+      "movzx REG REG", 
+      "mov REG MEMACC", 
+      "add REG CONSTANT", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "cmp -20 241", 
+      "jz ADDR"
+    ], 
+    "1049269": [
+      "nop"
+    ], 
+    "1049270": [
+      "leave", 
+      "ret"
+    ], 
+    "1049207": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "add REG CONSTANT", 
+      "movzx REG MEMACC", 
+      "movzx REG REG", 
+      "and REG CONSTANT", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1049248": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "jmp ADDR"
+    ], 
+    "1049198": [
+      "cmp -20 240", 
+      "jz ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1049232": "JZ 0x001002b6", 
+    "1049073": "JZ 0x001002b5", 
+    "1049269": "NOP", 
+    "1049270": "RET", 
+    "1049207": "JZ 0x001002b6", 
+    "1049248": "JMP 0x001002b6", 
+    "1049198": "JZ 0x001002b5"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "boundary": {
+    "1050544": 1050550, 
+    "1050550": 1050569, 
+    "1050490": 1050496, 
+    "1050587": 1050592, 
+    "1050496": 1050544, 
+    "1050592": 1050594, 
+    "1050406": 1050490, 
+    "1050569": 1050587
+  }, 
+  "edges": {
+    "1050544": [
+      1050550, 
+      1050569
+    ], 
+    "1050550": [
+      1050569
+    ], 
+    "1050490": [
+      1050496, 
+      1050544
+    ], 
+    "1050587": [], 
+    "1050496": [
+      1050544
+    ], 
+    "1050592": [], 
+    "1050406": [
+      1050490, 
+      1050496
+    ], 
+    "1050569": [
+      1050587, 
+      1050592
+    ]
+  }, 
+  "nodes": {
+    "1050544": [
+      "cmp -20 0", 
+      "jns ADDR"
+    ], 
+    "1050550": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR"
+    ], 
+    "1050490": [
+      "cmp -20 -22", 
+      "jnz ADDR"
+    ], 
+    "1050587": [
+      "call ADDR"
+    ], 
+    "1050496": [
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov MEMACC CONSTANT", 
+      "lea PROCESS_SPECIFIC -16", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG CONSTANT", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov MEMACC REG"
+    ], 
+    "1050592": [
+      "leave", 
+      "ret"
+    ], 
+    "1050406": [
+      "endbr64", 
+      "push REG", 
+      "mov REG REG", 
+      "sub REG CONSTANT", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "xor REG REG", 
+      "mov MEMACC CONSTANT", 
+      "lea PROCESS_SPECIFIC -16", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG CONSTANT", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov MEMACC REG", 
+      "cmp -20 -2", 
+      "jz ADDR"
+    ], 
+    "1050569": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "sub REG MEMACC", 
+      "jz ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1050544": "JNS 0x001007c9", 
+    "1050550": "CALL 0x00101060", 
+    "1050490": "JNZ 0x001007b0", 
+    "1050587": "CALL 0x00101010", 
+    "1050496": "MOV dword ptr [RBP + -0x14],EAX", 
+    "1050592": "RET", 
+    "1050406": "JZ 0x00100780", 
+    "1050569": "JZ 0x001007e0"
+  }
+}

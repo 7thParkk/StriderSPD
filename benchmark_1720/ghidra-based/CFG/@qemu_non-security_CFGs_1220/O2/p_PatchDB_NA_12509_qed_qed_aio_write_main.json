@@ -1,0 +1,114 @@
+{
+  "boundary": {
+    "1054512": 1054562, 
+    "1054612": 1054626, 
+    "1054645": 1054667, 
+    "1054586": 1054602, 
+    "1054562": 1054586, 
+    "1054626": 1054645, 
+    "1054602": 1054612, 
+    "1054667": 1054672
+  }, 
+  "edges": {
+    "1054512": [
+      1054562, 
+      1054586
+    ], 
+    "1054612": [
+      1054626, 
+      1054645
+    ], 
+    "1054645": [
+      1054667
+    ], 
+    "1054586": [
+      1054602, 
+      1054667
+    ], 
+    "1054562": [
+      1054586
+    ], 
+    "1054626": [
+      1054645, 
+      1054667
+    ], 
+    "1054602": [
+      1054612, 
+      1054667
+    ], 
+    "1054667": []
+  }, 
+  "nodes": {
+    "1054512": [
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "lea REG -1", 
+      "mov REG MEMACC", 
+      "and REG MEMACC", 
+      "add REG MEMACC", 
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1054612": [
+      "mov REG MEMACC", 
+      "cmp 12368 0", 
+      "jz ADDR"
+    ], 
+    "1054645": [
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "xor REG REG", 
+      "test REG REG", 
+      "cmovg REG REG"
+    ], 
+    "1054586": [
+      "lea REG 88", 
+      "mov REG REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "js ADDR"
+    ], 
+    "1054562": [
+      "mov REG MEMACC", 
+      "mov REG CONSTANT", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC"
+    ], 
+    "1054626": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "test REG REG", 
+      "js ADDR"
+    ], 
+    "1054602": [
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1054667": [
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1054512": "JZ 0x0010177a", 
+    "1054612": "JZ 0x001017b5", 
+    "1054645": "CMOVG EAX,EDX", 
+    "1054586": "JS 0x001017cb", 
+    "1054562": "MOV RDI,qword ptr [RAX + 0x3058]", 
+    "1054626": "JS 0x001017cb", 
+    "1054602": "JZ 0x001017cb", 
+    "1054667": "RET"
+  }
+}

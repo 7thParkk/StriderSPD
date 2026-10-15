@@ -1,0 +1,114 @@
+{
+  "boundary": {
+    "1053969": 1053974, 
+    "1053874": 1053901, 
+    "1053811": 1053861, 
+    "1053911": 1053925, 
+    "1053944": 1053969, 
+    "1053861": 1053874, 
+    "1053925": 1053944, 
+    "1053901": 1053911
+  }, 
+  "edges": {
+    "1053969": [], 
+    "1053874": [
+      1053901, 
+      1053969
+    ], 
+    "1053811": [
+      1053861, 
+      1053874
+    ], 
+    "1053911": [
+      1053925, 
+      1053944
+    ], 
+    "1053944": [
+      1053969
+    ], 
+    "1053861": [
+      1053874
+    ], 
+    "1053925": [
+      1053944, 
+      1053969
+    ], 
+    "1053901": [
+      1053911, 
+      1053969
+    ]
+  }, 
+  "nodes": {
+    "1053969": [
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1053874": [
+      "lea REG 88", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "js ADDR"
+    ], 
+    "1053811": [
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "lea REG -1", 
+      "and REG MEMACC", 
+      "add REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1053911": [
+      "mov REG MEMACC", 
+      "cmp 12368 0", 
+      "jz ADDR"
+    ], 
+    "1053944": [
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "mov REG CONSTANT", 
+      "cmovg REG REG"
+    ], 
+    "1053861": [
+      "mov REG MEMACC", 
+      "mov REG CONSTANT", 
+      "call ADDR"
+    ], 
+    "1053925": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "test REG REG", 
+      "js ADDR"
+    ], 
+    "1053901": [
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1053969": "RET", 
+    "1053874": "JS 0x00101511", 
+    "1053811": "JZ 0x001014b2", 
+    "1053911": "JZ 0x001014f8", 
+    "1053944": "CMOVG EAX,EDX", 
+    "1053861": "CALL 0x00104068", 
+    "1053925": "JS 0x00101511", 
+    "1053901": "JZ 0x00101511"
+  }
+}

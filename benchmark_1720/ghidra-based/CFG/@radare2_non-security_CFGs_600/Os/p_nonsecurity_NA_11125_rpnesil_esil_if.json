@@ -1,0 +1,84 @@
+{
+  "boundary": {
+    "1058968": 1058973, 
+    "1058937": 1058947, 
+    "1058876": 1058919, 
+    "1058973": 1058979, 
+    "1058947": 1058952, 
+    "1058919": 1058937, 
+    "1058952": 1058968
+  }, 
+  "edges": {
+    "1058968": [], 
+    "1058937": [
+      1058947
+    ], 
+    "1058876": [
+      1058919, 
+      1058952
+    ], 
+    "1058973": [], 
+    "1058947": [
+      1058952
+    ], 
+    "1058919": [
+      1058937, 
+      1058947
+    ], 
+    "1058952": [
+      1058968, 
+      1058973
+    ]
+  }, 
+  "nodes": {
+    "1058968": [
+      "call ADDR"
+    ], 
+    "1058937": [
+      "mov MEMACC CONSTANT"
+    ], 
+    "1058876": [
+      "endbr64", 
+      "push REG", 
+      "mov REG REG", 
+      "sub REG CONSTANT", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "xor REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "xor REG REG", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1058973": [
+      "add REG CONSTANT", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1058947": [
+      "mov REG CONSTANT"
+    ], 
+    "1058919": [
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "cmp MEMACC 0", 
+      "jnz ADDR"
+    ], 
+    "1058952": [
+      "mov REG MEMACC", 
+      "sub REG MEMACC", 
+      "jz ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1058968": "CALL 0x00105068", 
+    "1058937": "MOV dword ptr [RBX + 0x114],0x1", 
+    "1058876": "JZ 0x00102888", 
+    "1058973": "RET", 
+    "1058947": "MOV EAX,0x1", 
+    "1058919": "JNZ 0x00102883", 
+    "1058952": "JZ 0x0010289d"
+  }
+}

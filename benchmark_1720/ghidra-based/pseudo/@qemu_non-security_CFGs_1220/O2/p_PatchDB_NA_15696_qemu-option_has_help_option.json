@@ -1,0 +1,32 @@
+{
+  "pseudo_code": [
+    "undefined8 has_help_option(char *param_1)", 
+    "", 
+    "{", 
+    "  char cVar1;", 
+    "  int iVar2;", 
+    "  size_t sVar3;", 
+    "  char *__s1;", 
+    "  undefined8 uVar4;", 
+    "", 
+    "  sVar3 = strlen(param_1);", 
+    "  __s1 = (char *)g_malloc(sVar3 + 1);", 
+    "  cVar1 = *param_1;", 
+    "  do {", 
+    "    if (cVar1 == '\\0') {", 
+    "      uVar4 = 0;", 
+    "LAB_001009ca:", 
+    "      free(__s1);", 
+    "      return uVar4;", 
+    "    }", 
+    "    param_1 = (char *)get_opt_value(__s1,sVar3 + 1 & 0xffffffff,param_1);", 
+    "    param_1 = param_1 + (*param_1 != '\\0');", 
+    "    if (((*__s1 == '?') && (__s1[1] == '\\0')) || (iVar2 = strcmp(__s1,\"help\"), iVar2 == 0)) {", 
+    "      uVar4 = 1;", 
+    "      goto LAB_001009ca;", 
+    "    }", 
+    "    cVar1 = *param_1;", 
+    "  } while( true );", 
+    "}"
+  ]
+}

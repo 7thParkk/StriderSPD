@@ -1,0 +1,115 @@
+{
+  "boundary": {
+    "1049840": 1049847, 
+    "1049713": 1049723, 
+    "1049847": 1049852, 
+    "1049723": 1049807, 
+    "1049632": 1049704, 
+    "1049826": 1049836, 
+    "1049704": 1049713, 
+    "1049807": 1049826
+  }, 
+  "edges": {
+    "1049840": [
+      1049807
+    ], 
+    "1049713": [
+      1049723, 
+      1049840
+    ], 
+    "1049847": [], 
+    "1049723": [
+      1049807
+    ], 
+    "1049632": [
+      1049704, 
+      1049840
+    ], 
+    "1049826": [], 
+    "1049704": [
+      1049713, 
+      1049840
+    ], 
+    "1049807": [
+      1049826, 
+      1049847
+    ]
+  }, 
+  "nodes": {
+    "1049840": [
+      "mov REG CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1049713": [
+      "cmp 4 33554432", 
+      "jnz ADDR"
+    ], 
+    "1049847": [
+      "call ADDR"
+    ], 
+    "1049723": [
+      "mov REG MEMACC", 
+      "lea REG 1096", 
+      "mov REG CONSTANT", 
+      "bswap REG", 
+      "test REG REG", 
+      "lea REG 511", 
+      "cmovns REG REG", 
+      "lea PROCESS_SPECIFIC 8", 
+      "sar REG CONSTANT", 
+      "mov MEMACC REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "add REG CONSTANT", 
+      "sar REG CONSTANT", 
+      "add REG CONSTANT", 
+      "and REG CONSTANT", 
+      "cdqe", 
+      "mov MEMACC REG", 
+      "xor REG REG"
+    ], 
+    "1049632": [
+      "endbr64", 
+      "push REG", 
+      "mov REG REG", 
+      "xor REG REG", 
+      "mov REG CONSTANT", 
+      "push REG", 
+      "sub REG CONSTANT", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "xor REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "cmp REG 1056", 
+      "jnz ADDR"
+    ], 
+    "1049826": [
+      "add REG CONSTANT", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1049704": [
+      "cmp MEMACC 1297043279", 
+      "jnz ADDR"
+    ], 
+    "1049807": [
+      "mov REG MEMACC", 
+      "sub REG MEMACC", 
+      "jnz ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1049840": "JMP 0x001004cf", 
+    "1049713": "JNZ 0x001004f0", 
+    "1049847": "CALL 0x00101018", 
+    "1049723": "XOR EAX,EAX", 
+    "1049632": "JNZ 0x001004f0", 
+    "1049826": "RET", 
+    "1049704": "JNZ 0x001004f0", 
+    "1049807": "JNZ 0x001004f7"
+  }
+}

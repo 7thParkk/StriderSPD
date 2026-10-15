@@ -1,0 +1,107 @@
+{
+  "boundary": {
+    "1049712": 1049739, 
+    "1049744": 1049766, 
+    "1049683": 1049691, 
+    "1049691": 1049709, 
+    "1049600": 1049646, 
+    "1049646": 1049683
+  }, 
+  "edges": {
+    "1049712": [
+      1049691
+    ], 
+    "1049744": [], 
+    "1049683": [
+      1049691
+    ], 
+    "1049691": [], 
+    "1049600": [
+      1049646, 
+      1049744
+    ], 
+    "1049646": [
+      1049683, 
+      1049712
+    ]
+  }, 
+  "nodes": {
+    "1049712": [
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "jmp ADDR"
+    ], 
+    "1049744": [
+      "add REG CONSTANT", 
+      "xor REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "jmp ADDR"
+    ], 
+    "1049683": [
+      "mov REG REG", 
+      "call ADDR"
+    ], 
+    "1049691": [
+      "add REG CONSTANT", 
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1049600": [
+      "endbr64", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "mov REG REG", 
+      "sub REG CONSTANT", 
+      "movzx REG MEMACC", 
+      "mov MEMACC REG", 
+      "test REG 1", 
+      "jnz ADDR"
+    ], 
+    "1049646": [
+      "or REG CONSTANT", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov MEMACC REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call MEMACC", 
+      "and MEMACC CONSTANT", 
+      "mov REG REG", 
+      "test REG REG", 
+      "jz ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1049712": "JMP 0x0010045b", 
+    "1049744": "JMP 0x00100000", 
+    "1049683": "CALL 0x00100230", 
+    "1049691": "RET", 
+    "1049600": "JNZ 0x00100490", 
+    "1049646": "JZ 0x00100470"
+  }
+}

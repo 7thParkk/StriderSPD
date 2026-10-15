@@ -1,0 +1,29 @@
+{
+  "pseudo_code": [
+    "undefined4 uart_read(long param_1,ulong param_2)", 
+    "", 
+    "{", 
+    "  undefined4 uVar1;", 
+    "  ulong uVar2;", 
+    "  char *pcVar3;", 
+    "", 
+    "  if (param_2 < 0x20) {", 
+    "    uVar2 = 1L << ((byte)(param_2 >> 2) & 0x3f);", 
+    "    if ((uVar2 & 0x9a) == 0) {", 
+    "      if ((uVar2 & 100) == 0) {", 
+    "        uVar1 = *(undefined4 *)(param_1 + 0x23e8);", 
+    "        uart_update_irq();", 
+    "        return uVar1;", 
+    "      }", 
+    "      return *(undefined4 *)(param_1 + 0x23e8 + (param_2 >> 2) * 4);", 
+    "    }", 
+    "    pcVar3 = \"lm32_uart: read access to write only register 0x%016lx\";", 
+    "  }", 
+    "  else {", 
+    "    pcVar3 = \"lm32_uart: read access to unknown register 0x%016lx\";", 
+    "  }", 
+    "  error_report(pcVar3,param_2 & 0xfffffffffffffffc);", 
+    "  return 0;", 
+    "}"
+  ]
+}

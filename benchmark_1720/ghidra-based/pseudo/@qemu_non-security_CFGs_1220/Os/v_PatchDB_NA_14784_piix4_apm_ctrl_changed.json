@@ -1,0 +1,18 @@
+{
+  "pseudo_code": [
+    "void apm_ctrl_changed(int param_1,long param_2)", 
+    "", 
+    "{", 
+    "  long lVar1;", 
+    "", 
+    "  lVar1 = object_dynamic_cast_assert(param_2,\"pci-device\",&_LC0,0x6f,\"apm_ctrl_changed\");", 
+    "  acpi_pm1_cnt_update(param_2 + 0xa78,param_1 == 0xf1,param_1 == 0xf0);", 
+    "  if (((*(byte *)(*(long *)(lVar1 + 0x78) + 0x5b) & 2) != 0) && (*(long *)(param_2 + 0x1008) != 0))", 
+    "  {", 
+    "    qemu_set_irq(*(long *)(param_2 + 0x1008),1);", 
+    "    return;", 
+    "  }", 
+    "  return;", 
+    "}"
+  ]
+}

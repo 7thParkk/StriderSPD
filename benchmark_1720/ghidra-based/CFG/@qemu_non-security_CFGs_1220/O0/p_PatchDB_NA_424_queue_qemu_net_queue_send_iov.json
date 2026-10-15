@@ -1,0 +1,106 @@
+{
+  "boundary": {
+    "1049939": 1049982, 
+    "1049812": 1049862, 
+    "1049982": 1049998, 
+    "1049862": 1049899, 
+    "1049899": 1049939, 
+    "1049998": 1050000
+  }, 
+  "edges": {
+    "1049939": [
+      1049998
+    ], 
+    "1049812": [
+      1049862, 
+      1049899
+    ], 
+    "1049982": [
+      1049998
+    ], 
+    "1049862": [
+      1049998
+    ], 
+    "1049899": [
+      1049939, 
+      1049982
+    ], 
+    "1049998": []
+  }, 
+  "nodes": {
+    "1049939": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1049812": [
+      "endbr64", 
+      "push REG", 
+      "mov REG REG", 
+      "sub REG CONSTANT", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "movzx REG MEMACC", 
+      "and REG CONSTANT", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1049982": [
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG MEMACC"
+    ], 
+    "1049862": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG CONSTANT", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "jmp ADDR"
+    ], 
+    "1049899": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov MEMACC REG", 
+      "cmp -8 0", 
+      "jnz ADDR"
+    ], 
+    "1049998": [
+      "leave", 
+      "ret"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1049939": "JMP 0x0010058e", 
+    "1049812": "JZ 0x0010052b", 
+    "1049982": "MOV RAX,qword ptr [RBP + -0x8]", 
+    "1049862": "JMP 0x0010058e", 
+    "1049899": "JNZ 0x0010057e", 
+    "1049998": "RET"
+  }
+}

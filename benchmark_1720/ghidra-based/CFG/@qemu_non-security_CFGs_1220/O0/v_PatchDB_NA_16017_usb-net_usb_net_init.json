@@ -1,0 +1,110 @@
+{
+  "boundary": {
+    "1055733": 1055787, 
+    "1055797": 1055886, 
+    "1055893": 1055967, 
+    "1055967": 1055969, 
+    "1055787": 1055797, 
+    "1055886": 1055893
+  }, 
+  "edges": {
+    "1055733": [
+      1055787, 
+      1055797
+    ], 
+    "1055797": [
+      1055886, 
+      1055893
+    ], 
+    "1055893": [
+      1055967
+    ], 
+    "1055967": [], 
+    "1055787": [
+      1055967
+    ], 
+    "1055886": [
+      1055967
+    ]
+  }, 
+  "nodes": {
+    "1055733": [
+      "endbr64", 
+      "push REG", 
+      "mov REG REG", 
+      "sub REG CONSTANT", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov REG CONSTANT", 
+      "mov REG REG", 
+      "lea REG 1061000", 
+      "mov PROCESS_SPECIFIC REG", 
+      "call ADDR", 
+      "mov MEMACC REG", 
+      "cmp -16 0", 
+      "jnz ADDR"
+    ], 
+    "1055797": [
+      "mov REG MEMACC", 
+      "lea REG 1057005", 
+      "lea REG 1057009", 
+      "mov PROCESS_SPECIFIC REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "lea REG 1057014", 
+      "lea REG 1057018", 
+      "mov PROCESS_SPECIFIC REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "mov REG CONSTANT", 
+      "mov REG REG", 
+      "mov REG CONSTANT", 
+      "call ADDR", 
+      "mov MEMACC REG", 
+      "cmp -20 -1", 
+      "jnz ADDR"
+    ], 
+    "1055893": [
+      "lea REG 1057024", 
+      "mov PROCESS_SPECIFIC REG", 
+      "mov REG CONSTANT", 
+      "call ADDR", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "cdqe", 
+      "shl REG CONSTANT", 
+      "lea REG 1061040", 
+      "add REG REG", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG MEMACC"
+    ], 
+    "1055967": [
+      "leave", 
+      "ret"
+    ], 
+    "1055787": [
+      "mov REG CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1055886": [
+      "mov REG CONSTANT", 
+      "jmp ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1055733": "JNZ 0x00101c35", 
+    "1055797": "JNZ 0x00101c95", 
+    "1055893": "MOV RAX,qword ptr [RBP + -0x8]", 
+    "1055967": "RET", 
+    "1055787": "JMP 0x00101cdf", 
+    "1055886": "JMP 0x00101cdf"
+  }
+}

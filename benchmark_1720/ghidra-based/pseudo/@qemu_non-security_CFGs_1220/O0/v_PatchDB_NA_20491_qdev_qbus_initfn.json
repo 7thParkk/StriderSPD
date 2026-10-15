@@ -1,0 +1,13 @@
+{
+  "pseudo_code": [
+    "void qbus_initfn(undefined8 param_1)", 
+    "", 
+    "{", 
+    "  long lVar1;", 
+    "", 
+    "  lVar1 = object_dynamic_cast_assert(param_1,&DAT_00102780,&DAT_00102600,0x376,\"qbus_initfn\");", 
+    "  object_property_add_link(param_1,\"hotplug-handler\",\"hotplug-handler\",lVar1 + 0x48,0);", 
+    "  return;", 
+    "}"
+  ]
+}

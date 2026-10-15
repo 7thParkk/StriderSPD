@@ -1,0 +1,107 @@
+{
+  "boundary": {
+    "1055185": 1055253, 
+    "1055282": 1055297, 
+    "1055253": 1055268, 
+    "1055321": 1055328, 
+    "1055297": 1055321, 
+    "1055268": 1055270, 
+    "1055270": 1055279, 
+    "1055279": 1055282
+  }, 
+  "edges": {
+    "1055185": [
+      1055253, 
+      1055270
+    ], 
+    "1055282": [
+      1055297, 
+      1055321
+    ], 
+    "1055253": [
+      1055268, 
+      1055279
+    ], 
+    "1055321": [], 
+    "1055297": [], 
+    "1055268": [
+      1055282
+    ], 
+    "1055270": [
+      1055279
+    ], 
+    "1055279": [
+      1055282
+    ]
+  }, 
+  "nodes": {
+    "1055185": [
+      "endbr64", 
+      "push REG", 
+      "lea REG 1062368", 
+      "mov REG CONSTANT", 
+      "lea REG 1060749", 
+      "push REG", 
+      "push REG", 
+      "mov REG REG", 
+      "lea REG 1060825", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "cmp 248 0", 
+      "mov REG REG", 
+      "jz ADDR"
+    ], 
+    "1055282": [
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1055253": [
+      "mov REG REG", 
+      "or REG CONSTANT", 
+      "call ADDR", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1055321": [
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1055297": [
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "mov REG REG", 
+      "pop REG", 
+      "jmp ADDR"
+    ], 
+    "1055268": [
+      "jmp ADDR"
+    ], 
+    "1055270": [
+      "and REG CONSTANT", 
+      "or REG CONSTANT"
+    ], 
+    "1055279": [
+      "and REG CONSTANT"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1055185": "JZ 0x00101a26", 
+    "1055282": "JZ 0x00101a59", 
+    "1055253": "JZ 0x00101a2f", 
+    "1055321": "RET", 
+    "1055297": "JMP 0x00105240", 
+    "1055268": "JMP 0x00101a32", 
+    "1055270": "OR EBX,0x20", 
+    "1055279": "AND BH,0xbb"
+  }
+}

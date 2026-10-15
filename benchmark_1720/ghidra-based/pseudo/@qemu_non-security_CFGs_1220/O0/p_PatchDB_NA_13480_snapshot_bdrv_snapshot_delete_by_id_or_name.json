@@ -1,0 +1,31 @@
+{
+  "pseudo_code": [
+    "int bdrv_snapshot_delete_by_id_or_name(BlockDriverState *bs,char *id_or_name,Error **errp)", 
+    "", 
+    "{", 
+    "  long in_FS_OFFSET;", 
+    "  Error **errp_local;", 
+    "  char *id_or_name_local;", 
+    "  BlockDriverState *bs_local;", 
+    "  int ret;", 
+    "  Error *local_err;", 
+    "  long local_10;", 
+    "", 
+    "  local_10 = *(long *)(in_FS_OFFSET + 0x28);", 
+    "  local_err = (Error *)0x0;", 
+    "  ret = bdrv_snapshot_delete(bs,id_or_name,(char *)0x0,&local_err);", 
+    "  if ((ret == -2) || (ret == -0x16)) {", 
+    "    error_free(local_err);", 
+    "    local_err = (Error *)0x0;", 
+    "    ret = bdrv_snapshot_delete(bs,(char *)0x0,id_or_name,&local_err);", 
+    "  }", 
+    "  if (ret < 0) {", 
+    "    error_propagate(errp,local_err);", 
+    "  }", 
+    "  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {", 
+    "    __stack_chk_fail();", 
+    "  }", 
+    "  return ret;", 
+    "}"
+  ]
+}

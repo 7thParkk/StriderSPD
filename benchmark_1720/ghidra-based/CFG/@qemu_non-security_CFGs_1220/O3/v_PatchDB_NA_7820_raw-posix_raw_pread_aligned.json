@@ -1,0 +1,381 @@
+{
+  "boundary": {
+    "1053712": 1053721, 
+    "1053780": 1053785, 
+    "1053721": 1053726, 
+    "1053916": 1053925, 
+    "1053726": 1053740, 
+    "1053504": 1053545, 
+    "1053952": 1053974, 
+    "1053637": 1053665, 
+    "1053573": 1053604, 
+    "1053768": 1053780, 
+    "1054024": 1054028, 
+    "1053897": 1053916, 
+    "1053834": 1053865, 
+    "1054028": 1054053, 
+    "1053744": 1053768, 
+    "1053808": 1053834, 
+    "1053872": 1053897, 
+    "1053683": 1053692, 
+    "1054008": 1054019, 
+    "1053561": 1053573, 
+    "1053692": 1053710, 
+    "1053792": 1053805, 
+    "1053984": 1054008, 
+    "1053665": 1053669, 
+    "1053604": 1053613, 
+    "1053669": 1053683, 
+    "1053925": 1053947, 
+    "1054053": 1054063, 
+    "1053865": 1053870, 
+    "1053545": 1053561, 
+    "1053613": 1053637
+  }, 
+  "edges": {
+    "1053712": [
+      1053721, 
+      1053808
+    ], 
+    "1053780": [
+      1053561
+    ], 
+    "1053721": [
+      1053692, 
+      1053726
+    ], 
+    "1053916": [
+      1053683, 
+      1053925
+    ], 
+    "1053726": [
+      1053692
+    ], 
+    "1053504": [
+      1053545, 
+      1053637
+    ], 
+    "1053952": [
+      1053561
+    ], 
+    "1053637": [
+      1053665, 
+      1053721
+    ], 
+    "1053573": [
+      1053604, 
+      1054028
+    ], 
+    "1053768": [
+      1053613, 
+      1053780
+    ], 
+    "1054024": [
+      1053916
+    ], 
+    "1053897": [
+      1053916
+    ], 
+    "1053834": [
+      1053726, 
+      1053865
+    ], 
+    "1054028": [
+      1054008, 
+      1054053
+    ], 
+    "1053744": [
+      1053768, 
+      1053952
+    ], 
+    "1053808": [
+      1053721, 
+      1053834
+    ], 
+    "1053872": [
+      1053897, 
+      1054024
+    ], 
+    "1053683": [
+      1053692, 
+      1053808
+    ], 
+    "1054008": [
+      1053692
+    ], 
+    "1053561": [
+      1053573, 
+      1053984
+    ], 
+    "1053692": [], 
+    "1053792": [
+      1053613
+    ], 
+    "1053984": [
+      1053573, 
+      1054008
+    ], 
+    "1053665": [
+      1053669, 
+      1053712
+    ], 
+    "1053604": [
+      1053613, 
+      1053792
+    ], 
+    "1053669": [
+      1053683, 
+      1053872
+    ], 
+    "1053925": [
+      1053721
+    ], 
+    "1054053": [
+      1054008
+    ], 
+    "1053865": [
+      1053692
+    ], 
+    "1053545": [
+      1053561, 
+      1053744
+    ], 
+    "1053613": [
+      1053637
+    ]
+  }, 
+  "nodes": {
+    "1053712": [
+      "cmp 2244 1", 
+      "jz ADDR"
+    ], 
+    "1053780": [
+      "jmp ADDR"
+    ], 
+    "1053721": [
+      "test REG REG", 
+      "jns ADDR"
+    ], 
+    "1053916": [
+      "cmp REG REG", 
+      "jl ADDR"
+    ], 
+    "1053726": [
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "neg REG", 
+      "mov REG REG", 
+      "jmp ADDR"
+    ], 
+    "1053504": [
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "mov REG REG", 
+      "sub REG CONSTANT", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "cmp 4 2", 
+      "mov REG MEMACC", 
+      "jnz ADDR"
+    ], 
+    "1053952": [
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "mov MEMACC CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1053637": [
+      "mov REG MEMACC", 
+      "movsxd REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "cmp REG REG", 
+      "jz ADDR"
+    ], 
+    "1053573": [
+      "mov REG MEMACC", 
+      "lea REG 80", 
+      "and REG CONSTANT", 
+      "call ADDR", 
+      "mov MEMACC REG", 
+      "test REG REG", 
+      "js ADDR"
+    ], 
+    "1053768": [
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jns ADDR"
+    ], 
+    "1054024": [
+      "cdqe", 
+      "jmp ADDR"
+    ], 
+    "1053897": [
+      "mov REG MEMACC", 
+      "mov REG CONSTANT", 
+      "xor REG REG", 
+      "mov REG MEMACC", 
+      "call ADDR"
+    ], 
+    "1053834": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "test REG REG", 
+      "js ADDR"
+    ], 
+    "1054028": [
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "mov MEMACC CONSTANT", 
+      "mov MEMACC REG", 
+      "test REG REG", 
+      "js ADDR"
+    ], 
+    "1053744": [
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "sub REG MEMACC", 
+      "cmp REG 999", 
+      "jg ADDR"
+    ], 
+    "1053808": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "cmp REG REG", 
+      "jz ADDR"
+    ], 
+    "1053872": [
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov MEMACC REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "js ADDR"
+    ], 
+    "1053683": [
+      "cmp 2244 1", 
+      "jz ADDR"
+    ], 
+    "1054008": [
+      "mov REG CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1053561": [
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jnz ADDR"
+    ], 
+    "1053692": [
+      "add REG CONSTANT", 
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1053792": [
+      "mov MEMACC CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1053984": [
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "sub REG MEMACC", 
+      "cmp REG 999", 
+      "jg ADDR"
+    ], 
+    "1053665": [
+      "test REG REG", 
+      "jnz ADDR"
+    ], 
+    "1053604": [
+      "test REG REG", 
+      "js ADDR"
+    ], 
+    "1053669": [
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jnz ADDR"
+    ], 
+    "1053925": [
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "xor REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "jmp ADDR"
+    ], 
+    "1054053": [
+      "mov MEMACC CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1053865": [
+      "jmp ADDR"
+    ], 
+    "1053545": [
+      "lea REG 1060872", 
+      "test REG REG", 
+      "jns ADDR"
+    ], 
+    "1053613": [
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "mov MEMACC CONSTANT", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1053712": "JZ 0x00101470", 
+    "1053780": "JMP 0x00101379", 
+    "1053721": "JNS 0x001013fc", 
+    "1053916": "JL 0x001013f3", 
+    "1053726": "JMP 0x001013fc", 
+    "1053504": "JNZ 0x001013c5", 
+    "1053952": "JMP 0x00101379", 
+    "1053637": "JZ 0x00101419", 
+    "1053573": "JS 0x0010154c", 
+    "1053768": "JNS 0x001013ad", 
+    "1054024": "JMP 0x001014dc", 
+    "1053897": "CALL 0x00103068", 
+    "1053834": "JS 0x0010141e", 
+    "1054028": "JS 0x00101538", 
+    "1053744": "JG 0x00101500", 
+    "1053808": "JZ 0x00101419", 
+    "1053872": "JS 0x00101548", 
+    "1053683": "JZ 0x00101470", 
+    "1054008": "JMP 0x001013fc", 
+    "1053561": "JNZ 0x00101520", 
+    "1053692": "RET", 
+    "1053792": "JMP 0x001013ad", 
+    "1053984": "JG 0x00101385", 
+    "1053665": "JNZ 0x00101410", 
+    "1053604": "JS 0x00101460", 
+    "1053669": "JNZ 0x001014b0", 
+    "1053925": "JMP 0x00101419", 
+    "1054053": "JMP 0x00101538", 
+    "1053865": "JMP 0x001013fc", 
+    "1053545": "JNS 0x00101430", 
+    "1053613": "MOV qword ptr [R13 + 0x10],RAX"
+  }
+}

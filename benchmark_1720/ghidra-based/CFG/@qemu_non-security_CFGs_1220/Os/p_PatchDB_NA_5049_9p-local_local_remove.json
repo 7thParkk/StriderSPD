@@ -1,0 +1,120 @@
+{
+  "boundary": {
+    "1055025": 1055035, 
+    "1054875": 1054958, 
+    "1055035": 1055070, 
+    "1055070": 1055075, 
+    "1055075": 1055093, 
+    "1054986": 1055025, 
+    "1054958": 1054986
+  }, 
+  "edges": {
+    "1055025": [
+      1055035
+    ], 
+    "1054875": [
+      1054958, 
+      1055035
+    ], 
+    "1055035": [
+      1055070, 
+      1055075
+    ], 
+    "1055070": [], 
+    "1055075": [], 
+    "1054986": [
+      1055025
+    ], 
+    "1054958": [
+      1054986, 
+      1055025
+    ]
+  }, 
+  "nodes": {
+    "1055025": [
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR"
+    ], 
+    "1054875": [
+      "endbr64", 
+      "push REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "mov REG REG", 
+      "sub REG CONSTANT", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "xor REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "inc REG", 
+      "jz ADDR"
+    ], 
+    "1055035": [
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "sub REG MEMACC", 
+      "jz ADDR"
+    ], 
+    "1055070": [
+      "call ADDR"
+    ], 
+    "1055075": [
+      "add REG CONSTANT", 
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1054986": [
+      "mov REG MEMACC", 
+      "xor REG REG", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "and REG CONSTANT", 
+      "cmp REG 16384", 
+      "setz REG", 
+      "shl REG CONSTANT", 
+      "call ADDR", 
+      "mov REG REG"
+    ], 
+    "1054958": [
+      "lea PROCESS_SPECIFIC 8", 
+      "mov REG CONSTANT", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "or REG CONSTANT", 
+      "test REG REG", 
+      "js ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1055025": "CALL 0x0010000c", 
+    "1054875": "JZ 0x0010193b", 
+    "1055035": "JZ 0x00101963", 
+    "1055070": "CALL 0x00103070", 
+    "1055075": "RET", 
+    "1054986": "MOV R13D,EAX", 
+    "1054958": "JS 0x00101931"
+  }
+}

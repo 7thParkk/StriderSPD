@@ -1,0 +1,108 @@
+{
+  "boundary": {
+    "1049328": 1049351, 
+    "1049363": 1049370, 
+    "1049460": 1049467, 
+    "1049370": 1049409, 
+    "1049440": 1049460, 
+    "1049472": 1049494, 
+    "1049351": 1049363, 
+    "1049416": 1049430
+  }, 
+  "edges": {
+    "1049328": [
+      1049351, 
+      1049472
+    ], 
+    "1049363": [
+      1049370, 
+      1049416
+    ], 
+    "1049460": [], 
+    "1049370": [], 
+    "1049440": [
+      1049460
+    ], 
+    "1049472": [
+      1049460
+    ], 
+    "1049351": [
+      1049363, 
+      1049440
+    ], 
+    "1049416": []
+  }, 
+  "nodes": {
+    "1049328": [
+      "endbr64", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "shr REG CONSTANT", 
+      "sub REG CONSTANT", 
+      "cmp REG 31", 
+      "ja ADDR"
+    ], 
+    "1049363": [
+      "mov REG REG", 
+      "test REG 100", 
+      "jnz ADDR"
+    ], 
+    "1049460": [
+      "add REG CONSTANT", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1049370": [
+      "and MEMACC CONSTANT", 
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "add REG CONSTANT", 
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1049440": [
+      "xor REG REG", 
+      "and REG CONSTANT", 
+      "lea REG 1049648", 
+      "call ADDR", 
+      "xor REG REG"
+    ], 
+    "1049472": [
+      "xor REG REG", 
+      "and REG CONSTANT", 
+      "lea REG 1049704", 
+      "call ADDR", 
+      "xor REG REG", 
+      "jmp ADDR"
+    ], 
+    "1049351": [
+      "mov REG CONSTANT", 
+      "shl REG REG", 
+      "test REG -102", 
+      "jnz ADDR"
+    ], 
+    "1049416": [
+      "mov REG MEMACC", 
+      "add REG CONSTANT", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1049328": "JA 0x00100380", 
+    "1049363": "JNZ 0x00100348", 
+    "1049460": "RET", 
+    "1049370": "RET", 
+    "1049440": "XOR EAX,EAX", 
+    "1049472": "JMP 0x00100374", 
+    "1049351": "JNZ 0x00100360", 
+    "1049416": "RET"
+  }
+}

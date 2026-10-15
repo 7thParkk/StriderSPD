@@ -1,0 +1,65 @@
+{
+  "boundary": {
+    "1050393": 1050399, 
+    "1050366": 1050393, 
+    "1050276": 1050366
+  }, 
+  "edges": {
+    "1050393": [], 
+    "1050366": [
+      1050393
+    ], 
+    "1050276": [
+      1050366, 
+      1050393
+    ]
+  }, 
+  "nodes": {
+    "1050393": [
+      "mov REG MEMACC", 
+      "leave", 
+      "ret"
+    ], 
+    "1050366": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG"
+    ], 
+    "1050276": [
+      "endbr64", 
+      "push REG", 
+      "mov REG REG", 
+      "sub REG CONSTANT", 
+      "mov MEMACC REG", 
+      "mov REG CONSTANT", 
+      "call ADDR", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1050393": "RET", 
+    "1050366": "MOV qword ptr [RDX + 0x28],RAX", 
+    "1050276": "JZ 0x00100719"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "pseudo_code": [
+    "void entity_init(undefined8 *param_1,undefined8 param_2,undefined8 param_3)", 
+    "", 
+    "{", 
+    "  undefined8 uVar1;", 
+    "", 
+    "  uVar1 = xstrdup(param_2);", 
+    "  uVar1 = xstrdup(param_3);", 
+    "  param_1[1] = uVar1;", 
+    "  uVar1 = xhash_init(0x100000,_entity_data_destroy,0,0);", 
+    "  param_1[2] = uVar1;", 
+    "  uVar1 = list_create(_entity_node_destroy);", 
+    "  param_1[4] = 0;", 
+    "  param_1[3] = uVar1;", 
+    "  return;", 
+    "}"
+  ]
+}

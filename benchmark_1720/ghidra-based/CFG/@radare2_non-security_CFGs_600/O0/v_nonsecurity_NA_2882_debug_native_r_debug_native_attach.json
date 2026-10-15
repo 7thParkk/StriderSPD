@@ -1,0 +1,113 @@
+{
+  "boundary": {
+    "1050675": 1050677, 
+    "1050519": 1050567, 
+    "1050655": 1050670, 
+    "1050437": 1050508, 
+    "1050567": 1050637, 
+    "1050508": 1050519, 
+    "1050637": 1050655, 
+    "1050670": 1050675
+  }, 
+  "edges": {
+    "1050675": [], 
+    "1050519": [
+      1050567, 
+      1050637
+    ], 
+    "1050655": [
+      1050670, 
+      1050675
+    ], 
+    "1050437": [
+      1050508, 
+      1050519
+    ], 
+    "1050567": [
+      1050637
+    ], 
+    "1050508": [
+      1050655
+    ], 
+    "1050637": [
+      1050655
+    ], 
+    "1050670": []
+  }, 
+  "nodes": {
+    "1050675": [
+      "leave", 
+      "ret"
+    ], 
+    "1050519": [
+      "mov REG MEMACC", 
+      "mov REG CONSTANT", 
+      "mov REG CONSTANT", 
+      "mov REG REG", 
+      "mov REG CONSTANT", 
+      "mov REG CONSTANT", 
+      "call ADDR", 
+      "mov MEMACC REG", 
+      "cmp -148 -1", 
+      "jz ADDR"
+    ], 
+    "1050655": [
+      "mov REG MEMACC", 
+      "sub REG MEMACC", 
+      "jz ADDR"
+    ], 
+    "1050437": [
+      "endbr64", 
+      "push REG", 
+      "mov REG REG", 
+      "sub REG CONSTANT", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "xor REG REG", 
+      "mov MEMACC CONSTANT", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "cmp -172 REG", 
+      "jnz ADDR"
+    ], 
+    "1050567": [
+      "lea PROCESS_SPECIFIC -144", 
+      "lea REG 1061094", 
+      "mov REG CONSTANT", 
+      "lea REG 1061016", 
+      "mov PROCESS_SPECIFIC REG", 
+      "lea REG 1061085", 
+      "mov REG CONSTANT", 
+      "mov REG REG", 
+      "mov REG CONSTANT", 
+      "call ADDR", 
+      "lea PROCESS_SPECIFIC -144", 
+      "mov REG REG", 
+      "call ADDR"
+    ], 
+    "1050508": [
+      "mov REG MEMACC", 
+      "jmp ADDR"
+    ], 
+    "1050637": [
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC"
+    ], 
+    "1050670": [
+      "call ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1050675": "RET", 
+    "1050519": "JZ 0x0010080d", 
+    "1050655": "JZ 0x00100833", 
+    "1050437": "JNZ 0x00100797", 
+    "1050567": "CALL 0x00104050", 
+    "1050508": "JMP 0x0010081f", 
+    "1050637": "MOV EAX,dword ptr [RBP + -0x94]", 
+    "1050670": "CALL 0x00104020"
+  }
+}

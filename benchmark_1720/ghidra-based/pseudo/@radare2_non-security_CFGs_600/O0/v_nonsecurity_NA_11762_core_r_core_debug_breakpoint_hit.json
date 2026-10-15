@@ -1,0 +1,18 @@
+{
+  "pseudo_code": [
+    "void r_core_debug_breakpoint_hit(long param_1,long param_2)", 
+    "", 
+    "{", 
+    "  undefined4 uVar1;", 
+    "  char *pcVar2;", 
+    "", 
+    "  uVar1 = *(undefined4 *)(*(long *)(param_1 + 0x50) + 0x3e0);", 
+    "  pcVar2 = (char *)r_config_get(*(undefined8 *)(param_1 + 8),\"cmd.bp\");", 
+    "  if ((pcVar2 != (char *)0x0) && (*pcVar2 != '\\0')) {", 
+    "    r_core_cmd0(param_1,pcVar2);", 
+    "  }", 
+    "  r_core_cmd0(param_1,*(undefined8 *)(param_2 + 0x78));", 
+    "  return;", 
+    "}"
+  ]
+}

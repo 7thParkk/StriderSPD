@@ -1,0 +1,94 @@
+{
+  "boundary": {
+    "1060304": 1060317, 
+    "1060317": 1060608, 
+    "1060256": 1060304
+  }, 
+  "edges": {
+    "1060304": [
+      1060304, 
+      1060317
+    ], 
+    "1060317": [], 
+    "1060256": [
+      1060304
+    ]
+  }, 
+  "nodes": {
+    "1060304": [
+      "xor REG REG", 
+      "xor REG REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "jnz ADDR"
+    ], 
+    "1060317": [
+      "xor REG REG", 
+      "mov REG REG", 
+      "lea PROCESS_SPECIFIC 12", 
+      "call ADDR", 
+      "lea REG 1052976", 
+      "lea REG 1058196", 
+      "call ADDR", 
+      "lea REG 1052256", 
+      "lea REG 1058218", 
+      "call ADDR", 
+      "lea REG 1054176", 
+      "lea REG 1058241", 
+      "call ADDR", 
+      "lea REG 1054048", 
+      "lea REG 1058256", 
+      "call ADDR", 
+      "lea REG 1054800", 
+      "lea REG 1058274", 
+      "call ADDR", 
+      "lea REG 1055024", 
+      "lea REG 1058295", 
+      "call ADDR", 
+      "lea REG 1055392", 
+      "lea REG 1058319", 
+      "call ADDR", 
+      "lea REG 1056864", 
+      "lea REG 1058344", 
+      "call ADDR", 
+      "lea REG 1055888", 
+      "lea REG 1058373", 
+      "call ADDR", 
+      "lea REG 1052032", 
+      "lea REG 1058399", 
+      "call ADDR", 
+      "lea REG 1055312", 
+      "lea REG 1058420", 
+      "call ADDR", 
+      "lea REG 1050720", 
+      "lea REG 1058447", 
+      "call ADDR", 
+      "lea REG 1050112", 
+      "lea REG 1058474", 
+      "call ADDR", 
+      "lea REG 1048592", 
+      "lea REG 1058495", 
+      "call ADDR", 
+      "call ADDR", 
+      "add REG CONSTANT", 
+      "ret"
+    ], 
+    "1060256": [
+      "endbr64", 
+      "sub REG CONSTANT", 
+      "mov MEMACC REG", 
+      "lea REG 1065160", 
+      "mov MEMACC REG", 
+      "call ADDR", 
+      "call ADDR", 
+      "mov MEMACC REG", 
+      "call ADDR", 
+      "nop MEMACC"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1060304": "JNZ 0x00102dd0", 
+    "1060317": "RET", 
+    "1060256": "NOP dword ptr [RAX]"
+  }
+}

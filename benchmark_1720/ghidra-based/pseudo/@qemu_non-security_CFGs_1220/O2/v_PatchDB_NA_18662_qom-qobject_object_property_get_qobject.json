@@ -1,0 +1,30 @@
+{
+  "pseudo_code": [
+    "undefined8 object_property_get_qobject(undefined8 param_1,undefined8 param_2,undefined8 param_3)", 
+    "", 
+    "{", 
+    "  undefined8 uVar1;", 
+    "  undefined8 uVar2;", 
+    "  undefined8 uVar3;", 
+    "  long in_FS_OFFSET;", 
+    "  long local_38;", 
+    "  long local_30;", 
+    "", 
+    "  local_30 = *(long *)(in_FS_OFFSET + 0x28);", 
+    "  local_38 = 0;", 
+    "  uVar1 = qmp_output_visitor_new();", 
+    "  uVar2 = qmp_output_get_visitor(uVar1);", 
+    "  uVar3 = 0;", 
+    "  object_property_get(param_1,uVar2,param_2,&local_38);", 
+    "  if (local_38 == 0) {", 
+    "    uVar3 = qmp_output_get_qobject(uVar1);", 
+    "  }", 
+    "  error_propagate(param_3,local_38);", 
+    "  qmp_output_visitor_cleanup(uVar1);", 
+    "  if (local_30 == *(long *)(in_FS_OFFSET + 0x28)) {", 
+    "    return uVar3;", 
+    "  }", 
+    "  __stack_chk_fail();", 
+    "}"
+  ]
+}

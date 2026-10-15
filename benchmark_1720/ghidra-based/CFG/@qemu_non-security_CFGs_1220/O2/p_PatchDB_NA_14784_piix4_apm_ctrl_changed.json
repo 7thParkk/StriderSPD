@@ -1,0 +1,83 @@
+{
+  "boundary": {
+    "1051991": 1052005, 
+    "1051872": 1051968, 
+    "1051968": 1051979, 
+    "1052008": 1052013, 
+    "1051979": 1051991
+  }, 
+  "edges": {
+    "1051991": [], 
+    "1051872": [
+      1051968, 
+      1052008
+    ], 
+    "1051968": [
+      1051979, 
+      1052008
+    ], 
+    "1052008": [], 
+    "1051979": [
+      1051991, 
+      1052008
+    ]
+  }, 
+  "nodes": {
+    "1051991": [
+      "pop REG", 
+      "mov REG CONSTANT", 
+      "pop REG", 
+      "pop REG", 
+      "jmp ADDR"
+    ], 
+    "1051872": [
+      "endbr64", 
+      "push REG", 
+      "lea REG 1053200", 
+      "mov REG CONSTANT", 
+      "lea REG 1052752", 
+      "push REG", 
+      "mov REG REG", 
+      "lea REG 1052342", 
+      "push REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "xor REG REG", 
+      "cmp REG 240", 
+      "lea REG 2680", 
+      "setz REG", 
+      "xor REG REG", 
+      "cmp REG 241", 
+      "mov REG REG", 
+      "setz REG", 
+      "sub REG CONSTANT", 
+      "call ADDR", 
+      "cmp REG 1", 
+      "jbe ADDR"
+    ], 
+    "1051968": [
+      "mov REG MEMACC", 
+      "test 91 2", 
+      "jz ADDR"
+    ], 
+    "1052008": [
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1051979": [
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1051991": "JMP 0x001031a8", 
+    "1051872": "JBE 0x00100d68", 
+    "1051968": "JZ 0x00100d68", 
+    "1052008": "RET", 
+    "1051979": "JZ 0x00100d68"
+  }
+}

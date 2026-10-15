@@ -1,0 +1,27 @@
+{
+  "pseudo_code": [
+    "void ptimer_set_limit(char *param_1,long param_2,undefined8 param_3)", 
+    "", 
+    "{", 
+    "  long lVar1;", 
+    "  undefined1 auVar2 [16];", 
+    "  undefined8 uVar3;", 
+    "", 
+    "  uVar3 = param_3;", 
+    "  if (((_use_icount == 0) && (lVar1 = *(long *)(param_1 + 0x20), (ulong)(lVar1 * param_2) < 10000))", 
+    "     && (lVar1 != 0)) {", 
+    "    auVar2._8_8_ = 0;", 
+    "    auVar2._0_8_ = SUB168(SEXT816(10000),8);", 
+    "    auVar2 = auVar2 << 0x40 | ZEXT816(10000);", 
+    "    param_2 = SUB168(auVar2 / SEXT816(lVar1),0);", 
+    "    uVar3 = SUB168(auVar2 % SEXT816(lVar1),0);", 
+    "  }", 
+    "  if (((int)param_3 != 0) && (*(long *)(param_1 + 0x10) = param_2, *param_1 != '\\0')) {", 
+    "    uVar3 = qemu_clock_get_ns(1,param_2,uVar3);", 
+    "    ptimer_reload(param_1);", 
+    "    return;", 
+    "  }", 
+    "  return;", 
+    "}"
+  ]
+}

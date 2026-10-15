@@ -1,0 +1,25 @@
+{
+  "pseudo_code": [
+    "long qemu_net_queue_send_iov", 
+    "               (long param_1,undefined8 param_2,undefined4 param_3,undefined8 param_4,", 
+    "               undefined4 param_5,undefined8 param_6)", 
+    "", 
+    "{", 
+    "  long lVar1;", 
+    "", 
+    "  if ((*(byte *)(param_1 + 0x28) & 1) == 0) {", 
+    "    lVar1 = (**(code **)(param_1 + 8))", 
+    "                      (param_2,param_3,param_4,param_5,*(undefined8 *)(param_1 + 0x10));", 
+    "    if (lVar1 == 0) {", 
+    "      qemu_net_queue_append_iov(param_1,param_2,param_3,param_4,param_5,param_6);", 
+    "    }", 
+    "    else {", 
+    "      qemu_net_queue_flush(param_1);", 
+    "    }", 
+    "    return lVar1;", 
+    "  }", 
+    "  lVar1 = qemu_net_queue_append_iov();", 
+    "  return lVar1;", 
+    "}"
+  ]
+}

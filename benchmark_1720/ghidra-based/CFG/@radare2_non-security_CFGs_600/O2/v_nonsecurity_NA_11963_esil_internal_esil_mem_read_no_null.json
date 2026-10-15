@@ -1,0 +1,133 @@
+{
+  "boundary": {
+    "1051252": 1051272, 
+    "1051288": 1051327, 
+    "1051200": 1051213, 
+    "1051328": 1051338, 
+    "1051360": 1051363, 
+    "1051234": 1051244, 
+    "1051272": 1051288, 
+    "1051338": 1051351, 
+    "1051244": 1051252, 
+    "1051213": 1051234
+  }, 
+  "edges": {
+    "1051252": [
+      1051272, 
+      1051288
+    ], 
+    "1051288": [], 
+    "1051200": [
+      1051213, 
+      1051360
+    ], 
+    "1051328": [
+      1051338
+    ], 
+    "1051360": [], 
+    "1051234": [
+      1051244, 
+      1051338
+    ], 
+    "1051272": [
+      1051288, 
+      1051328
+    ], 
+    "1051338": [], 
+    "1051244": [
+      1051252, 
+      1051338
+    ], 
+    "1051213": [
+      1051234, 
+      1051338
+    ]
+  }, 
+  "nodes": {
+    "1051252": [
+      "mov REG CONSTANT", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "jle ADDR"
+    ], 
+    "1051288": [
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "call MEMACC", 
+      "add REG CONSTANT", 
+      "pop REG", 
+      "movzx REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1051200": [
+      "endbr64", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1051328": [
+      "mov MEMACC CONSTANT", 
+      "mov MEMACC REG"
+    ], 
+    "1051360": [
+      "xor REG REG", 
+      "ret"
+    ], 
+    "1051234": [
+      "cmp 152 0", 
+      "jz ADDR"
+    ], 
+    "1051272": [
+      "movsxd REG REG", 
+      "xor REG REG", 
+      "mov REG REG", 
+      "div REG", 
+      "test REG REG", 
+      "jnz ADDR"
+    ], 
+    "1051338": [
+      "add REG CONSTANT", 
+      "xor REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1051244": [
+      "mov REG REG", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1051213": [
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "mov REG REG", 
+      "sub REG CONSTANT", 
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1051252": "JLE 0x00100a98", 
+    "1051288": "RET", 
+    "1051200": "JZ 0x00100ae0", 
+    "1051328": "MOV dword ptr [RBX + 0x70],EBP", 
+    "1051360": "RET", 
+    "1051234": "JZ 0x00100aca", 
+    "1051272": "JNZ 0x00100ac0", 
+    "1051338": "RET", 
+    "1051244": "JZ 0x00100aca", 
+    "1051213": "JZ 0x00100aca"
+  }
+}

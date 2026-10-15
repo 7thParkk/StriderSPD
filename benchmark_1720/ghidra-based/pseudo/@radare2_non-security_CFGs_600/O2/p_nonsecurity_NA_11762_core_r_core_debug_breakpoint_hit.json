@@ -1,0 +1,20 @@
+{
+  "pseudo_code": [
+    "void r_core_debug_breakpoint_hit(long param_1,long param_2)", 
+    "", 
+    "{", 
+    "  int iVar1;", 
+    "  char *pcVar2;", 
+    "", 
+    "  iVar1 = *(int *)(*(long *)(param_1 + 0x50) + 0x3e0);", 
+    "  pcVar2 = (char *)r_config_get(*(undefined8 *)(param_1 + 8),_LC0);", 
+    "  if ((pcVar2 != (char *)0x0) && (*pcVar2 != '\\0')) {", 
+    "    r_core_cmd0(param_1,pcVar2);", 
+    "  }", 
+    "  if ((*(char **)(param_2 + 0x78) != (char *)0x0) && (**(char **)(param_2 + 0x78) != '\\0')) {", 
+    "    r_core_cmd0(param_1);", 
+    "  }", 
+    "  return;", 
+    "}"
+  ]
+}

@@ -1,0 +1,128 @@
+{
+  "boundary": {
+    "1050994": 1051001, 
+    "1050869": 1050890, 
+    "1050934": 1050944, 
+    "1051001": 1051005, 
+    "1051005": 1051011, 
+    "1050944": 1050984, 
+    "1051011": 1051016, 
+    "1050984": 1050994, 
+    "1051016": 1051018, 
+    "1050890": 1050934
+  }, 
+  "edges": {
+    "1050994": [
+      1051016
+    ], 
+    "1050869": [
+      1051005
+    ], 
+    "1050934": [
+      1050944, 
+      1051001
+    ], 
+    "1051001": [
+      1051005
+    ], 
+    "1051005": [
+      1050890, 
+      1051011
+    ], 
+    "1050944": [
+      1050984, 
+      1051001
+    ], 
+    "1051011": [
+      1051016
+    ], 
+    "1050984": [
+      1050994, 
+      1051001
+    ], 
+    "1051016": [], 
+    "1050890": [
+      1050934, 
+      1050944
+    ]
+  }, 
+  "nodes": {
+    "1050994": [
+      "mov REG CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1050869": [
+      "endbr64", 
+      "push REG", 
+      "mov REG REG", 
+      "mov MEMACC REG", 
+      "mov MEMACC CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1050934": [
+      "pxor REG REG", 
+      "ucomisd REG REG", 
+      "jz ADDR"
+    ], 
+    "1051001": [
+      "add MEMACC CONSTANT"
+    ], 
+    "1051005": [
+      "cmp -4 5", 
+      "jle ADDR"
+    ], 
+    "1050944": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "movsxd REG REG", 
+      "mov REG REG", 
+      "add REG REG", 
+      "add REG REG", 
+      "shl REG CONSTANT", 
+      "add REG REG", 
+      "movsd REG MEMACC", 
+      "pxor REG REG", 
+      "ucomisd REG REG", 
+      "jp ADDR"
+    ], 
+    "1051011": [
+      "mov REG CONSTANT"
+    ], 
+    "1050984": [
+      "pxor REG REG", 
+      "ucomisd REG REG", 
+      "jnz ADDR"
+    ], 
+    "1051016": [
+      "pop REG", 
+      "ret"
+    ], 
+    "1050890": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "movsxd REG REG", 
+      "mov REG REG", 
+      "add REG REG", 
+      "add REG REG", 
+      "shl REG CONSTANT", 
+      "add REG REG", 
+      "add REG CONSTANT", 
+      "movsd REG MEMACC", 
+      "pxor REG REG", 
+      "ucomisd REG REG", 
+      "jp ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1050994": "JMP 0x00100988", 
+    "1050869": "JMP 0x0010097d", 
+    "1050934": "JZ 0x00100979", 
+    "1051001": "ADD dword ptr [RBP + -0x4],0x1", 
+    "1051005": "JLE 0x0010090a", 
+    "1050944": "JP 0x00100979", 
+    "1051011": "MOV EAX,0x0", 
+    "1050984": "JNZ 0x00100979", 
+    "1051016": "RET", 
+    "1050890": "JP 0x00100940"
+  }
+}

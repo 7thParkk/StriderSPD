@@ -1,0 +1,27 @@
+{
+  "pseudo_code": [
+    "void set_reg_profile(long param_1)", 
+    "", 
+    "{", 
+    "  char *local_10;", 
+    "", 
+    "  if (*(int *)(param_1 + 8) == 0x10) {", 
+    "    local_10 =", 
+    "    \"=pc\\tip\\n=sp\\tsp\\n=bp\\tbp\\n=a0\\tax\\n=a1\\tbx\\n=a2\\tcx\\n=a3\\tdi\\ngpr\\tip\\t.16\\t48\\t0\\ngpr\\tax\\t.16\\t24\\t0\\ngpr\\tah\\t.8\\t24\\t0\\ngpr\\tal\\t.8\\t25\\t0\\ngpr\\tbx\\t.16\\t0\\t0\\ngpr\\tbh\\t.8\\t0\\t0\\ngpr\\tbl\\t.8\\t1\\t0\\ngpr\\tcx\\t.16\\t4\\t0\\ngpr\\tch\\t.8\\t4\\t0\\ngpr\\tcl\\t.8\\t5\\t0\\ngpr\\tdx\\t.16\\t8\\t0\\ngpr\\tdh\\t.8\\t8\\t0\\ngpr\\tdl\\t.8\\t9\\t0\\ngpr\\tsp\\t.16\\t60\\t0\\ngpr\\tbp\\t.16\\t20\\t0\\ngpr\\tsi\\t.16\\t12\\t0\\ngpr\\tdi\\t.16\\t16\\t0\\nseg\\tcs\\t.16\\t52\\t0\\ngpr\\tflags\\t.16\\t56\\t0\\ngpr\\tcf\\t.1\\t.448\\t0\\nflg\\tflag_p\\t.1\\t.449\\t0\\nflg\\tflag_a\\t.1\\t.450\\t0\\ngpr\\tzf\\t.1\\t.451\\t0\\ngpr\\tsf\\t.1\\t.452\\t0\\nflg\\tflag_t\\t.1\\t.453\\t0\\nflg\\tflag_i\\t.1\\t.454\\t0\\nflg\\tflag_d\\t.1\\t.455\\t0\\nflg\\tof\\t.1\\t.456\\t0\\nflg\\tflag_r\\t.1\\t.457\\t0\\n\"", 
+    "    ;", 
+    "  }", 
+    "  else if (*(int *)(param_1 + 8) == 0x20) {", 
+    "    local_10 =", 
+    "    \"=pc\\teip\\n=sp\\tesp\\n=bp\\tebp\\n=a0\\teax\\n=a1\\tebx\\n=a2\\tecx\\n=a3\\tedi\\ngpr\\teip\\t.32\\t48\\t0\\ngpr\\tip\\t.16\\t48\\t0\\ngpr\\toeax\\t.32\\t44\\t0\\ngpr\\teax\\t.32\\t24\\t0\\ngpr\\tax\\t.16\\t24\\t0\\ngpr\\tah\\t.8\\t24\\t0\\ngpr\\tal\\t.8\\t25\\t0\\ngpr\\tebx\\t.32\\t0\\t0\\ngpr\\tbx\\t.16\\t0\\t0\\ngpr\\tbh\\t.8\\t0\\t0\\ngpr\\tbl\\t.8\\t1\\t0\\ngpr\\tecx\\t.32\\t4\\t0\\ngpr\\tcx\\t.16\\t4\\t0\\ngpr\\tch\\t.8\\t4\\t0\\ngpr\\tcl\\t.8\\t5\\t0\\ngpr\\tedx\\t.32\\t8\\t0\\ngpr\\tdx\\t.16\\t8\\t0\\ngpr\\tdh\\t.8\\t8\\t0\\ngpr\\tdl\\t.8\\t9\\t0\\ngpr\\tesp\\t.32\\t60\\t0\\ngpr\\tsp\\t.16\\t60\\t0\\ngpr\\tebp\\t.32\\t20\\t0\\ngpr\\tbp\\t.16\\t20\\t0\\ngpr\\tesi\\t.32\\t12\\t0\\ngpr\\tsi\\t.16\\t12\\t0\\ngpr\\tedi\\t.32\\t16\\t0\\ngpr\\tdi\\t.16\\t16\\t0\\nseg\\txfs\\t.32\\t36\\t0\\nseg\\txgs\\t.32\\t40\\t0\\nseg\\txcs\\t.32\\t52\\t0\\nseg\\tcs\\t.16\\t52\\t0\\nseg\\txss\\t.32\\t52\\t0\\ngpr\\teflags\\t.32\\t56\\t0\\tc1p.a.zstido.n.rv\\ngpr\\tflags\\t.16\\t56\\t0\\ngpr\\tcf\\t.1\\t.448\\t0\\nflg\\tflag_p\\t.1\\t.449\\t0\\nflg\\tflag_a\\t.1\\t.450\\t0\\ngpr\\tzf\\t.1\\t.451\\t0\\ngpr\\tsf\\t.1\\t.452\\t0\\nflg\\tflag_t\\t.1\\t.453\\t0\\nflg\\tflag_i\\t.1\\t.454\\t0\\nflg\\tflag_d\\t.1\\t.455\\t0\\nflg\\tof\\t.1\\t.456\\t0\\nflg\\tflag_r\\t.1\\t.457\\t0\\ndrx\\tdr0\\t.32\\t0\\t0\\ndrx\\tdr1\\t.32\\t4\\t0\\ndrx\\tdr2\\t.32\\t8\\t0\\ndrx\\tdr3\\t.32\\t12\\t0\\ndrx\\tdr6\\t.32\\t24\\t0\\ndrx\\tdr7\\t.32\\t28\\t0\\n\"", 
+    "    ;", 
+    "  }", 
+    "  else {", 
+    "    local_10 =", 
+    "    \"=pc\\trip\\n=sp\\trsp\\n=bp\\trbp\\n=a0\\trax\\n=a1\\trbx\\n=a2\\trcx\\n=a3\\trdx\\n# no profile defined for x86-64\\ngpr\\tr15\\t.64\\t0\\t0\\ngpr\\tr14\\t.64\\t8\\t0\\ngpr\\tr13\\t.64\\t16\\t0\\ngpr\\tr12\\t.64\\t24\\t0\\ngpr\\trbp\\t.64\\t32\\t0\\ngpr\\tebp\\t.32\\t32\\t0\\ngpr\\trbx\\t.64\\t40\\t0\\ngpr\\tebx\\t.32\\t40\\t0\\ngpr\\tbx\\t.16\\t40\\t0\\ngpr\\tbh\\t.8\\t40\\t0\\ngpr\\tbl\\t.8\\t41\\t0\\ngpr\\tr11\\t.64\\t48\\t0\\ngpr\\tr10\\t.64\\t56\\t0\\ngpr\\tr9\\t.64\\t64\\t0\\ngpr\\tr8\\t.64\\t72\\t0\\ngpr\\trax\\t.64\\t80\\t0\\ngpr\\teax\\t.32\\t80\\t0\\ngpr\\trcx\\t.64\\t88\\t0\\ngpr\\tecx\\t.32\\t88\\t0\\ngpr\\trdx\\t.64\\t96\\t0\\ngpr\\tedx\\t.32\\t96\\t0\\ngpr\\trsi\\t.64\\t104\\t0\\ngpr\\tesi\\t.32\\t104\\t0\\ngpr\\trdi\\t.64\\t112\\t0\\ngpr\\tedi\\t.32\\t112\\t0\\ngpr\\toeax\\t.64\\t120\\t0\\ngpr\\trip\\t.64\\t128\\t0\\nseg\\tcs\\t.64\\t136\\t0\\ngpr\\teflags\\t.32\\t144\\t0\\tc1p.a.zstido.n.rv\\ngpr\\tcf\\t.1\\t.1152\\t0\\nflg\\tflag_p\\t.1\\t.1153\\t0\\nflg\\tflag_a\\t.1\\t.1154\\t0\\ngpr\\tzf\\t.1\\t.1155\\t0\\ngpr\\tsf\\t.1\\t.1156\\t0\\nflg\\tflag_t\\t.1\\t.1157\\t0\\nflg\\tflag_i\\t.1\\t.1158\\t0\\nflg\\tflag_d\\t.1\\t.1159\\t0\\nflg\\tof\\t.1\\t.1160\\t0\\nflg\\tflag_r\\t.1\\t.1161\\t0\\ngpr\\trsp\\t.64\\t152\\t0\\nseg\\tss\\t.64\\t160\\t0\\nseg\\tfs_base\\t.64\\t168\\t0\\nseg\\tgs_base\\t.64\\t176\\t0\\nseg\\tds\\t.64\\t184\\t0\\nseg\\tes\\t.64\\t192\\t0\\nseg\\tfs\\t.64\\t200\\t0\\nseg\\tgs\\t.64\\t208\\t0\\ndrx\\tdr0\\t.32\\t0\\t0\\ndrx\\tdr1\\t.32\\t4\\t0\\ndrx\\tdr2\\t.32\\t8\\t0\\ndrx\\tdr3\\t.32\\t12\\t0\\ndrx\\tdr6\\t.32\\t24\\t0\\ndrx\\tdr7\\t.32\\t28\\t0\\n\"", 
+    "    ;", 
+    "  }", 
+    "  r_reg_set_profile_string(*(undefined8 *)(param_1 + 0x50),local_10);", 
+    "  return;", 
+    "}"
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "boundary": {
+    "1049297": 1049309, 
+    "1049366": 1049368, 
+    "1049368": 1049384, 
+    "1049339": 1049366, 
+    "1049309": 1049324, 
+    "1049220": 1049229, 
+    "1049160": 1049220, 
+    "1049256": 1049292, 
+    "1049384": 1049389, 
+    "1049292": 1049297, 
+    "1049324": 1049326, 
+    "1049229": 1049256, 
+    "1049389": 1049404, 
+    "1049326": 1049339
+  }, 
+  "edges": {
+    "1049297": [
+      1049309, 
+      1049326
+    ], 
+    "1049366": [
+      1049368
+    ], 
+    "1049368": [
+      1049384, 
+      1049389
+    ], 
+    "1049339": [
+      1049220
+    ], 
+    "1049309": [
+      1049324, 
+      1049339
+    ], 
+    "1049220": [
+      1049229, 
+      1049366
+    ], 
+    "1049160": [
+      1049220
+    ], 
+    "1049256": [
+      1049292, 
+      1049339
+    ], 
+    "1049384": [], 
+    "1049292": [
+      1049368
+    ], 
+    "1049324": [
+      1049292
+    ], 
+    "1049229": [
+      1049256, 
+      1049297
+    ], 
+    "1049389": [], 
+    "1049326": [
+      1049339
+    ]
+  }, 
+  "nodes": {
+    "1049297": [
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1049366": [
+      "xor REG REG"
+    ], 
+    "1049368": [
+      "mov REG MEMACC", 
+      "sub REG MEMACC", 
+      "jz ADDR"
+    ], 
+    "1049339": [
+      "movsxd REG MEMACC", 
+      "mov REG REG", 
+      "sub REG REG", 
+      "add REG REG", 
+      "shl REG CONSTANT", 
+      "cdqe", 
+      "add REG REG", 
+      "jmp ADDR"
+    ], 
+    "1049309": [
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "jns ADDR"
+    ], 
+    "1049220": [
+      "test REG REG", 
+      "jle ADDR"
+    ], 
+    "1049160": [
+      "endbr64", 
+      "push REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "sub REG CONSTANT", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "xor REG REG", 
+      "lea PROCESS_SPECIFIC 20", 
+      "mov MEMACC REG"
+    ], 
+    "1049256": [
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "shl REG CONSTANT", 
+      "shl REG CONSTANT", 
+      "add REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "cmp REG REG", 
+      "jz ADDR"
+    ], 
+    "1049384": [
+      "call ADDR"
+    ], 
+    "1049292": [
+      "or REG CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1049324": [
+      "jmp ADDR"
+    ], 
+    "1049229": [
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1049389": [
+      "add REG CONSTANT", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1049326": [
+      "shl REG CONSTANT", 
+      "xor REG REG", 
+      "mov REG REG", 
+      "movsxd REG REG", 
+      "stosb.rep REG"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1049297": "JZ 0x001002ee", 
+    "1049366": "XOR EAX,EAX", 
+    "1049368": "JZ 0x0010032d", 
+    "1049339": "JMP 0x00100284", 
+    "1049309": "JNS 0x001002fb", 
+    "1049220": "JLE 0x00100316", 
+    "1049160": "MOV qword ptr [RSP + 0x8],RAX", 
+    "1049256": "JZ 0x001002fb", 
+    "1049384": "CALL 0x00101018", 
+    "1049292": "JMP 0x00100318", 
+    "1049324": "JMP 0x001002cc", 
+    "1049229": "JZ 0x001002d1", 
+    "1049389": "RET", 
+    "1049326": "STOSB.REP RDI"
+  }
+}

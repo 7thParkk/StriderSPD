@@ -1,0 +1,29 @@
+{
+  "pseudo_code": [
+    "void bdrv_image_info_specific_dump(undefined8 param_1,undefined8 param_2,undefined8 param_3)", 
+    "", 
+    "{", 
+    "  undefined8 uVar1;", 
+    "  undefined8 uVar2;", 
+    "  int *piVar3;", 
+    "  undefined8 local_20;", 
+    "", 
+    "  local_20 = param_3;", 
+    "  uVar1 = qmp_output_visitor_new();", 
+    "  uVar2 = qmp_output_get_visitor(uVar1);", 
+    "  visit_type_ImageInfoSpecific(uVar2,0,&local_20,&error_abort);", 
+    "  piVar3 = (int *)qmp_output_get_qobject(uVar1);", 
+    "  if (6 < *piVar3 - 1U) {", 
+    "    qobject_type_part_0(piVar3);", 
+    "  }", 
+    "  if (*piVar3 == 4) {", 
+    "    uVar2 = qobject_to_qdict();", 
+    "    uVar2 = qdict_get(uVar2,&_LC31);", 
+    "    dump_qobject(param_1,param_2,1,uVar2);", 
+    "    qmp_output_visitor_cleanup(uVar1);", 
+    "    return;", 
+    "  }", 
+    "  __assert_fail(\"qobject_type(obj) == QTYPE_QDICT\",&_LC19,699,\"bdrv_image_info_specific_dump\");", 
+    "}"
+  ]
+}

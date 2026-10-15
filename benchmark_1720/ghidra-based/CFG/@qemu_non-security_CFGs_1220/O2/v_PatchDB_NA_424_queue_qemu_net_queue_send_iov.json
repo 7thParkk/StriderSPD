@@ -1,0 +1,117 @@
+{
+  "boundary": {
+    "1049715": 1049725, 
+    "1049752": 1049760, 
+    "1049784": 1049806, 
+    "1049725": 1049747, 
+    "1049632": 1049673, 
+    "1049760": 1049778, 
+    "1049673": 1049715
+  }, 
+  "edges": {
+    "1049715": [
+      1049725, 
+      1049752
+    ], 
+    "1049752": [
+      1049760
+    ], 
+    "1049784": [], 
+    "1049725": [
+      1049760
+    ], 
+    "1049632": [
+      1049673, 
+      1049784
+    ], 
+    "1049760": [], 
+    "1049673": [
+      1049715, 
+      1049752
+    ]
+  }, 
+  "nodes": {
+    "1049715": [
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1049752": [
+      "mov REG REG", 
+      "call ADDR"
+    ], 
+    "1049784": [
+      "add REG CONSTANT", 
+      "xor REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "jmp ADDR"
+    ], 
+    "1049725": [
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "jmp ADDR"
+    ], 
+    "1049632": [
+      "endbr64", 
+      "push REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "mov REG REG", 
+      "sub REG CONSTANT", 
+      "movzx REG MEMACC", 
+      "test REG 1", 
+      "jnz ADDR"
+    ], 
+    "1049760": [
+      "add REG CONSTANT", 
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1049673": [
+      "or REG CONSTANT", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "mov REG REG", 
+      "mov MEMACC REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call MEMACC", 
+      "and MEMACC CONSTANT", 
+      "mov REG REG", 
+      "test REG REG", 
+      "jnz ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1049715": "JZ 0x00100498", 
+    "1049752": "CALL 0x00100230", 
+    "1049784": "JMP 0x00100000", 
+    "1049725": "JMP 0x001004a0", 
+    "1049632": "JNZ 0x001004b8", 
+    "1049760": "RET", 
+    "1049673": "JNZ 0x00100498"
+  }
+}

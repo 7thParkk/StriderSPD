@@ -1,0 +1,89 @@
+{
+  "boundary": {
+    "1054610": 1054635, 
+    "1054585": 1054598, 
+    "1054529": 1054565, 
+    "1054565": 1054570, 
+    "1054598": 1054610, 
+    "1054570": 1054572, 
+    "1054572": 1054585
+  }, 
+  "edges": {
+    "1054610": [], 
+    "1054585": [
+      1054610
+    ], 
+    "1054529": [
+      1054565, 
+      1054572
+    ], 
+    "1054565": [
+      1054570, 
+      1054585
+    ], 
+    "1054598": [
+      1054610
+    ], 
+    "1054570": [
+      1054598
+    ], 
+    "1054572": [
+      1054610
+    ]
+  }, 
+  "nodes": {
+    "1054610": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov PROCESS_SPECIFIC MEMACC", 
+      "mov PROCESS_SPECIFIC REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "leave", 
+      "ret"
+    ], 
+    "1054585": [
+      "lea REG 1056640", 
+      "mov MEMACC PROCESS_SPECIFIC", 
+      "jmp ADDR"
+    ], 
+    "1054529": [
+      "endbr64", 
+      "push REG", 
+      "mov REG REG", 
+      "sub REG CONSTANT", 
+      "mov MEMACC REG", 
+      "mov MEMACC CONSTANT", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "cmp REG 16", 
+      "jz ADDR"
+    ], 
+    "1054565": [
+      "cmp REG 32", 
+      "jz ADDR"
+    ], 
+    "1054598": [
+      "lea REG 1057560", 
+      "mov MEMACC PROCESS_SPECIFIC", 
+      "nop"
+    ], 
+    "1054570": [
+      "jmp ADDR"
+    ], 
+    "1054572": [
+      "lea REG 1056104", 
+      "mov MEMACC PROCESS_SPECIFIC", 
+      "jmp ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1054610": "RET", 
+    "1054585": "JMP 0x00101792", 
+    "1054529": "JZ 0x0010176c", 
+    "1054565": "JZ 0x00101779", 
+    "1054598": "NOP", 
+    "1054570": "JMP 0x00101786", 
+    "1054572": "JMP 0x00101792"
+  }
+}

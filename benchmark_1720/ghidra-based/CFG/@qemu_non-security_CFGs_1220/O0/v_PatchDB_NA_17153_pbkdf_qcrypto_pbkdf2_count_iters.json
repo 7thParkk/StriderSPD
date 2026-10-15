@@ -1,0 +1,201 @@
+{
+  "boundary": {
+    "1048886": 1048898, 
+    "1048950": 1048962, 
+    "1049110": 1049125, 
+    "1048985": 1048994, 
+    "1049081": 1049110, 
+    "1049019": 1049026, 
+    "1049052": 1049081, 
+    "1048863": 1048886, 
+    "1048898": 1048950, 
+    "1048962": 1048985, 
+    "1048994": 1049019, 
+    "1049026": 1049052, 
+    "1048805": 1048863, 
+    "1049125": 1049130, 
+    "1049130": 1049132
+  }, 
+  "edges": {
+    "1048886": [
+      1049110
+    ], 
+    "1048950": [
+      1049110
+    ], 
+    "1049110": [
+      1049125, 
+      1049130
+    ], 
+    "1048985": [
+      1049110
+    ], 
+    "1049081": [
+      1049110
+    ], 
+    "1049019": [
+      1049026, 
+      1049052
+    ], 
+    "1049052": [
+      1048863
+    ], 
+    "1048863": [
+      1048886, 
+      1048898
+    ], 
+    "1048898": [
+      1048950, 
+      1048962
+    ], 
+    "1048962": [
+      1048985, 
+      1048994
+    ], 
+    "1048994": [
+      1049019, 
+      1049081
+    ], 
+    "1049026": [
+      1048863
+    ], 
+    "1048805": [
+      1048863
+    ], 
+    "1049125": [], 
+    "1049130": []
+  }, 
+  "nodes": {
+    "1048886": [
+      "mov REG CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1048950": [
+      "mov REG CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1049110": [
+      "mov REG MEMACC", 
+      "sub REG MEMACC", 
+      "jz ADDR"
+    ], 
+    "1048985": [
+      "mov REG CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1049081": [
+      "nop", 
+      "mov REG MEMACC", 
+      "imul REG REG CONSTANT", 
+      "mov REG CONSTANT", 
+      "div MEMACC", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC"
+    ], 
+    "1049019": [
+      "cmp -56 99", 
+      "ja ADDR"
+    ], 
+    "1049052": [
+      "mov REG MEMACC", 
+      "imul REG REG CONSTANT", 
+      "mov REG CONSTANT", 
+      "div MEMACC", 
+      "mov MEMACC REG", 
+      "jmp ADDR"
+    ], 
+    "1048863": [
+      "mov REG MEMACC", 
+      "lea PROCESS_SPECIFIC -80", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "jns ADDR"
+    ], 
+    "1048898": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "sub REG CONSTANT", 
+      "push MEMACC", 
+      "push CONSTANT", 
+      "lea PROCESS_SPECIFIC -48", 
+      "push REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "add REG CONSTANT", 
+      "test REG REG", 
+      "jns ADDR"
+    ], 
+    "1048962": [
+      "mov REG MEMACC", 
+      "lea PROCESS_SPECIFIC -72", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "jns ADDR"
+    ], 
+    "1048994": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "sub REG REG", 
+      "mov MEMACC REG", 
+      "cmp -56 500", 
+      "ja ADDR"
+    ], 
+    "1049026": [
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "shl REG CONSTANT", 
+      "add REG REG", 
+      "add REG REG", 
+      "mov MEMACC REG", 
+      "jmp ADDR"
+    ], 
+    "1048805": [
+      "endbr64", 
+      "push REG", 
+      "mov REG REG", 
+      "add REG CONSTANT", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "xor REG REG", 
+      "mov MEMACC CONSTANT"
+    ], 
+    "1049125": [
+      "call ADDR"
+    ], 
+    "1049130": [
+      "leave", 
+      "ret"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1048886": "JMP 0x00100216", 
+    "1048950": "JMP 0x00100216", 
+    "1049110": "JZ 0x0010022a", 
+    "1048985": "JMP 0x00100216", 
+    "1049081": "MOV RAX,qword ptr [RBP + -0x40]", 
+    "1049019": "JA 0x001001dc", 
+    "1049052": "JMP 0x0010011f", 
+    "1048863": "JNS 0x00100142", 
+    "1048898": "JNS 0x00100182", 
+    "1048962": "JNS 0x001001a2", 
+    "1048994": "JA 0x001001f9", 
+    "1049026": "JMP 0x0010011f", 
+    "1048805": "MOV qword ptr [RBP + -0x40],0x8000", 
+    "1049125": "CALL 0x00101018", 
+    "1049130": "RET"
+  }
+}

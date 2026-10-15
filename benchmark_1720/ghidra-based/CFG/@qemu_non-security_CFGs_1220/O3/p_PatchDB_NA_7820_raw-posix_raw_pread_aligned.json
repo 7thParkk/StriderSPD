@@ -1,0 +1,230 @@
+{
+  "boundary": {
+    "1051120": 1051128, 
+    "1051216": 1051218, 
+    "1051280": 1051289, 
+    "1051312": 1051316, 
+    "1051187": 1051204, 
+    "1051253": 1051280, 
+    "1051128": 1051151, 
+    "1051224": 1051253, 
+    "1051289": 1051306, 
+    "1051040": 1051080, 
+    "1051106": 1051110, 
+    "1051110": 1051120, 
+    "1051174": 1051178, 
+    "1051080": 1051106, 
+    "1051208": 1051216, 
+    "1051178": 1051187, 
+    "1051151": 1051174
+  }, 
+  "edges": {
+    "1051120": [
+      1051128, 
+      1051187
+    ], 
+    "1051216": [
+      1051174
+    ], 
+    "1051280": [
+      1051120, 
+      1051289
+    ], 
+    "1051312": [
+      1051280
+    ], 
+    "1051187": [], 
+    "1051253": [
+      1051280
+    ], 
+    "1051128": [
+      1051151, 
+      1051187
+    ], 
+    "1051224": [
+      1051253, 
+      1051312
+    ], 
+    "1051289": [
+      1051187
+    ], 
+    "1051040": [
+      1051080, 
+      1051187
+    ], 
+    "1051106": [
+      1051110, 
+      1051208
+    ], 
+    "1051110": [
+      1051120, 
+      1051224
+    ], 
+    "1051174": [
+      1051178, 
+      1051187
+    ], 
+    "1051080": [
+      1051106, 
+      1051187
+    ], 
+    "1051208": [
+      1051128, 
+      1051216
+    ], 
+    "1051178": [
+      1051187
+    ], 
+    "1051151": [
+      1051174, 
+      1051187
+    ]
+  }, 
+  "nodes": {
+    "1051120": [
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1051216": [
+      "jmp ADDR"
+    ], 
+    "1051280": [
+      "cmp REG REG", 
+      "jl ADDR"
+    ], 
+    "1051312": [
+      "cdqe", 
+      "jmp ADDR"
+    ], 
+    "1051187": [
+      "add REG CONSTANT", 
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1051253": [
+      "mov REG MEMACC", 
+      "mov REG CONSTANT", 
+      "xor REG REG", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "mov REG MEMACC"
+    ], 
+    "1051128": [
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "cmp REG REG", 
+      "jz ADDR"
+    ], 
+    "1051224": [
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov MEMACC REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "js ADDR"
+    ], 
+    "1051289": [
+      "mov REG REG", 
+      "xor REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "jmp ADDR"
+    ], 
+    "1051040": [
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "mov REG REG", 
+      "sub REG CONSTANT", 
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "mov REG REG", 
+      "test REG REG", 
+      "js ADDR"
+    ], 
+    "1051106": [
+      "test REG REG", 
+      "jnz ADDR"
+    ], 
+    "1051110": [
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jnz ADDR"
+    ], 
+    "1051174": [
+      "test REG REG", 
+      "jns ADDR"
+    ], 
+    "1051080": [
+      "mov REG MEMACC", 
+      "movsxd REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "cmp REG REG", 
+      "jz ADDR"
+    ], 
+    "1051208": [
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jnz ADDR"
+    ], 
+    "1051178": [
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "neg REG"
+    ], 
+    "1051151": [
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "cmp REG REG", 
+      "jz ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1051120": "JZ 0x00100a33", 
+    "1051216": "JMP 0x00100a26", 
+    "1051280": "JL 0x001009f0", 
+    "1051312": "JMP 0x00100a90", 
+    "1051187": "RET", 
+    "1051253": "MOV ECX,dword ptr [RSP + 0x4]", 
+    "1051128": "JZ 0x00100a33", 
+    "1051224": "JS 0x00100ab0", 
+    "1051289": "JMP 0x00100a33", 
+    "1051040": "JS 0x00100a33", 
+    "1051106": "JNZ 0x00100a48", 
+    "1051110": "JNZ 0x00100a58", 
+    "1051174": "JNS 0x00100a33", 
+    "1051080": "JZ 0x00100a33", 
+    "1051208": "JNZ 0x001009f8", 
+    "1051178": "NEG ECX", 
+    "1051151": "JZ 0x00100a33"
+  }
+}

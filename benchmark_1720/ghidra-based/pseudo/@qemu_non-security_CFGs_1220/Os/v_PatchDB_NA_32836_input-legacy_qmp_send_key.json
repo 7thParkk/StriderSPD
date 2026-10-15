@@ -1,0 +1,33 @@
+{
+  "pseudo_code": [
+    "void qmp_send_key(KeyValueList *keys,_Bool has_hold_time,int64_t hold_time,Error **errp)", 
+    "", 
+    "{", 
+    "  KeyValueList *pKVar1;", 
+    "  KeyValue *pKVar2;", 
+    "  Error **errp_local;", 
+    "  int64_t hold_time_local;", 
+    "  _Bool has_hold_time_local;", 
+    "  KeyValueList *keys_local;", 
+    "  KeyValueList *p;", 
+    "", 
+    "  p = keys;", 
+    "  hold_time_local = hold_time;", 
+    "  if (!has_hold_time) {", 
+    "    hold_time_local = 0;", 
+    "  }", 
+    "  for (; pKVar1 = keys, p != (KeyValueList *)0x0; p = p->next) {", 
+    "    pKVar2 = copy_key_value((p->field_0).value);", 
+    "    qemu_input_event_send_key(0,pKVar2,1);", 
+    "    qemu_input_event_send_key_delay(hold_time_local & 0xffffffff);", 
+    "  }", 
+    "  while (p = pKVar1, p != (KeyValueList *)0x0) {", 
+    "    pKVar2 = copy_key_value((p->field_0).value);", 
+    "    qemu_input_event_send_key(0,pKVar2,0);", 
+    "    qemu_input_event_send_key_delay(hold_time_local & 0xffffffff);", 
+    "    pKVar1 = p->next;", 
+    "  }", 
+    "  return;", 
+    "}"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "pseudo_code": [
+    "undefined1  [16] usb_braille_init(void)", 
+    "", 
+    "{", 
+    "  long lVar1;", 
+    "  undefined8 uVar2;", 
+    "  undefined8 in_RCX;", 
+    "  undefined1 auVar3 [16];", 
+    "", 
+    "  lVar1 = qemu_chr_open(\"braille\",\"braille\",0);", 
+    "  uVar2 = 0;", 
+    "  if (lVar1 != 0) {", 
+    "    uVar2 = usb_create(0,\"usb-braille\");", 
+    "    qdev_prop_set_chr(uVar2,\"chardev\",lVar1);", 
+    "    qdev_init(uVar2);", 
+    "  }", 
+    "  auVar3._8_8_ = in_RCX;", 
+    "  auVar3._0_8_ = uVar2;", 
+    "  return auVar3;", 
+    "}"
+  ]
+}

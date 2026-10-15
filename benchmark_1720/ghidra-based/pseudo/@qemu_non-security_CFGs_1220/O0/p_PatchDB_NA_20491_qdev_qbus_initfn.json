@@ -1,0 +1,22 @@
+{
+  "pseudo_code": [
+    "void qbus_initfn(Object *obj)", 
+    "", 
+    "{", 
+    "  long lVar1;", 
+    "  long lVar2;", 
+    "  long in_FS_OFFSET;", 
+    "  Object *obj_local;", 
+    "  BusState *bus;", 
+    "", 
+    "  lVar1 = *(long *)(in_FS_OFFSET + 0x28);", 
+    "  lVar2 = object_dynamic_cast_assert(obj,&DAT_00103078,\"hw/core/qdev.c\",0x39d,\"qbus_initfn\");", 
+    "  object_property_add_link(obj,\"hotplug-handler\",\"hotplug-handler\",lVar2 + 0x48,0);", 
+    "  object_property_add_bool(obj,\"realized\",bus_get_realized,bus_set_realized,0);", 
+    "  if (lVar1 != *(long *)(in_FS_OFFSET + 0x28)) {", 
+    "    __stack_chk_fail();", 
+    "  }", 
+    "  return;", 
+    "}"
+  ]
+}

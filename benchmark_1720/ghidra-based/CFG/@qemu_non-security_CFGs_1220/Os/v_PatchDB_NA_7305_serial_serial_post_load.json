@@ -1,0 +1,86 @@
+{
+  "boundary": {
+    "1049779": 1049783, 
+    "1049812": 1049819, 
+    "1049783": 1049789, 
+    "1049819": 1049849, 
+    "1049789": 1049806, 
+    "1049769": 1049779, 
+    "1049806": 1049812
+  }, 
+  "edges": {
+    "1049779": [
+      1049783
+    ], 
+    "1049812": [
+      1049819
+    ], 
+    "1049783": [
+      1049789, 
+      1049806
+    ], 
+    "1049819": [], 
+    "1049789": [
+      1049806
+    ], 
+    "1049769": [
+      1049779, 
+      1049783
+    ], 
+    "1049806": [
+      1049812, 
+      1049819
+    ]
+  }, 
+  "nodes": {
+    "1049779": [
+      "mov MEMACC CONSTANT"
+    ], 
+    "1049812": [
+      "mov MEMACC CONSTANT"
+    ], 
+    "1049783": [
+      "cmp 16 -1", 
+      "jnz ADDR"
+    ], 
+    "1049819": [
+      "mov REG MEMACC", 
+      "movzx REG MEMACC", 
+      "shr REG CONSTANT", 
+      "and REG CONSTANT", 
+      "mov MEMACC REG", 
+      "call ADDR", 
+      "call ADDR", 
+      "xor REG REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1049789": [
+      "mov REG MEMACC", 
+      "and REG CONSTANT", 
+      "cmp REG 2", 
+      "setz REG", 
+      "movzx REG REG", 
+      "mov MEMACC REG"
+    ], 
+    "1049769": [
+      "endbr64", 
+      "push REG", 
+      "cmp REG 2", 
+      "jg ADDR"
+    ], 
+    "1049806": [
+      "cmp 52 4", 
+      "jbe ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1049779": "MOV byte ptr [RDI + 0xd],0x0", 
+    "1049812": "MOV dword ptr [RDI + 0x34],0x4", 
+    "1049783": "JNZ 0x001004ce", 
+    "1049819": "RET", 
+    "1049789": "MOV dword ptr [RDI + 0x10],EAX", 
+    "1049769": "JG 0x001004b7", 
+    "1049806": "JBE 0x001004db"
+  }
+}

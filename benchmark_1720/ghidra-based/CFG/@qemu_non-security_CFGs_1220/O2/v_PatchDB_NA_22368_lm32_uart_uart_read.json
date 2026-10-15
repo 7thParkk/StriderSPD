@@ -1,0 +1,97 @@
+{
+  "boundary": {
+    "1049328": 1049346, 
+    "1049392": 1049401, 
+    "1049362": 1049384, 
+    "1049428": 1049430, 
+    "1049408": 1049428, 
+    "1049440": 1049462, 
+    "1049346": 1049358, 
+    "1049358": 1049362
+  }, 
+  "edges": {
+    "1049328": [
+      1049346, 
+      1049440
+    ], 
+    "1049392": [], 
+    "1049362": [], 
+    "1049428": [], 
+    "1049408": [
+      1049428
+    ], 
+    "1049440": [
+      1049428
+    ], 
+    "1049346": [
+      1049358, 
+      1049408
+    ], 
+    "1049358": [
+      1049362, 
+      1049392
+    ]
+  }, 
+  "nodes": {
+    "1049328": [
+      "endbr64", 
+      "mov REG REG", 
+      "push REG", 
+      "shr REG CONSTANT", 
+      "cmp REG 31", 
+      "ja ADDR"
+    ], 
+    "1049392": [
+      "mov REG MEMACC", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1049362": [
+      "and MEMACC CONSTANT", 
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "mov REG REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1049428": [
+      "pop REG", 
+      "ret"
+    ], 
+    "1049408": [
+      "xor REG REG", 
+      "and REG CONSTANT", 
+      "lea REG 1049616", 
+      "call ADDR", 
+      "xor REG REG"
+    ], 
+    "1049440": [
+      "xor REG REG", 
+      "and REG CONSTANT", 
+      "lea REG 1049672", 
+      "call ADDR", 
+      "xor REG REG", 
+      "jmp ADDR"
+    ], 
+    "1049346": [
+      "mov REG CONSTANT", 
+      "shl REG REG", 
+      "test REG -102", 
+      "jnz ADDR"
+    ], 
+    "1049358": [
+      "test REG 100", 
+      "jnz ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1049328": "JA 0x00100360", 
+    "1049392": "RET", 
+    "1049362": "RET", 
+    "1049428": "RET", 
+    "1049408": "XOR EAX,EAX", 
+    "1049440": "JMP 0x00100354", 
+    "1049346": "JNZ 0x00100340", 
+    "1049358": "JNZ 0x00100330"
+  }
+}

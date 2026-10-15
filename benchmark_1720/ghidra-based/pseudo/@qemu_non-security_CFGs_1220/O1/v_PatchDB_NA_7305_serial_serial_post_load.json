@@ -1,0 +1,17 @@
+{
+  "pseudo_code": [
+    "undefined8 serial_post_load(long param_1,int param_2)", 
+    "", 
+    "{", 
+    "  if (param_2 < 3) {", 
+    "  }", 
+    "  if (*(int *)(param_1 + 0x10) == -1) {", 
+    "  }", 
+    "  if (4 < *(uint *)(param_1 + 0x34)) {", 
+    "  }", 
+    "  serial_write_fcr(param_1,*(undefined1 *)(param_1 + 0xd));", 
+    "  serial_update_parameters(param_1);", 
+    "  return 0;", 
+    "}"
+  ]
+}

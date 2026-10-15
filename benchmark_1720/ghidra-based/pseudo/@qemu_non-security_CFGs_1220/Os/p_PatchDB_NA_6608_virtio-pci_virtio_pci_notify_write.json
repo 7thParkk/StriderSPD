@@ -1,0 +1,30 @@
+{
+  "pseudo_code": [
+    "void virtio_pci_notify_write(void *opaque,hwaddr addr,uint64_t val,uint size)", 
+    "", 
+    "{", 
+    "  int iVar1;", 
+    "  long lVar2;", 
+    "  VirtIOPCIProxy *proxy_00;", 
+    "  uint size_local;", 
+    "  uint64_t val_local;", 
+    "  hwaddr addr_local;", 
+    "  void *opaque_local;", 
+    "  uint queue;", 
+    "  VirtIODevice *vdev;", 
+    "  VirtIOPCIProxy *proxy;", 
+    "", 
+    "  lVar2 = object_dynamic_cast_assert", 
+    "                    (opaque,\"device\",\"hw/virtio/virtio-pci.c\",0x563,\"virtio_pci_notify_write\");", 
+    "  proxy_00 = (VirtIOPCIProxy *)", 
+    "             object_dynamic_cast_assert", 
+    "                       (*(undefined8 *)(*(long *)(lVar2 + 0x48) + 0x28),\"virtio-pci\",", 
+    "                        \"hw/virtio/virtio-pci.c\",0x563,\"virtio_pci_notify_write\");", 
+    "  iVar1 = virtio_pci_queue_mem_mult(proxy_00);", 
+    "  if ((uint)(addr / (ulong)(long)iVar1) < 0x400) {", 
+    "    virtio_queue_notify(opaque,addr / (ulong)(long)iVar1 & 0xffffffff);", 
+    "  }", 
+    "  return;", 
+    "}"
+  ]
+}

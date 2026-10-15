@@ -1,0 +1,108 @@
+{
+  "boundary": {
+    "1056304": 1056313, 
+    "1056278": 1056302, 
+    "1056313": 1056331, 
+    "1056160": 1056229, 
+    "1056229": 1056263, 
+    "1056263": 1056278, 
+    "1056331": 1056338
+  }, 
+  "edges": {
+    "1056304": [
+      1056313
+    ], 
+    "1056278": [], 
+    "1056313": [
+      1056278, 
+      1056331
+    ], 
+    "1056160": [
+      1056229, 
+      1056304
+    ], 
+    "1056229": [
+      1056263, 
+      1056313
+    ], 
+    "1056263": [
+      1056278, 
+      1056331
+    ], 
+    "1056331": []
+  }, 
+  "nodes": {
+    "1056304": [
+      "and REG CONSTANT", 
+      "or REG CONSTANT"
+    ], 
+    "1056278": [
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "mov REG REG", 
+      "pop REG", 
+      "jmp ADDR"
+    ], 
+    "1056313": [
+      "mov REG MEMACC", 
+      "and REG CONSTANT", 
+      "call ADDR", 
+      "test REG REG", 
+      "jnz ADDR"
+    ], 
+    "1056160": [
+      "endbr64", 
+      "push REG", 
+      "lea REG 1064736", 
+      "mov REG CONSTANT", 
+      "lea REG 1063072", 
+      "push REG", 
+      "push REG", 
+      "mov REG REG", 
+      "lea REG 1063951", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1056229": [
+      "mov REG MEMACC", 
+      "or REG CONSTANT", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "mov MEMACC REG", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1056263": [
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1056331": [
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1056304": "OR EBX,0x20", 
+    "1056278": "JMP 0x00105228", 
+    "1056313": "JNZ 0x00101e16", 
+    "1056160": "JZ 0x00101e30", 
+    "1056229": "JZ 0x00101e39", 
+    "1056263": "JZ 0x00101e4b", 
+    "1056331": "RET"
+  }
+}

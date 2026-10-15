@@ -1,0 +1,118 @@
+{
+  "boundary": {
+    "1048664": 1048771, 
+    "1048792": 1048811, 
+    "1048825": 1048875, 
+    "1048637": 1048664, 
+    "1048771": 1048792, 
+    "1048811": 1048825, 
+    "1048875": 1048880
+  }, 
+  "edges": {
+    "1048664": [
+      1048771, 
+      1048825
+    ], 
+    "1048792": [
+      1048811
+    ], 
+    "1048825": [
+      1048811, 
+      1048875
+    ], 
+    "1048637": [
+      1048664, 
+      1048792
+    ], 
+    "1048771": [
+      1048811
+    ], 
+    "1048811": [
+      1048825
+    ], 
+    "1048875": []
+  }, 
+  "nodes": {
+    "1048664": [
+      "mov REG CONSTANT", 
+      "mov PROCESS_SPECIFIC REG", 
+      "mov MEMACC CONSTANT", 
+      "call ADDR", 
+      "mov PROCESS_SPECIFIC REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "lea REG 1052704", 
+      "xor REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "call ADDR", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "lea REG 1052704", 
+      "xor REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "cmp REG REG", 
+      "jz ADDR"
+    ], 
+    "1048792": [
+      "lea REG 1049124", 
+      "lea REG 1049472", 
+      "mov REG CONSTANT"
+    ], 
+    "1048825": [
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "call ADDR", 
+      "cmp 8 1", 
+      "mov REG CONSTANT", 
+      "lea REG 1049124", 
+      "lea REG 1049472", 
+      "jnz ADDR"
+    ], 
+    "1048637": [
+      "endbr64", 
+      "push REG", 
+      "lea REG 1052688", 
+      "push REG", 
+      "push REG", 
+      "cmp 8 1", 
+      "jnz ADDR"
+    ], 
+    "1048771": [
+      "lea REG 1049198", 
+      "lea REG 1049472", 
+      "mov REG CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1048811": [
+      "lea REG 1049143", 
+      "xor REG REG", 
+      "call ADDR"
+    ], 
+    "1048875": [
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1048664": "JZ 0x001000f9", 
+    "1048792": "MOV EDX,0x31", 
+    "1048825": "JNZ 0x001000eb", 
+    "1048637": "JNZ 0x001000d8", 
+    "1048771": "JMP 0x001000eb", 
+    "1048811": "CALL 0x00101050", 
+    "1048875": "RET"
+  }
+}

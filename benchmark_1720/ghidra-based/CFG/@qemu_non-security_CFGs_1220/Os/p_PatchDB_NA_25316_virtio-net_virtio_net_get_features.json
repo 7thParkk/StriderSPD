@@ -1,0 +1,108 @@
+{
+  "boundary": {
+    "1055351": 1055375, 
+    "1055322": 1055324, 
+    "1055324": 1055333, 
+    "1055233": 1055307, 
+    "1055333": 1055336, 
+    "1055336": 1055351, 
+    "1055307": 1055322, 
+    "1055375": 1055382
+  }, 
+  "edges": {
+    "1055351": [], 
+    "1055322": [
+      1055336
+    ], 
+    "1055324": [
+      1055333
+    ], 
+    "1055233": [
+      1055307, 
+      1055324
+    ], 
+    "1055333": [
+      1055336
+    ], 
+    "1055336": [
+      1055351, 
+      1055375
+    ], 
+    "1055307": [
+      1055322, 
+      1055333
+    ], 
+    "1055375": []
+  }, 
+  "nodes": {
+    "1055351": [
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "mov REG REG", 
+      "pop REG", 
+      "jmp ADDR"
+    ], 
+    "1055322": [
+      "jmp ADDR"
+    ], 
+    "1055324": [
+      "and REG CONSTANT", 
+      "or REG CONSTANT"
+    ], 
+    "1055233": [
+      "endbr64", 
+      "push REG", 
+      "lea REG 1062592", 
+      "mov REG CONSTANT", 
+      "lea REG 1060746", 
+      "push REG", 
+      "push REG", 
+      "mov REG REG", 
+      "lea REG 1060822", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "or REG MEMACC", 
+      "cmp 248 0", 
+      "mov REG REG", 
+      "jz ADDR"
+    ], 
+    "1055333": [
+      "and REG CONSTANT"
+    ], 
+    "1055336": [
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1055307": [
+      "mov REG REG", 
+      "or REG CONSTANT", 
+      "call ADDR", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1055375": [
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1055351": "JMP 0x00105240", 
+    "1055322": "JMP 0x00101a68", 
+    "1055324": "OR EBX,0x20", 
+    "1055233": "JZ 0x00101a5c", 
+    "1055333": "AND BH,0xbb", 
+    "1055336": "JZ 0x00101a8f", 
+    "1055307": "JZ 0x00101a65", 
+    "1055375": "RET"
+  }
+}

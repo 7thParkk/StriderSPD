@@ -1,0 +1,200 @@
+{
+  "boundary": {
+    "1048633": 1048655, 
+    "1048795": 1048810, 
+    "1048830": 1048906, 
+    "1048990": 1049016, 
+    "1048576": 1048633, 
+    "1048810": 1048815, 
+    "1048906": 1048990, 
+    "1048655": 1048687, 
+    "1048687": 1048795, 
+    "1048815": 1048830
+  }, 
+  "edges": {
+    "1048633": [], 
+    "1048795": [
+      1048810
+    ], 
+    "1048830": [
+      1048990
+    ], 
+    "1048990": [], 
+    "1048576": [
+      1048633, 
+      1048655
+    ], 
+    "1048810": [
+      1048815, 
+      1048830
+    ], 
+    "1048906": [
+      1048990
+    ], 
+    "1048655": [
+      1048687, 
+      1048906
+    ], 
+    "1048687": [
+      1048795, 
+      1048810
+    ], 
+    "1048815": [
+      1048830
+    ]
+  }, 
+  "nodes": {
+    "1048633": [
+      "add REG CONSTANT", 
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "jmp ADDR"
+    ], 
+    "1048795": [
+      "lea REG 1072679", 
+      "call ADDR", 
+      "mov REG REG"
+    ], 
+    "1048830": [
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "lea REG 1", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG CONSTANT", 
+      "xor REG REG", 
+      "lea REG 1072680", 
+      "call ADDR", 
+      "mov REG REG", 
+      "call ADDR", 
+      "jmp ADDR"
+    ], 
+    "1048990": [
+      "mov REG REG", 
+      "call ADDR", 
+      "add REG CONSTANT", 
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1048576": [
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "mov REG REG", 
+      "sub REG CONSTANT", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "test 380 1", 
+      "jnz ADDR"
+    ], 
+    "1048810": [
+      "test REG REG", 
+      "jnz ADDR"
+    ], 
+    "1048906": [
+      "lea REG 1072679", 
+      "call ADDR", 
+      "movsxd REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "xor REG REG", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG"
+    ], 
+    "1048655": [
+      "mov REG REG", 
+      "lea REG 1072676", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1048687": [
+      "mov REG REG", 
+      "mov REG REG", 
+      "sub REG REG", 
+      "call ADDR", 
+      "lea REG 2", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "xor REG REG", 
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "xor REG REG", 
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "jnz ADDR"
+    ], 
+    "1048815": [
+      "lea REG 1072679", 
+      "call ADDR", 
+      "mov REG REG"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1048633": "JMP 0x00109000", 
+    "1048795": "MOV RBP,RAX", 
+    "1048830": "JMP 0x0010019e", 
+    "1048990": "RET", 
+    "1048576": "JNZ 0x0010004f", 
+    "1048810": "JNZ 0x001000fe", 
+    "1048906": "MOV R12,RAX", 
+    "1048655": "JZ 0x0010014a", 
+    "1048687": "JNZ 0x001000ea", 
+    "1048815": "MOV RBX,RAX"
+  }
+}

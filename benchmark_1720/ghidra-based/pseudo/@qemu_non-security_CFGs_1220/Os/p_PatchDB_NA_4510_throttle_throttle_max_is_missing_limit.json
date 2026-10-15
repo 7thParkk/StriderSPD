@@ -1,0 +1,28 @@
+{
+  "pseudo_code": [
+    "undefined1  [16] throttle_max_is_missing_limit(ulong param_1,undefined8 param_2)", 
+    "", 
+    "{", 
+    "  undefined1 auVar1 [16];", 
+    "  undefined8 uVar2;", 
+    "  long lVar3;", 
+    "  undefined1 auVar4 [16];", 
+    "", 
+    "  lVar3 = 0;", 
+    "  while ((*(double *)(param_1 + 8 + lVar3) == 0.0 || (*(double *)(param_1 + lVar3) != 0.0))) {", 
+    "    lVar3 = lVar3 + 0x18;", 
+    "    if (lVar3 == 0x90) {", 
+    "      auVar1._8_8_ = 0;", 
+    "      auVar1._0_8_ = param_1;", 
+    "      return auVar1 << 0x40;", 
+    "    }", 
+    "  }", 
+    "  uVar2 = error_setg_internal(param_2,&_LC2,0x13d,\"throttle_max_is_missing_limit\",", 
+    "                              \"bps_max/iops_max require corresponding bps/iops values\");", 
+    "  auVar4._1_7_ = (undefined7)((ulong)uVar2 >> 8);", 
+    "  auVar4[0] = 1;", 
+    "  auVar4._8_8_ = lVar3;", 
+    "  return auVar4;", 
+    "}"
+  ]
+}

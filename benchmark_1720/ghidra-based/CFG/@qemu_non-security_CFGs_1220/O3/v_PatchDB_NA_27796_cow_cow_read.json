@@ -1,0 +1,204 @@
+{
+  "boundary": {
+    "1049264": 1049329, 
+    "1049329": 1049334, 
+    "1049526": 1049541, 
+    "1049465": 1049483, 
+    "1049403": 1049419, 
+    "1049344": 1049403, 
+    "1049443": 1049465, 
+    "1049508": 1049510, 
+    "1049510": 1049526, 
+    "1049544": 1049571, 
+    "1049576": 1049583, 
+    "1049419": 1049443, 
+    "1049483": 1049508, 
+    "1049583": 1049588
+  }, 
+  "edges": {
+    "1049264": [
+      1049329, 
+      1049419
+    ], 
+    "1049329": [
+      1049508
+    ], 
+    "1049526": [], 
+    "1049465": [
+      1049483, 
+      1049576
+    ], 
+    "1049403": [
+      1049419, 
+      1049508
+    ], 
+    "1049344": [
+      1049403, 
+      1049576
+    ], 
+    "1049443": [
+      1049465, 
+      1049544
+    ], 
+    "1049508": [
+      1049510
+    ], 
+    "1049510": [
+      1049526, 
+      1049583
+    ], 
+    "1049544": [
+      1049403
+    ], 
+    "1049576": [
+      1049510
+    ], 
+    "1049419": [
+      1049344, 
+      1049443
+    ], 
+    "1049483": [
+      1049419, 
+      1049508
+    ], 
+    "1049583": []
+  }, 
+  "nodes": {
+    "1049264": [
+      "endbr64", 
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "mov REG REG", 
+      "sub REG CONSTANT", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "xor REG REG", 
+      "lea PROCESS_SPECIFIC 36", 
+      "mov MEMACC REG", 
+      "test REG REG", 
+      "jg ADDR"
+    ], 
+    "1049329": [
+      "jmp ADDR"
+    ], 
+    "1049526": [
+      "add REG CONSTANT", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1049465": [
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "js ADDR"
+    ], 
+    "1049403": [
+      "movsxd REG REG", 
+      "sub REG REG", 
+      "add REG REG", 
+      "add REG REG", 
+      "test REG REG", 
+      "jle ADDR"
+    ], 
+    "1049344": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "shl REG CONSTANT", 
+      "add REG MEMACC", 
+      "mov REG REG", 
+      "shl REG CONSTANT", 
+      "movsxd REG REG", 
+      "mov MEMACC REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "cmp REG REG", 
+      "jnz ADDR"
+    ], 
+    "1049443": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1049508": [
+      "xor REG REG"
+    ], 
+    "1049510": [
+      "mov REG MEMACC", 
+      "sub REG MEMACC", 
+      "jnz ADDR"
+    ], 
+    "1049544": [
+      "mov REG REG", 
+      "xor REG REG", 
+      "mov REG REG", 
+      "shl REG CONSTANT", 
+      "movsxd REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "jmp ADDR"
+    ], 
+    "1049576": [
+      "mov REG CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1049419": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "jnz ADDR"
+    ], 
+    "1049483": [
+      "mov REG REG", 
+      "movsxd REG REG", 
+      "sub REG REG", 
+      "shl REG CONSTANT", 
+      "add REG REG", 
+      "movsxd REG REG", 
+      "add REG REG", 
+      "test REG REG", 
+      "jg ADDR"
+    ], 
+    "1049583": [
+      "call ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1049264": "JG 0x0010034b", 
+    "1049329": "JMP 0x001003a4", 
+    "1049526": "RET", 
+    "1049465": "JS 0x001003e8", 
+    "1049403": "JLE 0x001003a4", 
+    "1049344": "JNZ 0x001003e8", 
+    "1049443": "JZ 0x001003c8", 
+    "1049508": "XOR EAX,EAX", 
+    "1049510": "JNZ 0x001003ef", 
+    "1049544": "JMP 0x0010033b", 
+    "1049576": "JMP 0x001003a6", 
+    "1049419": "JNZ 0x00100300", 
+    "1049483": "JG 0x0010034b", 
+    "1049583": "CALL 0x00101018"
+  }
+}

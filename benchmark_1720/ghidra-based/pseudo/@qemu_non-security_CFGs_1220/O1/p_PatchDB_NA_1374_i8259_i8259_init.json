@@ -1,0 +1,33 @@
+{
+  "pseudo_code": [
+    "long i8259_init(undefined8 param_1,undefined8 param_2)", 
+    "", 
+    "{", 
+    "  long lVar1;", 
+    "  undefined8 uVar2;", 
+    "  undefined8 uVar3;", 
+    "  ulong uVar4;", 
+    "", 
+    "  lVar1 = g_malloc0(0x80);", 
+    "  uVar2 = i8259_init_chip(\"isa-i8259\",param_1,1);", 
+    "  uVar2 = object_dynamic_cast_assert(uVar2,\"device\",&_LC0,0x1de,__func___3);", 
+    "  qdev_connect_gpio_out(uVar2,0,param_2);", 
+    "  uVar4 = 0;", 
+    "  do {", 
+    "    uVar3 = qdev_get_gpio_in(uVar2,uVar4 & 0xffffffff);", 
+    "    uVar4 = uVar4 + 1;", 
+    "  } while (uVar4 != 8);", 
+    "  isa_pic = uVar2;", 
+    "  uVar2 = i8259_init_chip(\"isa-i8259\",param_1,0);", 
+    "  uVar2 = object_dynamic_cast_assert(uVar2,\"device\",&_LC0,0x1e8,__func___3);", 
+    "  qdev_connect_gpio_out(uVar2,0,*(undefined8 *)(lVar1 + 0x10));", 
+    "  uVar4 = 0;", 
+    "  do {", 
+    "    uVar3 = qdev_get_gpio_in(uVar2,uVar4 & 0xffffffff);", 
+    "    uVar4 = uVar4 + 1;", 
+    "  } while (uVar4 != 8);", 
+    "  slave_pic = object_dynamic_cast_assert(uVar2,\"pic-common\",&_LC0,0x1ef,__func___3);", 
+    "  return lVar1;", 
+    "}"
+  ]
+}

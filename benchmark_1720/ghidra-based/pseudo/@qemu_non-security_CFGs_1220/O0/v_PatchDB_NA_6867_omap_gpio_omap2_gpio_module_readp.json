@@ -1,0 +1,12 @@
+{
+  "pseudo_code": [
+    "uint omap2_gpio_module_readp(undefined8 param_1,ulong param_2)", 
+    "", 
+    "{", 
+    "  uint uVar1;", 
+    "", 
+    "  uVar1 = omap2_gpio_module_read(param_1,param_2 & 0xfffffffffffffffc);", 
+    "  return uVar1 >> (sbyte)(((uint)param_2 & 3) << 3);", 
+    "}"
+  ]
+}

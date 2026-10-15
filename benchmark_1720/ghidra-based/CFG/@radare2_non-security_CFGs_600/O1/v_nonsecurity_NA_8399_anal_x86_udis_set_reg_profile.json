@@ -1,0 +1,44 @@
+{
+  "boundary": {
+    "1052305": 1052326, 
+    "1052282": 1052305, 
+    "1052326": 1052340
+  }, 
+  "edges": {
+    "1052305": [
+      1052326
+    ], 
+    "1052282": [
+      1052305, 
+      1052326
+    ], 
+    "1052326": []
+  }, 
+  "nodes": {
+    "1052305": [
+      "cmp REG 32", 
+      "lea REG 1054360", 
+      "lea REG 1055280", 
+      "cmovnz PROCESS_SPECIFIC REG"
+    ], 
+    "1052282": [
+      "endbr64", 
+      "sub REG CONSTANT", 
+      "mov REG MEMACC", 
+      "lea REG 1053824", 
+      "cmp REG 16", 
+      "jz ADDR"
+    ], 
+    "1052326": [
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "add REG CONSTANT", 
+      "ret"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1052305": "CMOVNZ RSI,RAX", 
+    "1052282": "JZ 0x00100ea6", 
+    "1052326": "RET"
+  }
+}

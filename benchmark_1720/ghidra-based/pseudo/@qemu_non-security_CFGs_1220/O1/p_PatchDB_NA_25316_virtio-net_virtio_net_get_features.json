@@ -1,0 +1,33 @@
+{
+  "pseudo_code": [
+    "uint virtio_net_get_features(undefined8 param_1,uint param_2)", 
+    "", 
+    "{", 
+    "  int iVar1;", 
+    "  long lVar2;", 
+    "  long lVar3;", 
+    "  undefined8 uVar4;", 
+    "", 
+    "  lVar2 = object_dynamic_cast_assert", 
+    "                    (param_1,\"virtio-net-device\",&_LC0,0x1be,\"virtio_net_get_features\");", 
+    "  lVar3 = qemu_get_queue(*(undefined8 *)(lVar2 + 0xe8));", 
+    "  param_2 = param_2 | *(uint *)(lVar2 + 0x110);", 
+    "  if (*(int *)(lVar2 + 0xf8) == 0) {", 
+    "    param_2 = param_2 & 0xffffc47c | 0x20;", 
+    "  }", 
+    "  else {", 
+    "    param_2 = param_2 | 0x20;", 
+    "    iVar1 = peer_has_ufo(lVar2);", 
+    "    if (iVar1 != 0) goto LAB_00102e6d;", 
+    "  }", 
+    "  param_2 = param_2 & 0xffffbbff;", 
+    "LAB_00102e6d:", 
+    "  lVar2 = get_vhost_net(*(undefined8 *)(lVar3 + 0x20));", 
+    "  if (lVar2 != 0) {", 
+    "    uVar4 = get_vhost_net(*(undefined8 *)(lVar3 + 0x20));", 
+    "    param_2 = vhost_net_get_features(uVar4,param_2);", 
+    "  }", 
+    "  return param_2;", 
+    "}"
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "boundary": {
+    "1048721": 1048725, 
+    "1048661": 1048694, 
+    "1048694": 1048704, 
+    "1048576": 1048609, 
+    "1048704": 1048721, 
+    "1048609": 1048646, 
+    "1048646": 1048661
+  }, 
+  "edges": {
+    "1048721": [
+      1048694
+    ], 
+    "1048661": [
+      1048694
+    ], 
+    "1048694": [], 
+    "1048576": [
+      1048609, 
+      1048721
+    ], 
+    "1048704": [
+      1048721
+    ], 
+    "1048609": [
+      1048646, 
+      1048704
+    ], 
+    "1048646": [
+      1048661, 
+      1048704
+    ]
+  }, 
+  "nodes": {
+    "1048721": [
+      "xor REG REG", 
+      "jmp ADDR"
+    ], 
+    "1048661": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "movdqu REG MEMACC", 
+      "movups MEMACC REG", 
+      "movdqu REG MEMACC", 
+      "movups MEMACC REG", 
+      "movdqu REG MEMACC", 
+      "movups MEMACC REG"
+    ], 
+    "1048694": [
+      "add REG CONSTANT", 
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1048576": [
+      "endbr64", 
+      "push REG", 
+      "mov REG CONSTANT", 
+      "mov REG REG", 
+      "mov REG CONSTANT", 
+      "push REG", 
+      "sub REG CONSTANT", 
+      "call ADDR", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1048704": [
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "mov REG REG", 
+      "call ADDR"
+    ], 
+    "1048609": [
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "call ADDR", 
+      "movsxd REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1048646": [
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "cmp REG 43", 
+      "jbe ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1048721": "JMP 0x00100076", 
+    "1048661": "MOVUPS xmmword ptr [RBX + 0x34],XMM2", 
+    "1048694": "RET", 
+    "1048576": "JZ 0x00100091", 
+    "1048704": "CALL 0x00101028", 
+    "1048609": "JZ 0x00100080", 
+    "1048646": "JBE 0x00100080"
+  }
+}

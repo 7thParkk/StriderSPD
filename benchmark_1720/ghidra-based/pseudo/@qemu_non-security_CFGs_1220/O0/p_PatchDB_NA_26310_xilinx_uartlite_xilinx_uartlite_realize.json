@@ -1,0 +1,21 @@
+{
+  "pseudo_code": [
+    "void xilinx_uartlite_realize(DeviceState *dev,Error **errp)", 
+    "", 
+    "{", 
+    "  long lVar1;", 
+    "  undefined8 in_R9;", 
+    "  Error **errp_local;", 
+    "  DeviceState *dev_local;", 
+    "  XilinxUARTLite *s;", 
+    "", 
+    "  lVar1 = object_dynamic_cast_assert", 
+    "                    (dev,\"xlnx.xps-uartlite\",\"hw/char/xilinx_uartlite.c\",0xd4,", 
+    "                     \"xilinx_uartlite_realize\",in_R9,errp);", 
+    "  if (*(long *)(lVar1 + 0x3f8) != 0) {", 
+    "    qemu_chr_add_handlers(*(undefined8 *)(lVar1 + 0x3f8),uart_can_rx,uart_rx,uart_event,lVar1);", 
+    "  }", 
+    "  return;", 
+    "}"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "pseudo_code": [
+    "void job_cancel(long param_1,undefined1 param_2)", 
+    "", 
+    "{", 
+    "  if (*(int *)(param_1 + 0x14) == 9) {", 
+    "    job_do_dismiss();", 
+    "    return;", 
+    "  }", 
+    "  job_cancel_async(param_1,param_2);", 
+    "  if (*(long *)(param_1 + 0x20) == 0) {", 
+    "    job_completed(param_1,0xffffff83);", 
+    "    return;", 
+    "  }", 
+    "  if (*(char *)(param_1 + 0x61) != '\\0') {", 
+    "    job_completed_txn_abort();", 
+    "    return;", 
+    "  }", 
+    "  job_enter();", 
+    "  return;", 
+    "}"
+  ]
+}

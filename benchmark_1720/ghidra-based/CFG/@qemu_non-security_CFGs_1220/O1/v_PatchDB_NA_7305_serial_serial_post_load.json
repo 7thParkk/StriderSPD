@@ -1,0 +1,90 @@
+{
+  "boundary": {
+    "1049107": 1049113, 
+    "1049113": 1049119, 
+    "1049119": 1049126, 
+    "1049090": 1049103, 
+    "1049126": 1049166, 
+    "1049166": 1049186, 
+    "1049103": 1049107
+  }, 
+  "edges": {
+    "1049107": [
+      1049113, 
+      1049166
+    ], 
+    "1049113": [
+      1049119, 
+      1049126
+    ], 
+    "1049119": [
+      1049126
+    ], 
+    "1049090": [
+      1049103, 
+      1049107
+    ], 
+    "1049126": [], 
+    "1049166": [
+      1049113
+    ], 
+    "1049103": [
+      1049107
+    ]
+  }, 
+  "nodes": {
+    "1049107": [
+      "cmp 16 -1", 
+      "jz ADDR"
+    ], 
+    "1049113": [
+      "cmp 52 4", 
+      "jbe ADDR"
+    ], 
+    "1049119": [
+      "mov MEMACC CONSTANT"
+    ], 
+    "1049090": [
+      "endbr64", 
+      "push REG", 
+      "mov REG REG", 
+      "cmp REG 2", 
+      "jg ADDR"
+    ], 
+    "1049126": [
+      "movzx REG MEMACC", 
+      "shr REG CONSTANT", 
+      "and REG CONSTANT", 
+      "mov MEMACC REG", 
+      "movzx REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG CONSTANT", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1049166": [
+      "movzx REG MEMACC", 
+      "and REG CONSTANT", 
+      "cmp REG 2", 
+      "setz REG", 
+      "movzx REG REG", 
+      "mov MEMACC REG", 
+      "jmp ADDR"
+    ], 
+    "1049103": [
+      "mov MEMACC CONSTANT"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1049107": "JZ 0x0010024e", 
+    "1049113": "JBE 0x00100226", 
+    "1049119": "MOV dword ptr [RBX + 0x34],0x4", 
+    "1049090": "JG 0x00100213", 
+    "1049126": "RET", 
+    "1049166": "JMP 0x00100219", 
+    "1049103": "MOV byte ptr [RDI + 0xd],0x0"
+  }
+}

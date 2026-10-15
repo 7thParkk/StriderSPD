@@ -1,0 +1,33 @@
+{
+  "pseudo_code": [
+    "void job_unref(undefined8 *param_1)", 
+    "", 
+    "{", 
+    "  int iVar1;", 
+    "  char cVar2;", 
+    "", 
+    "  iVar1 = *(int *)(param_1 + 2);", 
+    "  if (iVar1 + -1 != 0) {", 
+    "    return;", 
+    "  }", 
+    "  if (*(int *)((long)param_1 + 0x14) != 10) {", 
+    "    __assert_fail(\"job->status == JOB_STATUS_NULL\",&_LC0,0x16a,\"job_unref\");", 
+    "  }", 
+    "  cVar2 = timer_pending(param_1 + 5);", 
+    "  if (cVar2 != '\\0') {", 
+    "    __assert_fail(\"!timer_pending(&job->sleep_timer)\",&_LC0,0x16b,\"job_unref\");", 
+    "  }", 
+    "  if (param_1[0x18] == 0) {", 
+    "    if (*(code **)(param_1[1] + 0x60) != (code *)0x0) {", 
+    "      (**(code **)(param_1[1] + 0x60))(param_1);", 
+    "    }", 
+    "    if (param_1[0x16] != 0) {", 
+    "    }", 
+    "    g_free(*param_1);", 
+    "    g_free(param_1);", 
+    "    return;", 
+    "  }", 
+    "  __assert_fail(\"!job->txn\",&_LC0,0x16c,\"job_unref\");", 
+    "}"
+  ]
+}

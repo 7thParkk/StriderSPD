@@ -1,0 +1,19 @@
+{
+  "pseudo_code": [
+    "undefined8 pvpanic_port(void)", 
+    "", 
+    "{", 
+    "  long lVar1;", 
+    "  undefined8 uVar2;", 
+    "", 
+    "  lVar1 = object_resolve_path_type(&DAT_001003f3,\"pvpanic\",0);", 
+    "  if (lVar1 == 0) {", 
+    "    uVar2 = 0;", 
+    "  }", 
+    "  else {", 
+    "    uVar2 = object_property_get_uint(lVar1,\"ioport\",0);", 
+    "  }", 
+    "  return uVar2;", 
+    "}"
+  ]
+}

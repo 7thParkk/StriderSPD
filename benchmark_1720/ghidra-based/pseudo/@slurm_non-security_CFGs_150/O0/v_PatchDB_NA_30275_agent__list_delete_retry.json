@@ -1,0 +1,31 @@
+{
+  "pseudo_code": [
+    "void _list_delete_retry(long param_1)", 
+    "", 
+    "{", 
+    "  long in_FS_OFFSET;", 
+    "  long local_18;", 
+    "  long local_10;", 
+    "", 
+    "  local_10 = *(long *)(in_FS_OFFSET + 0x28);", 
+    "  local_18 = param_1;", 
+    "  if (*(long *)(param_1 + 8) != 0) {", 
+    "    _xfree(param_1 + 8,&DAT_00101d58,0x263,&DAT_00101d50);", 
+    "  }", 
+    "  if (*(long *)(local_18 + 0x10) != 0) {", 
+    "    _xfree(local_18 + 0x10,&DAT_00101d58,0x264,&DAT_00101d50);", 
+    "  }", 
+    "  if (*(long *)(local_18 + 0x20) != 0) {", 
+    "    _xfree(local_18 + 0x20,&DAT_00101d58,0x266,&DAT_00101d50);", 
+    "  }", 
+    "  if (local_18 != 0) {", 
+    "    _xfree(&local_18,&DAT_00101d58,0x268,&DAT_00101d50);", 
+    "  }", 
+    "  local_18 = 0;", 
+    "  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {", 
+    "    __stack_chk_fail();", 
+    "  }", 
+    "  return;", 
+    "}"
+  ]
+}

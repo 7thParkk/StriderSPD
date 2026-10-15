@@ -1,0 +1,124 @@
+{
+  "boundary": {
+    "1053520": 1053552, 
+    "1053552": 1053588, 
+    "1053588": 1053607, 
+    "1053630": 1053639, 
+    "1053607": 1053630, 
+    "1053639": 1053644, 
+    "1053644": 1053677, 
+    "1053677": 1053710, 
+    "1053710": 1053743
+  }, 
+  "edges": {
+    "1053520": [
+      1053552
+    ], 
+    "1053552": [
+      1053588, 
+      1053644
+    ], 
+    "1053588": [
+      1053607, 
+      1053710
+    ], 
+    "1053630": [
+      1053552, 
+      1053639
+    ], 
+    "1053607": [
+      1053630, 
+      1053677
+    ], 
+    "1053639": [], 
+    "1053644": [], 
+    "1053677": [], 
+    "1053710": []
+  }, 
+  "nodes": {
+    "1053520": [
+      "endbr64", 
+      "push REG", 
+      "push REG", 
+      "lea REG 1056128", 
+      "push REG", 
+      "lea REG 144", 
+      "mov REG REG", 
+      "nop MEMACC"
+    ], 
+    "1053552": [
+      "xor REG REG", 
+      "mov REG CONSTANT", 
+      "mov REG REG", 
+      "stosq.rep PROCESS_SPECIFIC", 
+      "mov REG MEMACC", 
+      "mov PROCESS_SPECIFIC REG", 
+      "mov MEMACC REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1053588": [
+      "pxor REG REG", 
+      "mov PROCESS_SPECIFIC REG", 
+      "movups MEMACC REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "jnz ADDR"
+    ], 
+    "1053630": [
+      "add REG CONSTANT", 
+      "cmp REG REG", 
+      "jnz ADDR"
+    ], 
+    "1053607": [
+      "movq REG MEMACC", 
+      "mov PROCESS_SPECIFIC REG", 
+      "movups MEMACC REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "jnz ADDR"
+    ], 
+    "1053639": [
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1053644": [
+      "lea REG 1057728", 
+      "lea REG 1059424", 
+      "mov REG CONSTANT", 
+      "xor REG REG", 
+      "lea REG 1056384", 
+      "call ADDR"
+    ], 
+    "1053677": [
+      "lea REG 1057768", 
+      "lea REG 1059424", 
+      "mov REG CONSTANT", 
+      "xor REG REG", 
+      "lea REG 1056384", 
+      "call ADDR"
+    ], 
+    "1053710": [
+      "lea REG 1057768", 
+      "lea REG 1059424", 
+      "mov REG CONSTANT", 
+      "xor REG REG", 
+      "lea REG 1056384", 
+      "call ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1053520": "NOP dword ptr [RAX]", 
+    "1053552": "JZ 0x001013cc", 
+    "1053588": "JNZ 0x0010140e", 
+    "1053630": "JNZ 0x00101370", 
+    "1053607": "JNZ 0x001013ed", 
+    "1053639": "RET", 
+    "1053644": "CALL 0x00103030", 
+    "1053677": "CALL 0x00103030", 
+    "1053710": "CALL 0x00103030"
+  }
+}

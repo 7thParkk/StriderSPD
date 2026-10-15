@@ -1,0 +1,108 @@
+{
+  "boundary": {
+    "1060498": 1060505, 
+    "1060375": 1060449, 
+    "1060505": 1060520, 
+    "1060476": 1060498, 
+    "1060449": 1060458, 
+    "1060520": 1060522, 
+    "1060458": 1060461, 
+    "1060461": 1060476
+  }, 
+  "edges": {
+    "1060498": [], 
+    "1060375": [
+      1060449, 
+      1060505
+    ], 
+    "1060505": [
+      1060458, 
+      1060520
+    ], 
+    "1060476": [
+      1060498
+    ], 
+    "1060449": [
+      1060458
+    ], 
+    "1060520": [
+      1060461
+    ], 
+    "1060458": [
+      1060461
+    ], 
+    "1060461": [
+      1060476, 
+      1060498
+    ]
+  }, 
+  "nodes": {
+    "1060498": [
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1060375": [
+      "endbr64", 
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "mov REG REG", 
+      "lea REG 1064320", 
+      "mov REG CONSTANT", 
+      "lea REG 1062432", 
+      "lea REG 1063313", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "mov REG REG", 
+      "or REG MEMACC", 
+      "cmp 248 0", 
+      "jnz ADDR"
+    ], 
+    "1060505": [
+      "or REG CONSTANT", 
+      "mov REG REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1060476": [
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG"
+    ], 
+    "1060449": [
+      "and REG CONSTANT", 
+      "or REG CONSTANT"
+    ], 
+    "1060520": [
+      "jmp ADDR"
+    ], 
+    "1060458": [
+      "and REG CONSTANT"
+    ], 
+    "1060461": [
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "test REG REG", 
+      "jz ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1060498": "RET", 
+    "1060375": "JNZ 0x00102e99", 
+    "1060505": "JZ 0x00102e6a", 
+    "1060476": "MOV EBX,EAX", 
+    "1060449": "OR EBX,0x20", 
+    "1060520": "JMP 0x00102e6d", 
+    "1060458": "AND BH,0xbb", 
+    "1060461": "JZ 0x00102e92"
+  }
+}

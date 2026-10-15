@@ -1,0 +1,114 @@
+{
+  "boundary": {
+    "1050640": 1050689, 
+    "1050772": 1050776, 
+    "1050719": 1050725, 
+    "1050752": 1050767, 
+    "1050689": 1050719, 
+    "1050725": 1050730, 
+    "1050730": 1050751, 
+    "1050767": 1050772
+  }, 
+  "edges": {
+    "1050640": [
+      1050689, 
+      1050772
+    ], 
+    "1050772": [
+      1050730
+    ], 
+    "1050719": [
+      1050725, 
+      1050752
+    ], 
+    "1050752": [
+      1050725, 
+      1050767
+    ], 
+    "1050689": [
+      1050719, 
+      1050752
+    ], 
+    "1050725": [
+      1050730
+    ], 
+    "1050730": [], 
+    "1050767": [
+      1050689, 
+      1050772
+    ]
+  }, 
+  "nodes": {
+    "1050640": [
+      "endbr64", 
+      "push REG", 
+      "lea REG 1058630", 
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "mov REG REG", 
+      "sub REG CONSTANT", 
+      "call ADDR", 
+      "lea REG 1", 
+      "mov REG REG", 
+      "call ADDR", 
+      "cmp MEMACC 0", 
+      "mov REG REG", 
+      "jz ADDR"
+    ], 
+    "1050772": [
+      "xor REG REG", 
+      "jmp ADDR"
+    ], 
+    "1050719": [
+      "cmp 1 0", 
+      "jnz ADDR"
+    ], 
+    "1050752": [
+      "mov PROCESS_SPECIFIC REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1050689": [
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "cmp MEMACC 1", 
+      "sbb REG CONSTANT", 
+      "cmp MEMACC 63", 
+      "mov REG REG", 
+      "jnz ADDR"
+    ], 
+    "1050725": [
+      "mov REG CONSTANT"
+    ], 
+    "1050730": [
+      "mov REG REG", 
+      "call ADDR", 
+      "add REG CONSTANT", 
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1050767": [
+      "cmp MEMACC 0", 
+      "jnz ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1050640": "JZ 0x00100894", 
+    "1050772": "JMP 0x0010086a", 
+    "1050719": "JNZ 0x00100880", 
+    "1050752": "JZ 0x00100865", 
+    "1050689": "JNZ 0x00100880", 
+    "1050725": "MOV EBX,0x1", 
+    "1050730": "RET", 
+    "1050767": "JNZ 0x00100841"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "boundary": {
+    "1048624": 1048642, 
+    "1048642": 1048680, 
+    "1048680": 1048681
+  }, 
+  "edges": {
+    "1048624": [
+      1048642, 
+      1048680
+    ], 
+    "1048642": [
+      1048680
+    ], 
+    "1048680": []
+  }, 
+  "nodes": {
+    "1048624": [
+      "endbr64", 
+      "mov REG CONSTANT", 
+      "cmp REG 4095", 
+      "jbe ADDR"
+    ], 
+    "1048642": [
+      "movzx REG MEMACC", 
+      "shl REG CONSTANT", 
+      "movzx REG MEMACC", 
+      "shl REG CONSTANT", 
+      "or REG REG", 
+      "movzx REG MEMACC", 
+      "or REG REG", 
+      "movzx REG MEMACC", 
+      "shl REG CONSTANT", 
+      "or REG REG", 
+      "cmp REG -2143874496", 
+      "setz REG"
+    ], 
+    "1048680": [
+      "ret"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1048624": "JBE 0x00100068", 
+    "1048642": "SETZ AL", 
+    "1048680": "RET"
+  }
+}

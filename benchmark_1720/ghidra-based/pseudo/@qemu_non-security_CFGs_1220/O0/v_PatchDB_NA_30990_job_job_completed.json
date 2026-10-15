@@ -1,0 +1,25 @@
+{
+  "pseudo_code": [
+    "void job_completed(long param_1,undefined4 param_2)", 
+    "", 
+    "{", 
+    "  char cVar1;", 
+    "", 
+    "  if ((param_1 != 0) && (*(long *)(param_1 + 0xc0) != 0)) {", 
+    "    cVar1 = job_is_completed(param_1);", 
+    "    if (cVar1 != '\\x01') {", 
+    "      job_update_rc(param_1);", 
+    "      trace_job_completed(param_1,param_2,*(undefined4 *)(param_1 + 0x78));", 
+    "      if (*(int *)(param_1 + 0x78) == 0) {", 
+    "        job_completed_txn_success(param_1);", 
+    "      }", 
+    "      else {", 
+    "        job_completed_txn_abort(param_1);", 
+    "      }", 
+    "      return;", 
+    "    }", 
+    "  }", 
+    "  __assert_fail(\"job && job->txn && !job_is_completed(job)\",&DAT_00102630,0x35c,\"job_completed\");", 
+    "}"
+  ]
+}

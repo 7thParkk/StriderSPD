@@ -1,0 +1,109 @@
+{
+  "boundary": {
+    "1056208": 1056283, 
+    "1056369": 1056387, 
+    "1056283": 1056317, 
+    "1056317": 1056332, 
+    "1056387": 1056394, 
+    "1056360": 1056369, 
+    "1056332": 1056356
+  }, 
+  "edges": {
+    "1056208": [
+      1056283, 
+      1056360
+    ], 
+    "1056369": [
+      1056332, 
+      1056387
+    ], 
+    "1056283": [
+      1056317, 
+      1056369
+    ], 
+    "1056317": [
+      1056332, 
+      1056387
+    ], 
+    "1056387": [], 
+    "1056360": [
+      1056369
+    ], 
+    "1056332": []
+  }, 
+  "nodes": {
+    "1056208": [
+      "endbr64", 
+      "push REG", 
+      "lea REG 1064960", 
+      "mov REG CONSTANT", 
+      "lea REG 1063072", 
+      "push REG", 
+      "push REG", 
+      "mov REG REG", 
+      "lea REG 1063951", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "or REG MEMACC", 
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1056369": [
+      "mov REG MEMACC", 
+      "and REG CONSTANT", 
+      "call ADDR", 
+      "test REG REG", 
+      "jnz ADDR"
+    ], 
+    "1056283": [
+      "mov REG MEMACC", 
+      "or REG CONSTANT", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "mov MEMACC REG", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1056317": [
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1056387": [
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1056360": [
+      "and REG CONSTANT", 
+      "or REG CONSTANT"
+    ], 
+    "1056332": [
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "mov REG REG", 
+      "pop REG", 
+      "jmp ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1056208": "JZ 0x00101e68", 
+    "1056369": "JNZ 0x00101e4c", 
+    "1056283": "JZ 0x00101e71", 
+    "1056317": "JZ 0x00101e83", 
+    "1056387": "RET", 
+    "1056360": "OR EBX,0x20", 
+    "1056332": "JMP 0x00106228"
+  }
+}

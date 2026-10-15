@@ -1,0 +1,133 @@
+{
+  "boundary": {
+    "1049811": 1049816, 
+    "1049780": 1049790, 
+    "1049660": 1049674, 
+    "1049790": 1049797, 
+    "1049761": 1049780, 
+    "1049572": 1049647, 
+    "1049797": 1049804, 
+    "1049674": 1049761, 
+    "1049804": 1049811, 
+    "1049647": 1049660
+  }, 
+  "edges": {
+    "1049811": [], 
+    "1049780": [], 
+    "1049660": [
+      1049674, 
+      1049804
+    ], 
+    "1049790": [
+      1049761
+    ], 
+    "1049761": [
+      1049780, 
+      1049811
+    ], 
+    "1049572": [
+      1049647, 
+      1049790
+    ], 
+    "1049797": [
+      1049761
+    ], 
+    "1049674": [
+      1049761
+    ], 
+    "1049804": [
+      1049761
+    ], 
+    "1049647": [
+      1049660, 
+      1049797
+    ]
+  }, 
+  "nodes": {
+    "1049811": [
+      "call ADDR"
+    ], 
+    "1049780": [
+      "add REG CONSTANT", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1049660": [
+      "cmp 4 33554432", 
+      "jnz ADDR"
+    ], 
+    "1049790": [
+      "mov REG CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1049761": [
+      "mov REG MEMACC", 
+      "sub REG MEMACC", 
+      "jnz ADDR"
+    ], 
+    "1049572": [
+      "endbr64", 
+      "push REG", 
+      "push REG", 
+      "sub REG CONSTANT", 
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "xor REG REG", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "mov REG CONSTANT", 
+      "mov REG CONSTANT", 
+      "call ADDR", 
+      "cmp REG 1056", 
+      "jnz ADDR"
+    ], 
+    "1049797": [
+      "mov REG CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1049674": [
+      "mov REG MEMACC", 
+      "bswap REG", 
+      "lea REG 511", 
+      "test REG REG", 
+      "cmovns REG REG", 
+      "sar REG CONSTANT", 
+      "mov MEMACC REG", 
+      "lea PROCESS_SPECIFIC 8", 
+      "lea REG 1096", 
+      "mov REG CONSTANT", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "add REG CONSTANT", 
+      "sar REG CONSTANT", 
+      "add REG CONSTANT", 
+      "and REG CONSTANT", 
+      "cdqe", 
+      "mov MEMACC REG", 
+      "mov REG CONSTANT"
+    ], 
+    "1049804": [
+      "mov REG CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1049647": [
+      "cmp MEMACC 1297043279", 
+      "jnz ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1049811": "CALL 0x00101018", 
+    "1049780": "RET", 
+    "1049660": "JNZ 0x001004cc", 
+    "1049790": "JMP 0x001004a1", 
+    "1049761": "JNZ 0x001004d3", 
+    "1049572": "JNZ 0x001004be", 
+    "1049797": "JMP 0x001004a1", 
+    "1049674": "MOV EAX,0x0", 
+    "1049804": "JMP 0x001004a1", 
+    "1049647": "JNZ 0x001004c5"
+  }
+}

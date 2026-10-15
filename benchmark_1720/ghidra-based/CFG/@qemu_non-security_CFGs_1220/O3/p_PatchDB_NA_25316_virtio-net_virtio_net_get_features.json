@@ -1,0 +1,109 @@
+{
+  "boundary": {
+    "1055987": 1055994, 
+    "1055960": 1055969, 
+    "1055932": 1055956, 
+    "1055808": 1055883, 
+    "1055969": 1055987, 
+    "1055883": 1055917, 
+    "1055917": 1055932
+  }, 
+  "edges": {
+    "1055987": [], 
+    "1055960": [
+      1055969
+    ], 
+    "1055932": [], 
+    "1055808": [
+      1055883, 
+      1055960
+    ], 
+    "1055969": [
+      1055932, 
+      1055987
+    ], 
+    "1055883": [
+      1055917, 
+      1055969
+    ], 
+    "1055917": [
+      1055932, 
+      1055987
+    ]
+  }, 
+  "nodes": {
+    "1055987": [
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1055960": [
+      "and REG CONSTANT", 
+      "or REG CONSTANT"
+    ], 
+    "1055932": [
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "mov REG REG", 
+      "pop REG", 
+      "jmp ADDR"
+    ], 
+    "1055808": [
+      "endbr64", 
+      "push REG", 
+      "lea REG 1065920", 
+      "mov REG CONSTANT", 
+      "lea REG 1064016", 
+      "push REG", 
+      "push REG", 
+      "mov REG REG", 
+      "lea REG 1064895", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "or REG MEMACC", 
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1055969": [
+      "mov REG MEMACC", 
+      "and REG CONSTANT", 
+      "call ADDR", 
+      "test REG REG", 
+      "jnz ADDR"
+    ], 
+    "1055883": [
+      "mov REG MEMACC", 
+      "or REG CONSTANT", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "mov MEMACC REG", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1055917": [
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "test REG REG", 
+      "jz ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1055987": "RET", 
+    "1055960": "OR EBX,0x20", 
+    "1055932": "JMP 0x00106200", 
+    "1055808": "JZ 0x00101cd8", 
+    "1055969": "JNZ 0x00101cbc", 
+    "1055883": "JZ 0x00101ce1", 
+    "1055917": "JZ 0x00101cf3"
+  }
+}

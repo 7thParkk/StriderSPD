@@ -1,0 +1,16 @@
+{
+  "pseudo_code": [
+    "void xilinx_uartlite_realize(undefined8 param_1)", 
+    "", 
+    "{", 
+    "  long lVar1;", 
+    "", 
+    "  lVar1 = object_dynamic_cast_assert", 
+    "                    (param_1,\"xlnx.xps-uartlite\",&_LC0,0xd4,\"xilinx_uartlite_realize\");", 
+    "  if (*(long *)(lVar1 + 0x3f8) != 0) {", 
+    "    qemu_chr_add_handlers(*(long *)(lVar1 + 0x3f8),uart_can_rx,uart_rx,uart_event,lVar1);", 
+    "  }", 
+    "  return;", 
+    "}"
+  ]
+}

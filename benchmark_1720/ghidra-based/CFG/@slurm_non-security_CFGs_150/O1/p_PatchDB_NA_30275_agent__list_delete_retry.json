@@ -1,0 +1,117 @@
+{
+  "boundary": {
+    "1048691": 1048710, 
+    "1048663": 1048691, 
+    "1048793": 1048798, 
+    "1048798": 1048803, 
+    "1048738": 1048793, 
+    "1048644": 1048663, 
+    "1048581": 1048616, 
+    "1048710": 1048738, 
+    "1048616": 1048644
+  }, 
+  "edges": {
+    "1048691": [
+      1048710, 
+      1048738
+    ], 
+    "1048663": [
+      1048691
+    ], 
+    "1048793": [], 
+    "1048798": [], 
+    "1048738": [
+      1048793, 
+      1048798
+    ], 
+    "1048644": [
+      1048663, 
+      1048691
+    ], 
+    "1048581": [
+      1048616, 
+      1048644
+    ], 
+    "1048710": [
+      1048738
+    ], 
+    "1048616": [
+      1048644
+    ]
+  }, 
+  "nodes": {
+    "1048691": [
+      "mov REG MEMACC", 
+      "mov MEMACC CONSTANT", 
+      "cmp 32 0", 
+      "jz ADDR"
+    ], 
+    "1048663": [
+      "add REG CONSTANT", 
+      "lea REG 1054152", 
+      "mov REG CONSTANT", 
+      "lea REG 1054360", 
+      "call ADDR"
+    ], 
+    "1048793": [
+      "add REG CONSTANT", 
+      "ret"
+    ], 
+    "1048798": [
+      "call ADDR"
+    ], 
+    "1048738": [
+      "mov REG MEMACC", 
+      "mov MEMACC CONSTANT", 
+      "mov REG REG", 
+      "lea REG 1054152", 
+      "mov REG CONSTANT", 
+      "lea REG 1054360", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "sub REG MEMACC", 
+      "jnz ADDR"
+    ], 
+    "1048644": [
+      "mov REG MEMACC", 
+      "mov MEMACC CONSTANT", 
+      "cmp 16 0", 
+      "jz ADDR"
+    ], 
+    "1048581": [
+      "endbr64", 
+      "sub REG CONSTANT", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "xor REG REG", 
+      "mov MEMACC REG", 
+      "cmp 8 0", 
+      "jz ADDR"
+    ], 
+    "1048710": [
+      "add REG CONSTANT", 
+      "lea REG 1054152", 
+      "mov REG CONSTANT", 
+      "lea REG 1054360", 
+      "call ADDR"
+    ], 
+    "1048616": [
+      "add REG CONSTANT", 
+      "lea REG 1054152", 
+      "mov REG CONSTANT", 
+      "lea REG 1054360", 
+      "call ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1048691": "JZ 0x001000a2", 
+    "1048663": "CALL 0x00102000", 
+    "1048793": "RET", 
+    "1048798": "CALL 0x00102008", 
+    "1048738": "JNZ 0x001000de", 
+    "1048644": "JZ 0x00100073", 
+    "1048581": "JZ 0x00100044", 
+    "1048710": "CALL 0x00102000", 
+    "1048616": "CALL 0x00102000"
+  }
+}

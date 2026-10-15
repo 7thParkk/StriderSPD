@@ -1,0 +1,109 @@
+{
+  "boundary": {
+    "1049465": 1049481, 
+    "1049340": 1049465, 
+    "1049287": 1049325, 
+    "1049511": 1049516, 
+    "1049481": 1049487, 
+    "1049325": 1049340, 
+    "1049487": 1049511
+  }, 
+  "edges": {
+    "1049465": [
+      1049481, 
+      1049511
+    ], 
+    "1049340": [
+      1049465
+    ], 
+    "1049287": [
+      1049325, 
+      1049487
+    ], 
+    "1049511": [], 
+    "1049481": [], 
+    "1049325": [
+      1049340, 
+      1049487
+    ], 
+    "1049487": [
+      1049465
+    ]
+  }, 
+  "nodes": {
+    "1049465": [
+      "mov REG MEMACC", 
+      "sub REG MEMACC", 
+      "jnz ADDR"
+    ], 
+    "1049340": [
+      "mov MEMACC REG", 
+      "call ADDR", 
+      "cmp REG 1", 
+      "setz REG", 
+      "movzx REG REG", 
+      "lea REG 2", 
+      "mov MEMACC REG", 
+      "shl REG CONSTANT", 
+      "mov MEMACC REG", 
+      "mov MEMACC CONSTANT", 
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "call ADDR", 
+      "mov PROCESS_SPECIFIC MEMACC", 
+      "movsxd REG MEMACC", 
+      "mov REG REG", 
+      "mov REG CONSTANT", 
+      "div REG", 
+      "cmp REG REG", 
+      "adc REG CONSTANT", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "mov REG REG", 
+      "lea REG 1049516", 
+      "call ADDR", 
+      "mov REG CONSTANT"
+    ], 
+    "1049287": [
+      "endbr64", 
+      "push REG", 
+      "sub REG CONSTANT", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "xor REG REG", 
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1049511": [
+      "call ADDR"
+    ], 
+    "1049481": [
+      "add REG CONSTANT", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1049325": [
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1049487": [
+      "lea REG 1054768", 
+      "mov REG CONSTANT", 
+      "call ADDR", 
+      "mov REG CONSTANT", 
+      "jmp ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1049465": "JNZ 0x001003a7", 
+    "1049340": "MOV EAX,0x0", 
+    "1049287": "JZ 0x0010038f", 
+    "1049511": "CALL 0x00103090", 
+    "1049481": "RET", 
+    "1049325": "JZ 0x0010038f", 
+    "1049487": "JMP 0x00100379"
+  }
+}

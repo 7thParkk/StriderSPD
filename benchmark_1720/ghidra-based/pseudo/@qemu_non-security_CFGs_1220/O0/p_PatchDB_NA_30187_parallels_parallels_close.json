@@ -1,0 +1,13 @@
+{
+  "pseudo_code": [
+    "void parallels_close(BlockDriverState *bs)", 
+    "", 
+    "{", 
+    "  BlockDriverState *bs_local;", 
+    "  BDRVParallelsState *s;", 
+    "", 
+    "  g_free(*(undefined8 *)((long)bs->opaque + 0x18));", 
+    "  return;", 
+    "}"
+  ]
+}

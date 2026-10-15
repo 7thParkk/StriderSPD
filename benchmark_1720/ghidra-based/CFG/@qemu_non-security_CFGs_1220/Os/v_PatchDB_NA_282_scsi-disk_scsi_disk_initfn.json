@@ -1,0 +1,108 @@
+{
+  "boundary": {
+    "1049171": 1049187, 
+    "1049057": 1049171, 
+    "1048995": 1049027, 
+    "1049027": 1049038, 
+    "1049187": 1049192, 
+    "1049192": 1049198, 
+    "1049038": 1049057
+  }, 
+  "edges": {
+    "1049171": [
+      1049187, 
+      1049192
+    ], 
+    "1049057": [
+      1049171
+    ], 
+    "1048995": [
+      1049027, 
+      1049038
+    ], 
+    "1049027": [
+      1049038, 
+      1049057
+    ], 
+    "1049187": [], 
+    "1049192": [], 
+    "1049038": [
+      1049171
+    ]
+  }, 
+  "nodes": {
+    "1049171": [
+      "mov REG MEMACC", 
+      "sub REG MEMACC", 
+      "jz ADDR"
+    ], 
+    "1049057": [
+      "mov MEMACC REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "dec REG", 
+      "setz REG", 
+      "xor REG REG", 
+      "movzx REG REG", 
+      "mov MEMACC REG", 
+      "mov REG REG", 
+      "lea REG 2", 
+      "mov MEMACC REG", 
+      "shl REG CONSTANT", 
+      "mov MEMACC REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "xor REG REG", 
+      "mov REG REG", 
+      "movsxd REG MEMACC", 
+      "lea REG 1049325", 
+      "div REG", 
+      "cmp MEMACC REG", 
+      "adc REG CONSTANT", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "call ADDR", 
+      "xor REG REG"
+    ], 
+    "1048995": [
+      "endbr64", 
+      "push REG", 
+      "sub REG CONSTANT", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1049027": [
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jnz ADDR"
+    ], 
+    "1049187": [
+      "call ADDR"
+    ], 
+    "1049192": [
+      "add REG CONSTANT", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1049038": [
+      "xor REG REG", 
+      "lea REG 1053350", 
+      "call ADDR", 
+      "or REG CONSTANT", 
+      "jmp ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1049171": "JZ 0x00100268", 
+    "1049057": "XOR EAX,EAX", 
+    "1048995": "JZ 0x001001ce", 
+    "1049027": "JNZ 0x001001e1", 
+    "1049187": "CALL 0x00102080", 
+    "1049192": "RET", 
+    "1049038": "JMP 0x00100253"
+  }
+}

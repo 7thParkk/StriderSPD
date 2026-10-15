@@ -1,0 +1,91 @@
+{
+  "boundary": {
+    "1049264": 1049272, 
+    "1049272": 1049281, 
+    "1049281": 1049283, 
+    "1049283": 1049295, 
+    "1049226": 1049259, 
+    "1049259": 1049264, 
+    "1049295": 1049319
+  }, 
+  "edges": {
+    "1049264": [
+      1049272, 
+      1049281
+    ], 
+    "1049272": [
+      1049281, 
+      1049295
+    ], 
+    "1049281": [], 
+    "1049283": [
+      1049264
+    ], 
+    "1049226": [
+      1049259, 
+      1049264
+    ], 
+    "1049259": [
+      1049264, 
+      1049283
+    ], 
+    "1049295": [
+      1049281
+    ]
+  }, 
+  "nodes": {
+    "1049264": [
+      "mov MEMACC REG", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1049272": [
+      "mov MEMACC REG", 
+      "cmp MEMACC 0", 
+      "jnz ADDR"
+    ], 
+    "1049281": [
+      "pop REG", 
+      "ret"
+    ], 
+    "1049283": [
+      "mov REG CONSTANT", 
+      "cqo", 
+      "idiv REG", 
+      "jmp ADDR"
+    ], 
+    "1049226": [
+      "endbr64", 
+      "push REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "imul REG REG", 
+      "cmp REG 9999", 
+      "ja ADDR"
+    ], 
+    "1049259": [
+      "test REG REG", 
+      "jnz ADDR"
+    ], 
+    "1049295": [
+      "mov REG CONSTANT", 
+      "call ADDR", 
+      "mov MEMACC REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "jmp ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1049264": "JZ 0x001002c1", 
+    "1049272": "JNZ 0x001002cf", 
+    "1049281": "RET", 
+    "1049283": "JMP 0x001002b0", 
+    "1049226": "JA 0x001002b0", 
+    "1049259": "JNZ 0x001002c3", 
+    "1049295": "JMP 0x001002c1"
+  }
+}

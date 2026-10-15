@@ -1,0 +1,19 @@
+{
+  "pseudo_code": [
+    "void virtio_pci_notify_write(void *opaque,hwaddr addr,uint64_t val,uint size)", 
+    "", 
+    "{", 
+    "  uint size_local;", 
+    "  uint64_t val_local;", 
+    "  hwaddr addr_local;", 
+    "  void *opaque_local;", 
+    "  uint queue;", 
+    "  VirtIODevice *vdev;", 
+    "", 
+    "  if ((uint)(addr >> 0xc) < 0x400) {", 
+    "    virtio_queue_notify(opaque,addr >> 0xc & 0xffffffff);", 
+    "  }", 
+    "  return;", 
+    "}"
+  ]
+}

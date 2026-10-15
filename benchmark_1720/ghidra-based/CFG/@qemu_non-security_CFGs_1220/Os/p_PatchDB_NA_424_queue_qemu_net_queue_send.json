@@ -1,0 +1,107 @@
+{
+  "boundary": {
+    "1049270": 1049316, 
+    "1049208": 1049248, 
+    "1049338": 1049346, 
+    "1049248": 1049270, 
+    "1049346": 1049364, 
+    "1049316": 1049338
+  }, 
+  "edges": {
+    "1049270": [
+      1049316, 
+      1049338
+    ], 
+    "1049208": [
+      1049248, 
+      1049270
+    ], 
+    "1049338": [
+      1049346
+    ], 
+    "1049248": [], 
+    "1049346": [], 
+    "1049316": [
+      1049346
+    ]
+  }, 
+  "nodes": {
+    "1049270": [
+      "or REG CONSTANT", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov MEMACC REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call MEMACC", 
+      "and MEMACC CONSTANT", 
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "mov REG REG", 
+      "jnz ADDR"
+    ], 
+    "1049208": [
+      "endbr64", 
+      "push REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "mov REG REG", 
+      "sub REG CONSTANT", 
+      "mov REG MEMACC", 
+      "test REG 1", 
+      "jz ADDR"
+    ], 
+    "1049338": [
+      "mov REG REG", 
+      "call ADDR"
+    ], 
+    "1049248": [
+      "add REG CONSTANT", 
+      "xor REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "jmp ADDR"
+    ], 
+    "1049346": [
+      "add REG CONSTANT", 
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1049316": [
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "jmp ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1049270": "JNZ 0x001002fa", 
+    "1049208": "JZ 0x001002b6", 
+    "1049338": "CALL 0x001001db", 
+    "1049248": "JMP 0x00100000", 
+    "1049346": "RET", 
+    "1049316": "JMP 0x00100302"
+  }
+}

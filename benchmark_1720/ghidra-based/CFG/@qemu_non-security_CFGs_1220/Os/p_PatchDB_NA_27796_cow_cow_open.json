@@ -1,0 +1,107 @@
+{
+  "boundary": {
+    "1049528": 1049538, 
+    "1049633": 1049638, 
+    "1049442": 1049518, 
+    "1049538": 1049614, 
+    "1049638": 1049648, 
+    "1049518": 1049528, 
+    "1049614": 1049633
+  }, 
+  "edges": {
+    "1049528": [
+      1049538, 
+      1049614
+    ], 
+    "1049633": [], 
+    "1049442": [
+      1049518, 
+      1049614
+    ], 
+    "1049538": [
+      1049614
+    ], 
+    "1049638": [], 
+    "1049518": [
+      1049528, 
+      1049614
+    ], 
+    "1049614": [
+      1049633, 
+      1049638
+    ]
+  }, 
+  "nodes": {
+    "1049528": [
+      "cmp 12 33554432", 
+      "jnz ADDR"
+    ], 
+    "1049633": [
+      "call ADDR"
+    ], 
+    "1049442": [
+      "endbr64", 
+      "push REG", 
+      "mov REG REG", 
+      "mov REG CONSTANT", 
+      "xor REG REG", 
+      "push REG", 
+      "sub REG CONSTANT", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "xor REG REG", 
+      "lea PROCESS_SPECIFIC 8", 
+      "call ADDR", 
+      "mov REG REG", 
+      "or REG CONSTANT", 
+      "cmp REG 1056", 
+      "jnz ADDR"
+    ], 
+    "1049538": [
+      "mov REG MEMACC", 
+      "mov REG CONSTANT", 
+      "mov REG CONSTANT", 
+      "lea REG 1096", 
+      "bswap REG", 
+      "cqo", 
+      "idiv REG", 
+      "lea PROCESS_SPECIFIC 16", 
+      "mov MEMACC REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "add REG CONSTANT", 
+      "sar REG CONSTANT", 
+      "add REG CONSTANT", 
+      "and REG CONSTANT", 
+      "cdqe", 
+      "mov MEMACC REG", 
+      "xor REG REG"
+    ], 
+    "1049638": [
+      "add REG CONSTANT", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1049518": [
+      "cmp 8 1297043279", 
+      "jnz ADDR"
+    ], 
+    "1049614": [
+      "mov REG MEMACC", 
+      "sub REG MEMACC", 
+      "jz ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1049528": "JNZ 0x0010040e", 
+    "1049633": "CALL 0x00101018", 
+    "1049442": "JNZ 0x0010040e", 
+    "1049538": "XOR EAX,EAX", 
+    "1049638": "RET", 
+    "1049518": "JNZ 0x0010040e", 
+    "1049614": "JZ 0x00100426"
+  }
+}

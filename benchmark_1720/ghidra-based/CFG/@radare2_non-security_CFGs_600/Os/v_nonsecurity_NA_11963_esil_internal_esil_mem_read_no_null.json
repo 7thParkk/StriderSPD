@@ -1,0 +1,109 @@
+{
+  "boundary": {
+    "1050323": 1050334, 
+    "1050387": 1050391, 
+    "1050391": 1050410, 
+    "1050300": 1050323, 
+    "1050334": 1050344, 
+    "1050344": 1050349, 
+    "1050377": 1050387, 
+    "1050410": 1050416, 
+    "1050349": 1050377
+  }, 
+  "edges": {
+    "1050323": [
+      1050334, 
+      1050387
+    ], 
+    "1050387": [
+      1050410
+    ], 
+    "1050391": [
+      1050410
+    ], 
+    "1050300": [
+      1050323, 
+      1050387
+    ], 
+    "1050334": [
+      1050344, 
+      1050387
+    ], 
+    "1050344": [
+      1050349, 
+      1050387
+    ], 
+    "1050377": [
+      1050387
+    ], 
+    "1050410": [], 
+    "1050349": [
+      1050377, 
+      1050391
+    ]
+  }, 
+  "nodes": {
+    "1050323": [
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1050387": [
+      "xor REG REG", 
+      "jmp ADDR"
+    ], 
+    "1050391": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "call MEMACC", 
+      "movzx REG REG"
+    ], 
+    "1050300": [
+      "endbr64", 
+      "push REG", 
+      "sub REG CONSTANT", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1050334": [
+      "cmp 152 0", 
+      "jz ADDR"
+    ], 
+    "1050344": [
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1050377": [
+      "mov MEMACC CONSTANT", 
+      "mov MEMACC REG"
+    ], 
+    "1050410": [
+      "add REG CONSTANT", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1050349": [
+      "mov MEMACC REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "test REG REG", 
+      "mov REG MEMACC", 
+      "jnz ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1050323": "JZ 0x00100713", 
+    "1050387": "JMP 0x0010072a", 
+    "1050391": "MOVZX EAX,AL", 
+    "1050300": "JZ 0x00100713", 
+    "1050334": "JZ 0x00100713", 
+    "1050344": "JZ 0x00100713", 
+    "1050377": "MOV dword ptr [RBX + 0x70],ESI", 
+    "1050410": "RET", 
+    "1050349": "JNZ 0x00100717"
+  }
+}

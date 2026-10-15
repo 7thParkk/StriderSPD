@@ -1,0 +1,21 @@
+{
+  "pseudo_code": [
+    "void tcp_chr_tls_handshake(undefined8 param_1,long param_2)", 
+    "", 
+    "{", 
+    "  char cVar1;", 
+    "", 
+    "  cVar1 = qio_task_propagate_error(param_1,0);", 
+    "  if (cVar1 != '\\0') {", 
+    "    tcp_chr_disconnect(param_2);", 
+    "    return;", 
+    "  }", 
+    "  if (*(int *)(param_2 + 0xc0) != 0) {", 
+    "    tcp_chr_telnet_init();", 
+    "    return;", 
+    "  }", 
+    "  tcp_chr_connect();", 
+    "  return;", 
+    "}"
+  ]
+}

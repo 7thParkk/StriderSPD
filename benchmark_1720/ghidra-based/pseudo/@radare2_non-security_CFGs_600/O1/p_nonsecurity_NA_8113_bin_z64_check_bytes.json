@@ -1,0 +1,18 @@
+{
+  "pseudo_code": [
+    "undefined4 check_bytes(byte *param_1,ulong param_2)", 
+    "", 
+    "{", 
+    "  uint uVar1;", 
+    "  undefined4 uVar2;", 
+    "", 
+    "  uVar2 = 0;", 
+    "  if (0xfff < param_2) {", 
+    "    uVar1 = (uint)*param_1 << 0x18 | (uint)param_1[1] << 0x10 | (uint)param_1[3] |", 
+    "            (uint)param_1[2] << 8;", 
+    "    uVar2 = CONCAT31((int3)(uVar1 >> 8),uVar1 == 0x80371240);", 
+    "  }", 
+    "  return uVar2;", 
+    "}"
+  ]
+}

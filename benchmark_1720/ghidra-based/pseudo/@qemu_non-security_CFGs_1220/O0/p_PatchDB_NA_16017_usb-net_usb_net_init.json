@@ -1,0 +1,30 @@
+{
+  "pseudo_code": [
+    "undefined8 usb_net_init(undefined8 param_1)", 
+    "", 
+    "{", 
+    "  int iVar1;", 
+    "  long lVar2;", 
+    "  undefined8 uVar3;", 
+    "", 
+    "  lVar2 = qemu_opts_parse(&qemu_net_opts,param_1,0);", 
+    "  if (lVar2 == 0) {", 
+    "    uVar3 = 0;", 
+    "  }", 
+    "  else {", 
+    "    qemu_opt_set(lVar2,&DAT_001020f1,&DAT_001020ed);", 
+    "    qemu_opt_set(lVar2,\"model\",&DAT_001020f6);", 
+    "    iVar1 = net_client_init(0,lVar2,0);", 
+    "    if (iVar1 == -1) {", 
+    "      uVar3 = 0;", 
+    "    }", 
+    "    else {", 
+    "      uVar3 = usb_create(0,\"usb-net\");", 
+    "      qdev_set_nic_properties(uVar3,&nd_table + (long)iVar1 * 0x40);", 
+    "      qdev_init_nofail(uVar3);", 
+    "    }", 
+    "  }", 
+    "  return uVar3;", 
+    "}"
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "boundary": {
+    "1049297": 1049320, 
+    "1049335": 1049339, 
+    "1049369": 1049378, 
+    "1049339": 1049369, 
+    "1049378": 1049387, 
+    "1049415": 1049443, 
+    "1049320": 1049335, 
+    "1049387": 1049415
+  }, 
+  "edges": {
+    "1049297": [
+      1049320, 
+      1049415
+    ], 
+    "1049335": [
+      1049339, 
+      1049378
+    ], 
+    "1049369": [], 
+    "1049339": [
+      1049369
+    ], 
+    "1049378": [
+      1049369
+    ], 
+    "1049415": [
+      1049369
+    ], 
+    "1049320": [
+      1049335, 
+      1049387
+    ], 
+    "1049387": [
+      1049369
+    ]
+  }, 
+  "nodes": {
+    "1049297": [
+      "endbr64", 
+      "push REG", 
+      "push REG", 
+      "sub REG CONSTANT", 
+      "mov REG REG", 
+      "shr REG CONSTANT", 
+      "cmp REG 31", 
+      "ja ADDR"
+    ], 
+    "1049335": [
+      "test REG 100", 
+      "jnz ADDR"
+    ], 
+    "1049369": [
+      "mov REG REG", 
+      "add REG CONSTANT", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1049339": [
+      "mov REG MEMACC", 
+      "and MEMACC CONSTANT", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "call ADDR"
+    ], 
+    "1049378": [
+      "mov REG MEMACC", 
+      "jmp ADDR"
+    ], 
+    "1049415": [
+      "and REG CONSTANT", 
+      "lea REG 1049688", 
+      "mov REG CONSTANT", 
+      "call ADDR", 
+      "mov REG CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1049320": [
+      "mov REG REG", 
+      "mov REG CONSTANT", 
+      "shl REG REG", 
+      "test REG -102", 
+      "jnz ADDR"
+    ], 
+    "1049387": [
+      "and REG CONSTANT", 
+      "lea REG 1049632", 
+      "mov REG CONSTANT", 
+      "call ADDR", 
+      "mov REG CONSTANT", 
+      "jmp ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1049297": "JA 0x00100347", 
+    "1049335": "JNZ 0x00100322", 
+    "1049369": "RET", 
+    "1049339": "CALL 0x00101058", 
+    "1049378": "JMP 0x00100319", 
+    "1049415": "JMP 0x00100319", 
+    "1049320": "JNZ 0x0010032b", 
+    "1049387": "JMP 0x00100319"
+  }
+}

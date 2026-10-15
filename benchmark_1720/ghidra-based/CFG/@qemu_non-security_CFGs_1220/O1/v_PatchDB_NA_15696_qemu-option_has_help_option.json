@@ -1,0 +1,115 @@
+{
+  "boundary": {
+    "1050804": 1050855, 
+    "1050870": 1050875, 
+    "1050938": 1050945, 
+    "1050875": 1050914, 
+    "1050945": 1050952, 
+    "1050914": 1050919, 
+    "1050855": 1050870, 
+    "1050919": 1050938
+  }, 
+  "edges": {
+    "1050804": [
+      1050870
+    ], 
+    "1050870": [
+      1050875, 
+      1050938
+    ], 
+    "1050938": [
+      1050919
+    ], 
+    "1050875": [
+      1050855, 
+      1050914
+    ], 
+    "1050945": [
+      1050919
+    ], 
+    "1050914": [
+      1050919
+    ], 
+    "1050855": [
+      1050870, 
+      1050945
+    ], 
+    "1050919": []
+  }, 
+  "nodes": {
+    "1050804": [
+      "endbr64", 
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "lea REG 1", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "lea REG 1056278", 
+      "lea REG 1056280", 
+      "jmp ADDR"
+    ], 
+    "1050870": [
+      "cmp MEMACC 0", 
+      "jz ADDR"
+    ], 
+    "1050938": [
+      "mov REG CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1050875": [
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "cmp MEMACC 1", 
+      "sbb REG CONSTANT", 
+      "mov REG REG", 
+      "mov PROCESS_SPECIFIC REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "jnz ADDR"
+    ], 
+    "1050945": [
+      "mov REG CONSTANT", 
+      "jmp ADDR"
+    ], 
+    "1050914": [
+      "mov REG CONSTANT"
+    ], 
+    "1050855": [
+      "mov PROCESS_SPECIFIC REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1050919": [
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1050804": "JMP 0x001008f6", 
+    "1050870": "JZ 0x0010093a", 
+    "1050938": "JMP 0x00100927", 
+    "1050875": "JNZ 0x001008e7", 
+    "1050945": "JMP 0x00100927", 
+    "1050914": "MOV EBX,0x1", 
+    "1050855": "JZ 0x00100941", 
+    "1050919": "RET"
+  }
+}

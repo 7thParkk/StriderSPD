@@ -1,0 +1,104 @@
+{
+  "boundary": {
+    "1054066": 1054069, 
+    "1054069": 1054077, 
+    "1054077": 1054090, 
+    "1054055": 1054066, 
+    "1053993": 1054055, 
+    "1053932": 1053993
+  }, 
+  "edges": {
+    "1054066": [
+      1054069
+    ], 
+    "1054069": [], 
+    "1054077": [], 
+    "1054055": [
+      1054066, 
+      1054077
+    ], 
+    "1053993": [
+      1054055, 
+      1054069
+    ], 
+    "1053932": [
+      1053993, 
+      1054066
+    ]
+  }, 
+  "nodes": {
+    "1054066": [
+      "mov REG REG"
+    ], 
+    "1054069": [
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "jmp ADDR"
+    ], 
+    "1054077": [
+      "pop REG", 
+      "mov REG REG", 
+      "xor REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "jmp ADDR"
+    ], 
+    "1054055": [
+      "call ADDR", 
+      "mov REG REG", 
+      "test REG REG", 
+      "jns ADDR"
+    ], 
+    "1053993": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "lea REG 1", 
+      "add REG MEMACC", 
+      "lea REG -1", 
+      "lea REG 1", 
+      "and REG REG", 
+      "not REG", 
+      "and REG REG", 
+      "add REG REG", 
+      "mov REG REG", 
+      "sub REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "test REG REG", 
+      "jnz ADDR"
+    ], 
+    "1053932": [
+      "endbr64", 
+      "push REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "lea REG -1", 
+      "mov REG REG", 
+      "and REG REG", 
+      "not REG", 
+      "and REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "test REG REG", 
+      "jnz ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1054066": "MOV RDI,RBX", 
+    "1054069": "JMP 0x001003c7", 
+    "1054077": "JMP 0x0010048b", 
+    "1054055": "JNS 0x0010157d", 
+    "1053993": "JNZ 0x00101575", 
+    "1053932": "JNZ 0x00101572"
+  }
+}

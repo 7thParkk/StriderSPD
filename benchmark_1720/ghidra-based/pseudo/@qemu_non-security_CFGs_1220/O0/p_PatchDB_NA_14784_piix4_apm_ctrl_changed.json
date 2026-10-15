@@ -1,0 +1,21 @@
+{
+  "pseudo_code": [
+    "void apm_ctrl_changed(uint32_t val,void *arg)", 
+    "", 
+    "{", 
+    "  long lVar1;", 
+    "  void *arg_local;", 
+    "  uint32_t val_local;", 
+    "  PIIX4PMState *s;", 
+    "  PCIDevice *d;", 
+    "", 
+    "  lVar1 = object_dynamic_cast_assert(arg,\"pci-device\",\"hw/acpi/piix4.c\",0x6f,\"apm_ctrl_changed\");", 
+    "  acpi_pm1_cnt_update((long)arg + 0xa78,val == 0xf1,val == 0xf0);", 
+    "  if ((((val != 0xf1) && (val != 0xf0)) && ((*(byte *)(*(long *)(lVar1 + 0x78) + 0x5b) & 2) != 0))", 
+    "     && (*(long *)((long)arg + 0x1008) != 0)) {", 
+    "    qemu_irq_raise(*(qemu_irq *)((long)arg + 0x1008));", 
+    "  }", 
+    "  return;", 
+    "}"
+  ]
+}

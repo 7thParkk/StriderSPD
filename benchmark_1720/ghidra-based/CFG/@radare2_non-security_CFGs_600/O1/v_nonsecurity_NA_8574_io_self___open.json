@@ -1,0 +1,63 @@
+{
+  "boundary": {
+    "1049777": 1049786, 
+    "1049721": 1049777, 
+    "1049786": 1049817
+  }, 
+  "edges": {
+    "1049777": [], 
+    "1049721": [
+      1049777, 
+      1049786
+    ], 
+    "1049786": [
+      1049777
+    ]
+  }, 
+  "nodes": {
+    "1049777": [
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1049721": [
+      "endbr64", 
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov MEMACC CONSTANT", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG CONSTANT", 
+      "test REG REG", 
+      "jnz ADDR"
+    ], 
+    "1049786": [
+      "mov REG CONSTANT", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "lea REG 1082976", 
+      "call ADDR", 
+      "jmp ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1049777": "RET", 
+    "1049721": "JNZ 0x001004ba", 
+    "1049786": "JMP 0x001004b1"
+  }
+}

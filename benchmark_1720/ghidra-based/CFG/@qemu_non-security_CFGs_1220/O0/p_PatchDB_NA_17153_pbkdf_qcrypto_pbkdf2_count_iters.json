@@ -1,0 +1,209 @@
+{
+  "boundary": {
+    "1048880": 1048910, 
+    "1049172": 1049177, 
+    "1049177": 1049179, 
+    "1049089": 1049124, 
+    "1049027": 1049034, 
+    "1049060": 1049089, 
+    "1049124": 1049127, 
+    "1048805": 1048880, 
+    "1049127": 1049130, 
+    "1049002": 1049027, 
+    "1049034": 1049060, 
+    "1049130": 1049131, 
+    "1049131": 1049172, 
+    "1048972": 1049002, 
+    "1048910": 1048972
+  }, 
+  "edges": {
+    "1048880": [
+      1048910, 
+      1049124
+    ], 
+    "1049172": [], 
+    "1049177": [], 
+    "1049089": [
+      1049131
+    ], 
+    "1049027": [
+      1049034, 
+      1049060
+    ], 
+    "1049060": [
+      1048880
+    ], 
+    "1049124": [
+      1049131
+    ], 
+    "1048805": [
+      1048880
+    ], 
+    "1049127": [
+      1049131
+    ], 
+    "1049002": [
+      1049027, 
+      1049089
+    ], 
+    "1049034": [
+      1048880
+    ], 
+    "1049130": [
+      1049131
+    ], 
+    "1049131": [
+      1049172, 
+      1049177
+    ], 
+    "1048972": [
+      1049002, 
+      1049130
+    ], 
+    "1048910": [
+      1048972, 
+      1049127
+    ]
+  }, 
+  "nodes": {
+    "1048880": [
+      "mov REG MEMACC", 
+      "lea PROCESS_SPECIFIC -88", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "js ADDR"
+    ], 
+    "1049172": [
+      "call ADDR"
+    ], 
+    "1049177": [
+      "leave", 
+      "ret"
+    ], 
+    "1049089": [
+      "nop", 
+      "mov REG MEMACC", 
+      "imul REG REG CONSTANT", 
+      "mov REG CONSTANT", 
+      "div MEMACC", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "jmp ADDR"
+    ], 
+    "1049027": [
+      "cmp -56 99", 
+      "ja ADDR"
+    ], 
+    "1049060": [
+      "mov REG MEMACC", 
+      "imul REG REG CONSTANT", 
+      "mov REG CONSTANT", 
+      "div MEMACC", 
+      "mov MEMACC REG", 
+      "jmp ADDR"
+    ], 
+    "1049124": [
+      "nop", 
+      "jmp ADDR"
+    ], 
+    "1048805": [
+      "endbr64", 
+      "push REG", 
+      "mov REG REG", 
+      "sub REG CONSTANT", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "xor REG REG", 
+      "mov MEMACC CONSTANT", 
+      "mov MEMACC CONSTANT"
+    ], 
+    "1049127": [
+      "nop", 
+      "jmp ADDR"
+    ], 
+    "1049002": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "sub REG REG", 
+      "mov MEMACC REG", 
+      "cmp -56 500", 
+      "ja ADDR"
+    ], 
+    "1049034": [
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "shl REG CONSTANT", 
+      "add REG REG", 
+      "add REG REG", 
+      "mov MEMACC REG", 
+      "jmp ADDR"
+    ], 
+    "1049130": [
+      "nop"
+    ], 
+    "1049131": [
+      "lea PROCESS_SPECIFIC -48", 
+      "mov REG CONSTANT", 
+      "mov REG CONSTANT", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "sub REG MEMACC", 
+      "jz ADDR"
+    ], 
+    "1048972": [
+      "mov REG MEMACC", 
+      "lea PROCESS_SPECIFIC -80", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "js ADDR"
+    ], 
+    "1048910": [
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "sub REG CONSTANT", 
+      "push MEMACC", 
+      "push CONSTANT", 
+      "lea PROCESS_SPECIFIC -48", 
+      "push REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "add REG CONSTANT", 
+      "test REG REG", 
+      "js ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1048880": "JS 0x00100224", 
+    "1049172": "CALL 0x00101018", 
+    "1049177": "RET", 
+    "1049089": "JMP 0x0010022b", 
+    "1049027": "JA 0x001001e4", 
+    "1049060": "JMP 0x00100130", 
+    "1049124": "JMP 0x0010022b", 
+    "1048805": "MOV qword ptr [RBP + -0x40],0x8000", 
+    "1049127": "JMP 0x0010022b", 
+    "1049002": "JA 0x00100201", 
+    "1049034": "JMP 0x00100130", 
+    "1049130": "NOP", 
+    "1049131": "JZ 0x00100259", 
+    "1048972": "JS 0x0010022a", 
+    "1048910": "JS 0x00100227"
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "boundary": {
+    "1049008": 1049028, 
+    "1048888": 1048981, 
+    "1048984": 1049006, 
+    "1048667": 1048773, 
+    "1048637": 1048667, 
+    "1048576": 1048637, 
+    "1048864": 1048882, 
+    "1048773": 1048782, 
+    "1049032": 1049052, 
+    "1048782": 1048864
+  }, 
+  "edges": {
+    "1049008": [
+      1048773
+    ], 
+    "1048888": [
+      1048864
+    ], 
+    "1048984": [], 
+    "1048667": [
+      1048773, 
+      1049008
+    ], 
+    "1048637": [
+      1048667, 
+      1048888
+    ], 
+    "1048576": [
+      1048637, 
+      1048984
+    ], 
+    "1048864": [], 
+    "1048773": [
+      1048782, 
+      1049032
+    ], 
+    "1049032": [
+      1048782
+    ], 
+    "1048782": [
+      1048864
+    ]
+  }, 
+  "nodes": {
+    "1049008": [
+      "lea REG 1078231", 
+      "call ADDR", 
+      "mov REG REG", 
+      "jmp ADDR"
+    ], 
+    "1048888": [
+      "lea REG 1078231", 
+      "call ADDR", 
+      "movsxd REG MEMACC", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "xor REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "jmp ADDR"
+    ], 
+    "1048984": [
+      "add REG CONSTANT", 
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "jmp ADDR"
+    ], 
+    "1048667": [
+      "mov REG REG", 
+      "mov REG REG", 
+      "sub REG REG", 
+      "call ADDR", 
+      "lea REG 2", 
+      "mov REG REG", 
+      "call ADDR", 
+      "xor REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "xor REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG MEMACC", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1048637": [
+      "mov REG REG", 
+      "lea REG 1078228", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1048576": [
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "push REG", 
+      "mov REG REG", 
+      "push REG", 
+      "sub REG CONSTANT", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "mov MEMACC REG", 
+      "mov REG MEMACC", 
+      "mov REG MEMACC", 
+      "test 380 1", 
+      "jz ADDR"
+    ], 
+    "1048864": [
+      "add REG CONSTANT", 
+      "mov REG REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "pop REG", 
+      "ret"
+    ], 
+    "1048773": [
+      "test REG REG", 
+      "jz ADDR"
+    ], 
+    "1049032": [
+      "lea REG 1078231", 
+      "call ADDR", 
+      "mov REG REG", 
+      "jmp ADDR"
+    ], 
+    "1048782": [
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "call ADDR", 
+      "lea REG 1", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "mov REG REG", 
+      "lea REG 1078232", 
+      "mov REG CONSTANT", 
+      "mov REG REG", 
+      "xor REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "call ADDR", 
+      "mov REG REG", 
+      "call ADDR"
+    ]
+  }, 
+  "jmp_instruction": {
+    "1049008": "JMP 0x001000c5", 
+    "1048888": "JMP 0x00100120", 
+    "1048984": "JMP 0x0010b010", 
+    "1048667": "JZ 0x001001b0", 
+    "1048637": "JZ 0x00100138", 
+    "1048576": "JZ 0x00100198", 
+    "1048864": "RET", 
+    "1048773": "JZ 0x001001c8", 
+    "1049032": "JMP 0x001000ce", 
+    "1048782": "CALL 0x0010b020"
+  }
+}

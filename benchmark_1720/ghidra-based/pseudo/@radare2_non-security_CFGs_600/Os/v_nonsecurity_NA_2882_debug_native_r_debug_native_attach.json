@@ -1,0 +1,25 @@
+{
+  "pseudo_code": [
+    "ulong r_debug_native_attach(long param_1,ulong param_2)", 
+    "", 
+    "{", 
+    "  long lVar1;", 
+    "  long in_FS_OFFSET;", 
+    "  char local_a0 [128];", 
+    "  long local_20;", 
+    "", 
+    "  local_20 = *(long *)(in_FS_OFFSET + 0x28);", 
+    "  if (*(int *)(param_1 + 8) != (int)param_2) {", 
+    "    lVar1 = ptrace(PTRACE_ATTACH,param_2,0,0);", 
+    "    if ((int)lVar1 != -1) {", 
+    "      __snprintf_chk(local_a0,0x80,2,0x80,\"%s:%d %s\",&_LC25,0x17c,\"ptrace (PT_ATTACH)\");", 
+    "      perror(local_a0);", 
+    "    }", 
+    "  }", 
+    "  if (local_20 != *(long *)(in_FS_OFFSET + 0x28)) {", 
+    "    __stack_chk_fail();", 
+    "  }", 
+    "  return param_2 & 0xffffffff;", 
+    "}"
+  ]
+}

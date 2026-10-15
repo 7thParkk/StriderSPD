@@ -1,0 +1,15 @@
+{
+  "pseudo_code": [
+    "void string_output_free(long param_1)", 
+    "", 
+    "{", 
+    "  if (*(long *)(param_1 + 0xa0) != 0) {", 
+    "    g_string_free(*(long *)(param_1 + 0xa0),1);", 
+    "  }", 
+    "  g_list_foreach(*(undefined8 *)(param_1 + 0xc0),free_range,0);", 
+    "  g_list_free(*(undefined8 *)(param_1 + 0xc0));", 
+    "  g_free(param_1);", 
+    "  return;", 
+    "}"
+  ]
+}

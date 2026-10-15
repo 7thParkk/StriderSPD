@@ -1,0 +1,33 @@
+{
+  "pseudo_code": [
+    "void qnull_visit_test(void)", 
+    "", 
+    "{", 
+    "  undefined8 uVar1;", 
+    "  undefined8 uVar2;", 
+    "  undefined *puVar3;", 
+    "", 
+    "  if (_g_assertion_message_expr != 1) {", 
+    "    g_assertion_message_expr(0,&DAT_001004f0,0x31,\"qnull_visit_test\",\"qnull_.refcnt == 1\");", 
+    "  }", 
+    "  uVar1 = qnull();", 
+    "  uVar2 = qmp_input_visitor_new(uVar1,1);", 
+    "  qobject_decref(uVar1);", 
+    "  visit_type_null(uVar2,0,&error_abort);", 
+    "  visit_free(uVar2);", 
+    "  uVar1 = qmp_output_visitor_new();", 
+    "  uVar2 = qmp_output_get_visitor(uVar1);", 
+    "  visit_type_null(uVar2,0,&error_abort);", 
+    "  puVar3 = (undefined *)qmp_output_get_qobject(uVar1);", 
+    "  if (puVar3 != &qnull_) {", 
+    "    g_assertion_message_expr(0,&DAT_001004f0,0x3b,\"qnull_visit_test\",\"obj == &qnull_\");", 
+    "  }", 
+    "  qobject_decref(puVar3);", 
+    "  qmp_output_visitor_cleanup(uVar1);", 
+    "  if (_g_assertion_message_expr != 1) {", 
+    "    g_assertion_message_expr(0,&DAT_001004f0,0x3f,\"qnull_visit_test\",\"qnull_.refcnt == 1\");", 
+    "  }", 
+    "  return;", 
+    "}"
+  ]
+}

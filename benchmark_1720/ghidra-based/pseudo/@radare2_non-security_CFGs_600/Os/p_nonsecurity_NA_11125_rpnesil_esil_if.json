@@ -1,0 +1,27 @@
+{
+  "pseudo_code": [
+    "undefined8 esil_if(long param_1)", 
+    "", 
+    "{", 
+    "  long lVar1;", 
+    "  undefined8 uVar2;", 
+    "  long in_FS_OFFSET;", 
+    "  long local_18;", 
+    "  long local_10;", 
+    "", 
+    "  local_10 = *(long *)(in_FS_OFFSET + 0x28);", 
+    "  lVar1 = r_anal_esil_pop();", 
+    "  uVar2 = 0;", 
+    "  if (lVar1 != 0) {", 
+    "    esil_get_parm(param_1,lVar1,&local_18);", 
+    "    if (local_18 == 0) {", 
+    "    }", 
+    "    uVar2 = 1;", 
+    "  }", 
+    "  if (local_10 != *(long *)(in_FS_OFFSET + 0x28)) {", 
+    "    __stack_chk_fail();", 
+    "  }", 
+    "  return uVar2;", 
+    "}"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "pseudo_code": [
+    "undefined8 * error_copy(undefined8 *param_1)", 
+    "", 
+    "{", 
+    "  undefined8 *puVar1;", 
+    "  undefined8 uVar2;", 
+    "", 
+    "  puVar1 = (undefined8 *)g_malloc0(0x30);", 
+    "  uVar2 = g_strdup(*param_1);", 
+    "  puVar1[2] = param_1[2];", 
+    "  puVar1[3] = param_1[3];", 
+    "  if ((undefined8 *)param_1[5] != (undefined8 *)0x0) {", 
+    "    uVar2 = g_string_new(*(undefined8 *)param_1[5]);", 
+    "    puVar1[5] = uVar2;", 
+    "  }", 
+    "  return puVar1;", 
+    "}"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "pseudo_code": [
+    "undefined8 throttle_max_is_missing_limit(double *param_1,undefined8 param_2)", 
+    "", 
+    "{", 
+    "  double *pdVar1;", 
+    "", 
+    "  pdVar1 = param_1 + 0x12;", 
+    "  while ((param_1[1] == 0.0 || (*param_1 != 0.0))) {", 
+    "    param_1 = param_1 + 3;", 
+    "    if (param_1 == pdVar1) {", 
+    "      return 0;", 
+    "    }", 
+    "  }", 
+    "  error_setg_internal(param_2,&_LC2,0x13d,\"throttle_max_is_missing_limit\",", 
+    "                      \"bps_max/iops_max require corresponding bps/iops values\");", 
+    "  return 1;", 
+    "}"
+  ]
+}

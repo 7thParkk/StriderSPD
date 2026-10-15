@@ -1,0 +1,29 @@
+{
+  "pseudo_code": [
+    "int * r_bin_zimg_new_buf(undefined8 *param_1)", 
+    "", 
+    "{", 
+    "  undefined8 *puVar1;", 
+    "  int iVar2;", 
+    "  int *__ptr;", 
+    "  undefined8 uVar3;", 
+    "  ulong uVar4;", 
+    "", 
+    "  __ptr = calloc(1,0x78);", 
+    "  if (__ptr != (int *)0x0) {", 
+    "    uVar3 = r_buf_new();", 
+    "    iVar2 = r_buf_set_bytes(uVar3,*param_1,(long)*__ptr);", 
+    "    if ((iVar2 != 0) && (uVar4 = r_buf_size(*(undefined8 *)(__ptr + 4)), 0x2b < uVar4)) {", 
+    "      puVar1 = (undefined8 *)**(long **)(__ptr + 4);", 
+    "      uVar3 = puVar1[1];", 
+    "      uVar3 = puVar1[3];", 
+    "      uVar3 = *(undefined8 *)((long)puVar1 + 0x24);", 
+    "      return __ptr;", 
+    "    }", 
+    "    r_buf_free(*(undefined8 *)(__ptr + 4));", 
+    "    free(__ptr);", 
+    "  }", 
+    "  return (int *)0x0;", 
+    "}"
+  ]
+}
