@@ -45,6 +45,8 @@ benchmark_1720/
 
 There are 1,720 paired samples: 1,010 security and 710 non-security. Each modality has 3,440 pre/post JSON files. Projects, optimization levels, file names, manifest order and JSON contents are preserved from the original benchmark. CFG JSON contains nodes and edges; pseudo JSON contains a `pseudo_code` list. Labels and pair paths are in the manifest.
 
+Hard-negative sample IDs (the `id` field in `benchmark_new_infos.json`) are listed in [hard_negative_ids.txt](benchmark_1720/hard_negative_ids.txt).
+
 Check all data representations without ML dependencies:
 
 ```bash
